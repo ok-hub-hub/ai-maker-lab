@@ -18,7 +18,13 @@ export default defineConfig({
   site: SITE.website,
   integrations: [
     sitemap({
-      filter: page => SITE.showArchives || !page.endsWith("/archives"),
+      filter: page => {
+        // /go/[id] はアフィリリダイレクト用、noindex+nofollow なのでサイトマップ除外
+        if (page.includes("/go/")) return false;
+        // archives は SITE.showArchives で制御
+        if (!SITE.showArchives && page.endsWith("/archives")) return false;
+        return true;
+      },
     }),
     mdx(),
     react(),
