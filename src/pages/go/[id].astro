@@ -9,8 +9,7 @@ export async function getStaticPaths() {
 }
 
 const { tool } = Astro.props;
-// affiliateUrl が後で追加されたらそちらを優先
-const destination = (tool as any).affiliateUrl || tool.officialUrl;
+const destination = tool.affiliateUrl ?? tool.officialUrl;
 ---
 
 <!doctype html>

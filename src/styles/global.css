@@ -67,8 +67,16 @@ html[data-theme="dark"] {
   @apply max-w-3xl;
 }
 
+@utility max-w-site {
+  @apply max-w-6xl;
+}
+
 @utility app-layout {
-  @apply mx-auto w-full max-w-app px-4;
+  @apply mx-auto w-full max-w-app px-4 sm:px-6;
+}
+
+@utility site-layout {
+  @apply mx-auto w-full max-w-site px-4 sm:px-6;
 }
 
 .active-nav {

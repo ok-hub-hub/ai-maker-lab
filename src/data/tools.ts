@@ -25,9 +25,13 @@ export type ToolMeta = {
   scale: 1 | 2 | 3;
   affiliateTier: "S" | "A" | "B" | "C" | "watch";
   officialUrl: string;
+  /** アフィリエイトリンク（ASP登録後に追加。未設定なら officialUrl にフォールバック）*/
+  affiliateUrl?: string;
   description: string;
   strengths: string[];
   weaknesses: string[];
+  /** 価格・条件の確認日（古い場合は読者に警告表示するためのもの）*/
+  verifiedAt?: string;
   note?: string;
 };
 
