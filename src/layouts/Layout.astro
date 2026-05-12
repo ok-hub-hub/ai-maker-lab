@@ -132,6 +132,25 @@ const structuredData = {
       content={PUBLIC_GOOGLE_SITE_VERIFICATION || "YPBaLL64xAQsaj0LvmgfVuNy8_HC6CTbxb8nsgbmkKo"}
     />
 
+    <!-- Google Analytics 4 (production only) -->
+    {
+      import.meta.env.PROD && (
+        <>
+          <script
+            is:inline
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-S55TTRMBX0"
+          />
+          <script is:inline>{`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-S55TTRMBX0', { anonymize_ip: true });
+          `}</script>
+        </>
+      )
+    }
+
     <ClientRouter />
 
     <!-- Minimal inline script to prevent FOUC - sets theme immediately -->
