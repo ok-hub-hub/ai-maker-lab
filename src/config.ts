@@ -1,0 +1,23 @@
+export const SITE = {
+  website: "https://aimaker-lab.com/",
+  author: "AI Maker Lab",
+  profile: "https://aimaker-lab.com/about/",
+  desc: "AIで個人が「実際に作って公開する」ためのチュートリアル＋比較サイト。Vibe Coding・AI動画・AI音声・マーケ自動化のツールを、個人開発者の実体験ベースで紹介します。",
+  title: "AI Maker Lab",
+  ogImage: "aimaker-lab-og.jpg",
+  lightAndDarkMode: true,
+  postPerIndex: 6,
+  postPerPage: 8,
+  scheduledPostMargin: 15 * 60 * 1000,
+  showArchives: true,
+  showBackButton: true,
+  editPost: {
+    enabled: false,
+    text: "Edit page",
+    url: "",
+  },
+  dynamicOgImage: true,
+  dir: "ltr",
+  lang: "ja",
+  timezone: "Asia/Tokyo",
+} as const;
