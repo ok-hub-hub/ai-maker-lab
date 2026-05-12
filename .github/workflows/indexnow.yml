@@ -1,0 +1,80 @@
+name: IndexNow Submission
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  submit:
+    name: Notify IndexNow (Bing / Yandex)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Wait for Cloudflare Pages deploy
+        run: |
+          echo "Sleeping 240s to allow Cloudflare Pages build to finish..."
+          sleep 240
+
+      - name: Detect IndexNow key from public/
+        id: key
+        run: |
+          set -euo pipefail
+          KEY=$(ls public/*.txt 2>/dev/null | head -1 | sed 's|public/||; s|\.txt$||' || true)
+          if [ -z "$KEY" ]; then
+            echo "::error::No IndexNow key file found in public/"
+            exit 1
+          fi
+          echo "key=$KEY" >> "$GITHUB_OUTPUT"
+          echo "Detected IndexNow key: $KEY"
+
+      - name: Verify key file is reachable in production
+        env:
+          KEY: ${{ steps.key.outputs.key }}
+        run: |
+          URL="https://aimaker-lab.com/${KEY}.txt"
+          echo "Checking $URL ..."
+          HTTP_CODE=$(curl -sS -o response.txt -w "%{http_code}" "$URL")
+          BODY=$(cat response.txt | tr -d '[:space:]')
+          echo "HTTP $HTTP_CODE, body: $BODY"
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "::error::Key file not reachable (HTTP $HTTP_CODE)"
+            exit 1
+          fi
+          if [ "$BODY" != "$KEY" ]; then
+            echo "::error::Key file body ($BODY) does not match expected key ($KEY)"
+            exit 1
+          fi
+
+      - name: Fetch sitemap and extract URLs
+        id: urls
+        run: |
+          set -euo pipefail
+          curl -sSL "https://aimaker-lab.com/sitemap-0.xml" -o sitemap.xml
+          grep -oE '<loc>[^<]+</loc>' sitemap.xml | sed 's|<loc>||; s|</loc>||' > urls.txt
+          COUNT=$(wc -l < urls.txt | tr -d ' ')
+          echo "Extracted $COUNT URLs"
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          head -10 urls.txt
+
+      - name: Submit URLs to IndexNow
+        env:
+          KEY: ${{ steps.key.outputs.key }}
+        run: |
+          set -euo pipefail
+          URLS_JSON=$(python3 -c 'import json,sys; print(json.dumps([l.strip() for l in sys.stdin if l.strip()]))' < urls.txt)
+          PAYLOAD=$(python3 -c "import json; print(json.dumps({'host':'aimaker-lab.com','key':'${KEY}','keyLocation':'https://aimaker-lab.com/${KEY}.txt','urlList':${URLS_JSON}}))")
+          echo "Submitting $(python3 -c "import json; print(len(json.loads('${URLS_JSON}')))") URLs to IndexNow..."
+          HTTP_CODE=$(curl -sS -o response.txt -w "%{http_code}" -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$PAYLOAD")
+          echo "HTTP $HTTP_CODE"
+          cat response.txt
+          echo ""
+          if [ "$HTTP_CODE" != "200" ] && [ "$HTTP_CODE" != "202" ]; then
+            echo "::error::IndexNow submission failed with HTTP $HTTP_CODE"
+            exit 1
+          fi
+          echo "IndexNow submission accepted (HTTP $HTTP_CODE)"
