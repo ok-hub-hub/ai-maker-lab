@@ -525,6 +525,35 @@ export const TOOLS: ToolMeta[] = [
     weaknesses: ["個人ブロガーにはオーバースペック"],
   },
   {
+    id: "onamae",
+    name: "お名前.com",
+    category: ["infrastructure"],
+    forEngineer: true,
+    forBeginner: true,
+    priceMin: 1,
+    priceFree: false,
+    jpFriendly: true,
+    speed: 2,
+    quality: 2,
+    scale: 2,
+    affiliateTier: "A",
+    officialUrl: "https://www.onamae.com/",
+    affiliateUrl:
+      "https://www.onamae.com/?banner_id=690_vc_2215298&waad=yyDUAf8t&argument=29kVaVam&dmai=a5c73cbbb7f179",
+    description:
+      "GMOインターネット運営の国内シェアNo.1ドメイン取得サービス。1999年運営開始、登録実績2,500万件超。",
+    strengths: [
+      "国内シェアNo.1の安心感",
+      "対応TLDが圧倒的に多い",
+      "ドメインセット割や同時申込割引が豊富",
+    ],
+    weaknesses: [
+      "管理画面UIが古く、玄人向け",
+      "プロモーションメールが多い（受信設定で抑制可）",
+    ],
+    verifiedAt: "2026-05-12",
+  },
+  {
     id: "chatgpt",
     name: "ChatGPT",
     category: ["writing", "dev"],
