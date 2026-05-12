@@ -15,12 +15,12 @@ import type {
 
 type Step = 1 | 2 | 3 | 4 | 5 | "result";
 
-const Q1_OPTIONS: { code: Q1Code; label: string; emoji: string }[] = [
-  { code: "dev", label: "プログラミング・開発（コードを書く）", emoji: "💻" },
-  { code: "ui", label: "UI・デザイン・Webサイトを作る", emoji: "🎨" },
-  { code: "video", label: "動画・コンテンツ作成", emoji: "🎬" },
-  { code: "writing", label: "文章・記事・SEO", emoji: "✍️" },
-  { code: "automation", label: "業務自動化（複数ツール連携）", emoji: "🔗" },
+const Q1_OPTIONS: { code: Q1Code; label: string }[] = [
+  { code: "dev", label: "プログラミング・開発（コードを書く）" },
+  { code: "ui", label: "UI・デザイン・Webサイトを作る" },
+  { code: "video", label: "動画・コンテンツ作成" },
+  { code: "writing", label: "文章・記事・SEO" },
+  { code: "automation", label: "業務自動化（複数ツール連携）" },
 ];
 
 const Q2_OPTIONS: { code: Q2Code; label: string }[] = [
@@ -108,12 +108,13 @@ export default function Diagnose() {
       )}
 
       {step === 1 && (
-        <Question title="Q1. AIで何をしたいですか？">
-          {Q1_OPTIONS.map(o => (
+        <Question title="Q1. AIで、何をつくりますか？">
+          {Q1_OPTIONS.map((o, i) => (
             <OptionButton
               key={o.code}
+              index={i}
               onClick={() => pick("q1", o.code)}
-              label={`${o.emoji} ${o.label}`}
+              label={o.label}
             />
           ))}
         </Question>
@@ -121,9 +122,10 @@ export default function Diagnose() {
 
       {step === 2 && (
         <Question title="Q2. あなたの開発経験は？">
-          {Q2_OPTIONS.map(o => (
+          {Q2_OPTIONS.map((o, i) => (
             <OptionButton
               key={o.code}
+              index={i}
               onClick={() => pick("q2", o.code)}
               label={o.label}
             />
@@ -132,10 +134,11 @@ export default function Diagnose() {
       )}
 
       {step === 3 && (
-        <Question title="Q3. 月額予算はどれくらい？">
-          {Q3_OPTIONS.map(o => (
+        <Question title="Q3. 月額の予算は、どれくらいですか？">
+          {Q3_OPTIONS.map((o, i) => (
             <OptionButton
               key={o.code}
+              index={i}
               onClick={() => pick("q3", o.code)}
               label={o.label}
             />
@@ -144,10 +147,11 @@ export default function Diagnose() {
       )}
 
       {step === 4 && (
-        <Question title="Q4. AIで何をしたい？（目的）">
-          {Q4_OPTIONS.map(o => (
+        <Question title="Q4. 何のために、つかいますか？">
+          {Q4_OPTIONS.map((o, i) => (
             <OptionButton
               key={o.code}
+              index={i}
               onClick={() => pick("q4", o.code)}
               label={o.label}
             />
@@ -156,10 +160,11 @@ export default function Diagnose() {
       )}
 
       {step === 5 && (
-        <Question title="Q5. 重視するポイントは？（任意）">
-          {Q5_OPTIONS.map(o => (
+        <Question title="Q5. 重視したいことは？（任意）">
+          {Q5_OPTIONS.map((o, i) => (
             <OptionButton
               key={o.code}
+              index={i}
               onClick={() => pick("q5", o.code)}
               label={o.label}
             />
@@ -167,7 +172,7 @@ export default function Diagnose() {
           <button
             type="button"
             onClick={skipQ5}
-            className="mt-4 text-sm text-foreground/60 underline hover:text-accent"
+            className="mt-6 self-start border-b border-foreground-muted/40 pb-0.5 text-sm tracking-wide text-foreground-muted transition hover:border-accent hover:text-accent"
           >
             スキップして結果を見る →
           </button>
@@ -205,18 +210,26 @@ function Question({
 function OptionButton({
   onClick,
   label,
+  index,
 }: {
   onClick: () => void;
   label: string;
+  index: number;
 }) {
+  const num = String(index + 1).padStart(2, "0");
   return (
     <button
       type="button"
       onClick={onClick}
-      className="group w-full border-b border-border bg-transparent px-1 py-5 text-left text-base font-medium text-foreground transition hover:border-accent hover:text-accent"
+      className="group w-full border-b border-border bg-transparent px-1 py-5 text-left transition hover:border-accent"
     >
-      <span className="flex items-center justify-between">
-        <span>{label}</span>
+      <span className="flex items-baseline gap-5">
+        <span className="font-mono text-xs text-foreground-muted transition group-hover:text-accent">
+          {num}
+        </span>
+        <span className="flex-1 text-base font-medium text-foreground transition group-hover:text-accent">
+          {label}
+        </span>
         <span className="text-foreground-muted opacity-0 transition group-hover:translate-x-1 group-hover:text-accent group-hover:opacity-100">
           →
         </span>
@@ -405,15 +418,19 @@ function Result({
         <button
           type="button"
           onClick={onReset}
-          className="rounded-md border border-border px-4 py-2 text-sm hover:bg-foreground/5"
+          className="group inline-flex items-center gap-2 border-b border-foreground-muted/40 pb-0.5 text-sm tracking-wide text-foreground-muted transition hover:border-accent hover:text-accent"
         >
-          ↻ もう一度診断する
+          <span className="text-xs">↻</span>
+          もう一度診断する
         </button>
         <a
           href="/posts/"
-          className="rounded-md border border-border px-4 py-2 text-sm hover:bg-foreground/5"
+          className="group inline-flex items-center gap-2 border-b border-foreground-muted/40 pb-0.5 text-sm tracking-wide text-foreground-muted transition hover:border-accent hover:text-accent"
         >
-          📚 関連記事を読む →
+          関連記事を読む
+          <span className="transition-transform group-hover:translate-x-0.5">
+            →
+          </span>
         </a>
       </div>
     </div>

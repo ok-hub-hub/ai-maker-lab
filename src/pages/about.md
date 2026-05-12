@@ -15,14 +15,14 @@ title: "About"
 
 このサイトは3つの読者層を想定しています。
 
-### 👨‍💻 層1：エンジニア（AIで開発を加速したい）
-Cursor / Claude Code / Cline / Windsurf / v0 / MCP / Agent SDK / n8n の深掘り。
+### Ⅰ ─ For Engineers
+Cursor / Claude Code / Cline / Windsurf / v0 / MCP / Agent SDK / n8n の深掘り。AIで開発を加速したい層へ。
 
-### 🛠️ 層2：AI開発挑戦中（非エンジニアも含む）
-Lovable / Bolt / Replit Agent などの Vibe Coding ツール入門。「初めての AI でアプリ開発」ガイド。
+### Ⅱ ─ For Builders
+Lovable / Bolt / Replit Agent などの Vibe Coding ツール入門。非エンジニアも含む「はじめての AI アプリ開発」を支える章。
 
-### 💰 層3：AIで稼ぎたい個人
-副業ロードマップ（0→月1万円→月10万円）、収益化事例集、AI動画・音声・コンテンツ販売の選び方。
+### Ⅲ ─ For Earners
+副業ロードマップ（0 → 月1万円 → 月10万円）、収益化事例集、AI動画・音声・コンテンツ販売の選び方。
 
 ## AI診断
 
