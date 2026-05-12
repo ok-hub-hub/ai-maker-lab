@@ -1,0 +1,46 @@
+---
+import { TOOLS } from "@/data/tools";
+
+export async function getStaticPaths() {
+  return TOOLS.map(tool => ({
+    params: { id: tool.id },
+    props: { tool },
+  }));
+}
+
+const { tool } = Astro.props;
+// affiliateUrl が後で追加されたらそちらを優先
+const destination = (tool as any).affiliateUrl || tool.officialUrl;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting to {tool.name}...</title>
+    <meta http-equiv="refresh" content={`0; url=${destination}`} />
+    <link rel="canonical" href={destination} />
+    <meta name="robots" content="noindex,nofollow" />
+    <script is:inline define:vars={{ url: destination }}>
+      window.location.replace(url);
+    </script>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 480px;
+        margin: 80px auto;
+        padding: 0 20px;
+        text-align: center;
+        line-height: 1.6;
+        color: #333;
+      }
+      a {
+        color: #0066cc;
+      }
+    </style>
+  </head>
+  <body>
+    <p>{tool.name} へリダイレクト中…</p>
+    <p>自動的に遷移しない場合は <a href={destination}>こちら</a> をクリックしてください。</p>
+  </body>
+</html>

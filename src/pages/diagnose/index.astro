@@ -1,0 +1,24 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Diagnose from "@/components/Diagnose";
+---
+
+<Layout title="AI診断 | あなたに合うAIツールを3つ提案します">
+  <Header />
+  <main id="main-content" class="app-layout">
+    <section class="pt-8 pb-6">
+      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
+        AI診断
+      </h1>
+      <p class="mb-6 text-lg text-foreground/70">
+        5問の質問に答えるだけで、あなたに合うAIツール3つを提案します。
+        プログラミング経験不要、所要時間は約1分です。
+      </p>
+    </section>
+
+    <Diagnose client:load />
+  </main>
+  <Footer />
+</Layout>
