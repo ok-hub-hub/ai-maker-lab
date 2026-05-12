@@ -1,6 +1,6 @@
 ---
 author: AI Maker Lab
-pubDatetime: 2026-05-13T00:30:00+09:00
+pubDatetime: 2026-05-12T23:55:00+09:00
 title: "個人開発者のドメイン取得完全ガイド：.com / .dev / .app の選び方とレジストラ比較【2026年版】"
 slug: domain-selection-guide-2026
 featured: true

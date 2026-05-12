@@ -1,6 +1,6 @@
 ---
 author: AI Maker Lab
-pubDatetime: 2026-05-13T07:30:00+09:00
+pubDatetime: 2026-05-12T23:50:00+09:00
 title: "個人開発者のためのホスティング選び：Vercel / Cloudflare Pages / Netlify / mixhost【2026年版】"
 slug: hosting-for-individual-developers-2026
 featured: true
