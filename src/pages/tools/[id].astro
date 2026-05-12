@@ -1,0 +1,301 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import { TOOLS } from "@/data/tools";
+import { SITE } from "@/config";
+
+export async function getStaticPaths() {
+  return TOOLS.map(tool => ({
+    params: { id: tool.id },
+    props: { tool },
+  }));
+}
+
+const { tool } = Astro.props;
+
+const categoryLabels: Record<string, string> = {
+  dev: "Development",
+  ui: "UI Generation",
+  video: "Video",
+  writing: "Writing & SEO",
+  automation: "Automation",
+  infrastructure: "Infrastructure",
+};
+
+const categoryLabelsJa: Record<string, string> = {
+  dev: "開発",
+  ui: "UI生成",
+  video: "動画",
+  writing: "ライティング・SEO",
+  automation: "自動化",
+  infrastructure: "インフラ",
+};
+
+const tierLabels: Record<string, string> = {
+  S: "S — 主力候補",
+  A: "A — 推奨",
+  B: "B — 状況次第",
+  C: "C — 様子見",
+  watch: "Watch — 観察中",
+};
+
+const priceLabel = tool.priceFree
+  ? tool.priceMin === 0
+    ? "無料あり（無料プランで利用可）"
+    : `無料あり（有料は $${tool.priceMin}/月〜）`
+  : `$${tool.priceMin}/月〜`;
+
+const dotMeter = (n: 1 | 2 | 3) =>
+  ["●", "●", "●"].map((d, i) => (i < n ? d : "○")).join(" ");
+
+const categoryEn = tool.category.map(c => categoryLabels[c]).join(" · ");
+const categoryJa = tool.category.map(c => categoryLabelsJa[c]).join(" / ");
+
+const title = `${tool.name} — 料金・特徴・個人開発者の評価 | AI Maker Lab`;
+const description = tool.description;
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" data-layout="tool-detail">
+    <!-- ========== HEADER ========== -->
+    <section class="border-b border-border">
+      <div class="site-layout py-16 sm:py-20">
+        <div
+          class="mb-6 flex flex-wrap items-center gap-3 text-[11px] tracking-[0.2em] text-foreground-muted uppercase"
+        >
+          <span class="h-px w-8 bg-foreground-muted/40"></span>
+          <span>Tool · {categoryEn}</span>
+        </div>
+
+        <h1
+          class="font-serif text-[40px] leading-[1.15] font-medium tracking-tight text-foreground sm:text-[52px]"
+        >
+          {tool.name}
+        </h1>
+
+        <p
+          class="mt-6 max-w-2xl text-base leading-[1.85] text-foreground-muted sm:text-[17px]"
+        >
+          {tool.description}
+        </p>
+
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <a
+            href={`/go/${tool.id}`}
+            rel="sponsored noopener"
+            class="group inline-flex items-center gap-3 self-start border-b border-foreground py-2 text-base font-medium tracking-tight text-foreground transition hover:border-accent hover:text-accent sm:self-auto"
+          >
+            {tool.name} の公式サイトを見る
+            <span
+              class="transition group-hover:translate-x-1"
+              aria-hidden="true">→</span
+            >
+          </a>
+          <a
+            href="/diagnose"
+            class="inline-flex items-center gap-2 text-sm tracking-tight text-foreground-muted transition hover:text-accent"
+          >
+            自分に合うか1分で診断する
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SPECS ========== -->
+    <section class="border-b border-border">
+      <div class="site-layout grid gap-12 py-16 sm:py-20 lg:grid-cols-2">
+        <div>
+          <div
+            class="mb-6 flex items-center gap-3 text-[11px] tracking-[0.2em] text-foreground-muted uppercase"
+          >
+            <span class="h-px w-6 bg-foreground-muted/40"></span>
+            <span>Specs · 仕様</span>
+          </div>
+          <dl class="space-y-5 text-[15px] leading-[1.85]">
+            <div
+              class="grid grid-cols-[120px_1fr] gap-4 border-b border-border/40 pb-4"
+            >
+              <dt class="text-foreground-muted">カテゴリ</dt>
+              <dd class="text-foreground">{categoryJa}</dd>
+            </div>
+            <div
+              class="grid grid-cols-[120px_1fr] gap-4 border-b border-border/40 pb-4"
+            >
+              <dt class="text-foreground-muted">価格</dt>
+              <dd class="text-foreground">{priceLabel}</dd>
+            </div>
+            <div
+              class="grid grid-cols-[120px_1fr] gap-4 border-b border-border/40 pb-4"
+            >
+              <dt class="text-foreground-muted">日本語</dt>
+              <dd class="text-foreground">
+                {tool.jpFriendly ? "UI / ドキュメントに対応" : "英語が前提"}
+              </dd>
+            </div>
+            <div
+              class="grid grid-cols-[120px_1fr] gap-4 border-b border-border/40 pb-4"
+            >
+              <dt class="text-foreground-muted">向き</dt>
+              <dd class="text-foreground">
+                {tool.forEngineer && tool.forBeginner
+                  ? "エンジニア・非エンジニア両対応"
+                  : tool.forEngineer
+                    ? "エンジニア向け"
+                    : tool.forBeginner
+                      ? "非エンジニア向け"
+                      : "用途特化型"}
+              </dd>
+            </div>
+            <div
+              class="grid grid-cols-[120px_1fr] gap-4 border-b border-border/40 pb-4"
+            >
+              <dt class="text-foreground-muted">推奨ティア</dt>
+              <dd class="font-mono text-foreground">
+                {tierLabels[tool.affiliateTier]}
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div>
+          <div
+            class="mb-6 flex items-center gap-3 text-[11px] tracking-[0.2em] text-foreground-muted uppercase"
+          >
+            <span class="h-px w-6 bg-foreground-muted/40"></span>
+            <span>Capability · 性能</span>
+          </div>
+          <dl class="space-y-5 text-[15px] leading-[1.85]">
+            <div
+              class="grid grid-cols-[120px_1fr] gap-4 border-b border-border/40 pb-4"
+            >
+              <dt class="text-foreground-muted">速度</dt>
+              <dd class="font-mono tracking-widest text-accent"
+                >{dotMeter(tool.speed)}</dd
+              >
+            </div>
+            <div
+              class="grid grid-cols-[120px_1fr] gap-4 border-b border-border/40 pb-4"
+            >
+              <dt class="text-foreground-muted">品質</dt>
+              <dd class="font-mono tracking-widest text-accent"
+                >{dotMeter(tool.quality)}</dd
+              >
+            </div>
+            <div
+              class="grid grid-cols-[120px_1fr] gap-4 border-b border-border/40 pb-4"
+            >
+              <dt class="text-foreground-muted">スケール</dt>
+              <dd class="font-mono tracking-widest text-accent"
+                >{dotMeter(tool.scale)}</dd
+              >
+            </div>
+          </dl>
+          <p class="mt-6 text-[13px] leading-[1.8] text-foreground-muted">
+            ● ● ● = 3段階評価（個人開発者の体感ベース）。<br />
+            速度＝生成・反応の速さ、品質＝出力の完成度、スケール＝チーム・本番運用への耐性。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STRENGTHS / WEAKNESSES ========== -->
+    <section class="border-b border-border">
+      <div class="site-layout grid gap-12 py-16 sm:py-20 lg:grid-cols-2">
+        <div>
+          <div
+            class="mb-6 flex items-center gap-3 text-[11px] tracking-[0.2em] text-foreground-muted uppercase"
+          >
+            <span class="h-px w-6 bg-foreground-muted/40"></span>
+            <span>Strengths · 強み</span>
+          </div>
+          <ul class="space-y-4 text-[15px] leading-[1.85] text-foreground">
+            {
+              tool.strengths.map(s => (
+                <li class="flex gap-3">
+                  <span class="font-serif text-accent" aria-hidden="true">
+                    +
+                  </span>
+                  <span>{s}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div>
+          <div
+            class="mb-6 flex items-center gap-3 text-[11px] tracking-[0.2em] text-foreground-muted uppercase"
+          >
+            <span class="h-px w-6 bg-foreground-muted/40"></span>
+            <span>Caveats · 注意点</span>
+          </div>
+          <ul class="space-y-4 text-[15px] leading-[1.85] text-foreground">
+            {
+              tool.weaknesses.map(w => (
+                <li class="flex gap-3">
+                  <span class="font-serif text-foreground-muted" aria-hidden="true">
+                    −
+                  </span>
+                  <span>{w}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section>
+      <div class="site-layout py-16 sm:py-20">
+        <div
+          class="mb-6 flex items-center gap-3 text-[11px] tracking-[0.2em] text-foreground-muted uppercase"
+        >
+          <span class="h-px w-6 bg-foreground-muted/40"></span>
+          <span>Next · 次の一歩</span>
+        </div>
+        <h2
+          class="font-serif text-[28px] leading-[1.3] font-medium text-foreground sm:text-[34px]"
+        >
+          {tool.name} を、まず触ってみる。
+        </h2>
+        <p
+          class="mt-4 max-w-xl text-[15px] leading-[1.85] text-foreground-muted"
+        >
+          このページから公式へのリンクは、当サイトの広告リンクを含みます。<br
+          />
+          紹介の有無で読者の費用や仕様は変わりません。
+        </p>
+        <div class="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center">
+          <a
+            href={`/go/${tool.id}`}
+            rel="sponsored noopener"
+            class="group inline-flex items-center gap-3 self-start border-b border-foreground py-2 text-base font-medium tracking-tight text-foreground transition hover:border-accent hover:text-accent sm:self-auto"
+          >
+            {tool.name} の公式サイトを見る
+            <span
+              class="transition group-hover:translate-x-1"
+              aria-hidden="true">→</span
+            >
+          </a>
+          <a
+            href="/diagnose"
+            class="inline-flex items-center gap-2 text-sm tracking-tight text-foreground-muted transition hover:text-accent"
+          >
+            5問のAI診断で、自分に合うか確認する
+          </a>
+          <a
+            href="/posts"
+            class="inline-flex items-center gap-2 text-sm tracking-tight text-foreground-muted transition hover:text-accent"
+          >
+            個人開発者の検証記録を読む
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

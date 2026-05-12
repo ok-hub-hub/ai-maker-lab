@@ -1,0 +1,177 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import { TOOLS } from "@/data/tools";
+
+const categoryOrder: { code: string; en: string; ja: string }[] = [
+  { code: "dev", en: "Development", ja: "開発・コーディング" },
+  { code: "ui", en: "UI Generation", ja: "UI生成・Vibe Coding" },
+  { code: "video", en: "Video", ja: "動画生成・編集" },
+  { code: "writing", en: "Writing & SEO", ja: "ライティング・SEO" },
+  { code: "automation", en: "Automation", ja: "業務自動化" },
+  { code: "infrastructure", en: "Infrastructure", ja: "インフラ・ホスティング" },
+];
+
+const grouped = categoryOrder.map(cat => ({
+  ...cat,
+  tools: TOOLS.filter(t => t.category.includes(cat.code as any)).sort((a, b) => {
+    const tierOrder = ["S", "A", "B", "C", "watch"];
+    return tierOrder.indexOf(a.affiliateTier) - tierOrder.indexOf(b.affiliateTier);
+  }),
+}));
+
+const tierLabels: Record<string, string> = {
+  S: "S",
+  A: "A",
+  B: "B",
+  C: "C",
+  watch: "—",
+};
+
+const title = "ツール辞書 — 26のAIツールを領域別に | AI Maker Lab";
+const description = "AI Maker Lab が扱う26種のAIツールを、開発／UI生成／動画／ライティング／自動化／インフラの6領域に分けて一覧しています。各ツールの料金・日本語対応・強み弱みを編集ベースでまとめました。";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" data-layout="tools-index">
+    <!-- ========== HERO ========== -->
+    <section class="border-b border-border">
+      <div class="site-layout py-16 sm:py-20">
+        <div
+          class="mb-6 flex items-center gap-3 text-[11px] tracking-[0.2em] text-foreground-muted uppercase"
+        >
+          <span class="h-px w-8 bg-foreground-muted/40"></span>
+          <span>Tool Dictionary · 26 Picks</span>
+        </div>
+        <h1
+          class="font-serif text-[40px] leading-[1.15] font-medium tracking-tight text-foreground sm:text-[52px]"
+        >
+          ツール辞書。<br />
+          <span class="italic text-accent">26</span>のAIツールを、領域別に。
+        </h1>
+        <p
+          class="mt-8 max-w-2xl text-base leading-[1.85] text-foreground-muted sm:text-[17px]"
+        >
+          Vibe Coding、AI動画、AI音声、業務自動化、ホスティング。<br />
+          個人開発者が「実際に触ってみて、使えるかどうか」を編集してまとめた、6領域 26 ツールの一覧です。
+        </p>
+        <div class="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center">
+          <a
+            href="/diagnose"
+            class="group inline-flex items-center gap-3 self-start border-b border-foreground py-2 text-base font-medium tracking-tight text-foreground transition hover:border-accent hover:text-accent sm:self-auto"
+          >
+            1分でAI診断する
+            <span
+              class="transition group-hover:translate-x-1"
+              aria-hidden="true">→</span
+            >
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CATEGORY SECTIONS ========== -->
+    {
+      grouped.map(group => (
+        <section class="border-b border-border">
+          <div class="site-layout py-14 sm:py-16">
+            <div class="mb-8 flex items-baseline justify-between gap-4">
+              <div>
+                <div class="mb-3 flex items-center gap-3 text-[11px] tracking-[0.2em] text-foreground-muted uppercase">
+                  <span class="h-px w-6 bg-foreground-muted/40" />
+                  <span>{group.en}</span>
+                </div>
+                <h2 class="font-serif text-2xl leading-snug text-foreground sm:text-3xl">
+                  {group.ja}
+                </h2>
+              </div>
+              <span class="font-mono text-xs tabular-nums text-foreground-muted">
+                {String(group.tools.length).padStart(2, "0")} tools
+              </span>
+            </div>
+
+            <ol class="flex flex-col">
+              {group.tools.map((tool, i) => (
+                <li class={i === 0 ? "border-t border-border" : ""}>
+                  <a
+                    href={`/tools/${tool.id}/`}
+                    class="group flex items-baseline gap-6 border-b border-border py-5 transition hover:bg-foreground/[0.015]"
+                  >
+                    <span class="font-mono text-xs text-foreground-muted">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div class="min-w-0 flex-1">
+                      <div class="flex items-baseline justify-between gap-4">
+                        <span class="font-serif text-lg font-medium text-foreground transition group-hover:text-accent">
+                          {tool.name}
+                        </span>
+                        <span class="flex shrink-0 items-baseline gap-3 font-mono text-xs tabular-nums text-foreground-muted">
+                          <span>{tierLabels[tool.affiliateTier]}</span>
+                          <span>·</span>
+                          <span>
+                            {tool.priceMin === 0 ? "Free" : `$${tool.priceMin}`}
+                          </span>
+                          {tool.jpFriendly && (
+                            <>
+                              <span>·</span>
+                              <span>JP</span>
+                            </>
+                          )}
+                        </span>
+                      </div>
+                      <p class="mt-1 line-clamp-1 text-sm text-foreground-muted">
+                        {tool.description}
+                      </p>
+                    </div>
+                    <span
+                      class="shrink-0 text-foreground-muted opacity-0 transition group-hover:translate-x-0.5 group-hover:opacity-100"
+                      aria-hidden="true"
+                    >
+                      →
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      ))
+    }
+
+    <!-- ========== CTA ========== -->
+    <section>
+      <div class="site-layout py-16 sm:py-20">
+        <div
+          class="mb-6 flex items-center gap-3 text-[11px] tracking-[0.2em] text-foreground-muted uppercase"
+        >
+          <span class="h-px w-6 bg-foreground-muted/40"></span>
+          <span>Next · 迷ったら</span>
+        </div>
+        <h2
+          class="font-serif text-[28px] leading-[1.3] font-medium text-foreground sm:text-[34px]"
+        >
+          AI診断で、自分に合う3つを抽出。
+        </h2>
+        <p
+          class="mt-4 max-w-xl text-[15px] leading-[1.85] text-foreground-muted"
+        >
+          5問の質問に答えるだけで、26ツールから「やりたいこと × 経験 × 予算」で 最適な 3 つを提示します。所要 約 1 分。
+        </p>
+        <div class="mt-10">
+          <a
+            href="/diagnose"
+            class="group inline-flex items-center gap-3 border-b border-foreground py-2 text-base font-medium tracking-tight text-foreground transition hover:border-accent hover:text-accent"
+          >
+            AI診断を始める
+            <span class="transition group-hover:translate-x-1" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
