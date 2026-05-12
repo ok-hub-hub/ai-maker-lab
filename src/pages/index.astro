@@ -22,52 +22,103 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 <Layout>
   <Header />
   <main id="main-content" data-layout="index" class="app-layout">
-    <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        AIで、つくる。
-      </h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="inline-block"
-        aria-label="rss feed"
-        title="RSS Feed"
+    <section
+      id="hero"
+      class="relative overflow-hidden border-b border-border pt-10 pb-14 sm:pt-16 sm:pb-20"
+    >
+      <div
+        aria-hidden="true"
+        class="absolute inset-0 -z-10 opacity-40"
+        style="background: radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 50%), radial-gradient(circle at 80% 30%, color-mix(in srgb, var(--secondary) 14%, transparent), transparent 55%);"
       >
-        <IconRss
-          width={20}
-          height={20}
-          class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
-        />
-        <span class="sr-only">RSS Feed</span>
-      </a>
+      </div>
 
-      <p>
-        AI Maker Lab は、AIで個人が「実際に作って公開する」ためのチュートリアル＋比較サイトです。
-        Vibe Coding（v0 / Cursor / Lovable 等）、AI動画（Synthesia / HeyGen）、AI音声（ElevenLabs）、
-        マーケ自動化（GetResponse / n8n）など、個人開発者の実体験ベースで紹介します。
+      <span
+        class="mb-4 inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-bold tracking-wide text-accent uppercase"
+      >
+        <span class="size-1.5 rounded-full bg-accent"></span>
+        2026年最新・24ツール比較
+      </span>
+
+      <h1 class="text-4xl leading-[1.1] font-extrabold tracking-tight sm:text-6xl">
+        AIで、<span
+          class="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent"
+          >つくる</span
+        >。<br />
+        <span class="text-foreground/85">そして、稼ぐ。</span>
+      </h1>
+
+      <p class="mt-6 max-w-2xl text-base text-foreground/70 sm:text-lg">
+        Vibe Coding（v0 / Lovable / Bolt）、AI動画（Synthesia / HeyGen）、
+        AI音声（ElevenLabs）、マーケ自動化（n8n / GetResponse）。
+        <strong class="font-bold text-foreground"
+          >個人開発者の実体験ベース</strong
+        >でしか書けない比較・チュートリアルを揃えました。
       </p>
-      <p class="mt-2">
-        詳しくは
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="/about/"
+
+      <div class="mt-8 grid grid-cols-3 gap-2 sm:max-w-lg sm:gap-4">
+        <div
+          class="rounded-lg border border-border bg-card-bg p-3 text-center sm:p-4"
         >
-          About
-        </LinkButton> をご覧ください。
-      </p>
-      <div class="mt-6">
+          <div class="text-2xl font-extrabold text-accent sm:text-3xl">24</div>
+          <div class="mt-1 text-[10px] text-foreground/60 sm:text-xs">
+            比較ツール
+          </div>
+        </div>
+        <div
+          class="rounded-lg border border-border bg-card-bg p-3 text-center sm:p-4"
+        >
+          <div class="text-2xl font-extrabold text-accent sm:text-3xl">3層</div>
+          <div class="mt-1 text-[10px] text-foreground/60 sm:text-xs">
+            読者ペルソナ
+          </div>
+        </div>
+        <div
+          class="rounded-lg border border-border bg-card-bg p-3 text-center sm:p-4"
+        >
+          <div class="text-2xl font-extrabold text-accent sm:text-3xl">
+            実体験
+          </div>
+          <div class="mt-1 text-[10px] text-foreground/60 sm:text-xs">
+            ベースの解説
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
         <a
           href="/diagnose/"
-          class="inline-block rounded-md bg-accent px-6 py-3 font-semibold text-background transition hover:opacity-90"
+          class="group inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-4 text-base font-bold text-accent-fg shadow-lg shadow-accent/30 transition hover:scale-[1.02] hover:shadow-xl hover:shadow-accent/40"
         >
-          🎯 1分でAI診断：あなたに合うツールを見つける →
+          🎯 1分でAI診断する
+          <span class="transition-transform group-hover:translate-x-1">→</span>
+        </a>
+        <a
+          href="/posts/"
+          class="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card-bg px-6 py-4 text-base font-semibold text-foreground transition hover:border-accent hover:text-accent"
+        >
+          📚 記事を読む
+        </a>
+        <a
+          target="_blank"
+          href="/rss.xml"
+          class="hidden sm:inline-flex items-center"
+          aria-label="rss feed"
+          title="RSS Feed"
+        >
+          <IconRss
+            width={20}
+            height={20}
+            class="scale-110 stroke-foreground/60 stroke-3 hover:stroke-accent"
+          />
+          <span class="sr-only">RSS Feed</span>
         </a>
       </div>
+
       {
-        // only display if at least one social link is enabled
         SOCIALS.length > 0 && (
-          <div class="mt-4 flex max-sm:flex-col sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
+          <div class="mt-6 flex items-center gap-2 text-xs text-foreground/50">
+            <span>Follow:</span>
             <Socials />
           </div>
         )

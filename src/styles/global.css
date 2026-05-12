@@ -5,19 +5,27 @@
 
 :root,
 html[data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
-  --muted: #e6e6e6;
-  --border: #ece9e9;
+  --background: #fafaf9;
+  --foreground: #0f172a;
+  --accent: #f97316;
+  --accent-fg: #ffffff;
+  --secondary: #06b6d4;
+  --success: #16a34a;
+  --muted: #f1f5f9;
+  --border: #e2e8f0;
+  --card-bg: #ffffff;
 }
 
 html[data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --muted: #343f60;
-  --border: #ab4b08;
+  --background: #0a0e1a;
+  --foreground: #e2e8f0;
+  --accent: #fb923c;
+  --accent-fg: #0a0e1a;
+  --secondary: #22d3ee;
+  --success: #4ade80;
+  --muted: #1e293b;
+  --border: #334155;
+  --card-bg: #131927;
 }
 
 @theme inline {
@@ -25,8 +33,12 @@ html[data-theme="dark"] {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-secondary: var(--secondary);
+  --color-success: var(--success);
   --color-muted: var(--muted);
   --color-border: var(--border);
+  --color-card-bg: var(--card-bg);
 }
 
 @layer base {
