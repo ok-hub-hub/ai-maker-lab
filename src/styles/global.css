@@ -5,33 +5,42 @@
 
 :root,
 html[data-theme="light"] {
-  --background: #fafaf9;
-  --foreground: #0f172a;
-  --accent: #f97316;
-  --accent-fg: #ffffff;
-  --secondary: #06b6d4;
-  --success: #16a34a;
-  --muted: #f1f5f9;
-  --border: #e2e8f0;
+  --background: #faf9f5;
+  --foreground: #1c1a17;
+  --foreground-muted: #6b6660;
+  --accent: #b8553b;
+  --accent-fg: #faf9f5;
+  --secondary: #8b6f56;
+  --success: #5a7a4f;
+  --muted: #f1ede4;
+  --border: #e6e1d6;
   --card-bg: #ffffff;
 }
 
 html[data-theme="dark"] {
-  --background: #0a0e1a;
-  --foreground: #e2e8f0;
-  --accent: #fb923c;
-  --accent-fg: #0a0e1a;
-  --secondary: #22d3ee;
-  --success: #4ade80;
-  --muted: #1e293b;
-  --border: #334155;
-  --card-bg: #131927;
+  --background: #1a1817;
+  --foreground: #f3f0ea;
+  --foreground-muted: #a8a39a;
+  --accent: #d97757;
+  --accent-fg: #1a1817;
+  --secondary: #c9a585;
+  --success: #8fa67d;
+  --muted: #25221f;
+  --border: #322e2a;
+  --card-bg: #211e1c;
 }
 
 @theme inline {
-  --font-app: var(--font-google-sans-code);
+  --font-app:
+    var(--font-inter), var(--font-noto-sans-jp), ui-sans-serif, system-ui,
+    sans-serif;
+  --font-serif:
+    var(--font-noto-serif-jp), "EB Garamond", ui-serif, Georgia, serif;
+  --font-mono:
+    var(--font-google-sans-code), "JetBrains Mono", ui-monospace, monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
   --color-accent: var(--accent);
   --color-accent-fg: var(--accent-fg);
   --color-secondary: var(--secondary);

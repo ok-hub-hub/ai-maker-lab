@@ -5,28 +5,29 @@ import Footer from "@/components/Footer.astro";
 import Diagnose from "@/components/Diagnose";
 ---
 
-<Layout title="AI診断 | あなたに合うAIツールを3つ提案します">
+<Layout title="AI診断 | あなたに合うAIツールを3つご提案します">
   <Header />
   <main id="main-content">
-    <section class="border-b border-border bg-gradient-to-b from-accent/[0.04] to-transparent">
-      <div class="site-layout py-10 sm:py-14">
-        <span
-          class="mb-3 inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-[11px] font-bold tracking-wider text-accent uppercase"
+    <section class="border-b border-border">
+      <div class="site-layout py-16 sm:py-24">
+        <div class="mb-6 flex items-center gap-3 text-[11px] tracking-[0.2em] text-foreground-muted uppercase">
+          <span class="h-px w-8 bg-foreground-muted/40"></span>
+          <span>AI Tool Diagnosis · 5 Questions</span>
+        </div>
+        <h1
+          class="font-serif text-4xl leading-[1.15] font-medium tracking-tight text-foreground sm:text-5xl lg:text-6xl"
         >
-          <span class="size-1.5 rounded-full bg-accent"></span>
-          AI Tool Diagnosis
-        </span>
-        <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
-          1分で、あなたに合う<span class="text-accent">AIツール3つ</span>を提案。
+          1分で、あなたに合う<br />
+          <span class="italic text-accent">AIツール</span>を3つご提案します。
         </h1>
-        <p class="mt-3 max-w-2xl text-sm text-foreground/65 sm:text-base">
+        <p class="mt-6 max-w-2xl text-base leading-[1.8] text-foreground-muted sm:text-[17px]">
           5問の質問に答えるだけで、24種類のAIツールから「やりたいこと × 経験 × 予算」で
-          最適な3つを抽出します。プログラミング経験不要、所要時間は約1分です。
+          最適な3つを抽出します。プログラミング経験は不要、所要時間は約1分です。
         </p>
       </div>
     </section>
 
-    <section class="site-layout py-10 sm:py-14">
+    <section class="site-layout py-14 sm:py-20">
       <Diagnose client:load />
     </section>
   </main>

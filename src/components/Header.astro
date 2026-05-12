@@ -42,15 +42,10 @@ const navLinks = [
     <!-- Brand -->
     <a
       href="/"
-      class="group flex items-center gap-2 text-base font-bold tracking-tight sm:text-lg"
+      class="group flex items-baseline gap-2 font-serif text-lg tracking-tight text-foreground transition hover:text-accent sm:text-xl"
     >
-      <span
-        class="grid size-7 place-items-center rounded-md bg-gradient-to-br from-accent to-secondary font-extrabold text-accent-fg shadow-sm sm:size-8"
-        aria-hidden="true"
-      >
-        ⌘
-      </span>
-      <span class="hidden sm:inline">{SITE.title}</span>
+      <span class="font-medium">AI Maker</span>
+      <span class="italic text-accent">Lab</span>
     </a>
 
     <!-- Desktop Nav -->
@@ -100,9 +95,9 @@ const navLinks = [
 
       <a
         href="/diagnose"
-        class="group inline-flex items-center gap-1.5 rounded-md bg-accent px-3 py-1.5 text-sm font-bold text-accent-fg shadow-sm shadow-accent/30 transition hover:scale-[1.02] hover:shadow-md hover:shadow-accent/40"
+        class="group inline-flex items-center gap-1.5 border-b border-foreground py-1 text-sm font-medium tracking-tight text-foreground transition hover:border-accent hover:text-accent"
       >
-        <span class="hidden sm:inline">AI診断</span>
+        <span class="hidden sm:inline">AI診断する</span>
         <span class="sm:hidden">診断</span>
         <span class="transition-transform group-hover:translate-x-0.5">→</span>
       </a>

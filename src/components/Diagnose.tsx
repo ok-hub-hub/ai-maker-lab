@@ -91,13 +91,16 @@ export default function Diagnose() {
   return (
     <div className="mx-auto max-w-3xl py-8">
       {step !== "result" && (
-        <div className="mb-6">
-          <div className="mb-2 text-sm text-foreground/60">
-            ステップ {step} / 5
+        <div className="mb-10">
+          <div className="mb-2 flex items-center justify-between text-[10px] tracking-[0.2em] text-foreground-muted uppercase">
+            <span>Question {step} / 5</span>
+            <span className="font-mono">
+              0{step}.
+            </span>
           </div>
-          <div className="h-2 w-full overflow-hidden rounded bg-foreground/10">
+          <div className="h-px w-full overflow-hidden bg-border">
             <div
-              className="h-full rounded bg-accent transition-all"
+              className="h-full bg-accent transition-all"
               style={{ width: `${((step as number) / 5) * 100}%` }}
             />
           </div>
@@ -191,8 +194,10 @@ function Question({
 }) {
   return (
     <div>
-      <h2 className="mb-6 text-2xl font-bold sm:text-3xl">{title}</h2>
-      <div className="flex flex-col gap-3">{children}</div>
+      <h2 className="mb-8 font-serif text-2xl leading-snug text-foreground sm:text-3xl">
+        {title}
+      </h2>
+      <div className="flex flex-col gap-2">{children}</div>
     </div>
   );
 }
@@ -208,9 +213,14 @@ function OptionButton({
     <button
       type="button"
       onClick={onClick}
-      className="w-full rounded-lg border border-border bg-background px-5 py-4 text-left text-base font-medium transition hover:border-accent hover:bg-accent/5"
+      className="group w-full border-b border-border bg-transparent px-1 py-5 text-left text-base font-medium text-foreground transition hover:border-accent hover:text-accent"
     >
-      {label}
+      <span className="flex items-center justify-between">
+        <span>{label}</span>
+        <span className="text-foreground-muted opacity-0 transition group-hover:translate-x-1 group-hover:text-accent group-hover:opacity-100">
+          →
+        </span>
+      </span>
     </button>
   );
 }
@@ -226,11 +236,14 @@ function Result({
 }) {
   return (
     <div>
-      <h2 className="mb-6 text-3xl font-bold sm:text-4xl">
-        🎯 あなたへの推奨ツール
+      <div className="mb-3 text-[10px] tracking-[0.2em] text-foreground-muted uppercase">
+        Recommended Tools
+      </div>
+      <h2 className="mb-6 font-serif text-3xl text-foreground sm:text-4xl">
+        あなたへの推奨ツール
       </h2>
-      <p className="mb-8 text-base text-foreground/70">
-        診断結果に基づいて、あなたに合うAIツールを3つ提案します。
+      <p className="mb-12 max-w-2xl text-base leading-[1.8] text-foreground-muted">
+        診断結果に基づいて、あなたに合うAIツールを3つご提案します。
       </p>
 
       <ol className="flex flex-col gap-4">
@@ -294,7 +307,7 @@ function Result({
                     )}
                   </div>
 
-                  <h3 className="mb-2 text-xl font-bold tracking-tight sm:text-2xl">
+                  <h3 className="mb-2 font-serif text-2xl font-medium tracking-tight text-foreground sm:text-3xl">
                     {tool.name}
                   </h3>
 
@@ -432,12 +445,12 @@ function SpecCell({ label, value }: { label: string; value: string }) {
 function BarCell({ label, score }: { label: string; score: 1 | 2 | 3 }) {
   return (
     <div>
-      <dt className="text-[10px] font-semibold tracking-widest text-foreground/45 uppercase">
+      <dt className="text-[10px] font-semibold tracking-widest text-foreground-muted uppercase">
         {label}
       </dt>
-      <dd className="mt-1 flex h-1.5 overflow-hidden rounded-full bg-foreground/[0.08]">
+      <dd className="mt-1.5 flex h-[3px] overflow-hidden bg-foreground/[0.08]">
         <span
-          className="block h-full rounded-full bg-gradient-to-r from-accent to-orange-400 transition-all"
+          className="block h-full bg-accent transition-all"
           style={{ width: `${(score / 3) * 100}%` }}
         />
       </dd>
