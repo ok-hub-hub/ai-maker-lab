@@ -1,13 +1,14 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-05-12T10:00:00+09:00
-title: "AI Maker Lab、はじめました"
+title: "Vibe Coding と個人開発の実体験ジャーナル「AI Maker Lab」、はじめました【2026年5月】"
 slug: hello-ai-maker-lab
 featured: true
 draft: false
 tags:
   - announcement
-description: "AIで個人が「実際に作って公開する」ためのチュートリアル＋比較サイト「AI Maker Lab」を立ち上げました。Vibe Coding / AI動画 / AI音声 / マーケ自動化のツールを、個人開発者の実体験ベースで紹介します。"
+  - vibe-coding
+description: "v0 / Lovable / Bolt / Cursor などの Vibe Coding ツール、AI動画、AI音声、業務自動化を、個人開発者が実際に触って料金・できること・収益化までを書きとめるジャーナル「AI Maker Lab」を立ち上げました。実体験ベースのレビューと AI副業ロードマップを掲載しています。"
 ---
 
 AI Maker Lab は、AIで個人が「実際に作って公開する」ことに特化したチュートリアル＋比較サイトです。
