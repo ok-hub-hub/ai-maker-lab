@@ -47,6 +47,16 @@ const priceLabel = tool.priceFree
     : `無料あり（有料は $${tool.priceMin}/月〜）`
   : `$${tool.priceMin}/月〜`;
 
+const today = new Date("2026-05-13T00:00:00Z");
+const verifiedDate = new Date(tool.verifiedAt + "T00:00:00Z");
+const daysSinceVerified = Math.floor(
+  (today.getTime() - verifiedDate.getTime()) / (1000 * 60 * 60 * 24),
+);
+const verifiedStale = daysSinceVerified > 60;
+const verifiedLabel = `${tool.verifiedAt}（${
+  daysSinceVerified === 0 ? "本日確認" : `${daysSinceVerified}日前`
+}）`;
+
 const dotMeter = (n: 1 | 2 | 3) =>
   ["●", "●", "●"].map((d, i) => (i < n ? d : "○")).join(" ");
 
@@ -127,6 +137,21 @@ const description = tool.description;
             >
               <dt class="text-foreground-muted">価格</dt>
               <dd class="text-foreground">{priceLabel}</dd>
+            </div>
+            <div
+              class="grid grid-cols-[120px_1fr] gap-4 border-b border-border/40 pb-4"
+            >
+              <dt class="text-foreground-muted">料金確認日</dt>
+              <dd class={verifiedStale ? "text-accent" : "text-foreground"}>
+                <span class="font-mono text-[14px]">{verifiedLabel}</span>
+                {
+                  verifiedStale && (
+                    <span class="mt-1 block text-[12px] leading-[1.7] text-foreground-muted">
+                      ※ 60日以上前の情報です。公式サイトで最新料金をご確認ください。
+                    </span>
+                  )
+                }
+              </dd>
             </div>
             <div
               class="grid grid-cols-[120px_1fr] gap-4 border-b border-border/40 pb-4"

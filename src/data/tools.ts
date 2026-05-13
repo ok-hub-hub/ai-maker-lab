@@ -30,8 +30,8 @@ export type ToolMeta = {
   description: string;
   strengths: string[];
   weaknesses: string[];
-  /** 価格・条件の確認日（古い場合は読者に警告表示するためのもの）*/
-  verifiedAt?: string;
+  /** 価格・条件の確認日（ISO 8601 YYYY-MM-DD）。/tools/[id]/ に表示され、古い場合は読者に警告される */
+  verifiedAt: string;
   note?: string;
 };
 
@@ -61,6 +61,7 @@ export const TOOLS: ToolMeta[] = [
       "日本語UIなし（英語が前提）",
       "バックエンドが弱い（フロント特化）",
     ],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "cursor",
@@ -84,6 +85,7 @@ export const TOOLS: ToolMeta[] = [
       "Tab補完が高速",
     ],
     weaknesses: ["有料プランが本領（無料枠は限定的）", "日本語UIなし"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "claude-code",
@@ -107,6 +109,7 @@ export const TOOLS: ToolMeta[] = [
       "MCPサーバー連携で拡張性が高い",
     ],
     weaknesses: ["有料サブスク前提（Maxプラン推奨）", "GUI なし"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "cline",
@@ -126,6 +129,7 @@ export const TOOLS: ToolMeta[] = [
       "VSCode拡張型のOSS AIエージェント。任意のLLMプロバイダを指定可能。",
     strengths: ["OSSで透明性が高い", "LLMを自由に選べる", "拡張性が高い"],
     weaknesses: ["API料金は別途", "設定がやや上級者向け"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "windsurf",
@@ -144,6 +148,7 @@ export const TOOLS: ToolMeta[] = [
     description: "Codeium製のCursor競合IDE。Cascade（agentic mode）が特徴。",
     strengths: ["Cascadeで複数ファイル同時編集", "応答速度が速い"],
     weaknesses: ["Cursor比でエコシステムは新しめ", "日本語UIなし"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "bolt",
@@ -167,6 +172,7 @@ export const TOOLS: ToolMeta[] = [
       "WebContainer技術で高速",
     ],
     weaknesses: ["大規模化に弱い", "プロンプト枯渇が早い"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "lovable",
@@ -194,6 +200,7 @@ export const TOOLS: ToolMeta[] = [
       "プロンプト消費が早い",
     ],
     note: "アフィリエイト参加は当面不可、記事は監視枠として執筆",
+    verifiedAt: "2026-05-12",
   },
   {
     id: "replit",
@@ -217,6 +224,7 @@ export const TOOLS: ToolMeta[] = [
       "コラボレーション機能",
     ],
     weaknesses: ["生成品質はBolt/Lovableに比べやや弱め"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "figma-make",
@@ -239,6 +247,7 @@ export const TOOLS: ToolMeta[] = [
       "既存Figmaファイル資産との連携",
     ],
     weaknesses: ["Figma Pro契約必要", "コード品質はv0比でやや劣る"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "synthesia",
@@ -262,6 +271,7 @@ export const TOOLS: ToolMeta[] = [
       "ビジネス用途で実績多数",
     ],
     weaknesses: ["無料プランなし", "クリエイティブ自由度はやや低め"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "heygen",
@@ -285,6 +295,7 @@ export const TOOLS: ToolMeta[] = [
       "無料プランあり",
     ],
     weaknesses: ["日本語UIは限定的", "細かい編集はSynthesia比でやや弱い"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "runway",
@@ -303,6 +314,7 @@ export const TOOLS: ToolMeta[] = [
     description: "Gen-3 Alpha等を提供するAI動画生成。実写ベース表現に強い。",
     strengths: ["実写品質の動画生成", "クリエイティブ用途で強い"],
     weaknesses: ["アバター動画は不向き", "生成時間が長め"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "elevenlabs",
@@ -326,6 +338,7 @@ export const TOOLS: ToolMeta[] = [
       "API利用も容易",
     ],
     weaknesses: ["日本語の自然さは英語比でやや劣る", "生成上限あり"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "frase",
@@ -349,6 +362,7 @@ export const TOOLS: ToolMeta[] = [
       "AI記事生成",
     ],
     weaknesses: ["日本語SERP分析の精度は英語比で弱め"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "getresponse",
@@ -372,6 +386,7 @@ export const TOOLS: ToolMeta[] = [
       "アフィリエイト報酬が継続型",
     ],
     weaknesses: ["デザイン自由度は専用ツール比で限定的"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "tubebuddy",
@@ -395,6 +410,7 @@ export const TOOLS: ToolMeta[] = [
       "アフィリエイト継続型",
     ],
     weaknesses: ["日本語UIなし"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "n8n",
@@ -418,6 +434,7 @@ export const TOOLS: ToolMeta[] = [
       "アフィリエイト30%×12ヶ月",
     ],
     weaknesses: ["設定の自由度が高い分、初心者にはやや難しい"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "make",
@@ -437,6 +454,7 @@ export const TOOLS: ToolMeta[] = [
       "視覚的なシナリオ作成型の自動化ツール。Zapier比でコスパが良い。",
     strengths: ["ビジュアル設計", "実行回数あたり単価が安い"],
     weaknesses: ["日本語UIなし"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "zapier",
@@ -455,6 +473,7 @@ export const TOOLS: ToolMeta[] = [
     description: "自動化ツールの定番。連携アプリ数がトップクラス。",
     strengths: ["連携アプリ数最多", "日本語UIあり", "認知度が高い"],
     weaknesses: ["タスクあたり料金が割高", "Makeに比べ高コスト"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "conoha",
@@ -478,6 +497,7 @@ export const TOOLS: ToolMeta[] = [
       "日本語サポート充実",
     ],
     weaknesses: ["海外向けには遅め", "VPSは別商品"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "xserver",
@@ -500,6 +520,7 @@ export const TOOLS: ToolMeta[] = [
       "日本語サポート充実",
     ],
     weaknesses: ["価格はConoHa WING比でやや高め"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "xserver-biz",
@@ -523,6 +544,7 @@ export const TOOLS: ToolMeta[] = [
       "Webサイト制作代行付プランあり",
     ],
     weaknesses: ["個人ブロガーにはオーバースペック"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "mixhost",
@@ -598,6 +620,7 @@ export const TOOLS: ToolMeta[] = [
     description: "OpenAI製の汎用AIチャット。誰でも知っているベースライン。",
     strengths: ["認知度トップ", "日本語対応", "無料枠あり"],
     weaknesses: ["アフィリエイトプログラムなし"],
+    verifiedAt: "2026-05-12",
   },
   {
     id: "dub",
@@ -620,6 +643,7 @@ export const TOOLS: ToolMeta[] = [
       "API充実",
     ],
     weaknesses: ["日本語UIなし"],
+    verifiedAt: "2026-05-12",
   },
 ];
 
