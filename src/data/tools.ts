@@ -513,6 +513,7 @@ export const TOOLS: ToolMeta[] = [
     scale: 2,
     affiliateTier: "S",
     officialUrl: "https://www.xserver.ne.jp/",
+    affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3OR0+8C38Y+CO4+609HU",
     description: "国内No.1シェアの老舗レンタルサーバー。安定性と速度に定評。",
     strengths: [
       "20年以上の運用実績",
@@ -536,6 +537,7 @@ export const TOOLS: ToolMeta[] = [
     scale: 3,
     affiliateTier: "S",
     officialUrl: "https://business.xserver.ne.jp/",
+    affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3OR0+8C38Y+CO4+6LP3M",
     description:
       "法人・個人事業主向けのXserver上位プラン。SLA・専用サポート付き。",
     strengths: [
