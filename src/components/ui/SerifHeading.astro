@@ -1,0 +1,47 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Tag = "h1" | "h2" | "h3";
+type Size = "display" | "2xl" | "xl" | "lg";
+
+interface Props extends Omit<HTMLAttributes<"h2">, "class"> {
+  as?: Tag;
+  size?: Size;
+  class?: string;
+}
+
+const {
+  as = "h2",
+  size,
+  class: className,
+  ...attrs
+} = Astro.props as Props;
+
+const HeadingTag: Tag = as;
+
+const defaultSize: Record<Tag, Size> = {
+  h1: "display",
+  h2: "2xl",
+  h3: "xl",
+};
+const finalSize: Size = size ?? defaultSize[HeadingTag];
+
+const sizeClasses: Record<Size, string> = {
+  display:
+    "text-[44px] sm:text-[56px] lg:text-[68px] leading-[1.15]",
+  "2xl": "text-3xl sm:text-4xl",
+  xl: "text-2xl sm:text-3xl",
+  lg: "text-xl sm:text-2xl",
+};
+---
+
+<HeadingTag
+  class:list={[
+    "font-serif font-medium tracking-tight text-foreground",
+    sizeClasses[finalSize],
+    className,
+  ]}
+  {...attrs}
+>
+  <slot />
+</HeadingTag>

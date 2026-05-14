@@ -1,0 +1,29 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Props = {
+  withLine?: boolean;
+  size?: "sm" | "base";
+} & HTMLAttributes<"div">;
+
+const {
+  withLine = false,
+  size = "sm",
+  class: className,
+  ...attrs
+} = Astro.props;
+
+const sizeClass = size === "sm" ? "text-[10px]" : "text-[11px]";
+---
+
+<div
+  class:list={[
+    "flex items-center gap-3 tracking-[0.2em] text-foreground-muted uppercase",
+    sizeClass,
+    className,
+  ]}
+  {...attrs}
+>
+  {withLine && <span class="h-px w-8 bg-foreground-muted/40"></span>}
+  <span><slot /></span>
+</div>

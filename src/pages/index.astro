@@ -4,6 +4,10 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Card from "@/components/Card.astro";
+import Badge from "@/components/ui/Badge.astro";
+import SerifHeading from "@/components/ui/SerifHeading.astro";
+import Button from "@/components/ui/Button.astro";
+import EditorialSection from "@/components/ui/EditorialSection.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 import { SITE } from "@/config";
 import { TOOLS } from "@/data/tools";
@@ -51,19 +55,16 @@ const journals = [
       <div class="site-layout grid gap-12 py-20 sm:py-28 lg:grid-cols-[1.3fr_1fr] lg:gap-20">
         <!-- 左：価値提案 -->
         <div class="flex flex-col justify-center">
-          <div class="mb-8 flex items-center gap-3 text-[11px] tracking-[0.2em] text-foreground-muted uppercase">
-            <span class="h-px w-8 bg-foreground-muted/40"></span>
-            <span>Vibe Coding Journal · 2026</span>
-          </div>
+          <Badge withLine size="base" class="mb-8">
+            Vibe Coding Journal · 2026
+          </Badge>
 
-          <h1
-            class="font-serif text-[44px] leading-[1.15] font-medium tracking-tight text-foreground sm:text-[56px] lg:text-[68px]"
-          >
+          <SerifHeading as="h1">
             個人が、<br />
             <span class="italic text-accent">Vibe Codingで</span><br />
             つくって、稼ぐ。<br />
             実体験ジャーナル。
-          </h1>
+          </SerifHeading>
 
           <p class="mt-8 max-w-xl text-base leading-[1.85] text-foreground-muted sm:text-[17px]">
             v0 / Lovable / Bolt / Cursor などの AI コーディングツール、<br />
@@ -73,22 +74,17 @@ const journals = [
           </p>
 
           <div class="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center">
-            <a
-              href="/diagnose"
-              class="group inline-flex items-center gap-3 self-start border-b border-foreground py-2 text-base font-medium tracking-tight text-foreground transition hover:border-accent hover:text-accent sm:self-auto"
-            >
+            <Button href="/diagnose" variant="outline" class="self-start sm:self-auto">
               1分でAI診断する
-              <span
-                class="inline-block transition-transform group-hover:translate-x-1.5"
-                aria-hidden="true">→</span
-              >
-            </a>
-            <a
+            </Button>
+            <Button
               href="/posts"
-              class="group inline-flex items-center gap-2 self-start text-sm font-medium tracking-tight text-foreground-muted transition hover:text-foreground sm:self-auto"
+              variant="ghost"
+              showArrow={false}
+              class="self-start sm:self-auto"
             >
               実体験レビューを読む
-            </a>
+            </Button>
           </div>
 
           <dl class="mt-14 grid grid-cols-3 gap-10 border-t border-border pt-8">
@@ -121,13 +117,11 @@ const journals = [
 
         <!-- 右：エディトリアルなツール一覧 -->
         <aside class="lg:pt-2">
-          <div class="text-[10px] tracking-[0.2em] text-foreground-muted uppercase">
-            Curated Tools
-          </div>
-          <h2 class="mt-2 font-serif text-2xl leading-snug text-foreground sm:text-3xl">
+          <Badge>Curated Tools</Badge>
+          <SerifHeading as="h2" size="xl" class="mt-2 leading-snug">
             月額継続報酬の<br />
             主力ツール
-          </h2>
+          </SerifHeading>
 
           <ol class="mt-8 flex flex-col">
             {
@@ -168,137 +162,111 @@ const journals = [
           </ol>
 
           <div class="mt-6 flex flex-col gap-3">
-            <a
-              href="/tools"
-              class="group inline-flex items-center gap-2 text-xs tracking-wide text-foreground-muted transition hover:text-accent"
-            >
+            <Button href="/tools" variant="link" size="sm">
               <span class="border-b border-foreground-muted/40 pb-0.5 group-hover:border-accent">
                 26ツール辞書を領域別に見る
               </span>
-              <span class="transition-transform group-hover:translate-x-0.5"
-                >→</span>
-            </a>
-            <a
-              href="/diagnose"
-              class="group inline-flex items-center gap-2 text-xs tracking-wide text-foreground-muted transition hover:text-accent"
-            >
+            </Button>
+            <Button href="/diagnose" variant="link" size="sm">
               <span class="border-b border-foreground-muted/40 pb-0.5 group-hover:border-accent">
                 あなたに合うツールを診断する
               </span>
-              <span class="transition-transform group-hover:translate-x-0.5"
-                >→</span>
-            </a>
+            </Button>
           </div>
         </aside>
       </div>
     </section>
 
     <!-- ========== ジャーナル（4セクション） ========== -->
-    <section class="border-b border-border">
-      <div class="site-layout py-16 sm:py-20">
-        <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <div class="text-[10px] tracking-[0.2em] text-foreground-muted uppercase">
-              Sections
-            </div>
-            <h2 class="mt-1 font-serif text-3xl text-foreground sm:text-4xl">
-              どこから読みますか
-            </h2>
-          </div>
-          <p class="text-sm text-foreground-muted">3層ペルソナで設計しました</p>
+    <EditorialSection border="bottom" size="base">
+      <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <Badge>Sections</Badge>
+          <SerifHeading as="h2" class="mt-1">どこから読みますか</SerifHeading>
         </div>
-
-        <div class="grid divide-y divide-border border-t border-border lg:grid-cols-2 lg:divide-x lg:divide-y-0 lg:[&>a:nth-child(3)]:border-t lg:[&>a:nth-child(4)]:border-t lg:[&>a:nth-child(n+3)]:border-border">
-          {
-            journals.map(j => (
-              <a
-                href={j.href}
-                class="group flex items-baseline gap-6 py-7 pr-2 transition hover:bg-foreground/[0.015]"
-              >
-                <span class="font-mono text-xs text-foreground-muted">
-                  {j.no}
-                </span>
-                <div class="flex-1">
-                  <div class="font-serif text-xl text-foreground transition group-hover:text-accent sm:text-2xl">
-                    {j.label}
-                  </div>
-                  <p class="mt-1 text-sm text-foreground-muted">{j.desc}</p>
-                </div>
-                <span class="text-foreground-muted transition group-hover:translate-x-1 group-hover:text-accent">
-                  →
-                </span>
-              </a>
-            ))
-          }
-        </div>
+        <p class="text-sm text-foreground-muted">3層ペルソナで設計しました</p>
       </div>
-    </section>
+
+      <div class="grid divide-y divide-border border-t border-border lg:grid-cols-2 lg:divide-x lg:divide-y-0 lg:[&>a:nth-child(3)]:border-t lg:[&>a:nth-child(4)]:border-t lg:[&>a:nth-child(n+3)]:border-border">
+        {
+          journals.map(j => (
+            <a
+              href={j.href}
+              class="group flex items-baseline gap-6 py-7 pr-2 transition hover:bg-foreground/[0.015]"
+            >
+              <span class="font-mono text-xs text-foreground-muted">
+                {j.no}
+              </span>
+              <div class="flex-1">
+                <div class="font-serif text-xl text-foreground transition group-hover:text-accent sm:text-2xl">
+                  {j.label}
+                </div>
+                <p class="mt-1 text-sm text-foreground-muted">{j.desc}</p>
+              </div>
+              <span class="text-foreground-muted transition group-hover:translate-x-1 group-hover:text-accent">
+                →
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </EditorialSection>
 
     <!-- ========== Featured ========== -->
     {
       featuredPosts.length > 0 && (
-        <section
-          class:list={[
-            "py-16 sm:py-20",
-            { "border-b border-border": recentPosts.length > 0 },
-          ]}
+        <EditorialSection
+          border={recentPosts.length > 0 ? "bottom" : "none"}
+          size="base"
         >
-          <div class="site-layout">
-            <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
-              <div>
-                <div class="text-[10px] tracking-[0.2em] text-foreground-muted uppercase">
-                  Editor's Picks
-                </div>
-                <h2 class="mt-1 font-serif text-3xl text-foreground sm:text-4xl">
-                  おすすめ記事
-                </h2>
-              </div>
-              <a
-                href="/posts"
-                class="border-b border-foreground-muted/40 pb-0.5 text-xs tracking-wide text-foreground-muted transition hover:border-accent hover:text-accent"
-              >
-                すべての記事 →
-              </a>
+          <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <Badge>Editor's Picks</Badge>
+              <SerifHeading as="h2" class="mt-1">
+                おすすめ記事
+              </SerifHeading>
             </div>
-            <ul class="grid gap-px bg-border sm:grid-cols-2">
-              {featuredPosts.map(data => (
-                <Card variant="h3" {...data} />
-              ))}
-            </ul>
+            <a
+              href="/posts"
+              class="border-b border-foreground-muted/40 pb-0.5 text-xs tracking-wide text-foreground-muted transition hover:border-accent hover:text-accent"
+            >
+              すべての記事 →
+            </a>
           </div>
-        </section>
+          <ul class="grid gap-px bg-border sm:grid-cols-2">
+            {featuredPosts.map(data => (
+              <Card variant="h3" {...data} />
+            ))}
+          </ul>
+        </EditorialSection>
       )
     }
 
     <!-- ========== Recent ========== -->
     {
       recentPosts.length > 0 && (
-        <section class="py-16 sm:py-20">
-          <div class="site-layout">
-            <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
-              <div>
-                <div class="text-[10px] tracking-[0.2em] text-foreground-muted uppercase">
-                  Latest
-                </div>
-                <h2 class="mt-1 font-serif text-3xl text-foreground sm:text-4xl">
-                  最新レビュー
-                </h2>
-              </div>
-              <a
-                href="/posts"
-                class="border-b border-foreground-muted/40 pb-0.5 text-xs tracking-wide text-foreground-muted transition hover:border-accent hover:text-accent"
-              >
-                すべての記事 →
-              </a>
+        <EditorialSection border="none" size="base">
+          <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <Badge>Latest</Badge>
+              <SerifHeading as="h2" class="mt-1">
+                最新レビュー
+              </SerifHeading>
             </div>
-            <ul class="grid gap-px bg-border sm:grid-cols-2">
-              {recentPosts.map(
-                (data, index) =>
-                  index < SITE.postPerIndex && <Card variant="h3" {...data} />
-              )}
-            </ul>
+            <a
+              href="/posts"
+              class="border-b border-foreground-muted/40 pb-0.5 text-xs tracking-wide text-foreground-muted transition hover:border-accent hover:text-accent"
+            >
+              すべての記事 →
+            </a>
           </div>
-        </section>
+          <ul class="grid gap-px bg-border sm:grid-cols-2">
+            {recentPosts.map(
+              (data, index) =>
+                index < SITE.postPerIndex && <Card variant="h3" {...data} />
+            )}
+          </ul>
+        </EditorialSection>
       )
     }
   </main>

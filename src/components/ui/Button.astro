@@ -1,0 +1,64 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Variant = "outline" | "ghost" | "link";
+
+type Props = {
+  href: string;
+  variant?: Variant;
+  size?: "sm" | "base";
+  showArrow?: boolean;
+  external?: boolean;
+} & Omit<HTMLAttributes<"a">, "href">;
+
+const {
+  href,
+  variant = "outline",
+  size = "base",
+  showArrow = true,
+  external = false,
+  class: className,
+  ...attrs
+} = Astro.props;
+
+const variantClasses: Record<Variant, string> = {
+  outline:
+    "gap-3 border-b border-foreground py-2 font-medium tracking-tight text-foreground hover:border-accent hover:text-accent",
+  ghost:
+    "gap-2 font-medium tracking-tight text-foreground-muted hover:text-foreground",
+  link: "gap-2 tracking-wide text-foreground-muted hover:text-accent",
+};
+
+const sizeClasses = {
+  sm: variant === "link" ? "text-xs" : "text-sm",
+  base: variant === "link" ? "text-sm" : "text-base",
+};
+
+const externalAttrs = external
+  ? { target: "_blank", rel: "noopener sponsored" }
+  : {};
+---
+
+<a
+  href={href}
+  class:list={[
+    "group inline-flex items-center transition",
+    variantClasses[variant],
+    sizeClasses[size],
+    className,
+  ]}
+  {...externalAttrs}
+  {...attrs}
+>
+  <slot />
+  {
+    showArrow && (
+      <span
+        class="inline-block transition-transform group-hover:translate-x-1"
+        aria-hidden="true"
+      >
+        →
+      </span>
+    )
+  }
+</a>

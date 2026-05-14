@@ -1,0 +1,47 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Border = "top" | "bottom" | "both" | "none";
+type Size = "sm" | "base" | "lg";
+
+type Props = {
+  border?: Border;
+  size?: Size;
+  contained?: boolean;
+} & HTMLAttributes<"section">;
+
+const {
+  border = "bottom",
+  size = "base",
+  contained = true,
+  class: className,
+  ...attrs
+} = Astro.props;
+
+const borderClasses: Record<Border, string> = {
+  top: "border-t border-border",
+  bottom: "border-b border-border",
+  both: "border-y border-border",
+  none: "",
+};
+
+const sizeClasses: Record<Size, string> = {
+  sm: "py-12 sm:py-16",
+  base: "py-16 sm:py-20",
+  lg: "py-20 sm:py-28",
+};
+---
+
+<section class:list={[borderClasses[border], className]} {...attrs}>
+  {
+    contained ? (
+      <div class:list={["site-layout", sizeClasses[size]]}>
+        <slot />
+      </div>
+    ) : (
+      <div class:list={[sizeClasses[size]]}>
+        <slot />
+      </div>
+    )
+  }
+</section>
