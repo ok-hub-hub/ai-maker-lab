@@ -1,217 +1,172 @@
 import satori from "satori";
-// import { html } from "satori-html";
 import { SITE } from "@/config";
 import loadGoogleFonts from "../loadGoogleFont";
 
-// const markup = html`<div
-//       style={{
-//         background: "#fefbfb",
-//         width: "100%",
-//         height: "100%",
-//         display: "flex",
-//         alignItems: "center",
-//         justifyContent: "center",
-//       }}
-//     >
-//       <div
-//         style={{
-//           position: "absolute",
-//           top: "-1px",
-//           right: "-1px",
-//           border: "4px solid #000",
-//           background: "#ecebeb",
-//           opacity: "0.9",
-//           borderRadius: "4px",
-//           display: "flex",
-//           justifyContent: "center",
-//           margin: "2.5rem",
-//           width: "88%",
-//           height: "80%",
-//         }}
-//       />
+// Brand palette (matches src/styles/global.css)
+const COLORS = {
+  background: "#faf9f5",
+  foreground: "#1c1a17",
+  foregroundMuted: "#6b6660",
+  accent: "#b8553b",
+  secondary: "#8b6f56",
+  border: "#e6e1d6",
+};
 
-//       <div
-//         style={{
-//           border: "4px solid #000",
-//           background: "#fefbfb",
-//           borderRadius: "4px",
-//           display: "flex",
-//           justifyContent: "center",
-//           margin: "2rem",
-//           width: "88%",
-//           height: "80%",
-//         }}
-//       >
-//         <div
-//           style={{
-//             display: "flex",
-//             flexDirection: "column",
-//             justifyContent: "space-between",
-//             margin: "20px",
-//             width: "90%",
-//             height: "90%",
-//           }}
-//         >
-//           <p
-//             style={{
-//               fontSize: 72,
-//               fontWeight: "bold",
-//               maxHeight: "84%",
-//               overflow: "hidden",
-//             }}
-//           >
-//             {post.data.title}
-//           </p>
-//           <div
-//             style={{
-//               display: "flex",
-//               justifyContent: "space-between",
-//               width: "100%",
-//               marginBottom: "8px",
-//               fontSize: 28,
-//             }}
-//           >
-//             <span>
-//               by{" "}
-//               <span
-//                 style={{
-//                   color: "transparent",
-//                 }}
-//               >
-//                 "
-//               </span>
-//               <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-//                 {post.data.author}
-//               </span>
-//             </span>
-
-//             <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-//               {SITE.title}
-//             </span>
-//           </div>
-//         </div>
-//       </div>
-//     </div>`;
+const EYEBROW = "AI MAKER LAB · ESSAY";
 
 export default async post => {
+  const title = post.data.title;
+  const author = post.data.author;
+
+  // 長いタイトル用にフォントサイズを段階制御
+  const titleLen = [...title].length; // 多バイト対応
+  let titleFontSize = 84;
+  if (titleLen > 28) titleFontSize = 68;
+  if (titleLen > 40) titleFontSize = 56;
+  if (titleLen > 56) titleFontSize = 48;
+
+  const fontText =
+    title +
+    (author ?? "") +
+    EYEBROW +
+    SITE.title +
+    new URL(SITE.website).hostname +
+    "by ";
+
   return satori(
     {
       type: "div",
       props: {
         style: {
-          background: "#fefbfb",
           width: "100%",
           height: "100%",
+          background: COLORS.background,
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          flexDirection: "column",
+          padding: "72px 80px",
+          fontFamily: "Inter",
         },
         children: [
+          // ── Eyebrow（terracotta line + label）──
           {
             type: "div",
             props: {
               style: {
-                position: "absolute",
-                top: "-1px",
-                right: "-1px",
-                border: "4px solid #000",
-                background: "#ecebeb",
-                opacity: "0.9",
-                borderRadius: "4px",
                 display: "flex",
-                justifyContent: "center",
-                margin: "2.5rem",
-                width: "88%",
-                height: "80%",
+                alignItems: "center",
+                gap: "16px",
+                fontSize: 18,
+                letterSpacing: "0.2em",
+                color: COLORS.foregroundMuted,
+                fontWeight: 500,
               },
+              children: [
+                {
+                  type: "div",
+                  props: {
+                    style: {
+                      width: "48px",
+                      height: "2px",
+                      background: COLORS.accent,
+                    },
+                  },
+                },
+                EYEBROW,
+              ],
             },
           },
+
+          // ── Title block ──
           {
             type: "div",
             props: {
               style: {
-                border: "4px solid #000",
-                background: "#fefbfb",
-                borderRadius: "4px",
                 display: "flex",
+                flexDirection: "column",
+                flexGrow: 1,
                 justifyContent: "center",
-                margin: "2rem",
-                width: "88%",
-                height: "80%",
+                marginTop: "8px",
+                paddingRight: "20px",
               },
-              children: {
-                type: "div",
-                props: {
-                  style: {
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    margin: "20px",
-                    width: "90%",
-                    height: "90%",
+              children: [
+                {
+                  type: "div",
+                  props: {
+                    style: {
+                      fontFamily: "Noto Serif JP",
+                      fontWeight: 500,
+                      fontSize: titleFontSize,
+                      color: COLORS.foreground,
+                      letterSpacing: "-0.01em",
+                      lineHeight: 1.18,
+                      display: "flex",
+                      // 長文タイトルの行数制限（satori はoverflow非対応のため文字数で制御）
+                    },
+                    children: title,
                   },
-                  children: [
-                    {
-                      type: "p",
-                      props: {
-                        style: {
-                          fontSize: 72,
-                          fontWeight: "bold",
-                          maxHeight: "84%",
-                          overflow: "hidden",
-                        },
-                        children: post.data.title,
-                      },
-                    },
-                    {
-                      type: "div",
-                      props: {
-                        style: {
-                          display: "flex",
-                          justifyContent: "space-between",
-                          width: "100%",
-                          marginBottom: "8px",
-                          fontSize: 28,
-                        },
-                        children: [
-                          {
-                            type: "span",
-                            props: {
-                              children: [
-                                "by ",
-                                {
-                                  type: "span",
-                                  props: {
-                                    style: { color: "transparent" },
-                                    children: '"',
-                                  },
-                                },
-                                {
-                                  type: "span",
-                                  props: {
-                                    style: {
-                                      overflow: "hidden",
-                                      fontWeight: "bold",
-                                    },
-                                    children: post.data.author,
-                                  },
-                                },
-                              ],
-                            },
-                          },
-                          {
-                            type: "span",
-                            props: {
-                              style: { overflow: "hidden", fontWeight: "bold" },
-                              children: SITE.title,
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
                 },
+              ],
+            },
+          },
+
+          // ── Footer ──
+          {
+            type: "div",
+            props: {
+              style: {
+                display: "flex",
+                flexDirection: "column",
+                gap: "20px",
               },
+              children: [
+                {
+                  type: "div",
+                  props: {
+                    style: {
+                      height: "2px",
+                      background: COLORS.accent,
+                      width: "100%",
+                    },
+                  },
+                },
+                {
+                  type: "div",
+                  props: {
+                    style: {
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      fontSize: 22,
+                      color: COLORS.foregroundMuted,
+                      fontWeight: 500,
+                    },
+                    children: [
+                      {
+                        type: "div",
+                        props: {
+                          style: {
+                            color: COLORS.foreground,
+                            fontWeight: 500,
+                            letterSpacing: "0.04em",
+                          },
+                          children: new URL(SITE.website).hostname,
+                        },
+                      },
+                      {
+                        type: "div",
+                        props: {
+                          style: {
+                            display: "flex",
+                            color: COLORS.foregroundMuted,
+                            letterSpacing: "0.04em",
+                          },
+                          children: author ? `by ${author}` : SITE.title,
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
             },
           },
         ],
@@ -221,9 +176,7 @@ export default async post => {
       width: 1200,
       height: 630,
       embedFont: true,
-      fonts: await loadGoogleFonts(
-        post.data.title + post.data.author + SITE.title + "by"
-      ),
+      fonts: await loadGoogleFonts(fontText),
     }
   );
 };

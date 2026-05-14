@@ -18,7 +18,7 @@ async function loadGoogleFont(
     /src: url\((.+?)\) format\('(opentype|truetype)'\)/
   );
 
-  if (!resource) throw new Error("Failed to download dynamic font");
+  if (!resource) throw new Error("Failed to download dynamic font: " + font);
 
   const res = await fetch(resource[1]);
 
@@ -34,18 +34,27 @@ async function loadGoogleFonts(
 ): Promise<
   Array<{ name: string; data: ArrayBuffer; weight: number; style: string }>
 > {
+  // ブランドフォント：
+  // - Noto Serif JP（明朝）= 見出し用、日本語対応
+  // - Inter = 英数字・byline・URL 用
   const fontsConfig = [
     {
-      name: "IBM Plex Mono",
-      font: "IBM+Plex+Mono",
+      name: "Noto Serif JP",
+      font: "Noto+Serif+JP",
+      weight: 500,
+      style: "normal",
+    },
+    {
+      name: "Inter",
+      font: "Inter",
       weight: 400,
       style: "normal",
     },
     {
-      name: "IBM Plex Mono",
-      font: "IBM+Plex+Mono",
-      weight: 700,
-      style: "bold",
+      name: "Inter",
+      font: "Inter",
+      weight: 500,
+      style: "normal",
     },
   ];
 
