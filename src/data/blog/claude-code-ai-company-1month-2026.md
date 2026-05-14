@@ -1,6 +1,6 @@
 ---
 author: AI Maker Lab
-pubDatetime: 2026-05-14T18:00:00+09:00
+pubDatetime: 2026-05-14T11:30:00+09:00
 title: "Claude Code で「AI会社」を1ヶ月運営してみた｜CEO・QA・事業開発・技術検証の4部門で個人開発を回す"
 slug: claude-code-ai-company-1month-2026
 featured: true
