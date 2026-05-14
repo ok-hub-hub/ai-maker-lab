@@ -1,6 +1,6 @@
 ---
 author: AI Maker Lab
-pubDatetime: 2026-05-12T10:00:00+09:00
+pubDatetime: 2026-04-15T10:00:00+09:00
 title: "Vibe Coding と個人開発の実体験ジャーナル「AI Maker Lab」、はじめました【2026年5月】"
 slug: hello-ai-maker-lab
 featured: true

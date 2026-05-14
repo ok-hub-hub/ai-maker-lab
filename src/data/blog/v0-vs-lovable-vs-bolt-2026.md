@@ -1,6 +1,6 @@
 ---
 author: AI Maker Lab
-pubDatetime: 2026-05-12T23:30:00+09:00
+pubDatetime: 2026-04-28T16:00:00+09:00
 title: "v0 vs Lovable vs Bolt：Vibe Coding 3大ツールを個人開発者目線で徹底比較【2026年版】"
 slug: v0-vs-lovable-vs-bolt-2026
 featured: true
