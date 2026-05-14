@@ -38,14 +38,16 @@ const products: Product[] = [
   {
     id: "vibe-coding-prompt-pack",
     title: "Vibe Coding プロンプトパック v1",
-    tagline: "v0 / Lovable / Bolt / Cursor / Claude Code 用のプロンプト集",
-    price: "$19-29（予定）",
+    tagline: "v0 / Lovable / Bolt / Cursor / Claude Code 用のプロンプト集（50本+ケーススタディ3件）",
+    price: "$19（リリース告知登録者）→ $29 通常",
+    promoNote: "2026-06-15 リリース予定 / プレオーダー登録で20%オフ",
     status: "coming-soon",
     highlights: [
-      "個人開発者向け 50+ プロンプト",
+      "個人開発者向け 50 プロンプト（5ツール × 各10本）",
       "日本語ネイティブ向けに最適化",
-      "実運用検証済（AI Maker Lab で実証）",
-      "ツール別の使い分けガイド付き",
+      "実例ケーススタディ3件（SaaSランディング1日構築 / MVP10時間構築 / リファクタ3時間）",
+      "失敗パターンと回避策を全プロンプトに記載",
+      "月次アップデート（6ヶ月、新ツール対応）",
     ],
   },
 ];
@@ -148,12 +150,13 @@ const products: Product[] = [
                           <span class="transition-transform group-hover:translate-x-0.5">→</span>
                         </a>
                       ) : (
-                        <button
-                          disabled
-                          class="inline-flex w-full cursor-not-allowed items-center justify-center gap-2 border border-foreground-muted/40 px-4 py-2.5 text-sm font-medium tracking-tight text-foreground-muted"
+                        <a
+                          href="mailto:contact@aimaker-lab.com?subject=Vibe%20Coding%20Prompt%20Pack%20v1%20%E3%83%97%E3%83%AC%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E7%99%BB%E9%8C%B2&body=Vibe%20Coding%20Prompt%20Pack%20v1%20%E3%81%AE%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E9%80%9A%E7%9F%A5%E3%82%92%E5%B8%8C%E6%9C%9B%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%0A%0A%EF%BC%88%E3%81%93%E3%81%AE%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%92%E3%81%9D%E3%81%AE%E3%81%BE%E3%81%BE%E9%80%81%E4%BF%A1%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%81%B0%2C%20%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E6%99%82%E3%81%AB20%25%E3%82%AA%E3%83%95%E3%82%AF%E3%83%BC%E3%83%9D%E3%83%B3%E3%82%92%E3%81%8A%E9%80%81%E3%82%8A%E3%81%97%E3%81%BE%E3%81%99%EF%BC%89"
+                          class="group inline-flex w-full items-center justify-center gap-2 border border-accent px-4 py-2.5 text-sm font-medium tracking-tight text-accent transition hover:bg-accent hover:text-background"
                         >
-                          準備中
-                        </button>
+                          <span>プレオーダー登録（20%オフ）</span>
+                          <span class="transition-transform group-hover:translate-x-0.5">→</span>
+                        </a>
                       )}
                     </div>
                   </aside>
