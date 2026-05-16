@@ -47,10 +47,9 @@ const priceLabel = tool.priceFree
     : `無料あり（有料は $${tool.priceMin}/月〜）`
   : `$${tool.priceMin}/月〜`;
 
-const today = new Date("2026-05-13T00:00:00Z");
 const verifiedDate = new Date(tool.verifiedAt + "T00:00:00Z");
 const daysSinceVerified = Math.floor(
-  (today.getTime() - verifiedDate.getTime()) / (1000 * 60 * 60 * 24),
+  (Date.now() - verifiedDate.getTime()) / (1000 * 60 * 60 * 24),
 );
 const verifiedStale = daysSinceVerified > 60;
 const verifiedLabel = `${tool.verifiedAt}（${
