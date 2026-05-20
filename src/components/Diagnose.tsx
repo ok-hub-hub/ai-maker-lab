@@ -402,10 +402,10 @@ function Result({
                     </span>
                   </a>
                   <a
-                    href="/posts"
+                    href={`/tools/${tool.id}/`}
                     className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-border px-4 py-2.5 text-xs font-semibold text-foreground/65 transition hover:border-foreground/30 hover:text-foreground"
                   >
-                    レビュー記事
+                    詳細・料金
                   </a>
                 </div>
               </div>

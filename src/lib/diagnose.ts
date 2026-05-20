@@ -62,6 +62,8 @@ export function diagnose(answers: Answers): ToolMeta[] {
     if (answers.q5 === "jp") score += t.jpFriendly ? 10 : 0;
     // タイブレーカーとしてアフィリ強度（純粋な品質スコアの後）
     score += tierScore[t.affiliateTier];
+    // 実提携済み（affiliateUrl あり）のツールを、品質スコア同点時にわずかに優先
+    if (t.affiliateUrl) score += 0.4;
     // 経験との適合度ボーナス
     if (answers.q2 === "engineer" && t.forEngineer) score += 0.5;
     if (answers.q2 === "none" && t.forBeginner) score += 0.5;
@@ -79,7 +81,13 @@ export function diagnose(answers: Answers): ToolMeta[] {
     else if (answers.q1 === "ui" || answers.q1 === "dev")
       monetize = TOOLS.find(t => t.id === "conoha");
 
-    if (monetize && !top3.some(t => t.id === monetize!.id) && top3.length >= 3) {
+    // 提携リンク未設定（収益が発生しない）のツールは差し込まない
+    if (
+      monetize &&
+      monetize.affiliateUrl &&
+      !top3.some(t => t.id === monetize!.id) &&
+      top3.length >= 3
+    ) {
       top3[2] = monetize;
     }
   }

@@ -11,13 +11,20 @@ import EditorialSection from "@/components/ui/EditorialSection.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 import { SITE } from "@/config";
 import { TOOLS } from "@/data/tools";
+import { PRODUCTS } from "@/data/products";
 
 const posts = await getCollection("blog");
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
-const heroTools = TOOLS.filter(t => t.affiliateTier === "S").slice(0, 4);
+// 実際にアフィリエイト提携済み（affiliateUrl あり）のツールだけを目玉枠に出す
+const heroTools = TOOLS.filter(t => t.affiliateUrl)
+  .sort((a, b) => {
+    const tierRank = ["S", "A", "B", "C", "watch"];
+    return tierRank.indexOf(a.affiliateTier) - tierRank.indexOf(b.affiliateTier);
+  })
+  .slice(0, 4);
 
 const journals = [
   {
@@ -119,7 +126,7 @@ const journals = [
         <aside class="lg:pt-2">
           <Badge>Curated Tools</Badge>
           <SerifHeading as="h2" size="xl" class="mt-2 leading-snug">
-            月額継続報酬の<br />
+            編集部が提携する<br />
             主力ツール
           </SerifHeading>
 
@@ -269,6 +276,82 @@ const journals = [
         </EditorialSection>
       )
     }
+
+    <!-- ========== Shop ========== -->
+    <EditorialSection border="top" size="base">
+      <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <Badge>Shop</Badge>
+          <SerifHeading as="h2" class="mt-1">実運用テンプレを、商品で</SerifHeading>
+        </div>
+        <a
+          href="/shop"
+          class="border-b border-foreground-muted/40 pb-0.5 text-xs tracking-wide text-foreground-muted transition hover:border-accent hover:text-accent"
+        >
+          ショップをすべて見る →
+        </a>
+      </div>
+      <ul class="grid gap-px bg-border sm:grid-cols-2">
+        {
+          PRODUCTS.map(product => (
+            <li class="flex flex-col bg-background p-6 sm:p-7">
+              <div class="mb-3">
+                {product.status === "live" ? (
+                  <span class="inline-flex items-center gap-2 rounded-sm bg-accent/10 px-2 py-0.5 text-[10px] tracking-[0.2em] text-accent uppercase">
+                    <span class="size-1.5 rounded-full bg-accent" />
+                    Live
+                  </span>
+                ) : (
+                  <span class="inline-flex items-center gap-2 rounded-sm bg-foreground-muted/10 px-2 py-0.5 text-[10px] tracking-[0.2em] text-foreground-muted uppercase">
+                    Coming soon
+                  </span>
+                )}
+              </div>
+              <h3 class="font-serif text-xl leading-snug text-foreground sm:text-2xl">
+                {product.title}
+              </h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-foreground-muted">
+                {product.tagline}
+              </p>
+              <div class="mt-5 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
+                <span class="font-serif text-lg text-foreground">
+                  {product.price}
+                </span>
+                {product.status === "live" && product.url ? (
+                  <a
+                    href={product.url}
+                    target="_blank"
+                    rel="noopener sponsored"
+                    class="group inline-flex items-center gap-1.5 border-b border-foreground py-1 text-sm font-medium tracking-tight text-foreground transition hover:border-accent hover:text-accent"
+                  >
+                    Gumroad で購入
+                    <span
+                      class="transition-transform group-hover:translate-x-0.5"
+                      aria-hidden="true"
+                    >
+                      →
+                    </span>
+                  </a>
+                ) : (
+                  <a
+                    href="/shop"
+                    class="group inline-flex items-center gap-1.5 border-b border-foreground py-1 text-sm font-medium tracking-tight text-foreground transition hover:border-accent hover:text-accent"
+                  >
+                    詳細を見る
+                    <span
+                      class="transition-transform group-hover:translate-x-0.5"
+                      aria-hidden="true"
+                    >
+                      →
+                    </span>
+                  </a>
+                )}
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </EditorialSection>
   </main>
   <Footer />
 </Layout>

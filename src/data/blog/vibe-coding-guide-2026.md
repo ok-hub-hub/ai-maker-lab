@@ -3,7 +3,7 @@ author: AI Maker Lab
 pubDatetime: 2026-04-24T09:30:00+09:00
 title: "Vibe Coding 完全ガイド：個人開発者が AI で「動くアプリ」をつくる、最短ルート【2026年版】"
 slug: vibe-coding-guide-2026
-featured: true
+featured: false
 draft: false
 tags:
   - vibe-coding
