@@ -52,6 +52,14 @@ const journals = [
     no: "04",
   },
 ];
+
+const newsletterSubject = "AI Maker Lab ニュースレター購読希望";
+const newsletterBody =
+  "AI Maker Lab の更新情報メールの購読を希望します。\n\n" +
+  "（このメールをそのまま送信してください。新ツールのレビュー・料金改定・AI副業ロードマップの更新をお届けします。）";
+const newsletterMailto = `mailto:contact@aimaker-lab.com?subject=${encodeURIComponent(
+  newsletterSubject
+)}&body=${encodeURIComponent(newsletterBody)}`;
 ---
 
 <Layout>
@@ -351,6 +359,35 @@ const journals = [
           ))
         }
       </ul>
+    </EditorialSection>
+
+    <!-- ========== Newsletter ========== -->
+    <EditorialSection border="top" size="base">
+      <div
+        class="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-center lg:gap-16"
+      >
+        <div>
+          <Badge withLine>Newsletter</Badge>
+          <SerifHeading as="h2" class="mt-3">
+            新しいレビューを、メールで。
+          </SerifHeading>
+          <p
+            class="mt-4 max-w-xl text-[15px] leading-[1.85] text-foreground-muted"
+          >
+            新ツールのレビュー、料金改定、AI副業ロードマップの更新を、不定期にメールでお届けします。配信解除はいつでも可能です。
+          </p>
+        </div>
+        <div class="lg:justify-self-end">
+          <Button href={newsletterMailto} variant="outline">
+            メールで購読する
+          </Button>
+          <p
+            class="mt-3 text-[12px] leading-relaxed text-foreground-muted"
+          >
+            ボタンを押すとメールソフトが開きます。本文そのままで送信してください。
+          </p>
+        </div>
+      </div>
     </EditorialSection>
   </main>
   <Footer />
