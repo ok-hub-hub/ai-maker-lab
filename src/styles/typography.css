@@ -127,4 +127,28 @@
       @apply rounded-sm border border-border px-0.5 py-px;
     }
   }
+
+  /* ===== Zenn風 monospace コールアウト（実装メモ / コマンドメモ用） ===== */
+  /* Markdownで <div class="callout-note"> または <div class="callout-cmd"> を使う想定 */
+  .app-prose .callout-note,
+  .app-prose .callout-cmd {
+    @apply my-6 rounded-lg border border-border bg-muted/60 px-4 py-3 font-mono text-[13px] leading-[1.8] text-foreground;
+    border-left-width: 4px;
+  }
+  .app-prose .callout-note {
+    @apply border-l-accent;
+  }
+  .app-prose .callout-cmd {
+    @apply border-l-secondary bg-foreground/[0.04];
+  }
+  .app-prose .callout-note::before {
+    content: "実装メモ";
+    @apply mb-1 block text-[11px] font-bold tracking-wider text-accent uppercase;
+    font-family: var(--font-app);
+  }
+  .app-prose .callout-cmd::before {
+    content: "コマンドメモ";
+    @apply mb-1 block text-[11px] font-bold tracking-wider text-secondary uppercase;
+    font-family: var(--font-app);
+  }
 }

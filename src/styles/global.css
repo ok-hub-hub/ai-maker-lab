@@ -5,29 +5,31 @@
 
 :root,
 html[data-theme="light"] {
-  --background: #faf9f5;
-  --foreground: #1c1a17;
-  --foreground-muted: #6b6660;
-  --accent: #b8553b;
-  --accent-fg: #faf9f5;
-  --secondary: #8b6f56;
-  --success: #5a7a4f;
-  --muted: #f1ede4;
-  --border: #e6e1d6;
+  /* テック・エディトリアル：オフホワイト × ネイビー × ターコイズ */
+  --background: #fafbfc;
+  --foreground: #0f172a;
+  --foreground-muted: #475569;
+  --accent: #0e7490;
+  --accent-fg: #fafbfc;
+  --secondary: #1e40af;
+  --success: #047857;
+  --muted: #f1f5f9;
+  --border: #e2e8f0;
   --card-bg: #ffffff;
 }
 
 html[data-theme="dark"] {
-  --background: #1a1817;
-  --foreground: #f3f0ea;
-  --foreground-muted: #a8a39a;
-  --accent: #d97757;
-  --accent-fg: #1a1817;
-  --secondary: #c9a585;
-  --success: #8fa67d;
-  --muted: #25221f;
-  --border: #322e2a;
-  --card-bg: #211e1c;
+  /* ダーク：スレートネイビー × シアン */
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --foreground-muted: #94a3b8;
+  --accent: #22d3ee;
+  --accent-fg: #0f172a;
+  --secondary: #60a5fa;
+  --success: #34d399;
+  --muted: #1e293b;
+  --border: #334155;
+  --card-bg: #1e293b;
 }
 
 @theme inline {
@@ -90,6 +92,63 @@ html[data-theme="dark"] {
 
 .active-nav {
   @apply underline decoration-wavy decoration-2 underline-offset-8;
+}
+
+/* Tech-editorial visual accents */
+.tech-grid-bg {
+  background-image:
+    linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: -1px -1px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, black 40%, transparent 100%);
+}
+
+.cyan-glow {
+  position: relative;
+}
+.cyan-glow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--color-accent) 0%, transparent 40%, var(--color-secondary) 100%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+.editorial-marker {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-foreground-muted);
+  letter-spacing: 0.18em;
+}
+
+.persona-dial {
+  background: conic-gradient(
+    from 210deg,
+    var(--color-accent) 0deg,
+    var(--color-secondary) 120deg,
+    transparent 120deg 360deg
+  );
+}
+
+@keyframes shimmer {
+  from { background-position: 200% center; }
+  to { background-position: -200% center; }
+}
+.shimmer-text {
+  background: linear-gradient(110deg, var(--color-foreground) 30%, var(--color-accent) 50%, var(--color-foreground) 70%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
 }
 
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */

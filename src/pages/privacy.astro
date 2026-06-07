@@ -1,0 +1,80 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import { SITE } from "@/config";
+---
+
+<Layout
+  title={`プライバシーポリシー | ${SITE.title}`}
+  description={`${SITE.author} のプライバシーポリシー。個人情報・Cookie の取扱いについて。`}
+>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout">
+    <section id="privacy" class="app-prose mb-28 max-w-app prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-3xl">プライバシーポリシー</h1>
+      <p class="text-sm opacity-70">最終更新：2026-05-24</p>
+
+      <h2>個人情報の取扱い</h2>
+      <p>
+        {SITE.author}（以下「当サイト」）は、利用者の個人情報を、本ポリシーに従って取り扱います。
+        当サイトは、お問い合わせ等で利用者からご提供いただく情報を、ご質問への回答・取材依頼の調整・誤情報指摘への対応の目的のみに利用し、その他の目的には利用しません。
+      </p>
+
+      <h2>取得する情報</h2>
+      <ul>
+        <li>
+          <strong>お問い合わせ時にご提供いただく情報</strong>：X（Twitter）/ Threads の DM 経由でご連絡いただいた際の、アカウント名・メッセージ内容。
+        </li>
+        <li>
+          <strong>アクセス解析情報</strong>：Google Analytics（GA4）および Microsoft Clarity を利用し、IP アドレス・ブラウザ種類・閲覧ページ・参照元 URL・滞在時間・スクロール深度・クリック位置等の情報を取得します。これらは利用者の個人を特定する目的では使用しません。
+        </li>
+        <li>
+          <strong>Cookie</strong>：ブラウザの設定でいつでも無効化できます。Cookie を無効化した場合でも、当サイトの基本機能はご利用いただけます。
+        </li>
+      </ul>
+
+      <h2>第三者配信のアクセス解析・広告サービス</h2>
+      <p>
+        当サイトでは、以下の第三者サービスを利用しています：
+      </p>
+      <ul>
+        <li>
+          <strong>Google Analytics（GA4）</strong>：Google LLC が提供するアクセス解析サービス。Cookie を使用してトラフィックデータを収集します。
+          オプトアウトは <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google アナリティクス オプトアウト アドオン</a> から可能です。
+        </li>
+        <li>
+          <strong>Microsoft Clarity</strong>：Microsoft Corporation が提供する行動解析サービス。利用者の操作（クリック・スクロール）を匿名化された形で記録します。
+          詳細は <a href="https://clarity.microsoft.com/" target="_blank" rel="noopener noreferrer">Microsoft Clarity 公式サイト</a> をご確認ください。
+        </li>
+        <li>
+          <strong>アフィリエイトサービス</strong>：A8.net・もしもアフィリエイト・バリューコマース・Amazon アソシエイト 等を利用しています。これらのサービスは利用者のアクセス情報を取得することがあります。
+        </li>
+      </ul>
+
+      <h2>個人情報の第三者提供</h2>
+      <p>
+        当サイトは、法令に基づく場合を除き、取得した個人情報を本人の同意なく第三者に提供することはありません。
+      </p>
+
+      <h2>個人情報の開示・訂正・削除</h2>
+      <p>
+        利用者ご本人からの個人情報の開示・訂正・削除のご要望には、合理的な範囲で速やかに対応します。
+        ご要望は <a href="/contact/">お問い合わせページ</a> よりご連絡ください。
+      </p>
+
+      <h2>プライバシーポリシーの変更</h2>
+      <p>
+        当サイトは、本ポリシーを必要に応じて変更することがあります。変更後の内容は当ページに掲載した時点で効力を生じます。
+      </p>
+
+      <h2>お問い合わせ</h2>
+      <p>
+        本プライバシーポリシーに関するご質問は <a href="/contact/">お問い合わせページ</a> よりご連絡ください。
+      </p>
+    </section>
+  </main>
+  <Footer />
+</Layout>

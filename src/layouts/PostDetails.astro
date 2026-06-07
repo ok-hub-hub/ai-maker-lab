@@ -37,6 +37,12 @@ const {
 
 const { Content } = await render(post);
 
+// 読了時間ざっくり算出（日本語: 600字/min、英語: 250語/min）
+const _body = post.body ?? "";
+const _jp = (_body.match(/[　-鿿]/g) || []).length;
+const _en = _body.replace(/[　-鿿]/g, " ").split(/\s+/).filter(Boolean).length;
+const readMinutes = Math.max(1, Math.round(_jp / 600 + _en / 250));
+
 let ogImageUrl: string | undefined;
 
 // Determine OG image source
@@ -96,12 +102,28 @@ const nextPost =
     >
       {title}
     </h1>
-    <div class="my-2 flex items-center gap-2">
+    <div class="my-3 flex flex-wrap items-center gap-3 rounded-lg border border-border bg-muted/40 px-3 py-2.5">
+      <div class="flex items-center gap-2">
+        <span
+          aria-hidden="true"
+          class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-indigo-500 text-base font-bold text-white shadow-sm"
+        >AI</span>
+        <div class="flex flex-col leading-tight">
+          <span class="text-sm font-semibold text-foreground">{author}</span>
+          <span class="text-[11px] text-foreground-muted">編集部 + AIエージェント群</span>
+        </div>
+      </div>
+      <span aria-hidden="true" class="text-foreground-muted/40">|</span>
       <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
+      <span aria-hidden="true" class="text-foreground-muted/40">|</span>
+      <span class="inline-flex items-center gap-1 text-xs text-foreground-muted">
+        <svg aria-hidden="true" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg>
+        約{readMinutes}分で読了
+      </span>
       <span
         aria-hidden="true"
         class:list={[
-          "max-sm:hidden",
+          "text-foreground-muted/40 max-sm:hidden",
           { hidden: !SITE.editPost.enabled || hideEditPost },
         ]}>|</span
       >

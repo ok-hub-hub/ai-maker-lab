@@ -15,8 +15,8 @@ const COLORS = {
 const HEADLINE = "AI Maker Lab";
 const SUB_PRIMARY = "Vibe Coding と個人開発の";
 const SUB_SECONDARY = "実体験ジャーナル";
-const EYEBROW = "VIBE CODING JOURNAL · 2026";
-const FOOTER_NOTE = "v0 · Lovable · Bolt · Cursor";
+const EYEBROW = "AI-EDITED · VIBE CODING JOURNAL · 2026";
+const FOOTER_NOTE = "Built & Edited with AI — Claude Code · v0 · Cursor";
 
 export default async () => {
   // フォント subset 用テキスト（描画する全文字を渡す）

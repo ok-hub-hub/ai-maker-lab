@@ -218,31 +218,6 @@ const structuredData = {
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "wtgzgss0n2");
     </script>
-
-    <!-- nazo_lab (P-030) traffic Custom Tag -->
-    <script type="text/javascript" is:inline>
-      (function() {
-        function setNazoLabTag() {
-          try {
-            const params = new URLSearchParams(window.location.search);
-            const utm = params.get('utm_source');
-            const referrer = document.referrer || '';
-            const isNazoLab = utm === 'nazo_lab' ||
-                              referrer.includes('linktr.ee/nazolab') ||
-                              referrer.includes('linktr.ee/nazo_lab') ||
-                              referrer.includes('tiktok.com/@nazo_lab') ||
-                              referrer.includes('youtube.com/@nazo_lab') ||
-                              referrer.includes('instagram.com/nazo_lab');
-            if (isNazoLab && window.clarity) {
-              window.clarity('set', 'source', 'nazo_lab');
-              window.clarity('set', 'utm_campaign', utm || 'organic_nazolab');
-            }
-          } catch (e) { /* swallow */ }
-        }
-        if (document.readyState === 'complete') setNazoLabTag();
-        else window.addEventListener('load', setNazoLabTag);
-      })();
-    </script>
   </head>
   <body>
     <slot />

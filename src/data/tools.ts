@@ -49,17 +49,17 @@ export const TOOLS: ToolMeta[] = [
     quality: 3,
     scale: 3,
     affiliateTier: "S",
-    officialUrl: "https://v0.dev/",
+    officialUrl: "https://v0.app/",
     description:
-      "Vercel製のAI UI生成ツール。テキスト指示でReact/Tailwindの完成度の高いUIを生成し、そのままVercelにデプロイ可能。",
+      "Vercel公式のAI UI生成ツール。Next.js + Tailwind + shadcn/ui のスタックで本番投入できる React コードを生成し、生成画面から直接 Vercel にデプロイできる。",
     strengths: [
-      "Next.js + Tailwind ベースで出力品質が高い",
-      "Vercelとの統合でデプロイまでワンクリック",
-      "shadcn/uiコンポーネントとの相性が良い",
+      "生成コードが shadcn/ui ベースで、`npx shadcn add` 形式で既存 Next.js リポジトリに直接マージできる",
+      "Vercel と同一アカウントで動くため、Publish ボタン1回で `*.vercel.app` のプレビューURLが発行される",
+      "Design Mode でピクセル単位の調整が可能（生成→修正の往復が必要ない）",
     ],
     weaknesses: [
-      "日本語UIなし（英語が前提）",
-      "バックエンドが弱い（フロント特化）",
+      "Free プランは1日7メッセージで打ち止め、本気のプロダクト開発は Team $30/月が現実ライン",
+      "出力は React + Tailwind に固定、Vue / Svelte / 別 CSS フレームワークには非対応",
     ],
     verifiedAt: "2026-05-12",
   },
@@ -78,13 +78,16 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "C",
     officialUrl: "https://cursor.com/",
     description:
-      "VSCodeフォークのAI内蔵IDE。Claude/GPTを統合し、コードベース全体を理解した編集が可能。",
+      "VS Code をフォークした AI 内蔵 IDE。Cmd+K のインライン編集と差分プレビューを軸に、エディタ上で AI と対話しながらコードを編集する設計。",
     strengths: [
-      "コードベース全体のコンテキスト理解",
-      "VSCode拡張がそのまま使える",
-      "Tab補完が高速",
+      "VS Code フォークのため、慣れたショートカット・拡張機能・キーバインドがそのまま使える",
+      "Cmd+K のインライン編集は対象行を選択して指示すると差分プレビューで Accept/Reject 判定できる",
+      "@-mention で個別ファイル・ディレクトリをコンテキストに追加でき、対象を絞った編集に強い",
     ],
-    weaknesses: ["有料プランが本領（無料枠は限定的）", "日本語UIなし"],
+    weaknesses: [
+      "無料枠は使用回数とモデル選択が制限される（個人で本格利用なら $20/月の Pro が事実上の入り口）",
+      "ターミナルを横断した自走タスクは Tasks 機能で範囲限定的、複数ステップの自律実行は Claude Code に劣る",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -102,13 +105,16 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "C",
     officialUrl: "https://claude.com/claude-code",
     description:
-      "Anthropic公式のターミナル型AIコーディングツール。長期コンテキストとマルチファイル編集に強い。",
+      "Anthropic 公式のターミナル型 AI コーディングエージェント。プロジェクトディレクトリを文脈にして複数ファイルの探索・編集・テストまで自律実行する設計。",
     strengths: [
-      "Claude Opus/Sonnet を直接利用",
-      "長文コンテキストの保持力",
-      "MCPサーバー連携で拡張性が高い",
+      "シェルから直接ファイル操作・コマンド実行ができ、cron / GitHub Actions / CI に組み込んで動かせる",
+      "MCP（Model Context Protocol）サーバー連携で Gmail / Google Drive / Playwright など外部システムを呼べる",
+      "ターミナル単独で完結するため、VS Code / JetBrains など既存 IDE と共存して使える",
     ],
-    weaknesses: ["有料サブスク前提（Maxプラン推奨）", "GUI なし"],
+    weaknesses: [
+      "GUI が無く、UI を見ながらの細かなフロント実装には不向き（Cursor が適）",
+      "API 従量だと長時間タスクでトークン消費が早い、月額固定で予算管理するなら Claude Pro $20/月 や Max プラン経由が現実的",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -126,9 +132,16 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "C",
     officialUrl: "https://cline.bot/",
     description:
-      "VSCode拡張型のOSS AIエージェント。任意のLLMプロバイダを指定可能。",
-    strengths: ["OSSで透明性が高い", "LLMを自由に選べる", "拡張性が高い"],
-    weaknesses: ["API料金は別途", "設定がやや上級者向け"],
+      "VS Code 拡張として動く OSS（Apache 2.0）の AI コーディングエージェント。API キーを差し替えて Anthropic / OpenAI / OpenRouter / ローカル LLM など任意のプロバイダを指定できる。",
+    strengths: [
+      "ソースコードが GitHub で公開されており、何をどうエージェントに渡しているかを自分で監査できる",
+      "Anthropic / OpenAI / Gemini / OpenRouter / ローカル（Ollama 等）を切り替え可能、最安モデルを自分で選べる",
+      "VS Code 拡張なので、Cursor へ完全移行せずに既存 VS Code 環境のままエージェント機能だけを足せる",
+    ],
+    weaknesses: [
+      "本体は無料だが LLM の API 料金が必ず別途発生（実コストはモデル単価×トークン消費で読みづらい）",
+      "プロバイダ・モデル・MCP の組み合わせを自分で設定する必要があり、ゼロから使い始めるには Cursor より敷居が高い",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -145,9 +158,15 @@ export const TOOLS: ToolMeta[] = [
     scale: 3,
     affiliateTier: "C",
     officialUrl: "https://windsurf.com/",
-    description: "Codeium製のCursor競合IDE。Cascade（agentic mode）が特徴。",
-    strengths: ["Cascadeで複数ファイル同時編集", "応答速度が速い"],
-    weaknesses: ["Cursor比でエコシステムは新しめ", "日本語UIなし"],
+    description: "Codeium が提供する VS Code フォーク IDE。Cascade（複数ステップを自走するエージェントモード）と Supercomplete（後続行の先読み補完）が独自機能。",
+    strengths: [
+      "Cascade は1回の指示で複数ファイルを跨いだ編集を計画→実行する設計、Cursor の Tasks より自走域が広い",
+      "Supercomplete は次に書くであろうコードを行単位で先読み、Tab 1回で受け入れて流し書きできる",
+    ],
+    weaknesses: [
+      "リリースが Cursor より新しく、コミュニティの設定例・チュートリアル数は2026-05 時点で Cursor 比少なめ",
+      "VS Code 拡張資産はそのまま動くが、IDE 自体は Cursor と二者択一（同時に主力 IDE を2つ持てない）",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -165,13 +184,16 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "A",
     officialUrl: "https://bolt.new/",
     description:
-      "Stackblitz製のブラウザ完結型AIアプリビルダー。ローカル環境構築不要で即プレビュー可能。",
+      "StackBlitz 社の WebContainer 技術で Node.js をブラウザ内に立ち上げる AI アプリビルダー。`npm install` も `npm run dev` もブラウザの中で完結し、ローカルに何もインストールせずに開発できる。",
     strengths: [
-      "環境構築ゼロですぐ動かせる",
-      "プロンプトからフルスタックアプリ生成",
-      "WebContainer技術で高速",
+      "ブラウザだけで動くため、貸出 PC / 出先 / Chromebook など環境構築できない端末でも開発が始められる",
+      "React / Vue / Svelte / Astro など複数フレームワークの初期テンプレートを選べる、試行錯誤しやすい",
+      "URL を共有すれば同じ WebContainer 状態を他人のブラウザでも開ける、デモ共有が早い",
     ],
-    weaknesses: ["大規模化に弱い", "プロンプト枯渇が早い"],
+    weaknesses: [
+      "無料枠は「1日あたりトークン数」での制限で、1プロジェクトで深く対話すると午前で枯渇しがち",
+      "全部ブラウザ内で動く都合、数千行規模に育てると応答が重くなる（捨てプロトタイプ前提が現実的）",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -189,15 +211,15 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "watch",
     officialUrl: "https://lovable.dev/",
     description:
-      "ノーコード寄りのAIアプリビルダー。Supabase連携でフルスタックアプリを生成可能。",
+      "旧 GPT Engineer を前身とする AI フルスタックアプリビルダー。Supabase との統合がデフォルトテンプレートに組み込まれており、認証＋DB＋UI を1回の指示で生成できる。",
     strengths: [
-      "Supabase認証/DB組込みが容易",
-      "デザイン品質が高い",
-      "コミュニティが活発",
+      "「ログイン機能つき ToDo アプリ」のように指示すると、認証フロー・DB スキーマ・UI が一括生成される（v0 / Bolt では別途バックエンドを手書きする必要あり）",
+      "Supabase Auth / Storage / Edge Functions が初期テンプレートで接続済み、サインアップから動作するアプリにすぐ到達できる",
+      "Discord コミュニティが活発で、プロンプト改良例や失敗事例が日々共有される（学習素材が拾いやすい）",
     ],
     weaknesses: [
-      "アフィリエイトプログラムは移行中で参加不可（2026-05時点）",
-      "プロンプト消費が早い",
+      "アフィリエイトプログラムは新プログラムへ移行中で、2026-05 時点で新規申請は受付停止（紹介収益化はできない）",
+      "1指示あたりのプロンプト消費が v0 / Bolt より大きく、Starter $25/月でも長文プロジェクトでは追加課金が早い",
     ],
     note: "アフィリエイト参加は当面不可、記事は監視枠として執筆",
     verifiedAt: "2026-05-12",
@@ -217,13 +239,16 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "B",
     officialUrl: "https://replit.com/",
     description:
-      "Replit内蔵のAIエージェント。学習サポート機能で初心者にやさしい。",
+      "クラウド IDE 大手 Replit に内蔵された AI エージェント。生成・実行・ホスティング・カスタムドメイン接続までを単一の Web 画面で完結できる。",
     strengths: [
-      "学習機能で初心者導入に最適",
-      "ホスティングまで一気通貫",
-      "コラボレーション機能",
+      "生成したアプリをそのまま Replit Deployment（Static / Reserved VM 等）で公開でき、別ホスティング契約が不要",
+      "Replit Multiplayer により1つの workspace に複数人が同時編集で入れる（チーム作業・ペアプロ向き）",
+      "Python / Node / Go / Bun など多言語ランタイムが最初から有効、フロント特化の v0 / Lovable と棲み分けやすい",
     ],
-    weaknesses: ["生成品質はBolt/Lovableに比べやや弱め"],
+    weaknesses: [
+      "Web UI の生成精度は v0 / Lovable と比べて磨かれていない（コードが動くことを優先する設計）",
+      "Core プラン $25/月の Checkpoints 残量や Reserved VM のリソース上限で、長期運用するとコストが膨らみやすい",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -240,13 +265,16 @@ export const TOOLS: ToolMeta[] = [
     scale: 2,
     affiliateTier: "B",
     officialUrl: "https://www.figma.com/make/",
-    description: "Figma公式のAI UI生成機能。デザイナー視点での出力に強い。",
+    description: "Figma 公式の AI UI 生成機能。Figma ファイル上で「Make」コマンドからプロンプトを投げ、生成結果が同一キャンバスに Figma フレームとして出力される。",
     strengths: [
-      "Figmaワークフローに統合",
-      "デザイン品質が高い",
-      "既存Figmaファイル資産との連携",
+      "Auto Layout / Variables / Components など Figma のデザインシステム機能を継承した状態で出力される（v0 のような React 生成と違い、デザインデータとして編集できる）",
+      "既存 Figma ファイル内のスタイル・コンポーネントを参照させて出力できる、ブランド統一に強い",
+      "デザイナーが普段使う Figma ワークフロー（コメント・バージョン・Dev Mode）にそのまま乗る",
     ],
-    weaknesses: ["Figma Pro契約必要", "コード品質はv0比でやや劣る"],
+    weaknesses: [
+      "Figma Professional（$16/月/編集者）以上の契約が前提、無料 Starter プランからは利用不可",
+      "コード化は Dev Mode 経由の生成に頼るため、v0 のようにそのまま `.tsx` を取り出して実装できる体験ではない",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -264,13 +292,16 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "S",
     officialUrl: "https://www.synthesia.io/",
     description:
-      "AIアバター動画生成のトップランナー。140言語以上のナレーションに対応。",
+      "ロンドン本社の AI アバター動画生成サービス。スタジオ撮影された数百種のストックアバターと140超の言語ナレーションを組み合わせて、テキスト原稿から学習・社内研修動画を量産できる。",
     strengths: [
-      "AIアバターの自然さがトップクラス",
-      "日本語ナレーション対応",
-      "ビジネス用途で実績多数",
+      "アバターは実在モデルからスタジオ収録したものを学習源にしており、口元の発音同期と上半身の身振りが他社比で破綻しにくい",
+      "Amazon / Google など海外大手の社内動画事例が公開されており、コーポレート利用での信頼性を訴求しやすい",
+      "SCORM / xAPI 形式で書き出せるため、企業 LMS（学習管理システム）に直接アップロードできる",
     ],
-    weaknesses: ["無料プランなし", "クリエイティブ自由度はやや低め"],
+    weaknesses: [
+      "Free プランは廃止済み、Starter $22/月（月12分動画上限）からの有料契約が前提",
+      "アバターはストック中心で、HeyGen の Avatar IV のような「自分の顔・声をクローン」する自由度は低め",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -288,13 +319,16 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "A",
     officialUrl: "https://www.heygen.com/",
     description:
-      "AIアバター動画＋自分の動画からアバター生成も可能。Synthesia比で柔軟性が高い。",
+      "ロサンゼルス本社の AI アバター動画ツール。スマホで撮った2分の自分動画から専用アバターを学習させる Instant Avatar / Avatar IV が看板機能。",
     strengths: [
-      "自分のアバターをトレーニング可能",
-      "リアルタイム翻訳・吹替",
-      "無料プランあり",
+      "Instant Avatar は2分程度の自撮り動画から自分そっくりのアバターを生成、Synthesia のストック中心と差別化される",
+      "Video Translate で既存動画の音声を多言語へ吹き替え、口元のリップシンクまで自動で合わせる",
+      "Free プラン（月3本・各3分まで）が残っており、課金前にアバター生成・吹替の実用性を試せる",
     ],
-    weaknesses: ["日本語UIは限定的", "細かい編集はSynthesia比でやや弱い"],
+    weaknesses: [
+      "UI は英語前提で、日本語ローカライズはメニュー一部のみ（2026-05 時点）",
+      "テロップ・トランジション・BGM など編集自由度は Synthesia の方が UI として整っている",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -311,9 +345,16 @@ export const TOOLS: ToolMeta[] = [
     scale: 2,
     affiliateTier: "B",
     officialUrl: "https://runwayml.com/",
-    description: "Gen-3 Alpha等を提供するAI動画生成。実写ベース表現に強い。",
-    strengths: ["実写品質の動画生成", "クリエイティブ用途で強い"],
-    weaknesses: ["アバター動画は不向き", "生成時間が長め"],
+    description: "ニューヨーク本社、独自モデル Gen-3 Alpha / Gen-4 を提供する映像生成 AI。Text-to-Video / Image-to-Video / Video-to-Video の3系統を1ツールで切り替えられる。",
+    strengths: [
+      "実写映像にカメラワーク（pan / zoom / dolly）を指定して生成できる、映像作家・MV クリエイターの作風に乗せやすい",
+      "既存実写動画にプロンプトでスタイル変換をかけられる Video-to-Video が他社にない強みで、ロケ素材の二次活用に使える",
+      "Free プランで Gen-3 Turbo を実機テスト可能（月125クレジット相当）、サブスク契約前にトーンを試せる",
+    ],
+    weaknesses: [
+      "アバター × テキスト原稿の固定演出は Synthesia / HeyGen の方が安く速い（Runway は1本ずつ作る映像作家向き）",
+      "Gen-3 Alpha は1本10秒程度の生成に5〜10分程度待つことがあり、量産用途には不向き",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -332,15 +373,15 @@ export const TOOLS: ToolMeta[] = [
     officialUrl: "https://ai.conoha.jp/canvas/",
     affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3OR0+1SBLE+50+7RU5R6",
     description:
-      "ブラウザ完結型のAI画像生成サービス。Stable Diffusion ベースで AUTOMATIC1111 / ComfyUI を選択可能、LoRA学習や AI動画生成にも対応。月額1,100円から。",
+      "GMO インターネットグループ運営、Stable Diffusion 系の画像・動画生成をブラウザだけで完結させる国内 SaaS。AUTOMATIC1111 / ComfyUI / SDXL / LoRA 学習が GPU セットアップ無しで使える。",
     strengths: [
-      "Stable Diffusion を環境構築なしで使える",
-      "AUTOMATIC1111 と ComfyUI の両方を提供",
-      "LoRA学習・AI動画生成にも対応",
+      "ローカルに NVIDIA GPU が無い Mac / Windows でも AUTOMATIC1111 や ComfyUI を立ち上げてすぐ生成に入れる",
+      "国内事業者の請求書払い・銀行振込・日本円決済に対応、海外 SaaS と違い経費精算が通しやすい",
+      "LoRA 学習用 GPU セッションも同一アカウントで使える、自前データで顔・キャラを学習させたい用途を1サービスで完結できる",
     ],
     weaknesses: [
-      "Entry プラン10時間で超過は分課金（¥6.6/分）",
-      "海外SaaS比でコミュニティ・LoRA配布数は限定的",
+      "Entry プラン（月1,100円）は10時間で打ち止め、超過は分課金 ¥6.6/分（公式 2026-05 取得）",
+      "国産サービスのため、Civitai のような海外 LoRA 共有コミュニティとの直接連携はなく、モデル収集は自分で持ち込む必要がある",
     ],
     verifiedAt: "2026-05-14",
   },
@@ -359,13 +400,16 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "S",
     officialUrl: "https://elevenlabs.io/",
     description:
-      "AI音声生成の業界標準。Voice Cloningと多言語ナレーションが特徴。",
+      "ロンドン本社の AI 音声生成 SaaS。Voice Cloning（自分の声を1分の録音から再現）と Multilingual v2（同一の声で29言語ナレーション）が看板機能。",
     strengths: [
-      "音声品質が極めて高い",
-      "Voice Cloningで自分の声を再現可能",
-      "API利用も容易",
+      "Instant Voice Cloning は数十秒のサンプル音声で話者再現、Professional Voice Cloning は数時間データで本人とほぼ判別困難な品質に到達する",
+      "REST API が公式提供されており、Node.js / Python から TTS をストリーミング受信できる（Web アプリ・ゲーム組込に向く）",
+      "Voice Library に他ユーザー公開ボイスが2,000以上あり、自分でクローニング素材を持たずに作風を選べる",
     ],
-    weaknesses: ["日本語の自然さは英語比でやや劣る", "生成上限あり"],
+    weaknesses: [
+      "日本語の抑揚は英語と比べて平坦になりがち、文末の上下イントネーション制御は SSML / 句読点工夫で補う必要がある",
+      "Free プランは月10,000文字（約10分）まで、API 商用利用は Creator $22/月以上が前提",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -383,13 +427,16 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "A",
     officialUrl: "https://www.frase.io/",
     description:
-      "SEO記事ライティング特化AI。検索意図分析と競合分析機能が強力。",
+      "SEO ライティングに特化した AI エディタ。検索クエリを入力すると、上位20サイトの見出し・トピック・単語頻度を自動抽出し、不足トピックを赤色で可視化する。",
     strengths: [
-      "SERP分析からの記事構成提案",
-      "競合記事の自動要約",
-      "AI記事生成",
+      "Topic Score（自社記事の網羅性を0〜100点で採点）の数値で、競合に対する不足を客観評価できる",
+      "SERP 上位20件の見出し H2/H3 を1画面で並べてくれるため、記事構成の叩き台作成が早い",
+      "Google Search Console と連携でき、既存記事の改善対象を「インプ多×CTR低」の指標で抽出できる",
     ],
-    weaknesses: ["日本語SERP分析の精度は英語比で弱め"],
+    weaknesses: [
+      "日本語 SERP 解析の精度は英語版より落ち、ひらがな・カタカナ・漢字の表記揺れを単独単語として誤集計することがある",
+      "最安 Basic $14.99/月は記事プロジェクト4本上限、本数を伸ばすと Team $44.99/月以上が必要",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -407,13 +454,16 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "S",
     officialUrl: "https://www.getresponse.com/",
     description:
-      "メルマガ＋マーケ自動化のオールインワン。日本語対応＋AI支援機能が拡充中。",
+      "ポーランド本社、メルマガ配信・ランディングページ・マーケティング自動化を1契約で揃えられる老舗 MA ツール。日本語 UI と日本円請求書発行に対応。",
     strengths: [
-      "日本語UIあり",
-      "メルマガ＋ランディングページ＋自動化を統合",
-      "アフィリエイト報酬が継続型",
+      "メルマガ・LP・Webinar・自動化シナリオを1つの管理画面から扱える、Mailchimp + Unbounce + Zapier の代替として1契約で済む",
+      "アフィリエイトは33%継続報酬（紹介先が契約継続する限り毎月）または1件あたり$100の選択制（公式 GetResponse Partner Program 2026-05 取得）",
+      "日本語管理画面・日本円請求書・国内サポート窓口が揃っており、税務処理・経費精算で詰まりにくい",
     ],
-    weaknesses: ["デザイン自由度は専用ツール比で限定的"],
+    weaknesses: [
+      "LP / Webinar など機能数が多い分、設定画面が深い階層に分散しており、初期設定に丸1日かかる場合がある",
+      "デザインビルダーは Unbounce / Webflow など専用 LP ツールと比べると、テンプレート数とアニメーション表現でやや限定的",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -431,13 +481,16 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "S",
     officialUrl: "https://www.tubebuddy.com/",
     description:
-      "YouTube運営支援ツール。タグ最適化・SEO・サムネテスト機能を備える。",
+      "Chrome 拡張として YouTube Studio 上に重なる、YouTube クリエイター向け運営支援ツール。タグ補完・サムネA/B・公開時間サジェスト・SEO スコアを Studio 画面に直接表示する。",
     strengths: [
-      "YouTube SEO最適化に必須",
-      "A/Bテスト機能",
-      "アフィリエイト継続型",
+      "Chrome 拡張型のため、YouTube Studio のいつもの画面にスコア・推奨タグが直接表示される（別画面に切り替える必要が無い）",
+      "サムネイル A/B テスト機能で、複数サムネを実視聴データで比較可能（公式 YouTube は2024年以降に Test & Compare を提供開始したが、TubeBuddy は早期から類似機能を提供）",
+      "アフィリエイトは Impact 経由で30%継続報酬、月額継続商品のため積み上げ型",
     ],
-    weaknesses: ["日本語UIなし"],
+    weaknesses: [
+      "管理画面は英語のみ（日本語 UI は未提供、2026-05 時点）",
+      "Chrome 拡張のため、Safari / モバイルアプリ側の YouTube Studio では機能しない（PC ブラウザ運用前提）",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -455,13 +508,16 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "S",
     officialUrl: "https://n8n.io/",
     description:
-      "OSS（fair-code）の業務自動化プラットフォーム。セルフホスト or Cloud。",
+      "ベルリン本社、fair-code（Sustainable Use License）の業務自動化プラットフォーム。セルフホストと公式 Cloud の2系統が選べ、ノードを線で繋いでシナリオを組む。",
     strengths: [
-      "セルフホスト可能で長期コスト低",
-      "400以上のサービス連携",
-      "アフィリエイト30%×12ヶ月",
+      "Docker / VPS にセルフホストすると、シナリオ実行数に関係なく月額固定（Hetzner CX22 で月数百円程度）まで運用コストを抑えられる",
+      "公式ノード400超に加え、JavaScript / Python の Code ノードで自由スクリプトを差し込める、Zapier の Code by Zapier より自由度が高い",
+      "アフィリエイトは30%継続報酬 × 12ヶ月（公式 n8n Partner Program 2026-05 取得）、SaaS 紹介の単発と比べ積み上がりやすい",
     ],
-    weaknesses: ["設定の自由度が高い分、初心者にはやや難しい"],
+    weaknesses: [
+      "シナリオはノード接続式の本格 UI で、Zapier のような「Trigger → Action」の単純構造より学習曲線が急（最初の数日は YouTube チュートリアル前提）",
+      "セルフホスト時の OAuth 認証設定・バージョン更新・バックアップは自分で運用する必要がある（運用面倒見は Cloud プランへの課金で逃せる）",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -479,9 +535,16 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "A",
     officialUrl: "https://www.make.com/",
     description:
-      "視覚的なシナリオ作成型の自動化ツール。Zapier比でコスパが良い。",
-    strengths: ["ビジュアル設計", "実行回数あたり単価が安い"],
-    weaknesses: ["日本語UIなし"],
+      "プラハ本社（旧 Integromat）、複雑な分岐・繰り返し・エラーハンドリングをキャンバスに描いて構築するクラウド自動化サービス。ノード単位ではなくシナリオ全体の流れを図として設計する。",
+    strengths: [
+      "Router・Iterator・Aggregator など制御フローを描画でき、IF / for / try-catch 相当の処理を1画面で表現できる（Zapier の直列フローでは表しにくい複雑系に強い）",
+      "課金は「Operation 数」単位で、有料 Core $9/月から10,000 Ops、同価格帯 Zapier の Task 課金より単価が安い",
+      "実行ログがシナリオ図上に色付きで残り、どのステップで失敗したかをノードクリックで遡れる（デバッグが直感的）",
+    ],
+    weaknesses: [
+      "UI は英語のみ、ノード名・エラーメッセージも英語前提（2026-05 時点）",
+      "シナリオが描画ベースのため、Git による差分管理・コードレビューはやりにくい（n8n のような JSON export 編集が中心になる）",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -498,9 +561,16 @@ export const TOOLS: ToolMeta[] = [
     scale: 3,
     affiliateTier: "C",
     officialUrl: "https://zapier.com/",
-    description: "自動化ツールの定番。連携アプリ数がトップクラス。",
-    strengths: ["連携アプリ数最多", "日本語UIあり", "認知度が高い"],
-    weaknesses: ["タスクあたり料金が割高", "Makeに比べ高コスト"],
+    description: "サンフランシスコ本社、SaaS 自動化の老舗。「Trigger（受信）→ Action（実行）」の Zap を組むシンプル構造で、業界の事実上の汎用ハブとして連携先 SaaS 数が市場で最大級。",
+    strengths: [
+      "8,000超の SaaS（2026-05 公式表記）と接続でき、ニッチな国内 SaaS でも公式 Zap を持つケースが多い（n8n / Make でカバーされない連携先を埋める）",
+      "管理画面は日本語表示に対応、社内非エンジニアに引き継ぎやすい",
+      "Webhook 受信からの自動応答、Schedule / Filter / Path などの基本制御が GUI のみで成立する（コーディング無しで業務担当が組める）",
+    ],
+    weaknesses: [
+      "課金は Task 単位の従量、複雑なシナリオでは Make / n8n の数倍コストになることがある（Action ごとに Task カウント）",
+      "Router / Iterator のような複雑制御は Paths 機能で可能だが、Make のキャンバス UI ほど可視化されない",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -518,13 +588,16 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "S",
     officialUrl: "https://www.conoha.jp/wing/",
     description:
-      "国内最速級レンタルサーバー。WordPressブログから個人開発VPSまで対応。",
+      "GMO インターネット運営の WordPress 特化レンタルサーバー。国内データセンター（東京・大阪）の独自開発サーバー構成で、Web Vitals（特に TTFB）を国内アクセス向けに最適化している。",
     strengths: [
-      "国内サーバーで安定・低遅延",
-      "WordPress簡単インストール",
-      "日本語サポート充実",
+      "WordPress かんたんセットアップでドメイン取得・SSL・テーマ導入まで管理画面1画面で完了、ConoHa WING パック契約なら独自ドメインも永久無料",
+      "リザーブドプラン（割安・契約期間長）と通常プランを月額単位で切り替え可能、副業ブログのアクセス急増にも対応しやすい",
+      "GMO ペパボのカラーミー / minne などグループ EC との会員連携や、ConoHa AI Canvas（画像生成）と同一アカウントで運用できる",
     ],
-    weaknesses: ["海外向けには遅め", "VPSは別商品"],
+    weaknesses: [
+      "サーバー配置は国内特化のため、北米・欧州向けに配信する場合は CDN（Cloudflare 等）を別途併用する必要がある",
+      "VPS / GPU サーバー（ConoHa VPS / ConoHa AI Canvas）は別商品契約、WordPress と1契約で完結はしない",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -542,13 +615,16 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "S",
     officialUrl: "https://www.xserver.ne.jp/",
     affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3OR0+8C38Y+CO4+609HU",
-    description: "国内No.1シェアの老舗レンタルサーバー。安定性と速度に定評。",
+    description: "エックスサーバー株式会社運営の国内大手レンタルサーバー。2003年運営開始の長期実績と、NVMe SSD・KUSANAGI 由来の高速 WordPress チューニングを売りにする。",
     strengths: [
-      "20年以上の運用実績",
-      "速度・安定性ともに業界トップクラス",
-      "日本語サポート充実",
+      "サーバー停止履歴・障害事例が長期にわたり公開されており、安定稼働の検証材料が公的に揃っている",
+      "オールNVMe SSD + KUSANAGI 由来の WP 高速化技術を搭載、同価格帯の共用レンタルサーバーよりも WordPress 表示速度が出やすい",
+      "1サーバー契約で最大独自ドメイン無制限・マルチドメイン無制限、副業ブログを複数立ち上げる戦略に向く",
     ],
-    weaknesses: ["価格はConoHa WING比でやや高め"],
+    weaknesses: [
+      "月額料金は ConoHa WING のキャンペーン適用後と比べてやや高め（特に短期契約時）",
+      "海外向け配信には別途 CDN 併用が必要（データセンター国内集中）",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -567,13 +643,16 @@ export const TOOLS: ToolMeta[] = [
     officialUrl: "https://business.xserver.ne.jp/",
     affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3OR0+8C38Y+CO4+6LP3M",
     description:
-      "法人・個人事業主向けのXserver上位プラン。SLA・専用サポート付き。",
+      "Xserver の法人・個人事業主向け上位プラン。99.99% SLA・専用サポート・Webサイト制作代行（B10以上）を内包し、コーポレートサイト運営の選択肢としてパッケージされている。",
     strengths: [
-      "法人向けSLA",
-      "アフィリエイト報酬が最高クラス（日本ASP）",
-      "Webサイト制作代行付プランあり",
+      "稼働率 SLA 99.99% を明文化、停止時には返金規定があり法人決済の稟議が通しやすい（公式 Xserverビジネス 規約 2026-05 取得）",
+      "上位プランでは Web サイト制作代行（テンプレ選択型）が標準パックに含まれ、社外発注なしで法人サイトを立ち上げられる",
+      "A8.net / もしも経由のアフィリエイト報酬単価が日本ASPの中でも高水準帯（同カテゴリの中で月額継続でなく成果1件 × 高単価型）",
     ],
-    weaknesses: ["個人ブロガーにはオーバースペック"],
+    weaknesses: [
+      "個人ブログ用途には機能・料金（B2 月額3,762円〜）ともに重く、個人なら Xserver スタンダードや ConoHa WING ベーシックで足りる",
+      "Webサイト制作代行は選択テンプレ範囲内で、フルカスタムやアニメーション主体のサイトには対応しない",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -592,15 +671,15 @@ export const TOOLS: ToolMeta[] = [
     officialUrl: "https://mixhost.jp/",
     affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3OR0+LFMK2+3JTE+5YJRM",
     description:
-      "LiteSpeed採用の高速クラウド型レンタルサーバー。月額968円から、WordPressブログから個人開発のWebアプリまで対応。",
+      "アズポケット株式会社運営、Web サーバーに LiteSpeed Web Server を採用したクラウド型レンタルサーバー。LiteSpeed 標準の LSCache プラグインで WordPress のキャッシュ最適化がコード不要で効く。",
     strengths: [
-      "LiteSpeed採用で表示速度が速い",
-      "国内最安級の月額料金",
-      "WordPress簡単インストール対応",
+      "LiteSpeed + LSCache の組み合わせで、Apache + WP Super Cache 系より TTFB が短くなりやすい（mixhost 公式ベンチ参照）",
+      "全プラン無料の自動バックアップ（過去14日分）と1クリック復元、運用ミスからの戻しが他社より早い",
+      "10日間無料お試しがあり、本契約前に WordPress 移管・表示速度・管理画面操作感を実機確認できる",
     ],
     weaknesses: [
-      "ConoHa / Xserver と比べブランド認知度はやや低",
-      "管理画面の操作感は人を選ぶ",
+      "ConoHa WING / Xserver と比べ法人サイト事例の露出量が少なく、社内の決裁では「実績紹介」をこちらで補足する必要がある場合がある",
+      "管理画面は cPanel ベース、ConoHa の独自 GUI に比べて画面遷移が多くやや習熟が必要",
     ],
     verifiedAt: "2026-05-12",
   },
@@ -621,15 +700,15 @@ export const TOOLS: ToolMeta[] = [
     affiliateUrl:
       "https://www.onamae.com/?banner_id=690_vc_2215298&waad=yyDUAf8t&argument=29kVaVam&dmai=a5c73cbbb7f179",
     description:
-      "GMOインターネット運営の国内シェアNo.1ドメイン取得サービス。1999年運営開始、登録実績2,500万件超。",
+      "GMO インターネット運営の国内大手ドメイン登録サービス。1999年運営開始、対応 TLD 数は2026-05 時点で580種超。Whois 情報公開代行・コンビニ決済を国内事業者として標準で備える。",
     strengths: [
-      "国内シェアNo.1の安心感",
-      "対応TLDが圧倒的に多い",
-      "ドメインセット割や同時申込割引が豊富",
+      "580超の TLD（`.jp` `.co.jp` `.dev` `.app` から `.tokyo` 等のジオTLDまで）を1アカウントで取得・管理できる、海外レジストラに散逸させずに済む",
+      "コンビニ・銀行振込・請求書払いに対応、クレジットカードを使えない法人・学生でも契約可能",
+      "ConoHa WING / Xserver / mixhost との同時申込キャンペーンが頻繁にあり、サーバーとドメインのセット割を狙いやすい",
     ],
     weaknesses: [
-      "管理画面UIが古く、玄人向け",
-      "プロモーションメールが多い（受信設定で抑制可）",
+      "管理画面は機能網羅型で、初回利用ではメニュー階層から目的の設定にたどり着くのに時間がかかる",
+      "デフォルトでオプション商品・関連サービスのメール配信がオンになっており、受信設定で明示的に絞り込む必要がある",
     ],
     verifiedAt: "2026-05-12",
   },
@@ -647,9 +726,16 @@ export const TOOLS: ToolMeta[] = [
     scale: 3,
     affiliateTier: "C",
     officialUrl: "https://chatgpt.com/",
-    description: "OpenAI製の汎用AIチャット。誰でも知っているベースライン。",
-    strengths: ["認知度トップ", "日本語対応", "無料枠あり"],
-    weaknesses: ["アフィリエイトプログラムなし"],
+    description: "OpenAI が提供する汎用 AI チャット。Web / iOS / Android / macOS デスクトップに同期し、Free プランでも GPT-5（Auto モード）と GPT-4o mini 相当を利用可能（2026-05 公式取得）。",
+    strengths: [
+      "iOS / Android / macOS デスクトップ / Web で同一履歴に同期、Voice モードで通勤中に音声で続きの議論ができる",
+      "Code Interpreter / DALL·E 3 / 画像入力（Vision）/ Custom GPTs が Plus $20/月 1契約で全部入る、用途別 SaaS を複数契約する必要がない",
+      "GPT-Image / Codex CLI / OAuth 認証経由の Codex SDK など、API 課金とは別経路で開発ツールから呼べる",
+    ],
+    weaknesses: [
+      "アフィリエイトプログラム未提供のため、紹介経由の収益化はできない",
+      "Free プランは GPT-5 / Vision / 画像生成に1日数回程度のレート制限あり、本格利用は Plus 課金が前提",
+    ],
     verifiedAt: "2026-05-12",
   },
   {
@@ -666,14 +752,73 @@ export const TOOLS: ToolMeta[] = [
     scale: 3,
     affiliateTier: "A",
     officialUrl: "https://dub.co/",
-    description: "OSSの短縮URL＋クリック計測サービス。Bitly代替の本命。",
+    description: "Y Combinator 出身の OSS（AGPL-3.0）短縮 URL ＋ クリック計測サービス。dub.co の SaaS 版とセルフホスト版が同一コードベースで提供される。",
     strengths: [
-      "アフィリリンクのクリック計測",
-      "OSSでセルフホスト可",
-      "API充実",
+      "Free プランで25カスタムドメイン × 月1,000リンクまで利用可能、Bitly Free（5リンク/月）より個人で踏み込みやすい",
+      "リンクごとに国・デバイス・リファラ・UTM パラメータを集計、アフィリリンクの実クリック源をダッシュボードで分析できる",
+      "GitHub にコードが公開されており、Vercel / Railway / Docker で自分の VPS に立てれば商標と独自ドメインを完全自社運用できる",
     ],
-    weaknesses: ["日本語UIなし"],
+    weaknesses: [
+      "管理画面は英語のみ（2026-05 時点）、社内非エンジニアと共有する場合は翻訳補足が必要",
+      "セルフホスト時は PostgreSQL / Redis / Tinybird のデータストア構築が必要、運用ハードルは Bitly のような SaaS 完結より上がる",
+    ],
     verifiedAt: "2026-05-12",
+  },
+  {
+    id: "catchy",
+    name: "Catchy（キャッチー）",
+    category: ["writing"],
+    forEngineer: false,
+    forBeginner: true,
+    priceMin: 0,
+    priceFree: true,
+    jpFriendly: true,
+    speed: 3,
+    quality: 2,
+    scale: 2,
+    affiliateTier: "A",
+    officialUrl: "https://lp.ai-copywriter.jp/",
+    description:
+      "デジタルレシピ社が運営する日本語特化の生成AIライティングツール。広告コピー・SNS投稿・記事構成・メール文面など100種以上のテンプレートから、日本語の自然な文章を生成する。国内ユーザー数が多く、日本語UIで完結する。",
+    strengths: [
+      "100種以上のテンプレートで、広告コピー・SNS・記事の叩き台など短〜中文の量産に強い（用途ごとに型が用意されている）",
+      "完全日本語UI・日本語前提の設計で、英語圏ツール（Frase等）のような言語の壁がない",
+      "Free（毎月10クレジット）で実際の生成品質を試せるため、課金前に自分の用途に合うか判断できる",
+    ],
+    weaknesses: [
+      "長文SEO記事の構成設計・競合分析は専用ツール（Transcope/Frase）に劣り、Catchy単体でSEO上位を狙うのは不向き",
+      "Starterはクレジット制（¥3,000〜8,100/月）で使うほど消費し、無制限で回すならPro ¥9,800/月が現実ライン（料金は2026-06-05 公式取得・すべてサブスク）",
+    ],
+    verifiedAt: "2026-06-05",
+    note: "A8.net で提携可能。提携申請・承認後に affiliateUrl を差し込む（未設定時は officialUrl にフォールバック）。",
+  },
+  {
+    id: "transcope",
+    name: "Transcope（トランスコープ）",
+    category: ["writing"],
+    forEngineer: false,
+    forBeginner: true,
+    priceMin: 0,
+    priceFree: true,
+    jpFriendly: true,
+    speed: 2,
+    quality: 3,
+    scale: 2,
+    affiliateTier: "A",
+    officialUrl: "https://transcope.io/",
+    description:
+      "シェアモル社運営、SEOに特化した日本語AIライティングツール。キーワード分析・競合上位の見出し抽出・記事生成・検索順位チェックまでを1ツールで一気通貫し、オウンドメディア運営者を主なターゲットにする。",
+    strengths: [
+      "対象キーワードの競合上位を解析し、不足トピックを踏まえた長文SEO記事を生成できる（叩き台ではなく公開前提の本文に近い）",
+      "キーワード調査〜順位計測まで内包し、Frase（英語SERPが主）と違い日本語SERPを前提に設計されている",
+      "Free（1週間）で主要機能を試せるため、高額プラン契約前に自社の記事用途に合うか検証できる",
+    ],
+    weaknesses: [
+      "個人の趣味ブログには価格が重い（Basic ¥11,000 / Pro ¥38,500 / Enterprise ¥66,000 — 2026-06-05 公式取得・すべてサブスク前払い）",
+      "短文コピー・SNS文面のテンプレ量産はCatchyの方が手数が速い（Transcopeは長文SEO本文に最適化されている）",
+    ],
+    verifiedAt: "2026-06-05",
+    note: "もしもアフィリエイト（promotion_id=5285）で提携可能。提携申請・承認後に affiliateUrl を差し込む（未設定時は officialUrl にフォールバック）。",
   },
 ];
 

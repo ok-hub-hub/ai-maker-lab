@@ -1,0 +1,77 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import { SITE } from "@/config";
+---
+
+<Layout
+  title={`利用規約 | ${SITE.title}`}
+  description={`${SITE.author} の利用規約。`}
+>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout">
+    <section id="terms" class="app-prose mb-28 max-w-app prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-3xl">利用規約</h1>
+      <p class="text-sm opacity-70">最終更新：2026-05-24</p>
+
+      <p>
+        本利用規約（以下「本規約」）は、<strong>{SITE.author}</strong>（以下「当サイト」）の利用条件を定めるものです。利用者は、本規約に同意の上、当サイトを利用するものとします。
+      </p>
+
+      <h2>サービス内容</h2>
+      <p>
+        当サイトは、Vibe Coding（v0 / Lovable / Bolt / Cursor / Claude Code）と AI 動画・AI 音声・業務自動化ツールの比較・編集記事の提供を目的としたメディアです。
+      </p>
+
+      <h2>禁止事項</h2>
+      <p>利用者は、当サイトの利用にあたって以下の行為を行ってはなりません。</p>
+      <ul>
+        <li>法令または公序良俗に違反する行為</li>
+        <li>当サイトのサーバー・ネットワークに過度な負荷をかける行為</li>
+        <li>当サイトの記事内容を無断で複製・転載・改変する行為（引用の範囲を超えるもの）</li>
+        <li>当サイト・運営者・第三者の知的財産権・プライバシー・名誉を侵害する行為</li>
+        <li>当サイトを通じて取得した情報を商業目的で利用する行為（運営者の事前許可なき場合）</li>
+        <li>その他、当サイトが不適切と判断する行為</li>
+      </ul>
+
+      <h2>著作権・知的財産権</h2>
+      <p>
+        当サイトに掲載されている記事・画像・コンテンツの著作権は、当サイトまたは正当な権利者に帰属します。
+        引用の範囲を超える利用については、事前に <a href="/contact/">お問い合わせ</a> よりご連絡ください。
+      </p>
+      <p>
+        各 AI ツール・SaaS・サービスの商標・ロゴ等は、それぞれの権利者に帰属します。当サイトで言及・参照する場合、その権利を尊重して取扱います。
+      </p>
+
+      <h2>サービスの変更・中断・終了</h2>
+      <p>
+        当サイトは、利用者への事前通知なく、本サイトの内容・URL・運営状況を変更・中断・終了することがあります。
+        これにより利用者に生じた損害について、当サイトは責任を負いません。
+      </p>
+
+      <h2>免責事項</h2>
+      <p>
+        当サイトの利用に関する免責事項は、<a href="/disclaimer/">免責事項</a> ページに記載しています。
+      </p>
+
+      <h2>準拠法・管轄裁判所</h2>
+      <p>
+        本規約の解釈および当サイトの利用に関する紛争は、日本法に準拠し、運営者の所在地を管轄する裁判所を専属的合意管轄裁判所とします。
+      </p>
+
+      <h2>規約の変更</h2>
+      <p>
+        当サイトは、本規約を必要に応じて変更することがあります。変更後の内容は当ページに掲載した時点で効力を生じます。
+      </p>
+
+      <h2>お問い合わせ</h2>
+      <p>
+        本規約に関するご質問は <a href="/contact/">お問い合わせページ</a> よりご連絡ください。
+      </p>
+    </section>
+  </main>
+  <Footer />
+</Layout>

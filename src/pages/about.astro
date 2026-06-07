@@ -1,0 +1,93 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import { SITE } from "@/config";
+---
+
+<Layout
+  title={`運営者情報 | ${SITE.title}`}
+  description={`${SITE.author} の運営者情報。`}
+>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout">
+    <section id="about" class="app-prose mb-28 max-w-app prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-3xl">運営者情報</h1>
+      <p class="text-sm opacity-70">最終更新：2026-05-24</p>
+
+      <h2>運営主体</h2>
+      <table class="mt-4 w-full border-collapse text-sm">
+        <tbody>
+          <tr class="border-b">
+            <th class="w-40 px-4 py-3 text-left font-semibold">サイト名</th>
+            <td class="px-4 py-3">{SITE.author}（aimaker-lab.com）</td>
+          </tr>
+          <tr class="border-b">
+            <th class="px-4 py-3 text-left font-semibold">運営</th>
+            <td class="px-4 py-3">{SITE.author} 編集部</td>
+          </tr>
+          <tr class="border-b">
+            <th class="px-4 py-3 text-left font-semibold">事業内容</th>
+            <td class="px-4 py-3">
+              Vibe Coding（v0 / Lovable / Bolt / Cursor / Claude Code）と AI 動画・AI 音声・業務自動化ツールの比較・編集記事の提供。アフィリエイト広告収入による運営。
+            </td>
+          </tr>
+          <tr class="border-b">
+            <th class="px-4 py-3 text-left font-semibold">運営開始</th>
+            <td class="px-4 py-3">2026 年</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>編集方針</h2>
+      <p>
+        {SITE.author} は、<strong>Claude Code で「AI 会社」を運営する個人開発者の実体験</strong> をベースに、Vibe Coding と AI ツールを <strong>公式公開データ＋実体験</strong> で比較する <strong>AI 駆動メディア</strong> です。
+        料金・機能仕様は各公式サイトから取得日付きで引用し、景品表示法・ステマ規制（景表法第5条第3号）・著作権法に準拠して運営します。
+      </p>
+
+      <h2>編集ポリシー</h2>
+      <ul>
+        <li>掲載 AI ツールの評価は <strong>公式公開データ（料金・機能・対応モデル・利用制限）</strong> 等の客観情報で整理します。</li>
+        <li>主観的な判断には <strong>運営者の実体験</strong>（v0 / Cursor / Claude Code で実際に作って公開した感想）を併記し、利用者の状況に応じた判断材料を提供します。</li>
+        <li>誇張表現（「最強」「絶対に稼げる」「100%収益化」等）を避け、収益・効果には個人差があることを明示します。</li>
+        <li>成果報酬型広告（PR）のリンクには明示ラベル、または <code>rel="nofollow sponsored"</code> 属性を付与します。広告掲載はランキング・評価に影響しません。</li>
+      </ul>
+
+      <h2>AI 駆動の編集体制</h2>
+      <p>
+        本サイトは <strong>「AI Maker Lab 編集部」</strong> 名義で運営しています。編集部は <strong>個人開発者（運営者）＋ Claude Code を中核とする AI エージェント群</strong>（CEO 代行・QA・事業開発・技術検証の4部門）で構成されています。
+        <strong>「これも AI で作っています」</strong> を隠さず、Vibe Coding 時代のメディアの作り方そのものを実験として開示する方針です。
+      </p>
+      <p>
+        編集部の構成・編集プロセスの詳細は <a href="/editorial-team/">編集部紹介ページ</a> をご覧ください。
+      </p>
+
+      <h2>外部広告・アフィリエイト</h2>
+      <p>
+        本サイトは、A8.net・もしもアフィリエイト・バリューコマース・Amazon アソシエイト 等の ASP（アフィリエイト・サービス・プロバイダー）を通じた成果報酬型広告を掲載しています。
+        詳細は <a href="/pr-disclosure/">広告・PR 表示</a> をご覧ください。
+      </p>
+
+      <h2>免責事項</h2>
+      <p>
+        掲載情報の正確性には最大限注意していますが、最新情報・最終的な契約判断は必ず各ツール公式サイトをご確認ください。
+        詳細は <a href="/disclaimer/">免責事項</a> および <a href="/terms/">利用規約</a> をご覧ください。
+      </p>
+
+      <h2>お問い合わせ</h2>
+      <p>
+        本サイトに関するご質問・取材依頼・広告掲載のご相談・誤情報のご指摘等は、編集部公式 X アカウントの DM にてご連絡ください。
+      </p>
+      <p class="mt-2">
+        <strong>X (Twitter) DM：<a href="https://x.com/aimakerlab" target="_blank" rel="noopener noreferrer">@aimakerlab</a></strong>
+        ／ Threads：<a href="https://www.threads.com/@aimaker_lab" target="_blank" rel="noopener noreferrer">@aimaker_lab</a>
+      </p>
+      <p class="mt-2 text-xs opacity-70">
+        ※ 返信は内容により 2-7 営業日いただく場合があります。件名には【目的】（例：取材依頼／広告掲載相談／誤情報指摘 等）を冒頭にお書きいただくと、優先的に対応いたします。
+      </p>
+    </section>
+  </main>
+  <Footer />
+</Layout>

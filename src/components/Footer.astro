@@ -15,6 +15,53 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
   class:list={["app-layout", { "mt-auto": !noMarginTop }, className]}
   {...attrs}
 >
+  <div class="border-t border-border pt-8 pb-6">
+    <p class="editorial-marker mb-4">Network · 姉妹サイト</p>
+    <ul class="grid gap-3 sm:grid-cols-2">
+      <li>
+        <a
+          href="https://kokolabo.jp/"
+          rel="noopener"
+          class="group block rounded-lg border border-border bg-card-bg px-5 py-4 transition hover:border-accent"
+        >
+          <p class="font-serif text-lg text-foreground transition group-hover:text-accent">
+            ココラボ
+            <span class="ml-2 text-xs text-foreground-muted">kokolabo.jp →</span>
+          </p>
+          <p class="mt-1 text-xs text-foreground-muted">
+            化粧品・スキンケア・脱毛・美容医療を編集部が公式公開データで比較する美容メディア
+          </p>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://careerlounge.jp/"
+          rel="noopener"
+          class="group block rounded-lg border border-border bg-card-bg px-5 py-4 transition hover:border-accent"
+        >
+          <p class="font-serif text-lg text-foreground transition group-hover:text-accent">
+            キャリアラウンジ
+            <span class="ml-2 text-xs text-foreground-muted">careerlounge.jp →</span>
+          </p>
+          <p class="mt-1 text-xs text-foreground-muted">
+            転職エージェントを実データで比較する転職メディア、公式公開求人数の取得日付き引用
+          </p>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="border-t border-border pt-6 pb-4">
+    <p class="editorial-marker mb-3">運営・法務</p>
+    <ul class="flex flex-wrap gap-x-4 gap-y-2 text-xs text-foreground-muted">
+      <li><a href="/about/" class="hover:text-accent">運営者情報</a></li>
+      <li><a href="/editorial-team/" class="hover:text-accent">編集部紹介</a></li>
+      <li><a href="/pr-disclosure/" class="hover:text-accent">広告・PR 表示</a></li>
+      <li><a href="/disclaimer/" class="hover:text-accent">免責事項</a></li>
+      <li><a href="/privacy/" class="hover:text-accent">プライバシーポリシー</a></li>
+      <li><a href="/terms/" class="hover:text-accent">利用規約</a></li>
+      <li><a href="/contact/" class="hover:text-accent">お問い合わせ</a></li>
+    </ul>
+  </div>
   <div
     class:list={[
       "py-6 sm:py-4",

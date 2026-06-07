@@ -8,23 +8,97 @@ type Props = {
   variant?: "h2" | "h3";
 } & CollectionEntry<"blog">;
 
-const { variant: Heading = "h2", id, data, filePath } = Astro.props;
+const { variant: Heading = "h2", id, data, filePath, body } = Astro.props;
 
 const { title, description, featured, tags, ...props } = data;
 const href = getPath(id, filePath);
+
+// タグ群からサムネ用のアイコン・絵文字・グラデーション・ラベルを決める
+function thumbStyleFor(tagList: string[] | undefined): { emoji: string; gradient: string; label: string; icon?: string } {
+  const tagSet = new Set((tagList || []).map(t => t.toLowerCase()));
+  if (tagSet.has("vibe-coding") || tagSet.has("v0") || tagSet.has("lovable") || tagSet.has("bolt") || tagSet.has("ui-generator")) {
+    return { emoji: "", icon: "vibe-coding", gradient: "from-indigo-100 via-indigo-200 to-purple-200", label: "Vibe Coding" };
+  }
+  if (tagSet.has("comparison") || tagSet.has("ai-coding") || tagSet.has("cursor") || tagSet.has("claude-code") || tagSet.has("ide")) {
+    return { emoji: "", icon: "ai-tool", gradient: "from-violet-100 via-violet-200 to-fuchsia-200", label: "AIツール比較" };
+  }
+  if (tagSet.has("ai-side-business") || tagSet.has("monetization") || tagSet.has("affiliate") || tagSet.has("roadmap")) {
+    return { emoji: "", icon: "ai-side-business", gradient: "from-yellow-100 via-yellow-200 to-amber-200", label: "AI副業" };
+  }
+  if (tagSet.has("hosting") || tagSet.has("domain") || tagSet.has("infrastructure") || tagSet.has("cloudflare") || tagSet.has("vercel") || tagSet.has("mixhost") || tagSet.has("onamae")) {
+    return { emoji: "", icon: "hosting", gradient: "from-sky-100 via-sky-200 to-cyan-200", label: "ホスティング" };
+  }
+  if (tagSet.has("ai-company") || tagSet.has("ai-agent") || tagSet.has("journal")) {
+    return { emoji: "", icon: "ai-company", gradient: "from-emerald-100 via-emerald-200 to-teal-200", label: "AI会社運営" };
+  }
+  if (tagSet.has("announcement")) {
+    return { emoji: "", icon: "editor-memo", gradient: "from-rose-100 via-rose-200 to-pink-200", label: "お知らせ" };
+  }
+  return { emoji: "", icon: "individual-dev", gradient: "from-stone-100 via-stone-200 to-stone-300", label: "AI Maker Lab" };
+}
+
+// タグごとの配色クラス（Zenn風だがai-maker-labカラーパレットに合わせる）
+function tagColorFor(tag: string): string {
+  const t = tag.toLowerCase();
+  if (["v0", "vercel"].includes(t)) return "bg-indigo-50 text-indigo-700 ring-indigo-200 dark:bg-indigo-950/40 dark:text-indigo-300 dark:ring-indigo-800";
+  if (["cursor", "ide"].includes(t)) return "bg-violet-50 text-violet-700 ring-violet-200 dark:bg-violet-950/40 dark:text-violet-300 dark:ring-violet-800";
+  if (["claude-code", "ai-agent", "ai-company"].includes(t)) return "bg-emerald-50 text-emerald-700 ring-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:ring-emerald-800";
+  if (["lovable", "bolt", "ui-generator"].includes(t)) return "bg-fuchsia-50 text-fuchsia-700 ring-fuchsia-200 dark:bg-fuchsia-950/40 dark:text-fuchsia-300 dark:ring-fuchsia-800";
+  if (["vibe-coding"].includes(t)) return "bg-purple-50 text-purple-700 ring-purple-200 dark:bg-purple-950/40 dark:text-purple-300 dark:ring-purple-800";
+  if (["monetization", "affiliate", "ai-side-business", "roadmap"].includes(t)) return "bg-amber-50 text-amber-700 ring-amber-200 dark:bg-amber-950/40 dark:text-amber-300 dark:ring-amber-800";
+  if (["hosting", "domain", "infrastructure", "cloudflare", "mixhost", "onamae"].includes(t)) return "bg-sky-50 text-sky-700 ring-sky-200 dark:bg-sky-950/40 dark:text-sky-300 dark:ring-sky-800";
+  if (["announcement"].includes(t)) return "bg-rose-50 text-rose-700 ring-rose-200 dark:bg-rose-950/40 dark:text-rose-300 dark:ring-rose-800";
+  if (["comparison"].includes(t)) return "bg-cyan-50 text-cyan-700 ring-cyan-200 dark:bg-cyan-950/40 dark:text-cyan-300 dark:ring-cyan-800";
+  return "bg-stone-100 text-stone-700 ring-stone-200 dark:bg-stone-800/60 dark:text-stone-300 dark:ring-stone-700";
+}
+
+const thumb = thumbStyleFor(tags);
+
+// 読了時間ざっくり算出（日本語: 1分あたり600字想定 / 英語: 1分あたり250語）
+const text = body ?? "";
+const jpChars = (text.match(/[　-鿿]/g) || []).length;
+const enWords = text.replace(/[　-鿿]/g, " ").split(/\s+/).filter(Boolean).length;
+const readMinutes = Math.max(1, Math.round(jpChars / 600 + enWords / 250));
+
+// 編集部おすすめ度（実数値ではなく、featured + タグ数 + 文字数から擬似算出。「編集部おすすめ度」と明示）
+const recommendScore = (featured ? 50 : 20) + Math.min(40, Math.floor(jpChars / 1500)) + (tags?.length || 0) * 3;
+// 実装難度（カードバッジ用：tagsから判定）
+function difficultyFor(tagList: string[] | undefined): { label: string; cls: string } {
+  const s = new Set((tagList || []).map(t => t.toLowerCase()));
+  if (s.has("ai-company") || s.has("ai-agent") || s.has("infrastructure")) return { label: "応用", cls: "bg-rose-50 text-rose-700 ring-rose-200 dark:bg-rose-950/40 dark:text-rose-300 dark:ring-rose-800" };
+  if (s.has("comparison") || s.has("cursor") || s.has("claude-code")) return { label: "実践", cls: "bg-amber-50 text-amber-700 ring-amber-200 dark:bg-amber-950/40 dark:text-amber-300 dark:ring-amber-800" };
+  return { label: "入門", cls: "bg-emerald-50 text-emerald-700 ring-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:ring-emerald-800" };
+}
+const difficulty = difficultyFor(tags);
 ---
 
 <li class="group bg-background transition hover:bg-foreground/[0.012]">
-  <a href={href} class="flex h-full flex-col gap-3 p-8 sm:p-10">
-    <div class="flex items-center gap-3 text-[10px] tracking-[0.18em] text-foreground-muted uppercase">
+  <a href={href} class="flex h-full flex-col">
+    <div class={`relative h-44 w-full overflow-hidden bg-gradient-to-br ${thumb.gradient} flex items-center justify-center`}>
+      {thumb.icon ? (
+        <span class="flex h-28 w-28 items-center justify-center rounded-2xl bg-background/85 shadow-md ring-1 ring-background/50 backdrop-blur-sm">
+          <img src={`/icons/${thumb.icon}.png`} alt={thumb.label} class="h-24 w-24 object-contain" width="96" height="96" loading="lazy" />
+        </span>
+      ) : (
+        <span class="text-7xl drop-shadow-md">{thumb.emoji}</span>
+      )}
+      <div class="absolute inset-0 bg-gradient-to-t from-foreground/10 to-transparent"></div>
+      <span class="absolute bottom-3 left-3 rounded-full bg-background/90 px-2.5 py-1 text-[10px] font-bold tracking-wide text-foreground">
+        {thumb.label}
+      </span>
+      {featured && (
+        <span class="absolute top-3 right-3 rounded-full bg-accent/90 px-2.5 py-1 text-[10px] font-bold tracking-wider text-background uppercase">
+          Featured
+        </span>
+      )}
+    </div>
+    <div class="flex flex-1 flex-col gap-3 p-8 sm:p-10">
+    <div class="flex flex-wrap items-center gap-1.5">
       {
-        featured && (
-          <span class="font-medium text-accent">— Featured</span>
-        )
-      }
-      {
-        tags?.slice(0, 2).map(tag => (
-          <span>{tag}</span>
+        tags?.slice(0, 4).map(tag => (
+          <span class={`inline-flex items-center rounded-md px-2 py-0.5 text-[10px] font-medium ring-1 ring-inset ${tagColorFor(tag)}`}>
+            #{tag}
+          </span>
         ))
       }
     </div>
@@ -38,6 +112,20 @@ const href = getPath(id, filePath);
 
     <p class="line-clamp-3 text-[15px] leading-[1.8] text-foreground-muted">{description}</p>
 
+    <div class="mt-2 flex flex-wrap items-center gap-2 text-[11px] text-foreground-muted">
+      <span title="編集部おすすめ度（featuredとタグ数から算出した目安）" class="inline-flex items-center gap-1 rounded-md bg-muted px-2 py-0.5 ring-1 ring-inset ring-border">
+        <span aria-hidden="true">★</span>
+        編集部おすすめ度 {recommendScore}
+      </span>
+      <span class={`inline-flex items-center gap-1 rounded-md px-2 py-0.5 ring-1 ring-inset ${difficulty.cls}`}>
+        実装難度: {difficulty.label}
+      </span>
+      <span class="inline-flex items-center gap-1 rounded-md bg-muted px-2 py-0.5 ring-1 ring-inset ring-border" aria-label={`読了時間 ${readMinutes}分`}>
+        <svg aria-hidden="true" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg>
+        約{readMinutes}分で読了
+      </span>
+    </div>
+
     <div class="mt-auto flex items-baseline justify-between pt-4">
       <span class="text-[11px] tracking-wide text-foreground-muted">
         <Datetime {...props} />
@@ -48,6 +136,7 @@ const href = getPath(id, filePath);
         続きを読む
         <span class="transition-transform group-hover:translate-x-1">→</span>
       </span>
+    </div>
     </div>
   </a>
 </li>

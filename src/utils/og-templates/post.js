@@ -12,7 +12,7 @@ const COLORS = {
   border: "#e6e1d6",
 };
 
-const EYEBROW = "AI MAKER LAB · ESSAY";
+const EYEBROW = "AI MAKER LAB · AI-EDITED ESSAY";
 
 export default async post => {
   const title = post.data.title;

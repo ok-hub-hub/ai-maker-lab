@@ -1,0 +1,76 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import { SITE } from "@/config";
+---
+
+<Layout
+  title={`編集部紹介 | ${SITE.title}`}
+  description={`${SITE.author} の編集部紹介。編集方針・編集プロセス・掲載基準を公開しています。`}
+>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout">
+    <section id="editorial-team" class="app-prose mb-28 max-w-app prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-3xl">編集部紹介</h1>
+      <p class="text-sm opacity-70">最終更新：2026-05-19</p>
+
+      <h2>編集方針</h2>
+      <p>
+        <strong>AI Maker Lab</strong> は、Vibe Coding（v0 / Lovable / Bolt / Cursor）と AI動画・AI音声・業務自動化のツールについて、<strong>AI が編集する Vibe Coding メディア</strong> として比較・記録するジャーナルです。
+        <strong>Claude Code で「AI 会社」を1ヶ月運営した個人開発者の実体験</strong> をベースに、<strong>AI 駆動の編集体制</strong> で記事を制作しています。<strong>「これも AI で作っています」</strong> を隠さず、Vibe Coding 実践記録としてそのまま公開する方針です。
+        料金プラン・無料枠の限界・有料に上げるべきタイミング・日本語耐性まで、<strong>各社公式ドキュメントを取得日付き引用で整理する</strong> ことをベースに、AI 編集部と個人開発者の実体験を組み合わせて執筆します。
+      </p>
+
+      <h2>編集体制 — AI 駆動メディアの裏側</h2>
+      <p>
+        本サイトは <strong>「AI Maker Lab 編集部」</strong> 名義で運営しています。
+        編集部は <strong>個人開発者（運営者）＋ Claude Code を中核とする AI エージェント群</strong>（CEO 代行・QA・事業開発・技術検証の4部門）で構成され、以下の方針で執筆・編集を行っています。
+      </p>
+      <ul>
+        <li><strong>AI 駆動の編集プロセス</strong>：記事の構成・比較整理・表現チェックは AI 編集部が担当し、運営者（個人開発者）が事実確認・実体験との突き合わせ・最終公開判断を行います。「AI が書く AI ジャーナル」のメタ構造そのものを記事制作プロセスとして開示します。</li>
+        <li><strong>個人開発者の実体験ベース</strong>：v0 / Cursor / Claude Code で実際にプロダクトを作ってデプロイした感想、Vibe Coding 現場ノートを一次情報として記載します。</li>
+        <li><strong>公式情報の比較整理</strong>：紹介する有料プラン・サブスクリプションは、各ツールの公式公開データを取得日付き引用で比較・整理します。提供品・PR 案件は明示ラベルで開示します。</li>
+        <li><strong>公式ドキュメント引用</strong>：料金・機能仕様・利用制限は、各ツールの公式ドキュメント・公式サイトから取得日付きで引用します。デモ動画やスクリーンショットの受け売りはしません。</li>
+      </ul>
+
+      <h2>編集プロセス</h2>
+      <p>記事は以下の5ステップで作成・公開しています。<strong>AI 駆動の編集体制と人間の最終確認</strong> を組み合わせています。</p>
+      <ol>
+        <li><strong>公式公開データの取得</strong>：各 AI ツールの <strong>公式ドキュメント・公式サイト・料金ページ</strong> から仕様・料金・利用制限を取得し、<strong>取得日を記事内に明記</strong> します。</li>
+        <li><strong>AI 編集部による比較整理＋実体験の突き合わせ</strong>：取得した公式公開データを AI 編集部が横断的に整理し、運営者（個人開発者）が v0 / Cursor / Claude Code で実際に試した実体験と突き合わせて構造化します。</li>
+        <li><strong>法務4軸チェック</strong>：景品表示法（優良誤認・有利誤認の排除）／ステマ規制（広告関係の明示）／著作権法（公式ドキュメント引用範囲の遵守）／各ツール利用規約の4軸で表現を点検します。</li>
+        <li><strong>PR 表示の付与</strong>：成果報酬型広告・アフィリエイトリンクを含む記事・リンクには「PR」「広告」等のラベルを明示します。</li>
+        <li><strong>公開</strong>：チェック完了後に公開し、料金・機能仕様は AI ツール側のアップデートに合わせて定期的に再確認します。</li>
+      </ol>
+
+      <h2>掲載基準</h2>
+      <ul>
+        <li><strong>客観データ優先</strong>：料金プラン・無料枠・対応機能・対応モデル等の客観的仕様情報を最優先で記載します。</li>
+        <li><strong>誇張表現の排除</strong>：「最強」「絶対に稼げる」「誰でも収益化できる」等の断定的・誇張的表現は使用しません。実体験ベースの示唆として、AI 編集部の所見と運営者の感想を分けて記載します。</li>
+        <li><strong>PR 表示の明示</strong>：成果報酬型広告（アフィリエイト）を含む記事・リンクには「PR」ラベルを付与します。</li>
+        <li><strong>関連法令の遵守</strong>：景品表示法・ステマ規制（2023年10月施行）・著作権法・各ツール利用規約に準拠して執筆します。</li>
+        <li><strong>専門用語の正確性</strong>：AI モデル名・API 仕様・トークン単価等の技術用語は、公式表記に合わせて正確に記載します。</li>
+      </ul>
+
+      <h2>筆者 — AI 編集部 ＋ 個人開発者</h2>
+      <p>
+        本サイトの記事は、すべて <strong>「AI Maker Lab 編集部」</strong> 名義で公開しています。AI 編集部（Claude Code を中核とするエージェント群）と運営者（個人開発者）が協働で制作する体制を取っています。
+        個人名ではなく編集部全体での品質責任を担う形を採用しており、特定の個人見解ではなく <strong>AI 駆動の編集体制としての公式見解</strong> としてツールレビューを提供する方針です。<strong>「これも AI で作っています」</strong> ことを隠さず、Vibe Coding 時代のメディアの作り方そのものを実験として開示しています。
+      </p>
+      <p>
+        お問い合わせ・取材依頼・誤情報のご指摘等は、<a href="/about/">運営者情報ページ</a> に記載のメールアドレスまでご連絡ください。
+      </p>
+
+      <h2>アップデート方針</h2>
+      <ul>
+        <li>料金プラン・機能仕様・対応モデル等は、各 AI ツール公式サイトを定期的に再確認し、変更があれば各記事の「取得日」を更新します。</li>
+        <li>景品表示法・ステマ規制・著作権法等の法令改正、または各ツール利用規約の改定があった場合は、編集方針・既存記事の表現を見直します。</li>
+        <li>誤情報のご指摘は <a href="/about/">運営者情報ページ</a> 記載のメールアドレスにて受け付けます。確認の上、必要に応じて訂正・更新を行います。</li>
+      </ul>
+    </section>
+  </main>
+  <Footer />
+</Layout>

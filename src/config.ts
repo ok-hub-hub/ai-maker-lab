@@ -2,7 +2,7 @@ export const SITE = {
   website: "https://aimaker-lab.com/",
   author: "AI Maker Lab",
   profile: "https://aimaker-lab.com/about/",
-  desc: "Vibe Coding（v0 / Lovable / Bolt / Cursor）と AI動画・AI音声・業務自動化を、個人開発者が実際に触って料金・使い勝手・収益化までを書きとめるジャーナル。AI副業ロードマップ、ホスティング、ドメイン選びの実体験レビューも。",
+  desc: "Vibe Coding（v0 / Lovable / Bolt / Cursor）と AI動画・AI音声・業務自動化を、Claude Code で AI 会社を1ヶ月運営した個人開発者が、AI 駆動の編集体制で記録・比較する実体験ジャーナル。これも AI で作っています。AI副業ロードマップ、ホスティング、ドメイン選びの実体験記事も。",
   title: "AI Maker Lab — Vibe Coding と個人開発の実体験ジャーナル",
   ogImage: "aimaker-lab-og.jpg",
   lightAndDarkMode: true,

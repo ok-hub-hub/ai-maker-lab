@@ -1,0 +1,69 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import { SITE } from "@/config";
+---
+
+<Layout
+  title={`広告・PR 表示 | ${SITE.title}`}
+  description={`${SITE.author} のアフィリエイト広告・ステマ規制対応に関する表示。`}
+>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout">
+    <section id="pr-disclosure" class="app-prose mb-28 max-w-app prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-3xl">広告・PR 表示</h1>
+      <p class="text-sm opacity-70">最終更新：2026-05-24</p>
+
+      <p>
+        <strong>{SITE.author}</strong> は、消費者庁が 2023 年 10 月から施行した「景品表示法における事業者が自己の供給する商品又は役務の取引について行う表示」に関する告示（いわゆるステマ規制）を遵守し、広告・PR の開示を徹底します。
+      </p>
+
+      <h2>アフィリエイト広告について</h2>
+      <p>
+        当サイトの一部のリンクは、<strong>A8.net・もしもアフィリエイト・バリューコマース・Amazon アソシエイト</strong> 等のアフィリエイトプログラムを利用しています。
+        利用者が当該リンクを経由して商品・サービスを購入・契約された場合、当サイトに紹介手数料が支払われることがあります。
+      </p>
+      <p>
+        アフィリエイト広告を含む記事・リンクには、ページ上部または該当箇所近傍に <strong>「広告」「PR」「sponsored」</strong> 等の表記、もしくは <code>rel="nofollow sponsored"</code> 属性を明示します。
+        <strong>/go/&lt;id&gt;/</strong> 形式の内部リダイレクトリンクは、アフィリエイトリンクへのリダイレクトを集約管理するためのものであり、<code>noindex,nofollow</code> 属性を付与しています。
+      </p>
+
+      <h2>記事の開示ラベル</h2>
+      <p>各記事には、必要に応じて以下のいずれかの開示ラベルを付与します。</p>
+      <ul>
+        <li><strong>編集部比較</strong>：AI 編集部と個人開発者が、各ツールの公式公開データを取得日付き引用で比較・整理した記事。</li>
+        <li><strong>実体験レビュー</strong>：運営者（個人開発者）が実際に v0 / Cursor / Claude Code 等で利用した実体験を含む記事。</li>
+        <li><strong>PR / タイアップ</strong>：金銭または同等の対価を受けて作成された記事（該当時のみ）。</li>
+        <li><strong>アフィリエイト関係</strong>：当該商品・サービスのアフィリエイトリンクから収益を得る関係にある場合。</li>
+      </ul>
+
+      <h2>編集記事の方針</h2>
+      <p>
+        編集記事（編集部が作成する比較・解説記事）にアフィリエイトリンクを含める場合、記事内の該当箇所近傍に表示します。
+        順位・推奨は、報酬条件や提携金額の多寡で操作することなく、<strong>各ツール公式公開データと運営者の実体験</strong> に基づく公平な評価基準で選定します。
+      </p>
+
+      <h2>Amazon アソシエイトについて</h2>
+      <p>
+        当サイトは Amazon.co.jp を宣伝しリンクすることによってサイトが紹介料を獲得できる手段を提供することを目的に設定された <strong>アフィリエイトプログラムである、Amazon アソシエイト・プログラムの参加者</strong> です。
+        Amazon リンクには <code>?tag=aimakerlab26-22</code> のアソシエイトタグを付与し、<code>rel="nofollow sponsored noopener"</code> 属性を明示します。
+      </p>
+
+      <h2>第三者配信の広告サービス</h2>
+      <p>
+        当サイトでは、第三者配信の広告サービス（Google AdSense 等）を将来的に利用する場合があります。
+        これらの広告は、Cookie を利用してユーザーの行動履歴情報を取得し、その情報に基づき広告を配信することがあります。
+        Cookie を無効化する方法は各広告配信事業者のオプトアウトページをご確認ください。
+      </p>
+
+      <h2>お問い合わせ</h2>
+      <p>
+        広告・PR 表示に関するご質問は <a href="/contact/">お問い合わせページ</a> をご覧ください。
+      </p>
+    </section>
+  </main>
+  <Footer />
+</Layout>
