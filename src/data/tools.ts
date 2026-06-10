@@ -587,6 +587,7 @@ export const TOOLS: ToolMeta[] = [
     scale: 2,
     affiliateTier: "S",
     officialUrl: "https://www.conoha.jp/wing/",
+    affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3QAX+7RTR3M+50+5SS2PD",
     description:
       "GMO インターネット運営の WordPress 特化レンタルサーバー。国内データセンター（東京・大阪）の独自開発サーバー構成で、Web Vitals（特に TTFB）を国内アクセス向けに最適化している。",
     strengths: [
