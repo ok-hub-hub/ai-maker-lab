@@ -192,21 +192,27 @@ const structuredData = {
     <!-- アフィリエイトリンク click を GA4 イベントとして計測 -->
     <script is:inline>
       document.addEventListener("click", function (e) {
-        const a = e.target.closest && e.target.closest("a[rel*='sponsored'], a[rel*='nofollow']");
+        const a = e.target.closest && e.target.closest("a[href]");
         if (!a || !a.href) return;
-        const href = a.href;
-        if (a.hostname && a.hostname !== location.hostname) {
-          if (typeof gtag === "function") {
-            gtag("event", "affiliate_click", {
-              event_category: "outbound",
-              event_label: href,
-              transport_type: "beacon",
-              link_domain: a.hostname,
-              link_text: (a.textContent || "").trim().slice(0, 80),
-              page_path: location.pathname,
-            });
-          }
-        }
+        if (typeof gtag !== "function") return;
+        // 内部 /go/ クローク（主要なアフィリ導線）
+        const isCloaked = a.pathname && a.pathname.indexOf("/go/") === 0;
+        // 外部スポンサー/nofollow リンク（生のアフィリリンク）
+        const isExternalSponsored =
+          a.rel && /sponsored|nofollow/.test(a.rel) &&
+          a.hostname && a.hostname !== location.hostname;
+        if (!isCloaked && !isExternalSponsored) return;
+        gtag("event", "affiliate_click", {
+          event_category: "outbound",
+          event_label: a.href,
+          transport_type: "beacon",
+          link_domain: isCloaked ? location.hostname : a.hostname,
+          link_slug: isCloaked
+            ? a.pathname.replace("/go/", "").replace(/\/$/, "")
+            : "",
+          link_text: (a.textContent || "").trim().slice(0, 80),
+          page_path: location.pathname,
+        });
       }, { passive: true, capture: true });
     </script>
 
