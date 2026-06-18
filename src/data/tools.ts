@@ -779,6 +779,7 @@ export const TOOLS: ToolMeta[] = [
     scale: 2,
     affiliateTier: "A",
     officialUrl: "https://lp.ai-copywriter.jp/",
+    affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B5Q83+32QNAQ+52IU+60WN6",
     description:
       "デジタルレシピ社が運営する日本語特化の生成AIライティングツール。広告コピー・SNS投稿・記事構成・メール文面など100種以上のテンプレートから、日本語の自然な文章を生成する。国内ユーザー数が多く、日本語UIで完結する。",
     strengths: [
@@ -791,7 +792,7 @@ export const TOOLS: ToolMeta[] = [
       "Starterはクレジット制（¥3,000〜8,100/月）で使うほど消費し、無制限で回すならPro ¥9,800/月が現実ライン（料金は2026-06-05 公式取得・すべてサブスク）",
     ],
     verifiedAt: "2026-06-05",
-    note: "A8.net で提携可能。提携申請・承認後に affiliateUrl を差し込む（未設定時は officialUrl にフォールバック）。",
+    note: "A8.net 提携承認済み。affiliateUrl（px.a8.net 計測リンク）設定済み 2026-06-18。",
   },
   {
     id: "transcope",
@@ -807,6 +808,8 @@ export const TOOLS: ToolMeta[] = [
     scale: 2,
     affiliateTier: "A",
     officialUrl: "https://transcope.io/",
+    affiliateUrl:
+      "https://af.moshimo.com/af/c/click?a_id=5628821&p_id=5285&pc_id=14372&pl_id=69207",
     description:
       "シェアモル社運営、SEOに特化した日本語AIライティングツール。キーワード分析・競合上位の見出し抽出・記事生成・検索順位チェックまでを1ツールで一気通貫し、オウンドメディア運営者を主なターゲットにする。",
     strengths: [
@@ -819,7 +822,7 @@ export const TOOLS: ToolMeta[] = [
       "短文コピー・SNS文面のテンプレ量産はCatchyの方が手数が速い（Transcopeは長文SEO本文に最適化されている）",
     ],
     verifiedAt: "2026-06-05",
-    note: "もしもアフィリエイト（promotion_id=5285）で提携可能。提携申請・承認後に affiliateUrl を差し込む（未設定時は officialUrl にフォールバック）。",
+    note: "もしもアフィリエイト（promotion_id=5285）AI Maker Lab媒体(a_id=5628821)で提携承認済み。affiliateUrl 設定済み 2026-06-18。",
   },
 ];
 
