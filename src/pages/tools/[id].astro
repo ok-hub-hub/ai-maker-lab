@@ -22,6 +22,7 @@ const categoryLabels: Record<string, string> = {
   writing: "Writing & SEO",
   automation: "Automation",
   infrastructure: "Infrastructure",
+  career: "AI Career",
 };
 
 const categoryLabelsJa: Record<string, string> = {
@@ -31,6 +32,7 @@ const categoryLabelsJa: Record<string, string> = {
   writing: "ライティング・SEO",
   automation: "自動化",
   infrastructure: "インフラ",
+  career: "AIキャリア・学ぶ／働く",
 };
 
 const tierLabels: Record<string, string> = {
@@ -41,11 +43,20 @@ const tierLabels: Record<string, string> = {
   watch: "Watch — 観察中",
 };
 
-const priceLabel = tool.priceFree
-  ? tool.priceMin === 0
-    ? "無料あり（無料プランで利用可）"
-    : `無料あり（有料は $${tool.priceMin}/月〜）`
-  : `$${tool.priceMin}/月〜`;
+const careerPriceLabel: Record<string, string> = {
+  "free-counseling": "無料カウンセリング・無料相談あり（受講・利用は有料の場合あり／料金は公式で要確認）",
+  "free-signup": "無料登録・相談（求職者の利用は無料）",
+  "free-trial": "無料体験あり（本利用は有料の場合あり）",
+  "doc-request": "無料の資料請求・説明あり（受講は有料の場合あり）",
+};
+
+const priceLabel = tool.conversionPoint
+  ? careerPriceLabel[tool.conversionPoint]
+  : tool.priceFree
+    ? tool.priceMin === 0
+      ? "無料あり（無料プランで利用可）"
+      : `無料あり（有料は $${tool.priceMin}/月〜）`
+    : `$${tool.priceMin}/月〜`;
 
 const verifiedDate = new Date(tool.verifiedAt + "T00:00:00Z");
 const daysSinceVerified = Math.floor(

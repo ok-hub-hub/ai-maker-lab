@@ -4,7 +4,8 @@ export type Q1Code =
   | "video"
   | "writing"
   | "automation"
-  | "infrastructure";
+  | "infrastructure"
+  | "career";
 
 export type Q2Code = "engineer" | "some" | "none";
 export type Q3Code = "free" | "20" | "50" | "100plus";
@@ -33,6 +34,12 @@ export type ToolMeta = {
   /** 価格・条件の確認日（ISO 8601 YYYY-MM-DD）。/tools/[id]/ に表示され、古い場合は読者に警告される */
   verifiedAt: string;
   note?: string;
+  /** サービス種別。未設定は従来どおり SaaS ツール扱い。career カテゴリで使用 */
+  serviceType?: "tool" | "school" | "agent" | "freelance";
+  /** 成果地点（無料登録/無料カウンセリング等）。CTA文言・無料/有料の明示に使う */
+  conversionPoint?: "free-signup" | "free-counseling" | "free-trial" | "doc-request";
+  /** 成果単価の目安（円）。内部優先度・試算用。一次情報はASP管理画面 */
+  payoutJpy?: number;
 };
 
 export const TOOLS: ToolMeta[] = [
@@ -823,6 +830,97 @@ export const TOOLS: ToolMeta[] = [
     ],
     verifiedAt: "2026-06-05",
     note: "もしもアフィリエイト（promotion_id=5285）AI Maker Lab媒体(a_id=5628821)で提携承認済み。affiliateUrl 設定済み 2026-06-18。",
+  },
+  {
+    id: "career-company",
+    name: "キャリアカンパニー（IT転職エージェント）",
+    category: ["career"],
+    forEngineer: false,
+    forBeginner: true,
+    priceMin: 0,
+    priceFree: true,
+    jpFriendly: true,
+    speed: 2,
+    quality: 3,
+    scale: 2,
+    affiliateTier: "S",
+    officialUrl: "https://career-accompany.com/lp/inexperience-itjobchange/",
+    serviceType: "agent",
+    conversionPoint: "free-counseling",
+    payoutJpy: 10000,
+    description:
+      "未経験からITエンジニアを目指す人向けの転職エージェント（運営：株式会社エンデバース）。キャリア相談・求人紹介・選考対策を無料で受けられる。AIツールに触れて「IT業界で働くこと」に興味が出た段階の人が、無料の転職相談から次の一歩を検討できる。",
+    strengths: [
+      "求職者は無料で利用できる（転職エージェントは採用企業側から報酬を得るモデル）",
+      "未経験・スキル0からの相談に対応すると明記されており、AI/ITに触れ始めた層が相談しやすい",
+      "オンラインで無料転職相談を予約できる（来社必須ではない）",
+    ],
+    weaknesses: [
+      "求人は紹介制で、エリア・経歴により紹介できる案件が限られる場合がある",
+      "あくまで相談・紹介サービスであり、転職や年収の結果を保証するものではない",
+    ],
+    verifiedAt: "2026-06-18",
+    note: "A8.net で提携申請済み（2026-06-18・programId s00000027288001・成果地点=新規無料転職相談）。承認後に affiliateUrl（px.a8.net 計測リンク）を差し込む。未設定中は officialUrl にフォールバック。",
+  },
+  {
+    id: "potepan-camp",
+    name: "ポテパンキャンプ（エンジニア転職スクール）",
+    category: ["career"],
+    forEngineer: false,
+    forBeginner: true,
+    priceMin: 0,
+    priceFree: true,
+    jpFriendly: true,
+    speed: 2,
+    quality: 3,
+    scale: 2,
+    affiliateTier: "A",
+    officialUrl: "https://camp.potepan.com/",
+    serviceType: "school",
+    conversionPoint: "free-counseling",
+    description:
+      "未経験からWebエンジニアを目指すオンライン特化のプログラミングスクール（運営：株式会社ポテパン）。実務を想定した課題ベースのカリキュラムが特徴。受講前に無料のキャリア相談・説明を受けられる。AIツールを触ってみて本格的に開発を学びたくなった人向け。",
+    strengths: [
+      "受講前に無料でキャリア相談・カウンセリングを受けられる（いきなり申込不要）",
+      "オンライン完結で、地方や在職中でも学習を始めやすい",
+      "課題提出ベースで、手を動かしながらWeb開発の実務感覚を養う設計",
+    ],
+    weaknesses: [
+      "カウンセリングは無料だが、受講そのものは有料（料金・コースは公式で要確認）",
+      "学習には一定のまとまった時間が必要で、片手間での完走は難しい",
+    ],
+    verifiedAt: "2026-06-18",
+    note: "A8.net 提携申請予定（programId s00000017938002 系・成果地点=無料カウンセリング）。承認後に affiliateUrl 差し込み。未設定中は officialUrl フォールバック。受講有料・カウンセリング無料を明示すること。",
+  },
+  {
+    id: "ninja-code",
+    name: "忍者CODE（未経験向けオンライン学習）",
+    category: ["career"],
+    forEngineer: false,
+    forBeginner: true,
+    priceMin: 0,
+    priceFree: true,
+    jpFriendly: true,
+    speed: 2,
+    quality: 2,
+    scale: 2,
+    affiliateTier: "A",
+    officialUrl: "https://ninjacode.work/",
+    serviceType: "school",
+    conversionPoint: "free-counseling",
+    description:
+      "未経験からプロを目指すオンラインのプログラミング学習サービス（運営：株式会社ラグザス・クリエイト）。独学プランやメンター付きプランなど段階的に選べる構成で、Web制作・WEBデザイン・動画編集など実務テーマを扱う。まず無料相談で進め方を確認できる。",
+    strengths: [
+      "無料相談で、自分の目的に合うプラン・学習の進め方を確認できる",
+      "独学寄りの手頃なプランからメンター付きまで、予算に応じて選べる",
+      "Web制作・デザイン・動画編集など、AIと組み合わせて仕事にしやすい実務テーマ",
+    ],
+    weaknesses: [
+      "相談は無料だが、各プランの受講は有料（料金は公式で要確認）",
+      "独学プラン中心のため、手厚い伴走を求める人はプラン選択に注意",
+    ],
+    verifiedAt: "2026-06-18",
+    note: "A8.net 提携申請予定（成果地点=無料相談）。承認後に affiliateUrl 差し込み。未設定中は officialUrl フォールバック。受講有料・相談無料を明示すること。",
   },
 ];
 

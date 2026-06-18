@@ -12,6 +12,7 @@ const categoryOrder: { code: string; en: string; ja: string }[] = [
   { code: "writing", en: "Writing & SEO", ja: "ライティング・SEO" },
   { code: "automation", en: "Automation", ja: "業務自動化" },
   { code: "infrastructure", en: "Infrastructure", ja: "インフラ・ホスティング" },
+  { code: "career", en: "AI Career", ja: "AIキャリア・学ぶ／働く" },
 ];
 
 const grouped = categoryOrder.map(cat => ({
@@ -30,8 +31,8 @@ const tierLabels: Record<string, string> = {
   watch: "—",
 };
 
-const title = "ツール辞書 — 26のAIツールを領域別に | AI Maker Lab";
-const description = "AI Maker Lab が扱う26種のAIツールを、開発／UI生成／動画／ライティング／自動化／インフラの6領域に分けて一覧しています。各ツールの料金・日本語対応・強み弱みを編集ベースでまとめました。";
+const title = "ツール辞書 — AIツールとキャリアを領域別に | AI Maker Lab";
+const description = "AI Maker Lab が扱うAIツールを、開発／UI生成／動画／ライティング／自動化／インフラ／AIキャリア（学ぶ・働く）の7領域に分けて一覧しています。各サービスの料金・日本語対応・強み弱みを編集ベースでまとめました。";
 ---
 
 <Layout title={title} description={description}>
