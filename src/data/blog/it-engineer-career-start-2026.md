@@ -1,0 +1,136 @@
+---
+author: AI Maker Lab
+pubDatetime: 2026-06-24T21:00:00+09:00
+title: "未経験からITエンジニア転職・学習 完全ガイド【2026】まずは無料相談から"
+slug: it-engineer-career-start-2026
+featured: true
+draft: false
+tags:
+  - career
+  - ai-career
+  - engineer
+  - beginner
+  - reskilling
+description: "AIツールを触って「自分もITで働けるかも」と思い始めた未経験者へ。転職エージェントとプログラミングスクールの違い、選び方、そして失敗しない最初の一歩（無料相談）を、忖度なしでまとめました。"
+---
+
+<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-teal-100 to-sky-100 sm:h-64">
+  <img src="/icons/ai-tool.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+  <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
+</div>
+
+「**AIツールを触っていたら、自分もIT業界で働けるんじゃないか、と思い始めた。でも未経験。何から始めればいい？**」
+
+このサイトでは AI ツールを使い倒してきましたが、その先で「**IT を仕事にしたい**」と考える人は多いはずです。本記事では、未経験から IT エンジニアを目指すときの**転職エージェントとスクールの違い・選び方**、そして**失敗しない最初の一歩**を、実態ベースでまとめます。
+
+> **広告に関する表記**：本記事には [/go/career-company](/go/career-company)・[/go/potepan-camp](/go/potepan-camp)・[/go/ninja-code](/go/ninja-code) を経由するリンクが含まれます。リンク経由でのお申し込みにより、AI Maker Lab に紹介料が発生する場合があります。**いずれも相談・カウンセリングは無料**で、内容は公平な視点で書いています。
+
+## 目次
+
+- 30秒で結論：あなたの「最初の一歩」はこれ
+- 大前提：いきなり申し込まない。まず「無料相談」
+- 転職エージェント vs スクール（どっちが先？）
+- キャリアカンパニー（無料の転職相談から）
+- ポテパンキャンプ（実務想定で学ぶ）
+- 忍者CODE（独学寄り・手頃に始める）
+- FAQ（未経験でも転職できる？料金は？）
+- まとめ
+
+## 30秒で結論：あなたの「最初の一歩」はこれ
+
+| あなたの状況 | おすすめ | 最初の一歩（すべて無料） |
+|------------|----------|------------------------|
+| まず「IT業界に転職できるか」をプロに相談したい（求職者は無料） | **[キャリアカンパニー →](/go/career-company)** | 無料の転職相談（オンライン可） |
+| 実務想定の課題で本格的にWeb開発を学びたい | **[ポテパンキャンプ →](/go/potepan-camp)** | 無料キャリアカウンセリング |
+| 独学寄りに手頃に始めたい／Web制作・デザイン・動画も | **[忍者CODE →](/go/ninja-code)** | 無料相談 |
+| 自分に何が向くか分からない | [AI診断（5問）](/diagnose/) | 答えると候補を絞り込み |
+
+## 大前提：いきなり申し込まない。まず「無料相談」
+
+未経験者がつまずく一番の原因は、**情報がないまま高額なスクールにいきなり申し込んでしまう**ことです。
+
+転職エージェントもスクールも、**最初の「相談・カウンセリング」は無料**で受けられます。ここで「自分の状況で IT 転職は現実的か」「どんな学習が必要か」を確認してから、有料の受講や本格的な転職活動に進むのが、遠回りに見えて一番の近道です。
+
+> 無料相談は「契約」ではありません。話を聞いて合わなければ、進まなければいいだけ。リスクはゼロです。
+
+## 転職エージェント vs スクール（どっちが先？）
+
+- **転職エージェント**（例：キャリアカンパニー）：**求職者は無料**。企業を紹介し、選考対策をしてくれる。「今すぐ IT 業界に入れる可能性があるか」を知りたい人向け。
+- **スクール**（例：ポテパンキャンプ／忍者CODE）：**相談は無料・受講は有料**。手を動かしてスキルを身につけてから転職したい人向け。
+
+迷ったら、**まず転職エージェントの無料相談で「現状でどう動けるか」を聞く** → 必要ならスクールで学ぶ、の順がムダがありません。
+
+## キャリアカンパニー（無料の転職相談から）
+
+**未経験からITエンジニアを目指す人向けの転職エージェント**（運営：株式会社エンデバース）。キャリア相談・求人紹介・選考対策を**無料**で受けられます（転職エージェントは採用企業側から報酬を得るモデルのため、求職者は無料）。
+
+- **強み**：未経験・スキル0からの相談に対応と明記／オンラインで無料転職相談を予約できる（来社必須ではない）。
+- **正直な注意**：求人は紹介制で、エリア・経歴により紹介できる案件が限られる場合があります。**相談・紹介サービスであり、転職や年収を保証するものではありません。**
+
+<aside class="my-8 rounded-xl border-l-4 border-emerald-500 bg-emerald-50 p-5">
+  <p class="font-bold text-emerald-900">こんな人に</p>
+  <p class="mt-2 text-sm text-emerald-950">まず「未経験の自分でもIT転職できるのか」をプロに無料で聞きたい人 → <a href="/go/career-company" class="font-bold underline">無料の転職相談を見る</a></p>
+</aside>
+
+## ポテパンキャンプ（実務想定で学ぶ）
+
+**未経験からWebエンジニアを目指すオンライン特化のプログラミングスクール**（運営：株式会社ポテパン）。実務を想定した課題ベースのカリキュラムが特徴です。
+
+- **強み**：受講前に**無料**でキャリア相談・カウンセリングを受けられる／オンライン完結で在職中・地方でも始めやすい／課題提出ベースで実務感覚を養う設計。
+- **正直な注意**：**カウンセリングは無料ですが、受講そのものは有料**です（料金・コースは[公式](/go/potepan-camp)で要確認）。完走には一定のまとまった学習時間が必要です。
+
+<aside class="my-8 rounded-xl border-l-4 border-teal-500 bg-teal-50 p-5">
+  <p class="font-bold text-teal-900">こんな人に</p>
+  <p class="mt-2 text-sm text-teal-950">手を動かして本格的にWeb開発を学び、転職につなげたい人 → <a href="/go/potepan-camp" class="font-bold underline">無料カウンセリングを見る</a></p>
+</aside>
+
+## 忍者CODE（独学寄り・手頃に始める）
+
+**未経験からプロを目指すオンラインの学習サービス**（運営：株式会社ラグザス・クリエイト）。独学プランからメンター付きまで段階的に選べ、Web制作・WEBデザイン・動画編集など実務テーマを扱います。
+
+- **強み**：無料相談で自分の目的に合うプラン・進め方を確認できる／独学寄りの手頃なプランから選べる／AIと組み合わせて仕事にしやすい実務テーマ。
+- **正直な注意**：**相談は無料、各プランの受講は有料**です（料金は[公式](/go/ninja-code)で要確認）。独学プラン中心のため、手厚い伴走を求める人はプラン選択に注意。
+
+<aside class="my-8 rounded-xl border-l-4 border-sky-500 bg-sky-50 p-5">
+  <p class="font-bold text-sky-900">こんな人に</p>
+  <p class="mt-2 text-sm text-sky-950">まずは手頃に・独学寄りで始めたい／Web制作やデザイン・動画も視野の人 → <a href="/go/ninja-code" class="font-bold underline">無料相談を見る</a></p>
+</aside>
+
+## FAQ
+
+**Q. 無料相談だけ受けて、申し込まなくてもいい？**
+A. 大丈夫です。相談・カウンセリングは情報収集の場で、契約ではありません。合わなければ進めなくてOKです。
+
+**Q. 未経験でも本当に転職できる？**
+A. 保証はできません（誰にでも転職を約束するサービスはありません）。ただし「未経験からの相談に対応」と明記された窓口で、まず現状を聞くのが第一歩です。年齢・経歴・地域で結果は変わるため、無料相談で**自分のケース**を確認してください。
+
+**Q. 料金はいくら？**
+A. 転職エージェント（キャリアカンパニー）は求職者**無料**。スクール（ポテパン／忍者CODE）は**相談は無料・受講は有料**で、料金はプランにより異なります。最新の料金は各[公式サイト](/go/potepan-camp)で必ずご確認ください（本記事では断定しません）。
+
+## まとめ
+
+- 未経験のIT挑戦は、**いきなり申し込まず「無料相談」から**が鉄則。リスクゼロで現状を確認できる。
+- **転職できるか知りたい → 転職エージェント**（キャリアカンパニー・求職者無料）。
+- **手を動かして学びたい → スクール**（ポテパン＝実務課題／忍者CODE＝独学寄り・手頃。いずれも相談無料・受講有料）。
+
+<div class="my-8 grid gap-3 sm:grid-cols-3">
+  <a href="/go/career-company" class="flex flex-col rounded-2xl bg-emerald-600 p-4 text-white no-underline shadow-sm transition hover:bg-emerald-700">
+    <span class="text-base font-bold">転職相談（無料）→</span>
+    <span class="mt-1 text-xs text-emerald-100">キャリアカンパニー</span>
+  </a>
+  <a href="/go/potepan-camp" class="flex flex-col rounded-2xl bg-teal-600 p-4 text-white no-underline shadow-sm transition hover:bg-teal-700">
+    <span class="text-base font-bold">学んで転職 →</span>
+    <span class="mt-1 text-xs text-teal-100">ポテパンキャンプ（相談無料）</span>
+  </a>
+  <a href="/go/ninja-code" class="flex flex-col rounded-2xl bg-sky-600 p-4 text-white no-underline shadow-sm transition hover:bg-sky-700">
+    <span class="text-base font-bold">手頃に始める →</span>
+    <span class="mt-1 text-xs text-sky-100">忍者CODE（相談無料）</span>
+  </a>
+</div>
+
+<p class="text-center text-sm text-stone-600">自分に何が向くか迷う場合は <a href="/diagnose/" class="font-bold underline">AI診断（5問・約30秒）</a> もどうぞ。</p>
+
+次に読むなら：
+
+- [AIツール→仕事へ：これからのキャリアの作り方](/posts/ai-skills-to-career-2026/) — AIスキルをどう仕事に変えるかの全体像
+- [AI副業ロードマップ2026](/posts/ai-side-business-roadmap-2026/) — 雇用以外で稼ぐ道も知りたい人へ
