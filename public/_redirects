@@ -1,0 +1,8 @@
+# Cloudflare Pages リダイレクト
+# 公開→後で非公開(draft)にした記事の旧URLに外部被リンクが残り404になるのを回収する。
+# 週次メトリクス(2026-06-27)で「最多表示=404(18)」を検出 → 孤立URLを関連の生きた記事へ301。
+
+/posts/affiliate-2weeks-zero-to-video-pivot-2026/      /posts/ai-side-business-roadmap-2026/   301
+/posts/affiliate-2weeks-zero-to-video-pivot-2026       /posts/ai-side-business-roadmap-2026/   301
+/posts/handle-acquisition-playwright-3platforms-2026/  /posts/ai-side-business-roadmap-2026/   301
+/posts/handle-acquisition-playwright-3platforms-2026   /posts/ai-side-business-roadmap-2026/   301
