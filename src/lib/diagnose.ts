@@ -101,6 +101,22 @@ export function diagnose(answers: Answers): ToolMeta[] {
   return top3.slice(0, 3);
 }
 
+/**
+ * 「AIを仕事にしたい」意図（Q4=副業/本業）のとき、AIキャリアの一歩を1件提案する。
+ * 既存の top3（ツール推薦）は変更せず、結果欄の追加CTAとして使う。
+ * 経験度で出し分け：未経験→まず学ぶ、少し経験→転職前提スクール、エンジニア→無料転職相談。
+ */
+export function careerCtaFor(answers: Answers): ToolMeta | undefined {
+  if (answers.q4 !== "side" && answers.q4 !== "business") return undefined;
+  const id =
+    answers.q2 === "engineer"
+      ? "career-company"
+      : answers.q2 === "some"
+        ? "potepan-camp"
+        : "ninja-code";
+  return TOOLS.find(t => t.id === id);
+}
+
 export function buildReason(answers: Answers, tool: ToolMeta): string {
   const reasons: string[] = [];
   if (answers.q2 === "engineer" && tool.forEngineer)
