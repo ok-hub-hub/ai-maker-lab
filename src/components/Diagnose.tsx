@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   diagnose,
   buildReason,
+  careerCtaFor,
   type Answers,
 } from "@/lib/diagnose";
 import type {
@@ -247,6 +248,7 @@ function Result({
   answers: Answers;
   onReset: () => void;
 }) {
+  const career = careerCtaFor(answers);
   return (
     <div>
       <div className="mb-3 text-[10px] tracking-[0.2em] text-foreground-muted uppercase">
@@ -413,6 +415,35 @@ function Result({
           );
         })}
       </ol>
+
+      {career && (
+        <div className="mt-8 rounded-2xl border border-accent/30 bg-accent/[0.04] p-5 sm:p-6">
+          <div className="mb-1 text-[10px] tracking-[0.2em] text-accent uppercase">
+            Next Step
+          </div>
+          <p className="font-serif text-xl text-foreground">
+            AIを「触る」から「仕事にする」へ
+          </p>
+          <p className="mt-2 text-sm leading-7 text-foreground-muted">
+            AIツールに興味が出たら、スキルを学んだり、IT/AI業界への転職を無料で相談したりする道があります。まずは無料相談・無料カウンセリングから（受講・本利用は有料の場合あり）。
+          </p>
+          <a
+            href={`/go/${career.id}`}
+            rel="noopener sponsored"
+            target="_blank"
+            className="mt-4 inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
+          >
+            {career.name} を見る
+            <span>→</span>
+          </a>
+          <p className="mt-3 text-[11px] text-foreground-muted">
+            広告（PR）：リンク経由の申込で当サイトに紹介料が発生する場合があります。{" "}
+            <a href="/posts/ai-skills-to-career-2026/" className="underline">
+              AIキャリアの選び方を読む
+            </a>
+          </p>
+        </div>
+      )}
 
       <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <button
