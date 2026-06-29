@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-06-24T19:00:00+09:00
-title: "Catchy（キャッチー）の評判・口コミは本当？AIで記事量産して使った正直レビュー【2026】"
+title: "Catchy（キャッチー）「ひどい・使えない」評判は本当か？実際に使った正直レビュー【2026】"
 slug: catchy-review-2026
 featured: false
 draft: false
@@ -10,7 +10,7 @@ tags:
   - catchy
   - review
   - seo
-description: "日本語AIライティングツール Catchy（キャッチー）の評判・口コミは本当か。AIで複数メディアの記事を量産してきた実運用目線で、良い点・正直な弱点・料金・向く人/向かない人をまとめました。"
+description: "「Catchy ひどい」「使えない」と検索したあなたへ。日本語AIライティングツールを複数メディアで実際に使った目線で、弱点・料金・向く人/向かない人を正直にまとめます。"
 ---
 
 <div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-cyan-100 to-blue-100 sm:h-64">

@@ -10,7 +10,7 @@ tags:
   - transcope
   - review
   - seo
-description: "SEO特化の日本語AIライティングツール Transcope（トランスコープ）の評判・料金は本当に高いのか。AIで複数メディアの記事を量産してきた実運用目線で、強み・正直な弱点・料金・元が取れる人/取れない人をまとめました。"
+description: "SEO特化AIライティングツール Transcope（トランスコープ）の評判・料金・実際の効果は？複数メディアのSEO記事を量産してきた目線で、検索順位への影響・正直な弱点・元が取れる人/取れない人をまとめます。"
 ---
 
 <div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-violet-100 via-purple-100 to-indigo-100 sm:h-64">
