@@ -160,6 +160,7 @@ A. Free（1週間）で主要機能を確認できます。高額プランなの
 
 次に読むなら：
 
+- [AIライティングツール比較2026（4つに絞った理由）](/posts/ai-writing-tools-comparison-2026/) — ChatGPT/Claudeも含めた全体地図
 - [Catchy vs Transcope 徹底比較](/posts/catchy-vs-transcope-2026/) — 安く短文の Catchy か、SEOの Transcope か、用途別の選び方
 - [AI副業ロードマップ2026](/posts/ai-side-business-roadmap-2026/) — ツールを収益につなげる全体像
 

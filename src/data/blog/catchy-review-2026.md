@@ -170,6 +170,7 @@ A. サブスクなので、合わなければ次回更新前に解約すればOK
 
 次に読むなら：
 
+- [AIライティングツール比較2026（4つに絞った理由）](/posts/ai-writing-tools-comparison-2026/) — ChatGPT/Claudeも含めた全体地図
 - [Catchy vs Transcope 徹底比較](/posts/catchy-vs-transcope-2026/) — SEOまで本気で狙うなら、どっちを選ぶ？
 - [AI副業ロードマップ2026](/posts/ai-side-business-roadmap-2026/) — ツールを収益につなげる全体像
 
