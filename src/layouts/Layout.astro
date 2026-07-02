@@ -31,21 +31,41 @@ const {
 
 const socialImageURL = new URL(ogImage, Astro.url);
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  headline: `${title}`,
-  image: `${socialImageURL}`,
-  datePublished: `${pubDatetime?.toISOString()}`,
-  ...(modDatetime && { dateModified: modDatetime.toISOString() }),
-  author: [
-    {
-      "@type": "Person",
-      name: `${author}`,
-      ...(profile && { url: profile }),
-    },
-  ],
-};
+// 記事ページ（pubDatetime あり）は BlogPosting、それ以外は WebSite + Organization。
+// 旧実装は全ページ BlogPosting 固定で、非記事ページに datePublished:"undefined" が出力されていた。
+const structuredData = pubDatetime
+  ? {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: `${title}`,
+      image: `${socialImageURL}`,
+      datePublished: pubDatetime.toISOString(),
+      ...(modDatetime && { dateModified: modDatetime.toISOString() }),
+      author: [
+        {
+          "@type": "Person",
+          name: `${author}`,
+          ...(profile && { url: profile }),
+        },
+      ],
+      publisher: {
+        "@type": "Organization",
+        name: SITE.title,
+        url: SITE.website,
+      },
+    }
+  : {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: SITE.title,
+      url: SITE.website,
+      description: SITE.desc,
+      publisher: {
+        "@type": "Organization",
+        name: SITE.title,
+        url: SITE.website,
+      },
+    };
 ---
 
 <!doctype html>
