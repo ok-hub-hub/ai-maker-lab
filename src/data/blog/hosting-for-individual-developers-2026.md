@@ -175,7 +175,7 @@ Netlify は2014年運営開始の老舗で、Cloudflare Pages の DNS / Workers 
 
 WordPress を採用するなら、Vercel / Cloudflare Pages / Netlify は **すべて不適**です（これらは静的＋サーバレス前提のサービスのため、PHP+MySQL ベースの WordPress は動きません）。
 
-国内の主要レンタルサーバ（ConoHa WING / Xserver / mixhost / さくらインターネット 等）の中で、**LiteSpeed Web Server を採用している mixhost** は、WordPress の表示速度面で有利です。
+国内の主要レンタルサーバ（ConoHa WING / Xserver / mixhost / さくらインターネット 等）の中で、**LiteSpeed Web Server を採用している mixhost** は、WordPress の表示速度面で有利です。なお、サイトに載せる画像を Stable Diffusion で自作したい場合は、レンタルサーバーと同じ感覚で使える GPU 環境として [ConoHa AI Canvas のレビュー](/posts/conoha-ai-canvas-review-2026/)も参考にしてください。
 
 ### 向いているケース
 
