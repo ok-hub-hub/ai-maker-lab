@@ -30,7 +30,10 @@ export default defineConfig({
     react(),
   ],
   markdown: {
-    remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
+    remarkPlugins: [
+      [remarkToc, { heading: "目次|table of contents" }],
+      [remarkCollapse, { test: /目次|table of contents/i }],
+    ],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
       themes: { light: "min-light", dark: "night-owl" },

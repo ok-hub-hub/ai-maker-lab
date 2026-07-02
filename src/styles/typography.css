@@ -63,13 +63,16 @@
     }
 
     table {
+      /* スマホで表が画面幅を超えても横スクロールで読める（折り返し崩れ防止） */
+      @apply block max-w-full overflow-x-auto;
+
       th,
       td {
         @apply border border-border p-2;
       }
 
       th {
-        @apply py-1.5;
+        @apply py-1.5 whitespace-nowrap;
       }
 
       code {
