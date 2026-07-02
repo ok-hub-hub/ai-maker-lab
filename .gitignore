@@ -25,4 +25,5 @@ pnpm-debug.log*
 
 # pagefind
 
-public/pagefind
+public/pagefindrun-history.log
+public/nazolab/
