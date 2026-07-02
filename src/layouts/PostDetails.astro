@@ -14,6 +14,7 @@ import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
+import { getToolById } from "@/data/tools";
 
 type Props = {
   post: CollectionEntry<"blog">;
@@ -42,6 +43,13 @@ const _body = post.body ?? "";
 const _jp = (_body.match(/[　-鿿]/g) || []).length;
 const _en = _body.replace(/[　-鿿]/g, " ").split(/\s+/).filter(Boolean).length;
 const readMinutes = Math.max(1, Math.round(_jp / 600 + _en / 250));
+
+// アフィリ導線の検出：本文の最初の /go/<id> から主ツールを特定。
+// PR表記（ステマ規制）とスマホ追従CTAの表示判定に使う。
+const _goIds = [..._body.matchAll(/\/go\/([a-z0-9-]+)/g)].map(m => m[1]);
+const primaryGoId = _goIds[0];
+const primaryTool = primaryGoId ? getToolById(primaryGoId) : undefined;
+const hasAffiliate = _goIds.length > 0;
 
 let ogImageUrl: string | undefined;
 
@@ -129,12 +137,38 @@ const nextPost =
       >
       <EditPost {hideEditPost} {post} class="max-sm:hidden" />
     </div>
+    {
+      hasAffiliate && (
+        <p class="mt-2 text-xs leading-5 text-foreground-muted">
+          本記事にはアフィリエイトリンクを含みます。紹介料を受領する場合がありますが、レビュー・比較の内容は独自の検証に基づいており、評価には影響しません（<a href="/pr-disclosure/" class="underline underline-offset-2">広告・PR表示</a>）。
+        </p>
+      )
+    }
     <article
       id="article"
       class="app-prose mt-8 w-full max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
     >
       <Content />
     </article>
+
+    <!-- 著者・検証体制ボックス（E-E-A-T） -->
+    <aside class="mt-10 flex gap-4 rounded-xl border border-border bg-muted/40 p-5" data-pagefind-ignore>
+      <span
+        aria-hidden="true"
+        class="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-indigo-500 text-lg font-bold text-white shadow-sm"
+      >AI</span>
+      <div class="text-sm leading-6">
+        <p class="font-bold text-foreground">{author} 編集部</p>
+        <p class="mt-1 text-foreground-muted">
+          Claude Code で「AI会社」を運営する個人開発者＋AIエージェント群による編集体制。紹介するツールは記事量産・サイト運営の<strong>実運用で使った体験</strong>をもとに、公式情報と突き合わせて執筆しています。うまくいかなかったことも隠さず書くのが方針です。
+        </p>
+        <p class="mt-2">
+          <a href="/about/" class="font-medium text-accent underline underline-offset-2">運営者情報を見る</a>
+          <span class="mx-2 text-foreground-muted/40">|</span>
+          <a href="/editorial-team/" class="font-medium text-accent underline underline-offset-2">編集体制について</a>
+        </p>
+      </div>
+    </aside>
 
     <hr class="my-8 border-dashed" />
 
@@ -182,8 +216,67 @@ const nextPost =
       }
     </div>
   </main>
+
+  <!-- スマホ追従CTA（アフィリ記事のみ。ファーストビュー通過後に表示） -->
+  {
+    hasAffiliate && primaryTool && (
+      <div
+        id="sticky-cta"
+        data-pagefind-ignore
+        class="pointer-events-none fixed inset-x-0 bottom-0 z-40 translate-y-full p-2 transition-transform duration-300 md:hidden"
+      >
+        <div class="pointer-events-auto mx-auto flex max-w-md items-center gap-2 rounded-2xl border border-border bg-card-bg/95 p-2 shadow-lg backdrop-blur">
+          <button
+            id="sticky-cta-close"
+            type="button"
+            aria-label="閉じる"
+            class="flex h-8 w-8 flex-none items-center justify-center rounded-full text-foreground-muted hover:bg-muted"
+          >✕</button>
+          <div class="min-w-0 flex-none pr-1">
+            <p class="truncate text-xs font-bold text-foreground">{primaryTool.name}</p>
+            <p class="text-[10px] text-foreground-muted">公式サイトで確認</p>
+          </div>
+          <a
+            href={`/go/${primaryTool.id}`}
+            rel="sponsored nofollow"
+            class="flex-1 rounded-full bg-amber-500 py-3 text-center text-sm font-bold text-white shadow-sm transition hover:bg-amber-600"
+          >無料で試してみる »</a>
+        </div>
+      </div>
+    )
+  }
+
   <Footer />
 </Layout>
+
+<script is:inline data-astro-rerun>
+  (function () {
+    var bar = document.getElementById("sticky-cta");
+    if (!bar) return;
+    if (sessionStorage.getItem("stickyCtaClosed") === "1") return;
+    var closeBtn = document.getElementById("sticky-cta-close");
+    var shown = false;
+    function onScroll() {
+      var pass = window.scrollY > window.innerHeight;
+      if (pass && !shown) {
+        bar.classList.remove("translate-y-full");
+        shown = true;
+      } else if (!pass && shown) {
+        bar.classList.add("translate-y-full");
+        shown = false;
+      }
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    if (closeBtn) {
+      closeBtn.addEventListener("click", function () {
+        bar.classList.add("translate-y-full");
+        window.removeEventListener("scroll", onScroll);
+        sessionStorage.setItem("stickyCtaClosed", "1");
+      });
+    }
+  })();
+</script>
 
 <script is:inline data-astro-rerun>
   /** Create a progress indicator

@@ -1,0 +1,74 @@
+# aimaker-lab グロース改善 実行ログ
+
+---
+
+## 2026-07-01 サイクル2
+
+### 実行した改善
+
+**改善1: catchy-review-2026.md 本文に「ひどい・使えない」声の正体節を追加 (b)**
+- 対象: src/data/blog/catchy-review-2026.md
+- 狙い: 「Catchy ひどい」「Catchy 使えない」高インテント否定検索ユーザーへ直接回答
+- 追加箇所: 「料金」セクション直前
+- 内容: よく見る3つの否定的声（文章が雑・クレジット不足・月額もったいない）の正体を表形式で整理。「用途ミスマッチかFreeで試さなかった」が主因と結論
+
+**改善2: ninja-code-review-2026.md title/description 副業角度強化 (a)**
+- 対象: src/data/blog/ninja-code-review-2026.md
+- 狙い: topics.md 優先度3「忍者CODE 評判 副業 稼げる 未経験」クエリへの対応
+- Before title: "忍者CODEの評判・口コミは？独学寄りで手頃に始めたい未経験者の正直レビュー【2026】"
+- After title: "忍者CODE 評判・口コミ｜副業・仕事に活かせる？未経験者の正直レビュー【2026】"
+- Before description: 「評判・特徴・向く人/向かない人を忖度なしでまとめました」フォーム
+- After description: 「副業・仕事に稼げるか」検索への直接呼びかけ + AI組み合わせ仕事化の視点
+
+### ゲート結果
+- ✅ 法令4軸 grep: 「必ず」は全て公式確認促進文（断定なし）・医療表現なし・ステマなし
+- ✅ GA4 init: catchy-review は本文追加のみ（JS/HTML構造変更なし）、ninja-code は frontmatter のみ
+- ✅ ビルド: 0 errors、dist/posts/catchy-review-2026・ninja-code-review-2026 生成確認
+- ✅ /go/ リンク: 編集記事の /go/catchy・/go/transcope・/go/ninja-code・/go/potepan-camp すべて dist に存在
+
+### push
+- commit: b80f997
+- push: origin/main → Cloudflare Pages 自動デプロイ開始
+
+### 次サイクル候補
+1. catchy-review: 本文に「Free→有料への切り替え判断基準」小節追加（無料から有料の判断軸を具体化）
+2. ninja-code-review: 「AIと組み合わせた副業収益化ステップ」節を本文に追加（title との一致強化）
+3. A8.net で career-company・potepan-camp・ninja-code の承認状況確認 → 承認済みなら affiliateUrl 差し込み (c)
+4. GSC Playwright 実行で順位11〜20クエリ取得（計器整備が最優先課題として継続）
+5. (f) ヒーロー画像専用化: GA4/Clarity エンゲージデータが取得できた段階で低エンゲージ money page を特定→生成
+
+---
+
+## 2026-06-29 サイクル1
+
+### 実行した改善
+
+**改善1: catchy-review-2026.md frontmatter（タイトル＋description）**
+- 対象: src/data/blog/catchy-review-2026.md
+- 狙い: topics.md 優先度1「Catchy 評判 ひどい／使えない」の否定形ロングテールをキャプチャ
+- Before title: "Catchy（キャッチー）の評判・口コミは本当？AIで記事量産して使った正直レビュー【2026】"
+- After title: "Catchy（キャッチー）「ひどい・使えない」評判は本当か？実際に使った正直レビュー【2026】"
+- Before description: 「評判・口コミは本当か」フォーム
+- After description: 「Catchyひどいと検索したあなたへ」高インテントフォーム
+
+**改善2: transcope-review-2026.md description**
+- 対象: src/data/blog/transcope-review-2026.md
+- 狙い: topics.md 優先度2「Transcope SEO 記事 実際の順位 効果」クエリへの対応
+- Before: 料金の高さ中心の説明
+- After: 「実際の効果・検索順位への影響」を追加
+
+### ゲート結果
+- ✅ 法令4軸 grep: 適正開示文のみ・断定なし・医療表現なし
+- ✅ GA4 init: frontmatterのみ変更・JS/HTML無変更
+- ✅ ビルド: 0 errors / 162 pages built in 8.63s
+- ✅ /go/ リンク: 本文変更なし・整合維持
+
+### push
+- commit: f21e3bb
+- push: origin/main → Cloudflare Pages 自動デプロイ開始
+
+### 次サイクル候補
+1. catchy-review 本文冒頭に「ひどいという声の正体」節を追加（否定検索ユーザーへの直接回答）
+2. GSC で catchy-review/transcope-review の実CTR取得 → 改善効果計測
+3. career-company / potepan-camp / ninja-code の affiliateUrl（A8承認待ち）→ 承認確認→差し込み
+4. 順位11-20クエリの実データ取得（GSC Playwright ログイン）

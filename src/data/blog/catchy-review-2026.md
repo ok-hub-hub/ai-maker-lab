@@ -38,6 +38,19 @@ AIライティングツールを探すと必ず名前が挙がる **Catchy（キ
 
 ## 30秒で結論：Catchy は「こういう人」に向く
 
+<div class="my-6 rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+  <p class="flex items-center gap-2 text-lg font-bold text-amber-900">✅ 編集部の結論</p>
+  <p class="mt-2 text-amber-950">「ひどい・使えない」は<strong>用途ミスマッチが原因</strong>。短文・コピー・叩き台の量産に絞れば、日本語ツールでは手数最速クラス。長文SEOだけは専用ツールに譲る。</p>
+  <div class="mt-4 grid gap-1.5 text-sm text-amber-950">
+    <div class="flex items-center gap-2"><span class="w-28 flex-none">短文の手数</span><span class="h-2 flex-1 rounded-full bg-amber-200"><span class="block h-2 rounded-full bg-amber-500" style="width:90%"></span></span><span class="w-8 text-right font-bold">4.5</span></div>
+    <div class="flex items-center gap-2"><span class="w-28 flex-none">日本語の自然さ</span><span class="h-2 flex-1 rounded-full bg-amber-200"><span class="block h-2 rounded-full bg-amber-500" style="width:90%"></span></span><span class="w-8 text-right font-bold">4.5</span></div>
+    <div class="flex items-center gap-2"><span class="w-28 flex-none">料金の手軽さ</span><span class="h-2 flex-1 rounded-full bg-amber-200"><span class="block h-2 rounded-full bg-amber-500" style="width:80%"></span></span><span class="w-8 text-right font-bold">4.0</span></div>
+    <div class="flex items-center gap-2"><span class="w-28 flex-none">無料で試せる</span><span class="h-2 flex-1 rounded-full bg-amber-200"><span class="block h-2 rounded-full bg-amber-500" style="width:100%"></span></span><span class="w-8 text-right font-bold">5.0</span></div>
+    <div class="flex items-center gap-2"><span class="w-28 flex-none">長文SEO</span><span class="h-2 flex-1 rounded-full bg-amber-200"><span class="block h-2 rounded-full bg-amber-500" style="width:50%"></span></span><span class="w-8 text-right font-bold">2.5</span></div>
+  </div>
+  <p class="mt-2 text-xs text-amber-800">※ 編集部の実運用にもとづく5段階評価（総合 4.1）</p>
+</div>
+
 - **広告コピー・SNS投稿・記事の叩き台を、安く手早く量産したい** → **向く**。100種以上のテンプレで手数が速い。
 - **検索上位を狙う長文SEO記事を、競合分析込みで本気で書きたい** → **やや不向き**。SEO特化の [Transcope](/go/transcope) の領域。
 - **まず無料で生成品質を試したい** → **向く**。Free（毎月10クレジット）で課金前に確認できる。
@@ -70,6 +83,25 @@ Catchy は、**デジタルレシピ社**が運営する日本語特化の生成
 
 ## 正直な弱点・期待しすぎない方がいい点
 
+<div class="my-6 grid gap-4 sm:grid-cols-2">
+  <div class="rounded-xl border-t-4 border-emerald-500 bg-emerald-50 p-4">
+    <p class="font-bold text-emerald-900">メリット</p>
+    <ul class="mt-2 grid gap-1.5 text-sm text-emerald-950">
+      <li>✓ 短〜中文の叩き台を作る速さが圧倒的</li>
+      <li>✓ 完全日本語UI・翻訳っぽさのない自然な短文</li>
+      <li>✓ Free（毎月10クレジット）で課金前に品質確認できる</li>
+    </ul>
+  </div>
+  <div class="rounded-xl border-t-4 border-rose-400 bg-rose-50 p-4">
+    <p class="font-bold text-rose-900">デメリット</p>
+    <ul class="mt-2 grid gap-1.5 text-sm text-rose-950">
+      <li>✕ 長文SEOの競合分析・順位計測は専用ではない</li>
+      <li>✕ クレジット制は大量に使うと足りない（無制限はPro）</li>
+      <li>✕ 事実関係の最終チェックは人が必須</li>
+    </ul>
+  </div>
+</div>
+
 良いことばかり書くと信用できないので、弱点も正直に。
 
 1. **長文SEO記事の競合分析・順位計測は専用ではない**：Catchy 単体で検索上位を狙うのは不向きです。そこは [Transcope](/go/transcope) のようなSEO特化ツールの仕事。
@@ -92,10 +124,10 @@ Catchy は、**デジタルレシピ社**が運営する日本語特化の生成
 
 > **価格情報の取得日**：以下の料金は **2026-06-05 に公式サイトへ接続して取得**したものです。プラン改定が入る可能性があるため、契約前に必ず[公式サイト](/go/catchy)で最新情報をご確認ください。
 
-| プラン | 料金（税込・月額） | 向く用途 |
+| プラン | 料金（税込・月額） | こんな人におすすめ |
 |------|------------------|---------|
-| Free | **¥0**（毎月10クレジット） | お試し・生成品質の確認 |
-| Starter | **¥3,000〜8,100/月**（クレジット制） | 月にそこそこ使う個人 |
+| Free | **¥0**（毎月10クレジット） | まず品質を確かめたい全員（最初はここ一択） |
+| Starter | **¥3,000〜8,100/月**（クレジット制） | 週数本ペースでSNS・コピーを作る個人 |
 | Pro | **¥9,800/月**（無制限の現実ライン） | 毎日量産する人・小規模チーム |
 
 <sup>※料金・条件は2026-06-05時点。最新は[公式](/go/catchy)でご確認ください。すべてサブスクです。</sup>
@@ -140,6 +172,23 @@ A. サブスクなので、合わなければ次回更新前に解約すればOK
 
 - [Catchy vs Transcope 徹底比較](/posts/catchy-vs-transcope-2026/) — SEOまで本気で狙うなら、どっちを選ぶ？
 - [AI副業ロードマップ2026](/posts/ai-side-business-roadmap-2026/) — ツールを収益につなげる全体像
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "Catchy（キャッチー）",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY", "description": "Freeプラン（毎月10クレジット）" }
+  },
+  "reviewRating": { "@type": "Rating", "ratingValue": "4.1", "bestRating": "5" },
+  "author": { "@type": "Organization", "name": "AI Maker Lab 編集部" },
+  "publisher": { "@type": "Organization", "name": "AI Maker Lab" }
+}
+</script>
 
 <script type="application/ld+json">
 {
