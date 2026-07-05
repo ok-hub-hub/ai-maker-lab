@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-06-24T20:00:00+09:00
-modDatetime: 2026-07-02T11:00:00+09:00
+modDatetime: 2026-07-05T13:30:00+09:00
 title: "Transcope（トランスコープ）の評判・料金は高い？SEOで記事量産して使った正直レビュー【2026】"
 slug: transcope-review-2026
 featured: false
@@ -65,6 +65,9 @@ SEO特化のAIライティングツールとして名前が挙がる **Transcope
 </div>
 
 ## Transcope とは（提供元・できること）
+
+![Transcope公式サイトのトップページ。SEOに強いAIライティングツールとして紹介されている](/images/posts/transcope-review-2026/transcope-official-lp.png)
+*出典: [Transcope公式サイト](https://transcope.io/)のスクリーンショット（2026年7月時点）*
 
 Transcope は、**シェアモル社**が運営する、**SEOに特化**した日本語AIライティングツールです。対象キーワードの競合上位を解析し、不足トピックを踏まえた長文記事を生成、さらに**検索順位の計測まで1ツールで一気通貫**できます。オウンドメディア運営者が主なターゲットです。
 

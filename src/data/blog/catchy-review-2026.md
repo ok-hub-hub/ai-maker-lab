@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-06-24T19:00:00+09:00
-modDatetime: 2026-07-02T11:00:00+09:00
+modDatetime: 2026-07-05T13:30:00+09:00
 title: "Catchy（キャッチー）「ひどい・使えない」評判は本当か？実際に使った正直レビュー【2026】"
 slug: catchy-review-2026
 featured: false
@@ -65,6 +65,9 @@ AIライティングツールを探すと必ず名前が挙がる **Catchy（キ
 </div>
 
 ## Catchy とは（提供元・できること）
+
+![Catchy公式サイトのトップページ。AIによる文章生成のデモUIが表示されている](/images/posts/catchy-review-2026/catchy-official-lp.png)
+*出典: [Catchy公式サイト](https://lp.ai-copywriter.jp/)のスクリーンショット（2026年7月時点）*
 
 Catchy は、**デジタルレシピ社**が運営する日本語特化の生成AIライティングツールです。広告コピー・SNS投稿・記事構成・メール文面など **100種以上のテンプレート**から、日本語の自然な文章を生成できます。国内ユーザー数が多く、**完全日本語UI**で完結するのが特徴です。
 
