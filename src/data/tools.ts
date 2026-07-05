@@ -378,7 +378,8 @@ export const TOOLS: ToolMeta[] = [
     scale: 2,
     affiliateTier: "A",
     officialUrl: "https://ai.conoha.jp/canvas/",
-    affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3OR0+1SBLE+50+7RU5R6",
+    // 2026-07-05 A8参加中リストに無し（未提携）と実機確認 → 無効リンクのため無効化。再提携承認後に新a8matで復旧すること
+    // affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3OR0+1SBLE+50+7RU5R6",
     description:
       "GMO インターネットグループ運営、Stable Diffusion 系の画像・動画生成をブラウザだけで完結させる国内 SaaS。AUTOMATIC1111 / ComfyUI / SDXL / LoRA 学習が GPU セットアップ無しで使える。",
     strengths: [
@@ -594,7 +595,8 @@ export const TOOLS: ToolMeta[] = [
     scale: 2,
     affiliateTier: "S",
     officialUrl: "https://www.conoha.jp/wing/",
-    affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3QAX+7RTR3M+50+5SS2PD",
+    // 2026-07-05 A8参加中リストに無し（未提携）と実機確認 → 無効リンクのため無効化。再提携承認後に新a8matで復旧すること
+    // affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3QAX+7RTR3M+50+5SS2PD",
     description:
       "GMO インターネット運営の WordPress 特化レンタルサーバー。国内データセンター（東京・大阪）の独自開発サーバー構成で、Web Vitals（特に TTFB）を国内アクセス向けに最適化している。",
     strengths: [
@@ -622,7 +624,8 @@ export const TOOLS: ToolMeta[] = [
     scale: 2,
     affiliateTier: "S",
     officialUrl: "https://www.xserver.ne.jp/",
-    affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3OR0+8C38Y+CO4+609HU",
+    // 2026-07-05 A8参加中リストに無し（未提携）と実機確認 → 無効リンクのため無効化。再提携承認後に新a8matで復旧すること
+    // affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3OR0+8C38Y+CO4+609HU",
     description: "エックスサーバー株式会社運営の国内大手レンタルサーバー。2003年運営開始の長期実績と、NVMe SSD・KUSANAGI 由来の高速 WordPress チューニングを売りにする。",
     strengths: [
       "サーバー停止履歴・障害事例が長期にわたり公開されており、安定稼働の検証材料が公的に揃っている",
@@ -649,7 +652,8 @@ export const TOOLS: ToolMeta[] = [
     scale: 3,
     affiliateTier: "S",
     officialUrl: "https://business.xserver.ne.jp/",
-    affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3OR0+8C38Y+CO4+6LP3M",
+    // 2026-07-05 A8参加中リストに無し（未提携）と実機確認 → 無効リンクのため無効化。再提携承認後に新a8matで復旧すること
+    // affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3OR0+8C38Y+CO4+6LP3M",
     description:
       "Xserver の法人・個人事業主向け上位プラン。99.99% SLA・専用サポート・Webサイト制作代行（B10以上）を内包し、コーポレートサイト運営の選択肢としてパッケージされている。",
     strengths: [
@@ -677,7 +681,8 @@ export const TOOLS: ToolMeta[] = [
     scale: 2,
     affiliateTier: "A",
     officialUrl: "https://mixhost.jp/",
-    affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3OR0+LFMK2+3JTE+5YJRM",
+    // 2026-07-05 A8参加中リストに無し（未提携）と実機確認 → 無効リンクのため無効化。再提携承認後に新a8matで復旧すること
+    // affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3OR0+LFMK2+3JTE+5YJRM",
     description:
       "アズポケット株式会社運営、Web サーバーに LiteSpeed Web Server を採用したクラウド型レンタルサーバー。LiteSpeed 標準の LSCache プラグインで WordPress のキャッシュ最適化がコード不要で効く。",
     strengths: [
