@@ -3,7 +3,7 @@ author: AI Maker Lab
 pubDatetime: 2026-06-05T19:00:00+09:00
 title: "Catchy vs Transcope｜日本語AIライティングツールを実運用目線で比較【2026】"
 slug: catchy-vs-transcope-2026
-modDatetime: 2026-07-02T11:00:00+09:00
+modDatetime: 2026-07-06T00:45:00+09:00
 featured: true
 draft: false
 tags:
@@ -45,6 +45,11 @@ description: "日本語AIライティングツール Catchy と Transcope を、
 | **個人ブログで月数千円に抑えたい** | **[Catchy を見る →](/go/catchy)** | Pro ¥9,800/月。Transcopeの高額プランは個人には重い |
 | **オウンドメディアで集客＝売上に直結する** | **[Transcope を見る →](/go/transcope)** | 高単価でも「記事で集客できる」なら回収できる |
 | **どれを使うか決めかねている** | [AI診断（5問）](/diagnose/) | 答えると候補を自動で絞り込みます |
+
+<div class="my-6 rounded-xl border-2 border-sky-400 bg-sky-50 p-5">
+  <p class="font-bold text-sky-900">🧭 1行診断：迷ったらこれだけ</p>
+  <p class="mt-2 text-sky-950">「<strong>まだ記事が売上を生んでいない</strong>」なら <a href="/go/catchy">Catchy（Freeで今日から）</a>／「<strong>記事1本が売上・問い合わせにつながる事業</strong>」なら <a href="/go/transcope">Transcope（Free 1週間で検証）</a>。どちらも無料から始められるので、先に触ってから決めるのが最短です。</p>
+</div>
 
 ## 2ツール比較表（料金・日本語・SEO・得意領域）
 
