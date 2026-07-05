@@ -649,7 +649,7 @@ export const TOOLS: ToolMeta[] = [
     scale: 3,
     affiliateTier: "S",
     officialUrl: "https://business.xserver.ne.jp/",
-    affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3OR0+8C38Y+CO4+6LP3M",
+    affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B3QAX+8645MA+CO4+3SXWUQ", // XServerビジネス専用プログラム(s00000001642023)に格上げ 2026-07-05
     description:
       "Xserver の法人・個人事業主向け上位プラン。99.99% SLA・専用サポート・Webサイト制作代行（B10以上）を内包し、コーポレートサイト運営の選択肢としてパッケージされている。",
     strengths: [
