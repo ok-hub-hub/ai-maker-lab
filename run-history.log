@@ -2,6 +2,52 @@
 
 ---
 
+## 2026-07-08 サイクル（主任務: xserver-vs-conoha-wing-2026 強化）
+
+### 実行した改善
+
+**改善1: xserver-vs-conoha-wing-2026.md（主任務）**
+- 対象: src/data/blog/xserver-vs-conoha-wing-2026.md
+- 狙い: GSCシグナル「エックスサーバー conoha wing 比較」「conoha wing エックスサーバー 比較」各2表示・0クリック（平均順位35付近）のCTR改善
+- ① title改善
+  - Before: "エックスサーバー ConoHa WING 比較【2026年最新版】料金・速度・移行を3メディア運営者が徹底解説"
+  - After: "エックスサーバー vs ConoHa WING 比較【2026年最新版】月額660円〜・5項目を3メディア運営者が本音解説"
+  - ポイント: 具体数字（月額660円〜・5項目）追加でCTR向上
+- description改善: 「月額880円〜・660円〜」「AI副業ブログ向き不向き」「2026年7月更新」を追加
+- modDatetime: 2026-07-08T10:00:00+09:00 に更新（鮮度シグナル）
+- ③ 新H2「AIライティングで副業ブログを始めるなら：サーバー選びの正解」追加
+  - 対象クエリ: サイト読者の核心ニーズ（AI副業ブログ×サーバー選び）の未回答意図
+  - AI副業ブログ観点でのXserver/ConoHA比較表＋実務判断軸2点
+  - Catchy/Transcopeレビュー・比較記事への自然な内部リンク挿入
+- (b2) FAQPage JSON-LD追加（既存FAQ4問を構造化データ化）
+
+**改善2: ai-side-business-roadmap-2026.md（内部リンク④）**
+- 対象: src/data/blog/ai-side-business-roadmap-2026.md
+- 追加箇所: Wordpressホスティング推薦の直下
+- 内容: 「エックスサーバーと ConoHa WING で迷ったら → [エックスサーバー vs ConoHa WING 比較](/posts/xserver-vs-conoha-wing-2026/)」完全一致アンカーリンク
+
+### ゲート結果
+- ✅ 法令4軸 grep: 断定表現・ステマ・薬機・景表なし
+- ✅ GA4 init: 本文追加のみ（JS/HTML構造変更なし）
+- ✅ ビルド: 0 errors、7.92秒完了（Complete!）
+- ✅ /go/ リンク: /go/xserver・/go/conoha dist確認OK
+- ✅ 内部リンク: dist/posts/ai-side-business-roadmap-2026 → xserver-vs-conoha-wing-2026 レンダリング確認
+- ✅ FAQPage JSON-LD: dist/posts/xserver-vs-conoha-wing-2026 に3箇所確認
+- ✅ OG画像: public/aimaker-lab-og.jpg 実在確認
+
+### push
+- commit: TBD
+- push: origin/main → Cloudflare Pages 自動デプロイ開始予定
+
+### 次サイクル候補
+1. xserver-vs-conoha-wing: GSCでCTR改善を2週間後（2026-07-22以降）に確認
+2. catchy-vs-transcope-2026: 主任務対象（GSCで catchy 2表示・transcope 2表示 → 連携比較記事を強化）
+3. vibe-coding-guide: 2週間後にCTRデータ確認（2026-07-20以降）
+4. A8: ninja-code・potepan-camp・明光・TechGo の提携状況確認（Playwright）
+5. (g) 記事内画像: xserver-vs-conoha-wing-2026 は画像0枚・money page → 次サイクル公式スクショ挿入候補
+
+---
+
 ## 2026-07-01 サイクル2
 
 ### 実行した改善
@@ -72,3 +118,46 @@
 2. GSC で catchy-review/transcope-review の実CTR取得 → 改善効果計測
 3. career-company / potepan-camp / ninja-code の affiliateUrl（A8承認待ち）→ 承認確認→差し込み
 4. 順位11-20クエリの実データ取得（GSC Playwright ログイン）
+
+---
+
+## 2026-07-06 サイクル（主任務: vibe-coding-guide-2026 強化）
+
+### GSCサマリー（3か月 2026-05-11〜07-03）
+- 合計クリック3 / 表示167 / 平均CTR 1.8% / 平均順位35.1
+- 最大シグナル: 「vibe coding ツール」22表示0クリック → 主任務対象に選定
+
+### 実行した改善
+
+**改善1: vibe-coding-guide-2026.md（主任務）**
+- 対象: src/data/blog/vibe-coding-guide-2026.md
+- 狙い: GSC最大シグナル「vibe coding ツール」22表示0クリック対応
+- ① title改善
+  - Before: "Vibe Coding 完全ガイド：個人開発者が AI で「動くアプリ」をつくる、最短ルート【2026年版】"
+  - After: "バイブコーディングツール おすすめ比較5選【2026年最新版】v0・Lovable・Bolt・Replit Agent を用途別で選ぶ"
+  - ポイント: 先頭に「バイブコーディングツール」を配置（クエリ完全一致）・比較5選（数字）・2026年最新版
+- ② description改善: 「無料」「副業月5万円」「2026年7月更新」を追加
+- ③ modDatetime: 2026-07-06T10:00:00+09:00 追加（鮮度シグナル）
+- ④ 新H2「バイブコーディングツール無料枠まとめ（2026年版）」追加
+  - 対応クエリ: 「vibe coding 無料」6表示0クリック
+  - 各ツールの無料枠（v0: 1日7メッセージ/CC不要、Lovable/Bolt/Replit: 試用枠あり、Figma Make: Figma無料プラン内）
+- ⑤ 新H2「バイブコーディングスキルで副業収入を得る3ステップ」追加
+  - Step1: 公開実績1本作る / Step2: LP制作案件受注 / Step3: 忍者CODE でスキル体系化
+  - /go/ninja-code CTA 追加（未回答だった副業意図に対応）
+
+### ゲート結果
+- ✅ 法令4軸 grep: 断定表現・ステマ・薬機・景表なし
+- ✅ GA4 init: 本文追加のみ（JS/HTML構造変更なし）
+- ✅ ビルド: 0 errors、173 pages built in 9.26s
+- ✅ /go/ リンク: /go/ninja-code dist確認OK、ninja-code-review-2026 dist確認OK
+- ✅ OG画像: public/aimaker-lab-og.jpg 実在確認
+
+### push
+- commit: ba0a16e
+- push: origin/main → Cloudflare Pages 自動デプロイ開始
+
+### 次サイクル候補
+1. vibe-coding-guide: GSCでCTR改善を2週間後に確認 → 追加改善判断
+2. xserver-vs-conoha-wing-2026: 「エックスサーバー conoha wing 比較」2表示→主任務対象（vibe-coding-guideと2週間空ける）
+3. ヒーロー画像専用化(f): vibe-coding-guide・landing-page・v0-patternsで/icons/vibe-coding.pngを共有確認済み → GA4エンゲージデータ取得後に判断
+4. A8: ninja-code・potepan-camp・career-company の承認状況確認
