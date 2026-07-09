@@ -282,6 +282,14 @@ Cursor は複数モデルを選択可能で、Claude を含む各種モデルを
 
 ---
 
+<div class="my-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
+  <p class="mb-1 text-xs font-semibold tracking-wide text-amber-700">AI Maker Lab の自社商品</p>
+  <p class="mb-2 text-lg font-bold text-amber-900">AI会社運営テンプレ＋1ヶ月実運営ログ</p>
+  <p class="mb-4 text-sm leading-relaxed text-amber-900/80">Claude Code で動く4部門AI会社のテンプレ集（役割定義書5本・運用ファイル7本・1ヶ月の実運営ログ・ハンドブック全8章）。OSSの無料テンプレでは再現できない「実運営の判断・失敗・リカバリの記録」付き。リリース後6ヶ月は月次アップデート無料。</p>
+  <a href="https://okamuse.gumroad.com/l/ai-company-ops-template" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-2xl bg-amber-600 px-5 py-3 font-medium text-white no-underline transition hover:bg-amber-700">$39（プロモ価格）でテンプレを見る →</a>
+  <p class="mt-3 text-sm text-amber-900/70">まず読み物で試したい方は → <a href="https://zenn.dev/aimakerlab/books/bead6d47a62b9d" target="_blank" rel="noopener" class="underline">Zenn本「AIに会社を任せてみた」（¥1,000・1章無料試し読み）</a></p>
+</div>
+
 ## Amazon で関連書籍・ガジェットを探す
 
 本記事のテーマ（AI コーディング・Cursor・Claude Code）に関連する書籍・教材は Amazon でも購入できます。
