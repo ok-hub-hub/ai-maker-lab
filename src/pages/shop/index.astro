@@ -20,6 +20,21 @@ type Product = {
 
 const products: Product[] = [
   {
+    id: "ai-company-complete-kit-jp",
+    title: "AI会社 完全キット（日本語・円決済）",
+    tagline: "実運営ガイド10章＋そのまま使える運用テンプレート8点＋再発防止チェックリスト（PDF・8万字超）",
+    price: "¥6,500",
+    promoNote: "リリース価格。レビュー掲載後に段階的に値上げ予定（ココナラで販売・円決済/国内プラットフォーム）",
+    status: "live",
+    url: "https://coconala.com/contents_market/pictures/cmrg0cn5t03pj8i0hqae820bf",
+    highlights: [
+      "ガイド本編 全10章（約32,000字）：全体設計〜実際に起きた4つの事故と回復の記録",
+      "実運用テンプレート8点（約48,000字）：CEO役割定義書・QA体制・判断キュー・運用アラート・自動ジョブ設計ほか",
+      "ボーナス：再発防止チェックリスト（事故4件の蒸留）",
+      "完全非同期・買い切り（ココナラのコンテンツマーケットで購入）",
+    ],
+  },
+  {
     id: "ai-company-ops-template",
     title: "AI Company Ops Template",
     tagline: "Claude Code で動く 4 部門 AI会社 のテンプレ集 + 1ヶ月実運営ログ",
@@ -147,7 +162,7 @@ const products: Product[] = [
                           rel="noopener sponsored"
                           class="group inline-flex w-full items-center justify-center gap-2 border border-foreground bg-foreground px-4 py-2.5 text-sm font-medium tracking-tight text-background transition hover:border-accent hover:bg-accent"
                         >
-                          <span>Gumroad で購入</span>
+                          <span>{product.url.includes("coconala") ? "ココナラで購入" : "Gumroad で購入"}</span>
                           <span class="transition-transform group-hover:translate-x-0.5">→</span>
                         </a>
                       ) : (
