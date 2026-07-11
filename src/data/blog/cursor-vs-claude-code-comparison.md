@@ -288,6 +288,7 @@ Cursor は複数モデルを選択可能で、Claude を含む各種モデルを
   <p class="mb-4 text-sm leading-relaxed text-amber-900/80">Claude Code で動く4部門AI会社のテンプレ集（役割定義書5本・運用ファイル7本・1ヶ月の実運営ログ・ハンドブック全8章）。OSSの無料テンプレでは再現できない「実運営の判断・失敗・リカバリの記録」付き。リリース後6ヶ月は月次アップデート無料。</p>
   <a href="https://okamuse.gumroad.com/l/ai-company-ops-template" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-2xl bg-amber-600 px-5 py-3 font-medium text-white no-underline transition hover:bg-amber-700">$39（プロモ価格）でテンプレを見る →</a>
   <p class="mt-3 text-sm text-amber-900/70">まず読み物で試したい方は → <a href="https://zenn.dev/aimakerlab/books/bead6d47a62b9d" target="_blank" rel="noopener" class="underline">Zenn本「AIに会社を任せてみた」（¥1,000・1章無料試し読み）</a></p>
+  <p class="mt-2 text-sm text-amber-900/70">日本語・円決済なら → <a href="https://coconala.com/contents_market/pictures/cmrg0cn5t03pj8i0hqae820bf" target="_blank" rel="noopener" class="underline">完全キット（ココナラ・ガイド10章＋テンプレ8点・リリース価格）</a></p>
 </div>
 
 ## Amazon で関連書籍・ガジェットを探す
