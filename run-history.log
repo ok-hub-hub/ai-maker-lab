@@ -2,6 +2,91 @@
 
 ---
 
+## 2026-07-13 サイクル（主任務: xserver-vs-conoha-wing-2026 タイトル改善・内部リンク追加）
+
+### 実行した改善
+
+**改善1: xserver-vs-conoha-wing-2026.md — title/description先頭クエリ一致＋modDatetime（a・主任務）**
+- 対象: src/data/blog/xserver-vs-conoha-wing-2026.md
+- Before title: "エックスサーバー vs ConoHa WING 比較【2026年最新版】月額660円〜・5項目を3メディア運営者が本音解説"
+- After title: "ConoHa WING エックスサーバー 比較2026年版｜月額660円〜・速度・移行・解約まで3メディア運営者が正直比較"
+- GSC最大印象クエリ「conoha wing エックスサーバー 比較」(3表示28日)に先頭一致させた
+- description もConoHa WINGを先頭に並べ替え
+- modDatetime: 2026-07-08 → 2026-07-13（フレッシュネス更新）
+
+**改善2: vibe-coding-guide-2026.md — ホスティングセクションに内部リンク追加（b）**
+- 対象: src/data/blog/vibe-coding-guide-2026.md（GSC 19表示・最大シグナル記事）
+- ホスティングセクション(l.154)に "[ConoHa WING エックスサーバー 比較](/posts/xserver-vs-conoha-wing-2026/)" を自然文で追加
+- 完全一致アンカーテキスト「ConoHa WING エックスサーバー 比較」で内部リンクシグナルを強化
+
+### ゲート結果
+- ✅ 法令4軸 grep: 断定/薬機/景表/ステマなし
+- ✅ ビルド: 176 pages built, 0 errors
+- ✅ OG画像: aimaker-lab-og.jpg 実在確認
+- ✅ dist: xserver-vs-conoha-wing-2026 と vibe-coding-guide-2026 の生成確認
+
+### push
+- commit: (本サイクル)
+- push: origin/main → Cloudflare Pages 自動デプロイ
+
+### 次サイクル候補
+1. **cline 料金記事特定・強化**（GSC 3か月データで pos11.0。専用記事の特定またはcursor-vs-claude-code-comparison記事の確認）
+2. **figma make 料金記事強化**（pos17.0・2ページ目前半）
+3. **忍者code 口コミ記事強化**（28日で5表示の急成長クエリ→ninja-code-review-2026.mdのタイトル改善）
+4. **A8 TechGo（¥50k）・明光（¥78k）提携状況確認**（承認済みなら affiliateUrl 差し込み）
+5. **vibe coding 専用ハブ新規作成（PIN-1）**（作るジョブの領分、次サイクル以降）
+
+---
+
+## 2026-07-10 サイクル（主任務: transcope-review-2026 内部リンク集約・PIN-2）
+
+### 実行した改善
+
+**改善1: catchy-vs-transcope-2026.md — 完全一致アンカー変更＋まとめ節追加（b）**
+- 対象: src/data/blog/catchy-vs-transcope-2026.md（pos6・サイト最上位記事）
+- Before（line 125）: `[Transcope の詳細レビュー](/posts/transcope-review-2026/)`
+- After: `[トランスコープ 評判・詳細レビュー](/posts/transcope-review-2026/)`
+- まとめ節「次の記事」リストに `[トランスコープ 評判・詳細レビュー](/posts/transcope-review-2026/)` を先頭追加
+- 狙い: GSCクエリ「トランスコープ 評判」完全一致アンカーで被リンクシグナル強化
+
+**改善2: index.astro — ツールサイドバーに内部リンク新設（b）**
+- 対象: src/pages/index.astro（homepage）
+- catchy-vs-transcope リンク直下に追加
+- 追加: `<Button href="/posts/transcope-review-2026/">トランスコープ 評判・詳細レビュー →</Button>`
+- 狙い: homepage→transcope-review への内部リンク（指示書 PIN-2 明記の2ソース）
+
+**改善3: transcope-review-2026.md — modDatetime 更新（b2）**
+- 対象: src/data/blog/transcope-review-2026.md
+- Before: `modDatetime: 2026-07-05T13:30:00+09:00`
+- After: `modDatetime: 2026-07-10T10:00:00+09:00`
+- 狙い: フレッシュネスシグナル＋GSC再クロール促進
+
+### ゲート結果
+- ✅ 法令4軸 grep: 「必ず」は公式確認促進文のみ・断定/薬機/景表/ステマなし
+- ✅ GA4 init: frontmatter＋リンク変更のみ（JS/HTML構造変更なし）
+- ✅ ビルド: 0 errors、Complete!
+- ✅ /go/リンク: dist/go/transcope・dist/go/catchy 実在確認
+- ✅ 内部リンク: dist/index.html・dist/posts/catchy-vs-transcope-2026/index.html → transcope-review-2026 実在確認
+- ✅ OG画像: aimaker-lab-og.jpg 実在確認（1件マッチ）
+
+### push
+- commit: e9b4628
+- push: origin/main → Cloudflare Pages 自動デプロイ開始
+
+### GSC URL検査
+- URL: https://aimaker-lab.com/posts/transcope-review-2026/
+- 結果: 既にインデックス済み（URL は Google に登録されています）
+- インデックス登録リクエスト: ✅ 完了（優先クロールキューに追加）
+
+### 次サイクル候補
+1. **cline 料金記事の特定・強化**（GSC pos11.0 → トップ10入り狙い。まずサイト内の既存記事有無を確認してからタイトル改善または新規作成判断）
+2. **transcope-review-2026 CTR確認**（2週間後 2026-07-24 以降にGSC再取得・pos19→改善を確認）
+3. **figma make 料金 記事強化**（pos17.0・2ページ目前半）
+4. **A8 TechGo（¥50k）・明光（¥78k）提携状況確認**（承認済みなら affiliateUrl 差し込み）
+5. **(d2) money page 孤立検出**（`grep -rl "/go/" src/data/blog/` で列挙・被リンク0本を確認）
+
+---
+
 ## 2026-07-08 サイクル（主任務: xserver-vs-conoha-wing-2026 強化）
 
 ### 実行した改善
