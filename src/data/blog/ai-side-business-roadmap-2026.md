@@ -302,6 +302,7 @@ AI副業を始めるときの判断は、シンプルです：
 - [Cursor vs Claude Code 徹底比較](/posts/cursor-vs-claude-code-comparison/) — パス3（スキル販売）の前提となる AI コーディング環境
 - [Claude Code で AI 会社を1ヶ月運営してみた](/posts/claude-code-ai-company-1month-2026/) — パス1〜3の運営実例
 - [個人開発者のためのホスティング選び](/posts/hosting-for-individual-developers-2026/) — 道具編の補足
+- [未経験からITエンジニア転職 完全ガイド](/posts/it-engineer-career-start-2026/) — 副業でなく「本業ごとAI側に移る」選択肢。AIスキルを職務経歴に翻訳する方法も
 - [個人開発者のドメイン取得完全ガイド](/posts/domain-selection-guide-2026/) — パス1の起点
 
 その他のリソース：
