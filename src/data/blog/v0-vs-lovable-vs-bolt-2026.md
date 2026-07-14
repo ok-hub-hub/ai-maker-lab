@@ -1,7 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-04-28T16:00:00+09:00
-title: "v0 vs Lovable vs Bolt｜Vibe Coding 3大ツールを個人開発者目線で比較【2026】"
+modDatetime: 2026-07-14T10:00:00+09:00
+title: "v0 vs Lovable vs Bolt 比較2026年版｜料金$20〜・Vibe Coding 3大ツールを副業・個人開発目線で選ぶ"
 slug: v0-vs-lovable-vs-bolt-2026
 featured: true
 draft: false
@@ -12,7 +13,7 @@ tags:
   - bolt
   - ui-generator
   - comparison
-description: "v0 by Vercel / Lovable / Bolt.new の3ツールを、料金・出力品質・日本語耐性・公開のしやすさで比較。個人開発者の用途別に「これを選べ」を提示します。"
+description: "v0 by Vercel（$30〜）/ Lovable（$25〜）/ Bolt.new（$20〜）の3ツールを料金・出力品質・日本語・デプロイで徹底比較。副業・個人開発の用途別に「これを選べ」を提示します。"
 ---
 
 <div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-fuchsia-100 via-rose-100 to-orange-100 sm:h-64">
