@@ -1,7 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-07-12T10:03:00+09:00
-title: "バイブコーディング ツール おすすめ比較【2026年版】Claude Code・Cursor・v0・Bolt を副業×公開フローで選ぶ"
+modDatetime: 2026-07-15T10:00:00+09:00
+title: "vibe coding ツール おすすめ比較2026年版｜無料枠あり・Claude Code・Cursor・v0・Bolt を副業×公開フローで選ぶ"
 slug: vibe-coding-tools-2026
 featured: false
 draft: false
@@ -12,7 +13,7 @@ tags:
   - claude-code
   - v0
   - hosting
-description: "バイブコーディングツールを比較したい人へ。AI IDE型（Claude Code/Cursor/Cline）とAIアプリビルダー型（v0/Bolt/Lovable）の全7ツールを、副業で作って公開するフロー×料金×無料枠で徹底比較。作ったものを公開するホスティング選びまで一気通貫で解説。"
+description: "vibe coding ツール 無料で始めたい人へ。AI IDE型（Claude Code/Cursor/Cline）とAIアプリビルダー型（v0/Bolt/Lovable）の全7ツールを、副業で作って公開するフロー×料金×無料枠で徹底比較。作ったものを公開するホスティング選びまで一気通貫で解説。2026年7月更新。"
 ---
 
 <div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 sm:h-64">
