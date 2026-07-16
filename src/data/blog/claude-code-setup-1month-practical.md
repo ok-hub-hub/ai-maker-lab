@@ -25,7 +25,7 @@ description: "Claude Code を macOS / Windows でセットアップし1ヶ月運
 
 > 本記事は **AI 駆動を堂々と明示する立場** で書いています。「実は AI が書いた」を隠す方針ではなく、**AI と一緒に1人会社を回す**ことを前提にした実践ガイドです。
 >
-> **広告に関する表記**：本記事の末尾に [/go/meiko-career](/go/meiko-career) を経由するリンクを含みます。リンク経由での面談申込により、AI Maker Lab に紹介料が発生する場合があります。**面談は求職者は無料**で、Claude Code の評価・手順は広告と無関係に実体験で書いています。
+> **広告に関する表記**：本記事の末尾に [/go/meiko-career](/go/meiko-career)・[/go/techgo](/go/techgo) を経由するリンクを含みます。リンク経由での面談申込により、AI Maker Lab に紹介料が発生する場合があります。**面談は求職者は無料**で、Claude Code の評価・手順は広告と無関係に実体験で書いています。
 
 ## 目次
 
@@ -261,7 +261,11 @@ Claude Code や Cursor を使いこなせる人は、実は市場では珍しい
 <div class="my-8 flex flex-col gap-3">
   <a href="/go/meiko-career" class="flex flex-col rounded-2xl bg-indigo-600 p-5 text-white no-underline shadow-sm transition hover:bg-indigo-700">
     <span class="text-lg font-bold">エンジニア転職の無料キャリア面談を見る →</span>
-    <span class="mt-1 text-sm text-indigo-100">明光キャリアパートナーズ（求職者は無料・オンライン可）</span>
+    <span class="mt-1 text-sm text-indigo-100">明光キャリアパートナーズ（未経験〜ジュニア向け・求職者は無料・オンライン可）</span>
+  </a>
+  <a href="/go/techgo" class="flex flex-col rounded-2xl border-2 border-indigo-600 bg-white p-5 text-indigo-900 no-underline shadow-sm transition hover:bg-indigo-50">
+    <span class="text-lg font-bold">実務経験があるなら：ハイクラス転職の無料相談 →</span>
+    <span class="mt-1 text-sm text-indigo-700">TechGo（ITエンジニア経験者向け・上流/年収アップ特化・無料）</span>
   </a>
 </div>
 

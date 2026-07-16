@@ -1,9 +1,9 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-06-05T19:00:00+09:00
-title: "トランスコープ 評判・Catchy比較2026年版｜日本語AIライティングツールを実運用3ヶ月で正直比較"
+title: "Catchy トランスコープ どっち？比較2026年版｜料金・SEO効果を実運用3ヶ月で結論"
 slug: catchy-vs-transcope-2026
-modDatetime: 2026-07-09T10:00:00+09:00
+modDatetime: 2026-07-16T10:00:00+09:00
 featured: true
 draft: false
 tags:
@@ -12,7 +12,7 @@ tags:
   - transcope
   - comparison
   - seo
-description: "トランスコープの評判・料金（Basic ¥11,000〜）をCatchy（¥3,000〜）と3ヶ月実運用で比較。「高い」「SEO効果ある？」「ひどい」という声の真相・向かない人まで、実際に使って正直に書きます。"
+description: "Catchy（¥3,000〜）とトランスコープ（¥11,000〜）を実運用3ヶ月で比較。安く手早く始めるならCatchy、SEOで集客する事業ならTranscope——「高い」「効果ない」「ひどい」という声の真相まで、実際に使った人間が正直に書きます。"
 ---
 
 <div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-indigo-100 to-violet-100 sm:h-64">
