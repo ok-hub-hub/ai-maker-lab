@@ -1,8 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-06-24T20:00:00+09:00
-modDatetime: 2026-07-10T10:00:00+09:00
-title: "Transcope（トランスコープ）の評判・料金は高い？SEOで記事量産して使った正直レビュー【2026】"
+modDatetime: 2026-07-16T11:30:00+09:00
+title: "トランスコープの評判は実際どう？Transcopeで記事量産して分かった料金の元が取れる人【2026】"
 slug: transcope-review-2026
 featured: false
 draft: false
@@ -11,7 +11,7 @@ tags:
   - transcope
   - review
   - seo
-description: "SEO特化AIライティングツール Transcope（トランスコープ）の評判・料金・実際の効果は？複数メディアのSEO記事を量産してきた目線で、検索順位への影響・正直な弱点・元が取れる人/取れない人をまとめます。"
+description: "トランスコープ（Transcope）の評判・口コミは本当？SEO記事を実際に量産して検証した検索順位への効果・料金の正直な評価・元が取れる人/取れない人。「高い」と言われる月額の損益分岐も実体験で解説します。"
 ---
 
 <div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-violet-100 via-purple-100 to-indigo-100 sm:h-64">

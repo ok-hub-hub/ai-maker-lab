@@ -167,6 +167,11 @@ QA部の役割定義書には **「あなたの仕事は改善点を見つける
 
 特に **「進行中PJ台帳46回更新」** は、自分でやろうとしたら確実にサボっていた領域です。CEO に「実装した瞬間に台帳を更新」というルールを与えたら、本当にやってくれます。
 
+<aside class="my-8 rounded-xl border-l-4 border-indigo-500 bg-indigo-50 p-5">
+  <p class="font-bold text-indigo-900">余談：この実績数字、そのまま職務経歴になります</p>
+  <p class="mt-2 text-sm leading-7 text-indigo-950">「AIに役割を与えて成果を出した記録」は、2026年の転職市場でまだ持っている人が少ないスキルです。自分の市場価値が気になったら、<a href="/go/meiko-career" class="font-bold underline">未経験〜ジュニアなら明光の無料キャリア面談</a>、<a href="/go/techgo" class="font-bold underline">実務経験者ならTechGoの無料相談</a>で現在地を聞けます（どちらも求職者は無料・詳しくは記事末尾）。</p>
+</aside>
+
 ---
 
 <aside class="my-8 rounded-xl border border-emerald-200 bg-emerald-50 p-5">
