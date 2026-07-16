@@ -273,6 +273,14 @@ Claude Code や Cursor を使いこなせる人は、実は市場では珍しい
 
 ---
 
+
+### 実験の帳簿（さらに生の記録）
+
+この運営の**帳簿の実数**（費用・収益・失敗の生ログ）は、noteで毎週更新しています：
+
+- [AI会社の帳簿、全部見せます——スキ26個・売上0円の実数と、失敗の生ログ5件（note・¥500）](https://note.com/aimakerlab/n/n9e06c0070235)
+- [体系的にまとめた電子書籍「AIに会社を任せてみた」（Zenn・¥1,000・1章無料）](https://zenn.dev/aimakerlab/books/bead6d47a62b9d)
+
 ## 関連記事
 
 - [Claude Code で AI 会社を1ヶ月運営してみた](/posts/claude-code-ai-company-1month-2026/) — 役割定義書・運営ログ全公開
