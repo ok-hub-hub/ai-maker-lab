@@ -192,6 +192,8 @@ A. 完成品として使おうとすると落胆しやすい構造です。Catch
 記事を「作って終わり」にしないために、次の記事もどうぞ：
 
 - [トランスコープ 評判・詳細レビュー](/posts/transcope-review-2026/) — SEO特化AIライティングツールを実運用3ヶ月で徹底解説（料金・弱点・元が取れる人）
+- [ChatGPT で十分？Catchy・Transcope が必要な人を整理する](/posts/chatgpt-de-juubun-catchy-transcope-2026/) — 無料ChatGPTから有料ツールへ移行すべきか判断できます
+- [GPT-5.6 vs Claude Sonnet 5 日本語ライティング比較【2026年7月】](/posts/gpt-5-6-vs-claude-sonnet5-jp-writing-2026/) — AIモデル本体と専用ライティングツールの使い分けを整理します
 - [Vibe Coding 完全ガイド](/posts/vibe-coding-guide-2026/) — AIで「書く」前に「作る」を知りたい人へ
 - [AI副業ロードマップ2026](/posts/ai-side-business-roadmap-2026/) — ツールを収益につなげる全体像
 - [Claude Code でAI会社を1ヶ月運営した記録](/posts/claude-code-ai-company-1month-2026/) — この比較を書いている運用の裏側
