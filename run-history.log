@@ -2,6 +2,45 @@
 
 ---
 
+## 2026-07-16 サイクル（PIN-2: catchy-vs-transcope スニペット改善＋孤立money page 2件接続）
+
+### 実行した改善
+
+**改善1 (a+b2): catchy-vs-transcope-2026.md — タイトル/description/modDatetime 改善**
+- 対象: src/data/blog/catchy-vs-transcope-2026.md（GSC「transcope, catchy」pos5.9・7表示・CTR0）
+- Before title: "トランスコープ 評判・Catchy比較2026年版｜日本語AIライティングツールを実運用3ヶ月で正直比較"
+- After title: "Catchy トランスコープ どっち？比較2026年版｜料金・SEO効果を実運用3ヶ月で結論"
+  → 「Catchy トランスコープ」を先頭に（クエリ完全一致）・「どっち？」で意思決定ニーズに応答
+- Before description: "トランスコープの評判・料金（Basic ¥11,000〜）をCatchy（¥3,000〜）と3ヶ月実運用で比較。..."
+- After description: "Catchy（¥3,000〜）とトランスコープ（¥11,000〜）を実運用3ヶ月で比較。安く手早く始めるならCatchy、SEOで集客する事業ならTranscope——..."
+  → 冒頭に「安く=Catchy / SEO集客=Transcope」の決断軸を出してCTR向上狙い
+- modDatetime: 2026-07-09 → 2026-07-16（フレッシュネス更新）
+
+**改善2 (d2): catchy-vs-transcope-2026.md — 孤立money page 2件を末尾リストに接続**
+- chatgpt-de-juubun-catchy-transcope-2026（/go/リンク16件・被リンク0→1）
+- gpt-5-6-vs-claude-sonnet5-jp-writing-2026（/go/リンク6件・被リンク0→1）
+- いずれもAIライティングツール文脈で自然な接続
+
+### ゲート結果
+- ✅ 法令4軸 grep: 断定/薬機/景表/ステマなし
+- ✅ ビルド: 0 errors, Complete!（8.80s）
+- ✅ dist: catchy-vs-transcope-2026/chatgpt-de-juubun/gpt-5-6-vs-claude すべて生成確認
+- ✅ OG画像: public/aimaker-lab-og.jpg 実在確認
+- ✅ 内部リンク: dist/posts/catchy-vs-transcope-2026 に新規リンク先2件確認
+
+### push
+- commit: f8194a0
+- push: origin/main → Cloudflare Pages 自動デプロイ
+
+### 次サイクル候補
+1. **catchy-vs-transcope-2026 CTR確認**（2週間後 2026-07-30 以降にGSC再取得・「transcope, catchy」pos5.9→CTR改善確認）
+2. **transcope-review-2026 pos18.7 強化**（PIN-2 継続。記事本文のサブ意図追加で3,000字超→内部リンク集約。次サイクル検討）
+3. **figma-make 料金記事強化**（pos17.0・2ページ目前半。専用記事存在確認と content-gap分析）
+4. **claude-sonnet5-vs-opus48-vs-gpt55 の内部リンク確認**（gpt-5-6-vs-claude-sonnet5 の接続先として追加候補）
+5. **A8管理コンソール URL修正**（/login と /a8v2/wp_medialist.php が404 → TechGo¥50k・ninja-code提携状況確認）
+
+---
+
 ## 2026-07-13 サイクル（主任務: xserver-vs-conoha-wing-2026 タイトル改善・内部リンク追加）
 
 ### 実行した改善
@@ -246,3 +285,37 @@
 2. xserver-vs-conoha-wing-2026: 「エックスサーバー conoha wing 比較」2表示→主任務対象（vibe-coding-guideと2週間空ける）
 3. ヒーロー画像専用化(f): vibe-coding-guide・landing-page・v0-patternsで/icons/vibe-coding.pngを共有確認済み → GA4エンゲージデータ取得後に判断
 4. A8: ninja-code・potepan-camp・career-company の承認状況確認
+
+---
+
+## 2026-07-17 サイクル（主任務: ai-writing-tools-comparison サブ意図H2追加 + d2: vibe-coding-tools 孤立解消）
+
+### 実施内容
+
+**改善1 (主任務③ + b2): ai-writing-tools-comparison-2026 サブ意図H2追加・modDatetime更新**
+- modDatetime なし → `2026-07-17T11:00:00+09:00` に追加（鮮度シグナル・b2）
+- H2追加「副業・アフィリエイトブ���グで選ぶなら」：量産フェーズ(Catchy Free)→SEO集客フェーズ(Transcope)の段階的投資パターンを解説
+- H2追加「��額費用の3段階モデル」：¥0(ChatGPT Free)/¥3,000〜(Catchy有料)/¥14,000〜(Catchy+Transcope)の3パターン表を追加
+  - 料金根拠: 既存の比較表（2026-06-05公式取得値）を用いた加算 ✓
+- 本文 ≈1,900字 → ≈2,650字（2,500〜3,500字化達成）
+- 対象URL: /posts/ai-writing-tools-comparison-2026/（Jul 2以来初の主任務強化・15日経過・2週間ルール解放済��）
+
+**改善2 (d2): vibe-coding-tools-2026 孤立解消**
+- 被リンク: 0本 → 1本
+- 同記事の「関連記事」セクションに完全一致アンカーで接続
+  - `[vibe coding ツール おすす��比較2026年版（Claude Code・Cursor・v0・Bolt）](/posts/vibe-coding-tools-2026/)`
+
+### ゲート結果
+- ✅ ��令4�� grep: 断定（必ず稼げる等）・薬機・景表・ステマなし。広告表記は既存の行を継承 ✓
+- ✅ ビルド: 0 errors、184 pages built
+- ✅ dist確認: 新H2「副業・アフィリエイ���ブログで選ぶなら」「月額費用の3段階モデル」・vibe-coding-tools-2026リンク 全反��
+- ✅ OG画像: aimaker-lab-og.jpg 実在確認
+
+### push
+- commit: TBD
+- push: origin/main → Cloudflare Pages 自動デプロイ開始
+
+### 次サイクル候補
+1. catchy-review-2026（2026-07-05最終・Jul19解放→2日後）— 主任務最優先対���
+2. vibe-coding-tools-2026（被リンク1本に増加・PIN-1）— 次回更に内部リンク追加
+3. transcope-review-2026（Jul30解放・PIN-2継続）— 買い手クエリpos18.7の本命
