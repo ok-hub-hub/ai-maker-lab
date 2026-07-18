@@ -13,8 +13,8 @@ tags:
 description: "GPUなし・Mac環境でStable Diffusion（AUTOMATIC1111/ComfyUI）をブラウザだけで使えるクラウドサービス「ConoHa AI Canvas」の正直レビュー。料金・できること・弱点を2026年5月の実接続データで解説します。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-violet-100 via-purple-100 to-fuchsia-100 sm:h-64">
-  <img src="/icons/ai-tool.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-violet-100 via-purple-100 to-fuchsia-100 sm:h-32">
+  <img src="/icons/ai-tool.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

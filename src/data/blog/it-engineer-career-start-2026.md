@@ -15,8 +15,8 @@ tags:
 description: "AIツールを触って「自分もITで働けるかも」と思い始めた未経験者へ。転職エージェントとプログラミングスクールの違い、選び方、そして失敗しない最初の一歩（無料相談）を、忖度なしでまとめました。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-teal-100 to-sky-100 sm:h-64">
-  <img src="/icons/ai-tool.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-teal-100 to-sky-100 sm:h-32">
+  <img src="/icons/ai-tool.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

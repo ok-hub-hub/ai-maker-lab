@@ -14,8 +14,8 @@ tags:
 description: "バイブコーディングツールを探しているあなたへ。無料から始められる v0・Lovable・Bolt・Replit Agent・Figma Make の5ツールを料金・無料枠・向いている人で比較。副業月5万円への活用ステップも解説します【2026年7月更新】。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 sm:h-64">
-  <img src="/icons/vibe-coding.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 sm:h-32">
+  <img src="/icons/vibe-coding.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

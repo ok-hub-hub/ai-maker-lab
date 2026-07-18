@@ -14,8 +14,8 @@ tags:
 description: "Claude Code を AI 会社として運用し、kokolabo/careerlounge/ai-maker-lab の3メディアを2週間で立ち上げて流入ゼロのまま停滞。SEO の時間軸（3-6ヶ月）と焦りの心理的ギャップを正直に告白し、CEO 代行と7回旋回した末に「TikTok/YouTube Shorts/Instagram Reels の3プラ並走（ナゾラボ）」を新規収益軸として機械的に決定した実況です。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-violet-100 to-stone-100 sm:h-64">
-  <img src="/icons/ai-side-business.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-violet-100 to-stone-100 sm:h-32">
+  <img src="/icons/ai-side-business.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

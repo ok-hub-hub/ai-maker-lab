@@ -15,8 +15,8 @@ tags:
 description: "Claude Code を「個人開発の助っ人」ではなく、CEO・QA・事業開発・技術検証の4部門を持つ「AI会社」として1ヶ月運営してきた運用記録です。役割定義書の中身、相談処理フロー、失敗事例、1ヶ月の実績数字まで、誰も書いていない部分を全部公開します。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100 via-blue-100 to-indigo-100 sm:h-64">
-  <img src="/icons/ai-company.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100 via-blue-100 to-indigo-100 sm:h-32">
+  <img src="/icons/ai-company.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 
@@ -80,6 +80,8 @@ description: "Claude Code を「個人開発の助っ人」ではなく、CEO・
 </aside>
 
 ## 部門構成と役割定義
+
+<img src="/images/posts/claude-code-ai-company-1month-2026/org-chart.png" alt="AI会社の組織図：オーナー（人間・判断のみ）→CEO代行（Claude Code）→QA部・事業開発部・技術検証部の3部門" width="1200" height="675" loading="lazy" class="rounded-xl border border-stone-200" />
 
 ### CEO（中央）
 

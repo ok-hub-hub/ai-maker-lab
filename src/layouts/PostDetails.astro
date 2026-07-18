@@ -109,6 +109,18 @@ const currentPostIndex = allPosts.findIndex(a => a.id === post.id);
 const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
 const nextPost =
   currentPostIndex !== allPosts.length ? allPosts[currentPostIndex + 1] : null;
+
+/* ========== 関連記事（タグ一致スコア上位3件） ========== */
+const relatedPosts = posts
+  .filter(p => p.id !== post.id)
+  .map(p => ({
+    post: p,
+    score: p.data.tags.filter(tg => tags.includes(tg)).length,
+  }))
+  .filter(x => x.score > 0)
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 3)
+  .map(x => x.post);
 ---
 
 <Layout {...layoutProps}>
@@ -198,6 +210,24 @@ const nextPost =
     <ShareLinks />
 
     <hr class="my-6 border-dashed" />
+
+    {
+      relatedPosts.length > 0 && (
+        <section data-pagefind-ignore class="mb-8">
+          <h2 class="mb-4 text-lg font-bold text-foreground">関連記事</h2>
+          <ul class="grid gap-4 sm:grid-cols-3">
+            {relatedPosts.map(rp => (
+              <li class="rounded-xl border border-border p-4 transition hover:border-accent/60">
+                <a href={getPath(rp.id, rp.filePath)} class="block hover:opacity-90">
+                  <p class="text-sm font-semibold leading-6 text-accent">{rp.data.title}</p>
+                  <p class="mt-2 line-clamp-3 text-xs leading-5 text-foreground-muted">{rp.data.description}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
 
     <!-- Previous/Next Post Buttons -->
     <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2">

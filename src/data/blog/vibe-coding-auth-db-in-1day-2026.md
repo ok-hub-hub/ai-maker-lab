@@ -16,8 +16,8 @@ tags:
 description: "Lovable と Supabase を組み合わせて、ログインつき ToDo アプリを8時間で公開するまでの時間割。9:00 雛形生成から20:00 公開告知まで、RLS / OAuth / Cloudflare デプロイのトラブルシュート込みで提示します。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 sm:h-64">
-  <img src="/icons/read-time.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 sm:h-32">
+  <img src="/icons/read-time.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

@@ -15,8 +15,8 @@ tags:
 description: "TikTok/Instagram/YouTube の3プラで同じハンドル名を取得するために、Playwright で URL 直叩き＋snapshot 検証を回した実記録。@trivia_loop は取得済、@hatena_lab は IG で被ってた、@nazo_lab で全揃い。個人開発者向けの「ブランド開設のリアル」を可視化します。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-cyan-100 to-stone-100 sm:h-64">
-  <img src="/icons/ai-side-business.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-cyan-100 to-stone-100 sm:h-32">
+  <img src="/icons/ai-side-business.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

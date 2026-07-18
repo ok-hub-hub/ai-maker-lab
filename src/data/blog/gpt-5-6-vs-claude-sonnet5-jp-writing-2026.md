@@ -14,8 +14,8 @@ tags:
 description: "2026年7月9日に一般公開されたGPT-5.6（Sol/Terra/Luna）とClaude Sonnet 5を日本語ブログ記事生成の観点で徹底比較。API料金・日本語品質・速度・コスパを実数値で整理し「どちらを選ぶか」「なぜAIライティングツールを使うと悩まなくなるか」を解説します。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-orange-100 via-amber-100 to-yellow-100 sm:h-64">
-  <img src="/icons/trophy-ai.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-orange-100 via-amber-100 to-yellow-100 sm:h-32">
+  <img src="/icons/trophy-ai.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

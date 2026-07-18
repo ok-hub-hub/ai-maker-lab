@@ -14,8 +14,8 @@ tags:
 description: "「ChatGPT 無料で十分？Catchy や Transcope にわざわざお金を払う必要はある？」実際に複数メディアでAI文章生成を運用してきた目線で、ChatGPTで足りる人・専用ツールへ移行すべき人を判断軸ごとに正直にまとめます。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100 via-sky-100 to-violet-100 sm:h-64">
-  <img src="/icons/ai-tool.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100 via-sky-100 to-violet-100 sm:h-32">
+  <img src="/icons/ai-tool.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

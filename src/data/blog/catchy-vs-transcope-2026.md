@@ -15,8 +15,8 @@ tags:
 description: "Transcope（トランスコープ）とCatchy（キャッチー）を実運用3ヶ月で徹底比較。料金・日本語精度・SEO効果・向き不向きを実測データで解説。どっちを選ぶべきかタイプ別の結論つき。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-indigo-100 to-violet-100 sm:h-64">
-  <img src="/icons/ai-tool.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-indigo-100 to-violet-100 sm:h-32">
+  <img src="/icons/ai-tool.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

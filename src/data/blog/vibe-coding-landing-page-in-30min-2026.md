@@ -16,8 +16,8 @@ tags:
 description: "v0 と Lovable で LP を30分以内に作る実装パターンを10種類、プロンプト例とツール別手順で網羅。ヒーローのみ・3カラム・FAQ・縦長 LP・料金表・申し込みフォーム・A/B テスト・モバイル特化・shadcn/ui・Tailwind v4 ダーク対応まで編集部の所見付きで解説します。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-fuchsia-100 via-pink-100 to-orange-100 sm:h-64">
-  <img src="/icons/vibe-coding.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-fuchsia-100 via-pink-100 to-orange-100 sm:h-32">
+  <img src="/icons/vibe-coding.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

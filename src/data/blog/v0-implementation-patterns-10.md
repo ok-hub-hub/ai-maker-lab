@@ -14,8 +14,8 @@ tags:
 description: "v0 by Vercel を使いこなすための実装パターンを、ランディングページから管理画面・ダッシュボード・認証フォームまで10種類のプロンプト例とコードコールアウトで紹介。個人開発でハマる落とし穴も合わせて解説します。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-cyan-100 via-sky-100 to-blue-100 sm:h-64">
-  <img src="/icons/vibe-coding.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-cyan-100 via-sky-100 to-blue-100 sm:h-32">
+  <img src="/icons/vibe-coding.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

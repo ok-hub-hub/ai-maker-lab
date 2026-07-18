@@ -15,8 +15,8 @@ tags:
 description: "ポテパンキャンプ 評判・口コミを正直まとめ。料金は相談無料・受講有料、転職サポートの内容・向く人/向かない人をAI副業メディア運営者が解説。無料カウンセリングで自分に合うか先に確認するのが正解。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-teal-100 via-emerald-100 to-sky-100 sm:h-64">
-  <img src="/icons/ai-tool.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-teal-100 via-emerald-100 to-sky-100 sm:h-32">
+  <img src="/icons/ai-tool.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

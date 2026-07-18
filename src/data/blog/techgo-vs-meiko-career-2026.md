@@ -15,8 +15,8 @@ tags:
 description: "ITエンジニア転職エージェントのTechGo（テックゴー）と明光キャリアパートナーズを比較。分かれ道は「実務経験の有無」の1つだけ。AIツールを使いこなせるようになった人が、無料面談で自分の市場価値を確かめるならどちらか、実体験ベースの判断軸で整理します。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-sky-100 to-emerald-100 sm:h-64">
-  <img src="/icons/ai-side-business.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-sky-100 to-emerald-100 sm:h-32">
+  <img src="/icons/ai-side-business.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

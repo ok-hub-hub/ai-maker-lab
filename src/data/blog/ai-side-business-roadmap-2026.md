@@ -14,8 +14,8 @@ tags:
 description: "AIで副業収益を作りたい個人開発者・会社員向け、月収レンジ別ロードマップ。3つの収益化パス（アフィリ／プロダクト販売／スキル販売）の選び方、必要な道具、よくある失敗パターンまで現実ベースで整理。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 sm:h-64">
-  <img src="/icons/ai-side-business.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 sm:h-32">
+  <img src="/icons/ai-side-business.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

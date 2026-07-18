@@ -16,8 +16,8 @@ tags:
 description: "Vibe Coding で作ったアプリ、AI副業ブログ、WordPress、それぞれに最適なホスティングは違います。Vercel / Cloudflare Pages / Netlify / mixhost を、料金・速度・運用負荷で個人開発者目線で比較しました。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-100 sm:h-64">
-  <img src="/icons/hosting.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-100 sm:h-32">
+  <img src="/icons/hosting.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 
@@ -352,6 +352,17 @@ Vercel 公式 Pricing ページでは Hobby プランが **"personal project"** 
 その他のリソース：
 
 - [/tools/onamae/](/tools/onamae/) ／ [/tools/mixhost/](/tools/mixhost/) ／ [/tools/v0/](/tools/v0/) — 各サービス詳細
+<div class="my-8 grid gap-3 sm:grid-cols-2">
+  <a href="/go/mixhost" class="flex flex-col rounded-2xl bg-indigo-600 p-5 text-white no-underline shadow-sm transition hover:bg-indigo-700">
+    <span class="text-lg font-bold">mixhost の料金を見る →</span>
+    <span class="mt-1 text-sm text-indigo-100">WordPress×SEOブログ向け（LiteSpeed標準）</span>
+  </a>
+  <a href="/go/onamae" class="flex flex-col rounded-2xl border-2 border-indigo-600 bg-white p-5 text-indigo-900 no-underline shadow-sm transition hover:bg-indigo-50">
+    <span class="text-lg font-bold">ドメインの空きを調べる →</span>
+    <span class="mt-1 text-sm text-indigo-700">お名前.com（検索は無料）</span>
+  </a>
+</div>
+
 - [/go/onamae](/go/onamae) — お名前.com でドメインを探す
 - [/go/mixhost](/go/mixhost) — mixhost でホスティングを契約する
 

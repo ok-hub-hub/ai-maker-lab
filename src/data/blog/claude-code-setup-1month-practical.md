@@ -15,8 +15,8 @@ tags:
 description: "Claude Code を macOS / Windows でセットアップし1ヶ月運用。実コスト（Claude Pro 月$20）、よく使う基本コマンド、つまづいたポイントを実体験ベースで公開。AI 駆動で個人開発を回したい人の実践教本です。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-violet-100 via-fuchsia-100 to-pink-100 sm:h-64">
-  <img src="/icons/code-block.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-violet-100 via-fuchsia-100 to-pink-100 sm:h-32">
+  <img src="/icons/code-block.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

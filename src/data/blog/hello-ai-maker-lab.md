@@ -11,8 +11,8 @@ tags:
 description: "v0 / Lovable / Bolt / Cursor などの Vibe Coding ツール、AI動画、AI音声、業務自動化を、Claude Code で AI 会社を1ヶ月運営した個人開発者が AI 駆動の編集体制で記録する実体験ジャーナル「AI Maker Lab」を立ち上げました。これも AI で作っています。実体験記事と AI副業ロードマップを掲載しています。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 sm:h-64">
-  <img src="/icons/individual-dev.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 sm:h-32">
+  <img src="/icons/individual-dev.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

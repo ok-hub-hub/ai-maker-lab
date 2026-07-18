@@ -15,8 +15,8 @@ tags:
 description: "「AIライティングツール ○○選」を読んでも決められないあなたへ。実際に毎日AI駆動で記事を量産・配信している運用者が、日本語で使う前提で Catchy / Transcope / ChatGPT / Claude の4つに絞り、用途別の正解を◎○△×で整理します。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-violet-100 to-fuchsia-100 sm:h-64">
-  <img src="/icons/ai-tool.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-violet-100 to-fuchsia-100 sm:h-32">
+  <img src="/icons/ai-tool.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

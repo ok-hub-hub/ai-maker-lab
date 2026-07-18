@@ -13,8 +13,8 @@ tags:
 description: "Claude Sonnet 5（2026-06-30リリース）vs Opus 4.8 vs GPT-5.5を日本語ライティング用途で徹底比較。API料金・速度・日本語品質の3軸で「どれに課金すべきか」と、Catchy/Transcopeを使えばモデル選定を気にしなくていい理由を解説。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-blue-100 via-indigo-100 to-violet-100 sm:h-64">
-  <img src="/icons/ai-tool.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-blue-100 via-indigo-100 to-violet-100 sm:h-32">
+  <img src="/icons/ai-tool.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 

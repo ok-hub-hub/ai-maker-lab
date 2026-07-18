@@ -14,8 +14,8 @@ tags:
 description: "Claude Code を「AI 会社」として運用しながら、ASP（A8.net）で最初の即時提携プログラムを獲得し、kokolabo の医療脱毛記事 4本に広告リンクを実装するまでの実況。Day1 の通り月10万円達成までは遠いが、「収益化の蛇口がゼロから1へ動いた瞬間」を AI 駆動で記録した実体験記事です。"
 ---
 
-<div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-amber-100 via-rose-100 to-stone-100 sm:h-64">
-  <img src="/icons/ai-side-business.png" alt="" aria-hidden="true" class="h-28 w-28 sm:h-36 sm:w-36 drop-shadow-md" />
+<div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-amber-100 via-rose-100 to-stone-100 sm:h-32">
+  <img src="/icons/ai-side-business.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 
