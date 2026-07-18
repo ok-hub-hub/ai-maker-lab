@@ -36,6 +36,8 @@ Claude Code や Cursor を日常的に回すようになると、一度はよぎ
 | **実務は未経験**（独学・個人開発・AIツール経験のみ） | **[明光キャリアパートナーズ](/go/meiko-career)** — 未経験〜ジュニアのIT転職に特化 |
 | どちらか微妙（業務での開発経験が浅い・ブランクがある） | 先に [明光の無料面談](/go/meiko-career) で現在地を聞き、経験者枠で戦えると言われたら [TechGo](/go/techgo) にも相談 |
 
+<img src="/images/posts/techgo-vs-meiko-career-2026/career-fork.png" alt="分かれ道の図：実務経験がある→TechGo（経験者・上流特化）、ない→明光キャリアパートナーズ（未経験〜ジュニア特化）。どちらも求職者は無料" width="1200" height="675" loading="lazy" class="rounded-xl border border-stone-200" />
+
 料金はどちらも**求職者は無料**です（転職エージェントは採用企業側から報酬を得るモデル）。だからこの比較は「どちらにお金を払うか」ではなく、「**どちらの土俵なら自分の話がかみ合うか**」の比較になります。
 
 ## TechGo（テックゴー）とは
