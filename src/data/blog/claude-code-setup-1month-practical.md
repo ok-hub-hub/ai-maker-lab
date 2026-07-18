@@ -3,6 +3,7 @@ author: AI Maker Lab
 pubDatetime: 2026-05-19T10:00:00+09:00
 title: "Claude Code 実体験｜セットアップから1ヶ月運用・月$20のコストを公開【2026】"
 slug: claude-code-setup-1month-practical
+primaryGo: meiko-career
 featured: false
 draft: false
 tags:
@@ -25,7 +26,7 @@ description: "Claude Code を macOS / Windows でセットアップし1ヶ月運
 
 > 本記事は **AI 駆動を堂々と明示する立場** で書いています。「実は AI が書いた」を隠す方針ではなく、**AI と一緒に1人会社を回す**ことを前提にした実践ガイドです。
 >
-> **広告に関する表記**：本記事の末尾に [/go/meiko-career](/go/meiko-career)・[/go/techgo](/go/techgo) を経由するリンクを含みます。リンク経由での面談申込により、AI Maker Lab に紹介料が発生する場合があります。**面談は求職者は無料**で、Claude Code の評価・手順は広告と無関係に実体験で書いています。
+> **広告に関する表記**：本記事の末尾に [明光キャリアパートナーズ](/go/meiko-career)・[TechGo](/go/techgo) を経由するリンクを含みます。リンク経由での面談申込により、AI Maker Lab に紹介料が発生する場合があります。**面談は求職者は無料**で、Claude Code の評価・手順は広告と無関係に実体験で書いています。
 
 ## 目次
 

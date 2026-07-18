@@ -18,9 +18,12 @@ export const getStaticPaths = (async ({ paginate }) => {
 const { page } = Astro.props;
 ---
 
-<Layout title={`Posts | ${SITE.title}`}>
+<Layout
+  title={page.currentPage > 1 ? `記事一覧 ${page.currentPage}ページ目 | AI Maker Lab` : `記事一覧 | AI Maker Lab`}
+  description={`AIツール・個人開発の実体験記事一覧${page.currentPage > 1 ? `（${page.currentPage}ページ目）` : ""}。比較・レビュー・実録ジャーナルを実際に使った検証ベースで公開しています。`}
+>
   <Header />
-  <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
+  <Main pageTitle="記事一覧" pageDesc="実際に使って検証した記事だけを載せています。">
     <ul>
       {page.data.map(data => <Card {...data} />)}
     </ul>

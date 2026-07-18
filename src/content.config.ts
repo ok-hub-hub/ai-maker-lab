@@ -20,6 +20,8 @@ const blog = defineCollection({
       canonicalURL: z.string().optional(),
       hideEditPost: z.boolean().optional(),
       timezone: z.string().optional(),
+      // スマホ追従CTA等の主要導線を明示指定（省略時は本文最初の /go/ を自動検出）
+      primaryGo: z.string().optional(),
     }),
 });
 

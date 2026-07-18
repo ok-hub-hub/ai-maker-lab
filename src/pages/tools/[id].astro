@@ -73,8 +73,10 @@ const dotMeter = (n: 1 | 2 | 3) =>
 const categoryEn = tool.category.map(c => categoryLabels[c]).join(" · ");
 const categoryJa = tool.category.map(c => categoryLabelsJa[c]).join(" / ");
 
-const title = `${tool.name} — 料金・特徴・個人開発者の評価 | AI Maker Lab`;
-const description = tool.description;
+const title = tool.seoTitle
+  ? `${tool.seoTitle} | AI Maker Lab`
+  : `${tool.name} — 料金・特徴・個人開発者の評価 | AI Maker Lab`;
+const description = tool.seoDescription ?? tool.description;
 ---
 
 <Layout title={title} description={description}>

@@ -12,6 +12,20 @@ import {
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import { SITE } from "./src/config";
+import fs from "node:fs";
+import path from "node:path";
+
+// sitemap の lastmod 用に、ビルド時にブログ frontmatter から slug→更新日 を作る
+const BLOG_DIR = path.resolve("./src/data/blog");
+const lastmodBySlug: Record<string, string> = {};
+for (const f of fs.readdirSync(BLOG_DIR).filter(f => f.endsWith(".md"))) {
+  const src = fs.readFileSync(path.join(BLOG_DIR, f), "utf8");
+  const slug = src.match(/^slug:\s*(\S+)/m)?.[1];
+  const mod = src.match(/^modDatetime:\s*(\S+)/m)?.[1];
+  const pub = src.match(/^pubDatetime:\s*(\S+)/m)?.[1];
+  const d = mod ?? pub;
+  if (slug && d) lastmodBySlug[slug] = d;
+}
 
 // https://astro.build/config
 export default defineConfig({
@@ -24,6 +38,12 @@ export default defineConfig({
         // archives は SITE.showArchives で制御
         if (!SITE.showArchives && page.endsWith("/archives")) return false;
         return true;
+      },
+      serialize(item) {
+        const m = item.url.match(/\/posts\/([a-z0-9-]+)\/?$/);
+        const d = m ? lastmodBySlug[m[1]] : undefined;
+        if (d) item.lastmod = new Date(d).toISOString();
+        return item;
       },
     }),
     mdx(),

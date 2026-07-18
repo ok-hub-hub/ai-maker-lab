@@ -31,7 +31,10 @@ const { tag } = params;
 const { page, tagName } = Astro.props;
 ---
 
-<Layout title={`Tag: ${tagName} | ${SITE.title}`}>
+<Layout
+  title={`${tagName} の記事一覧 | AI Maker Lab`}
+  description={`「${tagName}」タグの実体験記事一覧。AIツールの比較・レビュー・個人開発の実録を、実際に使った検証ベースでまとめています。`}
+>
   <Header />
   <Main
     pageTitle={[`Tag:`, `${tagName}`]}

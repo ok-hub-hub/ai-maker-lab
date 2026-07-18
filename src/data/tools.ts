@@ -36,6 +36,9 @@ export type ToolMeta = {
   note?: string;
   /** サービス種別。未設定は従来どおり SaaS ツール扱い。career カテゴリで使用 */
   serviceType?: "tool" | "school" | "agent" | "freelance";
+  /** /tools/[id] ページのSEO title/description 上書き（GSCクエリ完全一致用） */
+  seoTitle?: string;
+  seoDescription?: string;
   /** 成果地点（無料登録/無料カウンセリング等）。CTA文言・無料/有料の明示に使う */
   conversionPoint?: "free-signup" | "free-counseling" | "free-trial" | "doc-request";
   /** 成果単価の目安（円）。内部優先度・試算用。一次情報はASP管理画面 */
@@ -126,6 +129,8 @@ export const TOOLS: ToolMeta[] = [
   },
   {
     id: "cline",
+    seoTitle: "Cline 料金 完全ガイド2026｜無料OSSとAPI従量課金の実額",
+    seoDescription: "Cline（クライン）の料金を解説。本体は無料OSSで、実コストはAPIキーの従量課金。月額の目安・Claude Codeとの違い・無料で始める手順まで、実際に使った検証ベースでまとめます。",
     name: "Cline",
     category: ["dev"],
     forEngineer: true,
@@ -260,6 +265,8 @@ export const TOOLS: ToolMeta[] = [
   },
   {
     id: "figma-make",
+    seoTitle: "Figma Make 料金 2026｜無料枠とAIクレジット制を解説",
+    seoDescription: "Figma Make の料金・無料枠・AIクレジット制を解説。無料でどこまで作れるか、有料プランの違い、v0など他のAI UI生成ツールとの使い分けを実体験ベースでまとめます。",
     name: "Figma Make",
     category: ["ui"],
     forEngineer: false,
@@ -475,6 +482,8 @@ export const TOOLS: ToolMeta[] = [
   },
   {
     id: "tubebuddy",
+    seoTitle: "TubeBuddy 日本語対応と料金2026｜無料版でできること",
+    seoDescription: "TubeBuddyの日本語対応状況・料金プラン・無料版でできることを解説。YouTube運用でのキーワード調査・サムネA/Bテストの実用度を検証ベースでまとめます。",
     name: "TubeBuddy",
     category: ["video"],
     forEngineer: false,

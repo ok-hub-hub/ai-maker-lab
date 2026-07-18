@@ -27,10 +27,15 @@ export function getPath(
   const blogId = id.split("/");
   const slug = blogId.length > 0 ? blogId.slice(-1) : blogId;
 
+  // リンク用途（includeBase=true）は末尾スラッシュ付きで返す。
+  // canonical が末尾スラッシュ付きのため、無しだと Cloudflare Pages で 308 リダイレクトを挟み
+  // クロール浪費・リンク評価の希釈が起きる。ルーティングparam用途（includeBase=false）は従来どおり。
+  const trail = includeBase ? "/" : "";
+
   // If not inside the sub-dir, simply return the file path
   if (!pathSegments || pathSegments.length < 1) {
-    return [basePath, slug].join("/");
+    return [basePath, slug].join("/") + trail;
   }
 
-  return [basePath, ...pathSegments, slug].join("/");
+  return [basePath, ...pathSegments, slug].join("/") + trail;
 }

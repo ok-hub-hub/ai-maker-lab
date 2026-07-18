@@ -18,12 +18,11 @@ const destination = tool.affiliateUrl ?? tool.officialUrl;
     <meta charset="utf-8" />
     <title>Redirecting to {tool.name}...</title>
     <meta http-equiv="refresh" content={`0; url=${destination}`} />
-    <link rel="canonical" href={destination} />
     <meta name="robots" content="noindex,nofollow" />
     <script is:inline define:vars={{ url: destination }}>
       window.location.replace(url);
     </script>
-    <style>
+    <style is:inline>
       body {
         font-family: system-ui, sans-serif;
         max-width: 480px;

@@ -160,7 +160,7 @@
 - ✅ OG画像: public/aimaker-lab-og.jpg 実在確認
 
 ### push
-- commit: TBD
+- commit: 82e60ed
 - push: origin/main → Cloudflare Pages 自動デプロイ開始予定
 
 ### 次サイクル候補
@@ -312,7 +312,7 @@
 - ✅ OG画像: aimaker-lab-og.jpg 実在確認
 
 ### push
-- commit: TBD
+- commit: 82e60ed
 - push: origin/main → Cloudflare Pages 自動デプロイ開始
 
 ### 次サイクル候補

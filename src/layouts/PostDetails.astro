@@ -34,6 +34,7 @@ const {
   timezone,
   tags,
   hideEditPost,
+  primaryGo,
 } = post.data;
 
 const { Content } = await render(post);
@@ -46,10 +47,23 @@ const readMinutes = Math.max(1, Math.round(_jp / 600 + _en / 250));
 
 // アフィリ導線の検出：本文の最初の /go/<id> から主ツールを特定。
 // PR表記（ステマ規制）とスマホ追従CTAの表示判定に使う。
+// 冒頭の広告表記blockquote（> で始まる行）内のリンクは「主導線」ではないため検出から除外する。
+// frontmatter の primaryGo があれば常にそれを優先（記事の文脈に合う導線を明示指定できる）。
 const _goIds = [..._body.matchAll(/\/go\/([a-z0-9-]+)/g)].map(m => m[1]);
-const primaryGoId = _goIds[0];
+const _bodyNoQuote = _body
+  .split("\n")
+  .filter(l => !l.trimStart().startsWith(">"))
+  .join("\n");
+const _goIdsNoQuote = [..._bodyNoQuote.matchAll(/\/go\/([a-z0-9-]+)/g)].map(
+  m => m[1]
+);
+const primaryGoId = primaryGo ?? _goIdsNoQuote[0] ?? _goIds[0];
 const primaryTool = primaryGoId ? getToolById(primaryGoId) : undefined;
 const hasAffiliate = _goIds.length > 0;
+// CTA文言はツール種別で出し分け（転職エージェント=無料面談、それ以外=無料で試す）
+const isAgentTool = primaryTool?.serviceType === "agent";
+const ctaLabel = isAgentTool ? "無料面談を予約する »" : "無料で試してみる »";
+const ctaSub = isAgentTool ? "求職者は無料・オンライン可" : "公式サイトで確認";
 
 let ogImageUrl: string | undefined;
 
@@ -62,7 +76,7 @@ if (typeof initOgImage === "string") {
 
 // Use dynamic OG image if enabled and no remote|local ogImage
 if (!ogImageUrl && SITE.dynamicOgImage) {
-  ogImageUrl = `${getPath(post.id, post.filePath)}/index.png`;
+  ogImageUrl = `${getPath(post.id, post.filePath)}index.png`;
 }
 
 // Resolve OG image URL (or fallback to SITE.ogImage / default `og.png`)
@@ -71,7 +85,8 @@ const ogImage = ogImageUrl
   : undefined;
 
 const layoutProps = {
-  title: `${title} | ${SITE.title}`,
+  title: `${title} | AI Maker Lab`,
+  headline: title,
   author,
   description,
   pubDatetime,
@@ -194,7 +209,7 @@ const nextPost =
           >
             <IconChevronLeft class="inline-block flex-none rtl:rotate-180" />
             <div>
-              <span>Previous Post</span>
+              <span>前の記事</span>
               <div class="text-sm text-accent/85">{prevPost.title}</div>
             </div>
           </a>
@@ -207,7 +222,7 @@ const nextPost =
             class="flex w-full justify-end gap-1 text-end hover:opacity-75 sm:col-start-2"
           >
             <div>
-              <span>Next Post</span>
+              <span>次の記事</span>
               <div class="text-sm text-accent/85">{nextPost.title}</div>
             </div>
             <IconChevronRight class="inline-block flex-none rtl:rotate-180" />
@@ -234,13 +249,13 @@ const nextPost =
           >✕</button>
           <div class="min-w-0 flex-none pr-1">
             <p class="truncate text-xs font-bold text-foreground">{primaryTool.name}</p>
-            <p class="text-[10px] text-foreground-muted">公式サイトで確認</p>
+            <p class="text-[10px] text-foreground-muted">{ctaSub}</p>
           </div>
           <a
             href={`/go/${primaryTool.id}`}
             rel="sponsored nofollow"
             class="flex-1 rounded-full bg-amber-500 py-3 text-center text-sm font-bold text-white shadow-sm transition hover:bg-amber-600"
-          >無料で試してみる »</a>
+          >{ctaLabel}</a>
         </div>
       </div>
     )
