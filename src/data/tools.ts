@@ -413,6 +413,7 @@ export const TOOLS: ToolMeta[] = [
     scale: 3,
     affiliateTier: "S",
     officialUrl: "https://elevenlabs.io/",
+    affiliateUrl: "https://try.elevenlabs.io/oti5aanjv9a2",
     description:
       "ロンドン本社の AI 音声生成 SaaS。Voice Cloning（自分の声を1分の録音から再現）と Multilingual v2（同一の声で29言語ナレーション）が看板機能。",
     strengths: [
@@ -424,6 +425,7 @@ export const TOOLS: ToolMeta[] = [
       "日本語の抑揚は英語と比べて平坦になりがち、文末の上下イントネーション制御は SSML / 句読点工夫で補う必要がある",
       "Free プランは月10,000文字（約10分）まで、API 商用利用は Creator $22/月以上が前提",
     ],
+    note: "PartnerStack提携済（2026-07-19 CEO登録・aimakerlab0512・即時承認・22%×12ヶ月継続）。リンク=try.elevenlabs.io/oti5aanjv9a2。credential=~/.config/partnerstack/credentials",
     verifiedAt: "2026-05-12",
   },
   {
