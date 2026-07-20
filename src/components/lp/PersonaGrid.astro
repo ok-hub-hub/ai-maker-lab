@@ -1,0 +1,39 @@
+---
+/**
+ * 状況別入口。リンク先は実在ページのみ渡すこと（index側で管理）。
+ */
+type Item = {
+  no: string;
+  need: string; // 読者の状況（一人称）
+  label: string; // 行き先の説明
+  href: string;
+  desc: string;
+};
+
+type Props = {
+  items: Item[];
+};
+
+const { items } = Astro.props;
+---
+
+<div class="grid divide-y divide-border border-t-2 border-foreground lg:grid-cols-3 lg:divide-x lg:divide-y-0">
+  {
+    items.map(item => (
+      <a
+        href={item.href}
+        class="group flex flex-col gap-3 py-7 no-underline transition hover:bg-foreground/[0.02] lg:px-6 lg:first:pl-0 lg:last:pr-0"
+      >
+        <span class="font-mono text-xs tracking-[0.2em] text-foreground-muted">{item.no}</span>
+        <span class="font-serif text-xl font-bold leading-snug text-foreground transition group-hover:text-accent">
+          「{item.need}」
+        </span>
+        <span class="text-sm leading-6 text-foreground-muted">{item.desc}</span>
+        <span class="mt-auto inline-flex items-center gap-2 text-sm font-medium text-foreground transition group-hover:text-accent">
+          {item.label}
+          <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+        </span>
+      </a>
+    ))
+  }
+</div>

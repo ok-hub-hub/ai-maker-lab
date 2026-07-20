@@ -13,6 +13,11 @@ tags:
   - beginner
   - reskilling
 description: "AIツールを触って「自分もITで働けるかも」と思い始めた未経験者へ。転職エージェントとプログラミングスクールの違い、選び方、そして失敗しない最初の一歩（無料相談）を、忖度なしでまとめました。"
+affiliateCta:
+  - id: type-tenshoku
+    lead: "IT・Web業界に強い老舗の転職エージェント。エンジニア専任アドバイザーとの面談で、未経験からの選択肢を確認できます（求職者は無料）。"
+  - id: terracam-ai
+    lead: "東証プライム上場SHIFTグループ運営のAIスクール。受講料5万円（2026-07-20公式サイト表記）で、AIスキルを武器にした転職を目指せます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-teal-100 to-sky-100 sm:h-32">

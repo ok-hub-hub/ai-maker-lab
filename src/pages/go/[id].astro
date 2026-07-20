@@ -17,10 +17,42 @@ const destination = tool.affiliateUrl ?? tool.officialUrl;
   <head>
     <meta charset="utf-8" />
     <title>Redirecting to {tool.name}...</title>
-    <meta http-equiv="refresh" content={`0; url=${destination}`} />
+    <!-- JS無効環境向けフォールバック（JS有効時は下のスクリプトが先に遷移する） -->
+    <meta http-equiv="refresh" content={`1; url=${destination}`} />
     <meta name="robots" content="noindex,nofollow" />
-    <script is:inline define:vars={{ url: destination }}>
-      window.location.replace(url);
+    <!-- /go/ 直アクセス（SNS・note経由など、記事内クリック計測が届かない流入）も
+         GA4 に go_redirect イベントとして記録する。gtag はロード前でも dataLayer に
+         キューされ beacon で送信される。計測不能でも 400ms で必ず遷移する。 -->
+    <script
+      is:inline
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-S55TTRMBX0"></script>
+    <script is:inline define:vars={{ url: destination, slug: tool.id }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      var done = false;
+      function go() {
+        if (done) return;
+        done = true;
+        window.location.replace(url);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-S55TTRMBX0", {
+        anonymize_ip: true,
+        send_page_view: false,
+      });
+      gtag("event", "go_redirect", {
+        link_slug: slug,
+        link_domain: new URL(url).hostname,
+        page_path: location.pathname,
+        referrer: document.referrer || "(direct)",
+        transport_type: "beacon",
+        event_callback: go,
+        event_timeout: 400,
+      });
+      setTimeout(go, 400);
     </script>
     <style is:inline>
       body {
@@ -30,10 +62,11 @@ const destination = tool.affiliateUrl ?? tool.officialUrl;
         padding: 0 20px;
         text-align: center;
         line-height: 1.6;
-        color: #333;
+        color: #1b1a17;
+        background: #f7f5f0;
       }
       a {
-        color: #0066cc;
+        color: #d9422a;
       }
     </style>
   </head>

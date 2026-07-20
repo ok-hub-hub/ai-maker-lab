@@ -1,0 +1,72 @@
+---
+/**
+ * 記事末尾のアフィリエイトCTA。
+ * - リンクは必ず /go/<id>（クローク統一・GA4計測）＋ rel="sponsored nofollow"
+ * - PR表示・無料/有料の明示・「編集部未検証」の正直表記をコンポーネント側で強制する
+ * - 挿入は記事frontmatterの affiliateCta（PostDetails が描画）から行う
+ */
+import { getToolById } from "@/data/tools";
+
+type Props = {
+  toolId: string;
+  /** 記事文脈に合わせたリード文（省略時はツール説明の先頭を使う） */
+  lead?: string;
+  /** 実運用の一言メモ（experienced=true のときのみ表示） */
+  note?: string;
+  /** 編集部が実運用しているか。false なら「未検証」を明示する */
+  experienced?: boolean;
+};
+
+const { toolId, lead, note, experienced = false } = Astro.props;
+const tool = getToolById(toolId);
+if (!tool) {
+  throw new Error(`AffiliateCta: unknown toolId "${toolId}"`);
+}
+
+const isAgent = tool.serviceType === "agent";
+const isSchool = tool.serviceType === "school";
+
+const ctaLabel = isAgent
+  ? "無料で転職相談を予約する"
+  : isSchool
+    ? "公式サイトで料金・内容を見る"
+    : "公式サイトで無料体験を見る";
+
+const feeNote = isAgent
+  ? "求職者は無料で利用できます（紹介企業側から報酬を得るモデル）。"
+  : isSchool
+    ? "受講は有料です。最新の料金・条件は公式サイトでご確認ください。"
+    : "無料枠・体験の範囲と最新料金は公式サイトでご確認ください。";
+
+const leadText = lead ?? tool.description;
+---
+
+<aside class="mt-10 border-2 border-foreground bg-card-bg p-6" data-pagefind-ignore>
+  <div class="flex flex-wrap items-center gap-3">
+    <span class="bg-foreground px-2 py-0.5 font-mono text-[10px] tracking-[0.2em] text-background">PR</span>
+    <p class="font-serif text-lg font-bold text-foreground">{tool.name}</p>
+  </div>
+  <p class="mt-3 text-sm leading-7 text-foreground-muted">{leadText}</p>
+  <p class="mt-2 text-xs leading-5 text-foreground-muted">{feeNote}</p>
+  {
+    experienced && note ? (
+      <p class="mt-2 border-l-2 border-accent pl-3 text-xs leading-5 text-foreground">
+        <strong>編集部の実運用メモ：</strong>{note}
+      </p>
+    ) : !experienced ? (
+      <p class="mt-2 text-xs leading-5 text-foreground-muted">
+        ※ 当編集部ではこのサービスを実際には利用していません（公式情報ベースの紹介です）。
+      </p>
+    ) : null
+  }
+  <a
+    href={`/go/${tool.id}`}
+    rel="sponsored nofollow"
+    class="mt-4 inline-flex items-center gap-2 bg-accent px-6 py-3 text-sm font-bold text-accent-fg transition hover:bg-foreground hover:text-background"
+  >
+    {ctaLabel} →
+  </a>
+  <p class="mt-3 text-[11px] leading-4 text-foreground-muted">
+    広告（PR）：リンク経由の申込・契約で当サイトに紹介料が発生する場合があります（<a href="/pr-disclosure/" class="underline underline-offset-2">広告・PR表示</a>）。
+  </p>
+</aside>

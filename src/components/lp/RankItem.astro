@@ -1,0 +1,40 @@
+---
+/**
+ * 編集部ピックのリスト行。読了時間・日付は実データを渡す（index側で本文から算出）。
+ * サムネイルは slot で ThumbTerm / ThumbSheet（実物素材）を差し込む。
+ */
+type Props = {
+  rank: number;
+  href: string;
+  category: string;
+  title: string;
+  summary: string;
+  dateLabel: string; // 例 "2026.05.14"
+  minutes: number; // 実測の読了目安
+};
+
+const { rank, href, category, title, summary, dateLabel, minutes } = Astro.props;
+---
+
+<li class="border-b border-border">
+  <a
+    href={href}
+    class="group grid gap-5 py-7 no-underline transition hover:bg-foreground/[0.02] sm:grid-cols-[3rem_1fr_16rem] sm:items-center"
+  >
+    <span class="font-mono text-2xl font-semibold tabular-nums text-foreground-muted transition group-hover:text-accent">
+      {String(rank).padStart(2, "0")}
+    </span>
+    <div class="min-w-0">
+      <p class="editorial-marker mb-2">
+        {category}<span class="mx-2">·</span>{dateLabel}<span class="mx-2">·</span>約{minutes}分
+      </p>
+      <h3 class="font-serif text-xl font-bold leading-snug text-foreground transition group-hover:text-accent sm:text-2xl">
+        {title}
+      </h3>
+      <p class="mt-2 text-sm leading-7 text-foreground-muted">{summary}</p>
+    </div>
+    <div class="hidden sm:block">
+      <slot />
+    </div>
+  </a>
+</li>

@@ -13,6 +13,9 @@ tags:
   - ai-skills
   - comparison
 description: "ITエンジニア転職エージェントのTechGo（テックゴー）と明光キャリアパートナーズを比較。分かれ道は「実務経験の有無」の1つだけ。AIツールを使いこなせるようになった人が、無料面談で自分の市場価値を確かめるならどちらか、実体験ベースの判断軸で整理します。"
+affiliateCta:
+  - id: type-tenshoku
+    lead: "TechGo・明光とあわせて検討したい、IT・Webに強い老舗エージェント。首都圏のIT求人を軸に無料面談から始められます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-sky-100 to-emerald-100 sm:h-32">

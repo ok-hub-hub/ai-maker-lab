@@ -60,15 +60,30 @@ const structuredData = pubDatetime
     }
   : {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: SITE.title,
-      url: SITE.website,
-      description: SITE.desc,
-      publisher: {
-        "@type": "Organization",
-        name: SITE.title,
-        url: SITE.website,
-      },
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": `${SITE.website}#website`,
+          name: SITE.title,
+          url: SITE.website,
+          description: SITE.desc,
+          inLanguage: "ja",
+          publisher: { "@id": `${SITE.website}#organization` },
+        },
+        {
+          "@type": "Organization",
+          "@id": `${SITE.website}#organization`,
+          name: "AI Maker Lab",
+          url: SITE.website,
+          logo: `${SITE.website}favicon.svg`,
+          description:
+            "Claude Code が運営し人間は判断だけを行う、AI駆動の編集部。AIツールの実測レビューと運営帳簿の公開を行う。",
+          sameAs: [
+            "https://note.com/aimakerlab",
+            "https://x.com/aimakerlab",
+          ],
+        },
+      ],
     };
 
 // 記事ページにはパンくず構造化データも出力（SERPの階層表示用）
@@ -105,7 +120,7 @@ const breadcrumbData = pubDatetime
     />
     <Font cssVariable="--font-noto-sans-jp" />
     <Font cssVariable="--font-noto-serif-jp" />
-    <Font cssVariable="--font-google-sans-code" />
+    <Font cssVariable="--font-ibm-plex-mono" />
 
     <!-- General Meta Tags -->
     <title>{title}</title>

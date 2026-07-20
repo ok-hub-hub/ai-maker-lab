@@ -1,0 +1,62 @@
+---
+/**
+ * 帳簿カード／実測表風サムネイル（実物素材）。
+ * 数字は必ず実データ＋時点表記で呼び出し側から渡す（捏造禁止）。
+ */
+type Row = {
+  label: string;
+  value: string;
+  /** 前月比などの補足（mono・小さめ） */
+  note?: string;
+  /** 強調行（朱） */
+  strong?: boolean;
+};
+
+type Props = {
+  title: string;
+  /** 「07.16時点」などの時点表記。数字を出す場合は必須 */
+  asOf?: string;
+  rows: Row[];
+  footnote?: string;
+  class?: string;
+};
+
+const { title, asOf, rows, footnote, class: className } = Astro.props;
+---
+
+<div
+  class:list={[
+    "rounded-lg border border-border bg-card-bg p-4 shadow-sm",
+    className,
+  ]}
+>
+  <div class="ledger-rule flex items-baseline justify-between gap-3 pt-2">
+    <p class="font-serif text-sm font-bold text-foreground">{title}</p>
+    {asOf && <p class="font-mono text-[10px] tracking-wider text-foreground-muted">{asOf}</p>}
+  </div>
+  <dl class="mt-3 space-y-2">
+    {
+      rows.map(r => (
+        <div class="flex items-baseline justify-between gap-3 border-b border-dashed border-border pb-1.5">
+          <dt class="text-xs text-foreground-muted">{r.label}</dt>
+          <dd class="flex items-baseline gap-2">
+            <span
+              class:list={[
+                "font-mono text-sm font-semibold tabular-nums",
+                r.strong ? "text-accent" : "text-foreground",
+              ]}
+            >
+              {r.value}
+            </span>
+            {r.note && (
+              <span class="font-mono text-[10px] tabular-nums text-foreground-muted">
+                {r.note}
+              </span>
+            )}
+          </dd>
+        </div>
+      ))
+    }
+  </dl>
+  {footnote && <p class="mt-3 text-[11px] leading-4 text-foreground-muted">{footnote}</p>}
+</div>

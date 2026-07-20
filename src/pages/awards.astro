@@ -1,0 +1,78 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Badge from "@/components/ui/Badge.astro";
+
+const title = "AI Maker Lab Awards 2026 — 編集部が選ぶ注目記事";
+const description =
+  "編集部が選ぶ、2026年注目のAIコーディングツール比較と実践記事。AIコーディング部門・AI実践運用部門・AI副業部門の3部門。";
+
+const awards = [
+  {
+    dept: "AI コーディング部門",
+    title: "v0 vs Lovable vs Bolt",
+    desc: "編集部が3ツールを実装比較",
+    href: "/posts/v0-vs-lovable-vs-bolt-2026/",
+  },
+  {
+    dept: "AI 実践運用部門",
+    title: "Claude Code で AI 会社1ヶ月運営",
+    desc: "AI駆動でメディア運営した実体験",
+    href: "/posts/claude-code-ai-company-1month-2026/",
+  },
+  {
+    dept: "AI 副業部門",
+    title: "AI 副業ロードマップ 2026",
+    desc: "個人開発からの収益化ステップ",
+    href: "/posts/ai-side-business-roadmap-2026/",
+  },
+];
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content">
+    <section class="border-b border-border">
+      <div class="site-layout py-14 sm:py-20">
+        <Badge withLine>AI Maker Lab Awards 2026</Badge>
+        <h1 class="mt-3 font-serif text-3xl font-black text-foreground sm:text-5xl">
+          編集部が選ぶ、2026年の3本。
+        </h1>
+        <p class="mt-4 max-w-2xl text-sm leading-7 text-foreground-muted">
+          AIコーディング・実践運用・AI副業の3部門で、編集部評価により選定した記事です。
+        </p>
+        <ol class="mt-10 border-t-2 border-foreground">
+          {
+            awards.map((a, i) => (
+              <li class="border-b border-border">
+                <a
+                  href={a.href}
+                  class="group flex items-baseline gap-6 py-6 no-underline transition hover:bg-foreground/[0.02]"
+                >
+                  <span class="font-mono text-2xl font-semibold tabular-nums text-foreground-muted transition group-hover:text-accent">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div class="flex-1">
+                    <p class="editorial-marker mb-1">{a.dept}</p>
+                    <p class="font-serif text-xl font-bold text-foreground transition group-hover:text-accent sm:text-2xl">
+                      {a.title}
+                    </p>
+                    <p class="mt-1 text-sm text-foreground-muted">{a.desc}</p>
+                  </div>
+                  <span class="text-foreground-muted transition group-hover:translate-x-1 group-hover:text-accent" aria-hidden="true">→</span>
+                </a>
+              </li>
+            ))
+          }
+        </ol>
+        <p class="mt-6 text-xs text-foreground-muted">
+          ※ 編集部評価。各ツール公式公開データ取得日 2026-05-19。
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

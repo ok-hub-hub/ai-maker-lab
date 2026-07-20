@@ -13,6 +13,19 @@ import type {
   Q5Code,
   ToolMeta,
 } from "@/data/tools";
+import { getProductById } from "@/data/products";
+
+/**
+ * 結果タイプに応じた自社商品1枠（/shop と同じ products.ts が唯一の正）。
+ * Vibe Coding系（開発・UI）→ プロンプトパック / それ以外（運営・収益化寄り）→ AI会社完全キット。
+ */
+function productFor(answers: Answers) {
+  const id =
+    answers.q1 === "dev" || answers.q1 === "ui"
+      ? "vibe-coding-prompt-pack"
+      : "ai-company-complete-kit-jp";
+  return getProductById(id);
+}
 
 type Step = 1 | 2 | 3 | 4 | 5 | "result";
 
@@ -249,6 +262,7 @@ function Result({
   onReset: () => void;
 }) {
   const career = careerCtaFor(answers);
+  const product = productFor(answers);
   return (
     <div>
       <div className="mb-3 text-[10px] tracking-[0.2em] text-foreground-muted uppercase">
@@ -441,6 +455,44 @@ function Result({
             <a href="/posts/ai-skills-to-career-2026/" className="underline">
               AIキャリアの選び方を読む
             </a>
+          </p>
+        </div>
+      )}
+
+      {product && (
+        <div className="mt-6 rounded-2xl border border-border bg-card-bg p-5 sm:p-6">
+          <div className="mb-1 flex items-center gap-2">
+            <span className="bg-foreground px-2 py-0.5 font-mono text-[10px] tracking-[0.2em] text-background uppercase">
+              自社商品
+            </span>
+            <span className="text-[10px] tracking-[0.2em] text-foreground-muted uppercase">
+              {product.platform}で販売中
+            </span>
+          </div>
+          <p className="font-serif text-xl font-bold text-foreground">
+            {product.title}
+          </p>
+          <p className="mt-2 text-sm leading-6 text-foreground-muted">
+            {product.tagline}
+          </p>
+          <div className="mt-4 flex flex-wrap items-center gap-4">
+            <a
+              href={product.url}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-2 bg-accent px-5 py-2.5 text-sm font-bold text-accent-fg transition hover:opacity-90"
+            >
+              {product.price} で見てみる →
+            </a>
+            <a
+              href="/shop/"
+              className="border-b border-foreground-muted/40 pb-0.5 text-xs text-foreground-muted transition hover:border-accent hover:text-accent"
+            >
+              他の商品も見る
+            </a>
+          </div>
+          <p className="mt-3 text-[11px] text-foreground-muted">
+            当サイト編集部が制作・販売している商品です（アフィリエイトではありません）。
           </p>
         </div>
       )}
