@@ -1,0 +1,36 @@
+---
+/**
+ * 自社商品ストリップ。商品・価格は src/data/products.ts が唯一の正（/shopと同期）。
+ */
+import { PRODUCTS } from "@/data/products";
+
+const products = PRODUCTS.filter(p => p.status === "live");
+---
+
+<div class="grid gap-px border-y border-border bg-border sm:grid-cols-3">
+  {
+    products.map(p => (
+      <a
+        href={p.url}
+        target="_blank"
+        rel="noopener sponsored"
+        class="group flex flex-col gap-3 bg-background p-6 no-underline transition hover:bg-card-bg"
+      >
+        <p class="editorial-marker">{p.platform}で販売中</p>
+        <h3 class="font-serif text-lg font-bold leading-snug text-foreground transition group-hover:text-accent">
+          {p.title}
+        </h3>
+        <p class="text-xs leading-5 text-foreground-muted">{p.tagline}</p>
+        <p class="mt-auto flex items-baseline justify-between border-t border-dashed border-border pt-3">
+          <span class="font-mono text-xl font-semibold tabular-nums text-foreground">{p.price}</span>
+          <span class="text-xs font-medium text-accent">購入ページへ →</span>
+        </p>
+      </a>
+    ))
+  }
+</div>
+<p class="mt-3 text-[11px] leading-5 text-foreground-muted">
+  すべて編集部が実運用している仕組みを商品化したものです。価格は
+  <a href="/shop/" class="underline underline-offset-2 hover:text-accent">ショップページ</a>
+  と同期しています。
+</p>

@@ -12,6 +12,14 @@ tags:
   - review
   - seo
 description: "トランスコープ（Transcope）の評判・口コミは本当？SEO記事を実際に量産して検証した検索順位への効果・料金の正直な評価・元が取れる人/取れない人。「高い」と言われる月額の損益分岐も実体験で解説します。"
+review:
+  itemName: "Transcope（トランスコープ）"
+  rating: 3.9
+affiliateCta:
+  - id: transcope
+    experienced: true
+    lead: "本記事でレビューしたSEO特化のAIライティングツール。Free（1週間）で競合分析〜長文生成まで試してから判断できます。"
+    note: "当サイトのSEO記事制作で実運用中。長文SEO本文の叩き台づくりと競合分析に使っています。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-violet-100 via-purple-100 to-indigo-100 sm:h-32">

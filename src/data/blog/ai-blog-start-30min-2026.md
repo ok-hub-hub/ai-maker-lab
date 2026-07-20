@@ -12,6 +12,9 @@ tags:
   - ai
   - beginner
 description: "ブログ開設でつまずく場所は決まっています。本記事は開設の全5ステップに「AIに貼るだけのプロンプト」を同梱した、AI伴走型の開設ガイドです。サーバー契約からWordPress初期設定、最初の記事、計測設置まで30分で完走できます。"
+affiliateCta:
+  - id: ai-blog-kun
+    lead: "キーワードを設定するだけで記事生成〜WordPress投稿まで自動で回す日本語ツール。まず無料体験で生成品質を確認できます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-teal-100 to-sky-100 sm:h-32">

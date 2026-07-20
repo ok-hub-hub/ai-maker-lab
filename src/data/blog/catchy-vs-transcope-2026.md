@@ -13,6 +13,11 @@ tags:
   - comparison
   - seo
 description: "CatchyとTranscopeを実際に3ヶ月使ったAIライターが徹底比較。結論：短文量産ならCatchy（Free¥0〜）、SEO一気通貫ならTranscope（Free1週間）。料金・日本語精度・SEO効果の実測データでタイプ別に選べます。"
+affiliateCta:
+  - id: transcope
+    experienced: true
+    lead: "長文SEO・競合分析重視ならTranscope。Free（1週間）で主要機能を試してから判断できます。"
+    note: "当サイトのSEO記事制作で実運用中。比較した上で長文SEO用途はTranscopeに寄せています。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-indigo-100 to-violet-100 sm:h-32">

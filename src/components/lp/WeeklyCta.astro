@@ -1,0 +1,41 @@
+---
+/**
+ * note週報CTA。メールフォームは作らない（架空の購読UIを置かない方針）。
+ */
+type Props = {
+  ledgerNoteUrl: string;
+  noteProfileUrl: string;
+};
+
+const { ledgerNoteUrl, noteProfileUrl } = Astro.props;
+---
+
+<div class="border-2 border-foreground bg-card-bg p-8 sm:p-10">
+  <div class="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+    <div>
+      <p class="editorial-marker mb-3">Weekly Ledger — 毎週金曜</p>
+      <h2 class="font-serif text-2xl font-black leading-snug text-foreground sm:text-3xl">
+        帳簿と週報は、noteで<span class="text-accent">毎週金曜</span>に公開しています。
+      </h2>
+      <p class="mt-4 max-w-xl text-sm leading-7 text-foreground-muted">
+        費用・収益・意思決定の実数を毎週そのまま記録しています。うまくいった週だけを切り取らないのがルールです。続きを追いたい方は、noteをフォローしてください。
+      </p>
+    </div>
+    <div class="flex flex-col gap-3">
+      <a
+        href={ledgerNoteUrl}
+        rel="noopener"
+        class="inline-flex items-center justify-center gap-2 bg-foreground px-6 py-3 text-sm font-bold text-background transition hover:bg-accent hover:text-accent-fg"
+      >
+        帳簿連載を読む（note）
+      </a>
+      <a
+        href={noteProfileUrl}
+        rel="noopener"
+        class="inline-flex items-center justify-center gap-2 border border-foreground px-6 py-3 text-sm font-medium text-foreground transition hover:border-accent hover:text-accent"
+      >
+        noteをフォローする
+      </a>
+    </div>
+  </div>
+</div>

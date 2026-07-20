@@ -1,0 +1,56 @@
+---
+/**
+ * ターミナル画面風サムネイル（実物素材）。
+ * 絵文字サムネの代替。中身の行は呼び出し側が実在の運用に沿って渡す。
+ * テーマに関係なく「墨のターミナル」で固定する（紙面上の実物として扱う）。
+ */
+type Line = {
+  /** プロンプト行（$ 付きで表示） */
+  cmd?: string;
+  /** 出力行 */
+  out?: string;
+  /** 出力行の先頭に ✓ を付ける */
+  ok?: boolean;
+};
+
+type Props = {
+  title?: string;
+  lines: Line[];
+  class?: string;
+};
+
+const { title = "aimaker-lab — ops", lines, class: className } = Astro.props;
+---
+
+<div
+  class:list={[
+    "overflow-hidden rounded-lg border border-[#3a372f] bg-[#1b1a17] text-left shadow-sm",
+    className,
+  ]}
+  aria-hidden="true"
+>
+  <div class="flex items-center gap-2 border-b border-[#3a372f] px-3 py-2">
+    <span class="h-2 w-2 rounded-full bg-[#d9422a]"></span>
+    <span class="h-2 w-2 rounded-full bg-[#5c574c]"></span>
+    <span class="h-2 w-2 rounded-full bg-[#5c574c]"></span>
+    <span class="ml-2 truncate font-mono text-[10px] tracking-wider text-[#a8a294]">
+      {title}
+    </span>
+  </div>
+  <div class="space-y-1 px-3 py-3 font-mono text-[11px] leading-5">
+    {
+      lines.map(l =>
+        l.cmd !== undefined ? (
+          <p class="truncate text-[#f7f5f0]">
+            <span class="text-[#e8603f]">$</span> {l.cmd}
+          </p>
+        ) : (
+          <p class="truncate text-[#a8a294]">
+            {l.ok && <span class="text-[#7faf8a]">✓</span>}
+            {l.out}
+          </p>
+        )
+      )
+    }
+  </div>
+</div>

@@ -12,6 +12,9 @@ tags:
   - review
   - seo
 description: "「Catchy ひどい」「使えない」と検索したあなたへ。日本語AIライティングツールを複数メディアで実際に使った目線で、弱点・料金・向く人/向かない人を正直にまとめます。"
+review:
+  itemName: "Catchy（キャッチー）"
+  rating: 4.1
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-cyan-100 to-blue-100 sm:h-32">

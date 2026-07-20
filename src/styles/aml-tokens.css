@@ -1,0 +1,35 @@
+/* ============================================================
+   AML Editorial Journal Tokens v2
+   紙色ベース(#F7F5F0) × 墨(#1B1A17) × 朱(#D9422A) の1アクセント。
+   「AIっぽい」定型（ダーク背景・シアン紫グラデ・光るボタン）を全廃し、
+   紙の編集部ジャーナルとして全ページのトークンをここで統一する。
+   帳簿・実測データの数字は IBM Plex Mono（--font-mono）で組む。
+   ============================================================ */
+
+:root,
+html[data-theme="light"] {
+  --background: #f7f5f0; /* 紙 */
+  --foreground: #1b1a17; /* 墨 */
+  --foreground-muted: #5c574c;
+  --accent: #d9422a; /* 朱（唯一の色）*/
+  --accent-fg: #f7f5f0;
+  --secondary: #6b5e48; /* 番手・補助ラベル用の焦茶。彩色はしない */
+  --success: #3d6b44;
+  --muted: #eeeae1;
+  --border: #ddd7c9;
+  --card-bg: #fffdf8;
+}
+
+html[data-theme="dark"] {
+  /* ダークも同じ紙×墨の反転。ネオン・グラデは使わない */
+  --background: #1b1a17;
+  --foreground: #f7f5f0;
+  --foreground-muted: #a8a294;
+  --accent: #e8603f; /* 暗所でも読める朱 */
+  --accent-fg: #1b1a17;
+  --secondary: #bfae8f;
+  --success: #7faf8a;
+  --muted: #262420;
+  --border: #3a372f;
+  --card-bg: #211f1b;
+}

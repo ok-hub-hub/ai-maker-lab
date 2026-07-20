@@ -13,6 +13,11 @@ tags:
   - review
   - seo
 description: "「AIライティングツール ○○選」を読んでも決められないあなたへ。実際に毎日AI駆動で記事を量産・配信している運用者が、日本語で使う前提で Catchy / Transcope / ChatGPT / Claude の4つに絞り、用途別の正解を◎○△×で整理します。"
+affiliateCta:
+  - id: transcope
+    experienced: true
+    lead: "比較したなかで長文SEO・競合分析に最も振り切っているのがTranscope。Free（1週間）で試せます。"
+    note: "当サイトのSEO記事制作で実運用中のツールです。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-violet-100 to-fuchsia-100 sm:h-32">

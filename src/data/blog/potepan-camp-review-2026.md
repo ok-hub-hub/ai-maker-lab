@@ -13,6 +13,9 @@ tags:
   - beginner
   - review
 description: "ポテパンキャンプ 評判・口コミを正直まとめ。料金は相談無料・受講有料、転職サポートの内容・向く人/向かない人をAI副業メディア運営者が解説。無料カウンセリングで自分に合うか先に確認するのが正解。"
+affiliateCta:
+  - id: type-tenshoku
+    lead: "スクールで学ぶ前に「いま転職市場でどう評価されるか」を確認したい人は、IT・Webに強いエージェントの無料面談も選択肢です。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-teal-100 via-emerald-100 to-sky-100 sm:h-32">

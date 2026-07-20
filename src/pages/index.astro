@@ -3,658 +3,212 @@ import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import Card from "@/components/Card.astro";
+import Hero from "@/components/lp/Hero.astro";
+import RankItem from "@/components/lp/RankItem.astro";
+import ThumbTerm from "@/components/lp/ThumbTerm.astro";
+import ThumbSheet from "@/components/lp/ThumbSheet.astro";
+import PersonaGrid from "@/components/lp/PersonaGrid.astro";
+import ShopStrip from "@/components/lp/ShopStrip.astro";
+import WeeklyCta from "@/components/lp/WeeklyCta.astro";
 import Badge from "@/components/ui/Badge.astro";
-import SerifHeading from "@/components/ui/SerifHeading.astro";
-import Button from "@/components/ui/Button.astro";
-import EditorialSection from "@/components/ui/EditorialSection.astro";
-import getSortedPosts from "@/utils/getSortedPosts";
-import { SITE } from "@/config";
 import { TOOLS } from "@/data/tools";
 
-const posts = await getCollection("blog");
-const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+const posts = await getCollection("blog", ({ data }) => !data.draft);
+const postCount = posts.length;
 
-const heroTools = TOOLS.filter(t => t.affiliateTier === "S").slice(0, 4);
+/**
+ * 帳簿（実測値・捏造禁止）。毎週金曜のnote帳簿更新後、ここだけ直せばHeroに反映される。
+ * 出典：GSC実測＋note帳簿（2026-07-16計測）。
+ */
+const LEDGER = {
+  asOf: "07.16時点",
+  adRevenue: "¥0",
+  searchImpressions: "265",
+  searchImpressionsDelta: "+71%",
+  searchClicks: "3",
+  noteLikes: "26",
+};
 
-// カテゴリラベルからサムネ用の絵文字・グラデーション・ラベルを決める
-function thumbStyleFor(category: string): { emoji: string; gradient: string; label: string; icon: string } {
-  const c = category || "";
-  if (c.includes("Vibe Coding") || c.includes("v0") || c.includes("Lovable") || c.includes("Bolt")) return { emoji: "", icon: "vibe-coding", gradient: "from-indigo-100 via-indigo-200 to-purple-200", label: "Vibe Coding" };
-  if (c.includes("ツール比較") || c.includes("比較") || c.includes("レビュー") || c.includes("Cursor") || c.includes("Claude Code")) return { emoji: "", icon: "ai-tool", gradient: "from-violet-100 via-violet-200 to-fuchsia-200", label: "AIツール比較" };
-  if (c.includes("AI副業") || c.includes("収益化")) return { emoji: "", icon: "ai-side-business", gradient: "from-yellow-100 via-yellow-200 to-amber-200", label: "AI副業" };
-  if (c.includes("ホスティング") || c.includes("ドメイン")) return { emoji: "", icon: "hosting", gradient: "from-sky-100 via-sky-200 to-cyan-200", label: "ホスティング" };
-  if (c.includes("AI会社") || c.includes("実体験") || c.includes("Claude Code")) return { emoji: "", icon: "ai-company", gradient: "from-emerald-100 via-emerald-200 to-teal-200", label: "AI会社運営" };
-  return { emoji: "", icon: "individual-dev", gradient: "from-stone-100 via-stone-200 to-stone-300", label: "AI Maker Lab" };
+const LEDGER_NOTE_URL = "https://note.com/aimakerlab/n/n9e06c0070235";
+const NOTE_PROFILE_URL = "https://note.com/aimakerlab";
+
+// 編集部ピック（実在記事・読了時間は本文から実算出）
+function readMinutes(body: string): number {
+  const jp = (body.match(/[　-鿿]/g) || []).length;
+  const en = body.replace(/[　-鿿]/g, " ").split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(jp / 600 + en / 250));
 }
-
-// 編集部選定の主要記事 TOP 5（ASP 審査時に「サイトの主軸コンテンツ」として参照される想定）
-// PV データ蓄積前のため、編集部が品質・テーマ網羅性で選定。AI 実践記事・ツールレビュー・収益化の3軸でカバー。
-const popularArticles = [
-  {
-    rank: 1,
-    href: "/posts/vibe-coding-guide-2026/",
-    category: "Vibe Coding / 入門",
-    title: "Vibe Coding 完全ガイド：個人開発者が AI で「動くアプリ」をつくる、最短ルート【2026年版】",
-    summary: "v0 / Lovable / Bolt / Cursor をどう使い分けるか、AI でアプリを最短デプロイするための4段階ロードマップを編集部が比較・整理。",
-  },
-  {
-    rank: 2,
-    href: "/posts/v0-vs-lovable-vs-bolt-2026/",
-    category: "ツール比較",
-    title: "v0 vs Lovable vs Bolt：Vibe Coding 3大ツールを個人開発者目線で徹底比較【2026年版】",
-    summary: "料金・できること・出力品質・継続課金可否を3ツール横断で比較。個人開発の3ユースケース別に向き不向きを整理。",
-  },
-  {
-    rank: 3,
-    href: "/posts/ai-side-business-roadmap-2026/",
-    category: "AI副業 / 収益化",
-    title: "AI副業ロードマップ：個人がAIで月3万→10万→30万へ進むための現実解【2026年版】",
-    summary: "アフィリ／受託／SaaS／コンテンツ販売の4ルートを月収レンジ別に整理。Vibe Coding 時代の個人収益化の道筋を編集部が公開情報ベースで解説。",
-  },
-  {
-    rank: 4,
-    href: "/posts/v0-review-2026/",
-    category: "ツールレビュー / v0",
-    title: "v0 by Vercel とは：料金・使い方・個人開発者の実践レビュー【2026年最新】",
-    summary: "v0 の料金プラン・できること・実際に作ったアプリ・限界点を個人開発者目線で正直にレビュー。継続課金の判断基準も整理。",
-  },
-  {
-    rank: 5,
-    href: "/posts/claude-code-ai-company-1month-2026/",
-    category: "Claude Code / 実体験",
-    title: "Claude Code で「AI会社」を1ヶ月運営してみた｜CEO・QA・事業開発・技術検証の4部門で個人開発を回す",
-    summary: "このサイト自体も AI で作っています。Claude Code を CEO 代行・QA・事業開発・技術検証の4部門に分けて運営した1ヶ月の実体験記録。AI Agent を組織化する具体的なワークフロー。",
-  },
-];
-
-const journals = [
-  {
-    label: "AI診断",
-    href: "/diagnose",
-    desc: "5問で、あなたに合うツールを3つ。",
-    no: "01",
-  },
-  {
-    label: "ツール比較",
-    href: "/tags",
-    desc: `${TOOLS.length}種類のAIを領域別に。`,
-    no: "02",
-  },
-  {
-    label: "実体験記事",
-    href: "/posts",
-    desc: "AI 駆動の編集体制で書く Vibe Coding 現場ノート。",
-    no: "03",
-  },
-  {
-    label: "収益化ガイド",
-    href: "/posts/ai-side-business-roadmap-2026/",
-    desc: "副業ロードマップ。",
-    no: "04",
-  },
-];
+function dateLabel(d: Date): string {
+  const p = (n: number) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}.${p(d.getMonth() + 1)}.${p(d.getDate())}`;
+}
+function pick(slug: string) {
+  const post = posts.find(p => p.id === slug);
+  if (!post) throw new Error(`編集部ピックの記事が見つかりません: ${slug}`);
+  return {
+    href: `/posts/${slug}/`,
+    title: post.data.title,
+    dateLabel: dateLabel(post.data.modDatetime ?? post.data.pubDatetime),
+    minutes: readMinutes(post.body ?? ""),
+  };
+}
+const pick1 = pick("claude-code-ai-company-1month-2026");
+const pick2 = pick("affiliate-2weeks-zero-to-video-pivot-2026");
+const pick3 = pick("v0-vs-lovable-vs-bolt-2026");
 ---
 
 <Layout>
   <Header />
   <main id="main-content" data-layout="index">
-    <!-- ========== HERO ========== -->
-    <section class="relative overflow-hidden border-b border-border">
-      <div class="tech-grid-bg pointer-events-none absolute inset-0 opacity-50" aria-hidden="true"></div>
-      <div class="pointer-events-none absolute -top-32 -right-20 h-96 w-96 rounded-full bg-accent/10 blur-[100px]" aria-hidden="true"></div>
-      <div class="pointer-events-none absolute -bottom-32 -left-20 h-96 w-96 rounded-full bg-secondary/10 blur-[120px]" aria-hidden="true"></div>
-      <div class="site-layout relative grid gap-12 py-20 sm:py-28 lg:grid-cols-[1.3fr_1fr] lg:gap-20">
-        <!-- 左：価値提案 -->
-        <div class="flex flex-col justify-center">
-          <Badge withLine size="base" class="mb-8">
-            AI-Edited · Vibe Coding Journal · 2026
-          </Badge>
+    <!-- 1. Hero：コピー＋CTA2＋信頼バー＋ターミナル＋帳簿カード -->
+    <Hero postCount={postCount} ledger={LEDGER} ledgerNoteUrl={LEDGER_NOTE_URL} />
 
-          <p class="editorial-marker mb-4">Issue 01 · これも AI で作っています</p>
-          <SerifHeading as="h1">
-            個人が、<br />
-            <span class="italic text-accent">Vibe Codingで</span><br />
-            つくって、稼ぐ。<br />
-            実体験ジャーナル。
-          </SerifHeading>
-
-          <p class="mt-8 max-w-xl text-base leading-[1.85] text-foreground-muted sm:text-[17px]">
-            v0 / Lovable / Bolt / Cursor などの AI コーディングツール、<br />
-            AI動画、AI音声、業務自動化。<br />
-            <strong>Claude Code で AI 会社を1ヶ月運営</strong> した個人開発者が、<br />
-            <strong>AI 駆動の編集体制</strong> で料金・できること・収益化までを記録します。
-          </p>
-
-          <!-- 数値ハイライトバナー -->
-          <div class="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-center sm:justify-start">
-            <div>
-              <p class="font-display text-3xl font-bold text-indigo-700">{TOOLS.length}選</p>
-              <p class="text-xs text-stone-600">AI ツール辞書</p>
-            </div>
-            <span class="hidden sm:inline-block h-12 w-px bg-stone-300"></span>
-            <div>
-              <p class="font-display text-3xl font-bold text-indigo-700">{sortedPosts.length}本</p>
-              <p class="text-xs text-stone-600">実体験ジャーナル</p>
-            </div>
-            <span class="hidden sm:inline-block h-12 w-px bg-stone-300"></span>
-            <div>
-              <p class="font-display text-3xl font-bold text-indigo-700">AI駆動</p>
-              <p class="text-xs text-stone-600">編集体制</p>
-            </div>
-          </div>
-
-          <div class="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center">
-            <Button href="/diagnose" variant="outline" class="self-start sm:self-auto">
-              1分でAI診断する
-            </Button>
-            <Button
-              href="/posts"
-              variant="ghost"
-              showArrow={false}
-              class="self-start sm:self-auto"
-            >
-              実体験記事を読む
-            </Button>
-          </div>
-
-          <dl class="mt-14 grid grid-cols-3 gap-10 border-t border-border pt-8">
-            <div>
-              <dt class="text-[10px] tracking-[0.2em] text-foreground-muted uppercase">
-                Tools
-              </dt>
-              <dd class="mt-2 font-serif text-3xl text-foreground sm:text-4xl">
-                {TOOLS.length}
-              </dd>
-            </div>
-            <div>
-              <dt class="text-[10px] tracking-[0.2em] text-foreground-muted uppercase">
-                Personas
-              </dt>
-              <dd class="mt-2 font-serif text-3xl text-foreground sm:text-4xl">
-                3
-              </dd>
-            </div>
-            <div>
-              <dt class="text-[10px] tracking-[0.2em] text-foreground-muted uppercase">
-                Source
-              </dt>
-              <dd class="mt-2 font-serif text-xl text-foreground sm:text-2xl">
-                AI 駆動編集
-              </dd>
-            </div>
-          </dl>
-        </div>
-
-        <!-- 右：エディトリアルなツール一覧 -->
-        <aside class="lg:pt-2">
-          <Badge>Curated Tools</Badge>
-          <SerifHeading as="h2" size="xl" class="mt-2 leading-snug">
-            月額継続報酬の<br />
-            主力ツール
-          </SerifHeading>
-
-          <ol class="mt-8 flex flex-col">
-            {
-              heroTools.map((tool, i) => (
-                <li class={i === 0 ? "border-t border-border" : ""}>
-                  <a
-                    href={`/go/${tool.id}`}
-                    target="_blank"
-                    rel="noopener sponsored"
-                    class="group flex items-baseline gap-6 border-b border-border py-5 transition hover:bg-foreground/[0.015]"
-                  >
-                    <span class="font-mono text-xs text-foreground-muted">
-                      0{i + 1}
-                    </span>
-                    <div class="min-w-0 flex-1">
-                      <div class="flex items-baseline justify-between gap-4">
-                        <span class="font-serif text-lg font-medium text-foreground transition group-hover:text-accent">
-                          {tool.name}
-                        </span>
-                        <span class="shrink-0 font-mono text-xs tabular-nums text-foreground-muted">
-                          {tool.priceMin === 0
-                            ? "Free"
-                            : `$${tool.priceMin}`}
-                        </span>
-                      </div>
-                      <p class="mt-1 line-clamp-1 text-sm text-foreground-muted">
-                        {tool.description}
-                      </p>
-                    </div>
-                    <span
-                      class="shrink-0 text-foreground-muted opacity-0 transition group-hover:translate-x-0.5 group-hover:opacity-100"
-                      aria-hidden="true">→</span
-                    >
-                  </a>
-                </li>
-              ))
-            }
-          </ol>
-
-          <div class="mt-6 flex flex-col gap-3">
-            <Button href="/posts/catchy-vs-transcope-2026/" variant="link" size="sm">
-              <span class="border-b border-accent/50 pb-0.5 font-medium text-accent group-hover:border-accent">
-                迷ったら：Catchy と Transcope、結局どっち？徹底比較 →
-              </span>
-            </Button>
-            <Button href="/posts/transcope-review-2026/" variant="link" size="sm">
-              <span class="border-b border-foreground-muted/40 pb-0.5 group-hover:border-accent">
-                トランスコープ 評判・詳細レビュー →
-              </span>
-            </Button>
-            <Button href="/posts/it-engineer-career-start-2026/" variant="link" size="sm">
-              <span class="border-b border-foreground-muted/40 pb-0.5 group-hover:border-accent">
-                未経験からITエンジニア転職 完全ガイド →
-              </span>
-            </Button>
-            <Button href="/tools" variant="link" size="sm">
-              <span class="border-b border-foreground-muted/40 pb-0.5 group-hover:border-accent">
-                26ツール辞書を領域別に見る
-              </span>
-            </Button>
-            <Button href="/diagnose" variant="link" size="sm">
-              <span class="border-b border-foreground-muted/40 pb-0.5 group-hover:border-accent">
-                あなたに合うツールを診断する
-              </span>
-            </Button>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ========== 実録ジャーナル連載（Hero直下・note読者の「続き」導線） ========== -->
-    <EditorialSection border="bottom" size="base">
-      <Badge>Journal</Badge>
-      <SerifHeading as="h2" class="mt-2">
-        <span class="italic text-accent">実録ジャーナル</span>連載中
-      </SerifHeading>
-      <p class="mt-3 max-w-2xl text-sm leading-7 text-foreground-muted">
-        AIだけで月10万円を目指す公開実験。Claude Codeが運営し、人間は判断だけ。費用・収益・失敗の実数を毎週公開しています。
-      </p>
-      <div class="mt-6 grid gap-4 sm:grid-cols-3">
-        <a href="/posts/claude-code-ai-company-1month-2026/" class="flex flex-col rounded-xl border border-border p-5 no-underline transition hover:border-accent/60">
-          <span class="text-xs font-bold uppercase tracking-wide text-accent">連載 #1</span>
-          <span class="mt-2 text-sm font-semibold leading-6 text-foreground">Claude Code で「AI会社」を1ヶ月運営してみた</span>
-          <span class="mt-2 text-xs leading-5 text-foreground-muted">役割定義・失敗・実績数字まで運営ログ全公開</span>
-        </a>
-        <a href="https://note.com/aimakerlab/n/n9e06c0070235" rel="noopener" class="flex flex-col rounded-xl border border-border p-5 no-underline transition hover:border-accent/60">
-          <span class="text-xs font-bold uppercase tracking-wide text-accent">帳簿（毎週更新）</span>
-          <span class="mt-2 text-sm font-semibold leading-6 text-foreground">AI会社の帳簿、全部見せます</span>
-          <span class="mt-2 text-xs leading-5 text-foreground-muted">費用・収益・失敗の生ログ（note連載）</span>
-        </a>
-        <a href="https://note.com/aimakerlab" rel="noopener" class="flex flex-col rounded-xl border border-border p-5 no-underline transition hover:border-accent/60">
-          <span class="text-xs font-bold uppercase tracking-wide text-accent">週報（毎週金曜）</span>
-          <span class="mt-2 text-sm font-semibold leading-6 text-foreground">AI会社週報</span>
-          <span class="mt-2 text-xs leading-5 text-foreground-muted">今週の実数と意思決定をnoteで配信中</span>
-        </a>
-      </div>
-    </EditorialSection>
-
-    <!-- ========== Monetization Fast Lane ========== -->
-    <EditorialSection border="bottom" size="base">
-      <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-        <div>
-          <Badge>Monetization</Badge>
-          <SerifHeading as="h2" class="mt-2">
-            まずは<span class="italic text-accent">1件成約</span>に近い順で。
-          </SerifHeading>
-          <p class="mt-6 max-w-md text-base leading-[1.85] text-foreground-muted">
-            AIツール紹介で収益化するなら、記事を増やす前に「診断」「比較」「ドメイン」「ホスティング」の4導線を整えるのが最短です。
-          </p>
-          <div class="mt-8">
-            <Button href="/posts/ai-side-business-roadmap-2026/" variant="outline">
-              AI副業ロードマップを読む
-            </Button>
-          </div>
-        </div>
-
-        <ol class="grid gap-px bg-border sm:grid-cols-2">
-          <li class="bg-background p-6">
-            <p class="editorial-marker">01 · Diagnose</p>
-            <h3 class="mt-3 font-serif text-xl text-foreground">AI診断へ送る</h3>
-            <p class="mt-3 text-sm leading-7 text-foreground-muted">
-              読者の用途・予算・経験を5問で分け、{TOOLS.length}ツールから候補を提示します。
-            </p>
-            <a href="/diagnose/" class="mt-5 inline-flex border-b border-foreground text-sm font-medium text-foreground hover:border-accent hover:text-accent">
-              1分でAI診断する
-            </a>
-          </li>
-          <li class="bg-background p-6">
-            <p class="editorial-marker">02 · Compare</p>
-            <h3 class="mt-3 font-serif text-xl text-foreground">比較記事で迷いを消す</h3>
-            <p class="mt-3 text-sm leading-7 text-foreground-muted">
-              AIライティングの2強 Catchy / Transcope を、料金と得意領域で仕分けます。
-            </p>
-            <a href="/posts/catchy-vs-transcope-2026/" class="mt-5 inline-flex border-b border-foreground text-sm font-medium text-foreground hover:border-accent hover:text-accent">
-              Catchy vs Transcope 比較を読む
-            </a>
-          </li>
-          <li class="bg-background p-6">
-            <p class="editorial-marker">03 · Domain</p>
-            <h3 class="mt-3 font-serif text-xl text-foreground">ドメイン取得へ進める</h3>
-            <p class="mt-3 text-sm leading-7 text-foreground-muted">
-              AI副業ブログや個人開発の最初の固定資産。取得後の記事導線も作れます。
-            </p>
-            <a href="/go/onamae" rel="sponsored" class="mt-5 inline-flex border-b border-foreground text-sm font-medium text-foreground hover:border-accent hover:text-accent">
-              お名前.comで探す
-            </a>
-          </li>
-          <li class="bg-background p-6">
-            <p class="editorial-marker">04 · Hosting</p>
-            <h3 class="mt-3 font-serif text-xl text-foreground">WordPress運用も拾う</h3>
-            <p class="mt-3 text-sm leading-7 text-foreground-muted">
-              静的サイトだけでなく、WordPress派の読者にはホスティング比較へ送ります。
-            </p>
-            <a href="/go/mixhost" rel="sponsored" class="mt-5 inline-flex border-b border-foreground text-sm font-medium text-foreground hover:border-accent hover:text-accent">
-              mixhostの料金を見る
-            </a>
-          </li>
-        </ol>
-      </div>
-    </EditorialSection>
-
-    <!-- ========== Explore — 次の一歩（内部送客：キャリア動線＋ツール辞書） ========== -->
-    <EditorialSection border="bottom" size="base">
-      <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <Badge>Explore</Badge>
-          <SerifHeading as="h2" class="mt-1">次の一歩</SerifHeading>
-        </div>
-        <p class="text-sm text-foreground-muted">AIを「触る」から「学ぶ・仕事にする」へ</p>
-      </div>
-
-      <div class="grid divide-y divide-border border-t border-border lg:grid-cols-2 lg:divide-x lg:divide-y-0">
-        <a
-          href="/posts/ai-skills-to-career-2026/"
-          class="group flex items-baseline gap-6 py-7 pr-2 transition hover:bg-foreground/[0.015]"
-        >
-          <span class="font-mono text-xs text-foreground-muted">N1</span>
-          <div class="flex-1">
-            <div class="font-serif text-xl text-foreground transition group-hover:text-accent sm:text-2xl">
-              AIスキルを仕事にする
-              <span class="ml-2 text-xs text-foreground-muted">学ぶ・転職・相談 →</span>
-            </div>
-            <p class="mt-2 text-sm leading-7 text-foreground-muted">
-              AIツールを触ってみて「仕事にできないか」と思った人へ。未経験からIT/AI業界で学ぶ・働くための3つの道と、無料で相談できるサービスを整理。
-            </p>
-          </div>
-          <span class="text-foreground-muted transition group-hover:translate-x-1 group-hover:text-accent">→</span>
-        </a>
-        <a
-          href="/tools/"
-          class="group flex items-baseline gap-6 py-7 pr-2 transition hover:bg-foreground/[0.015]"
-        >
-          <span class="font-mono text-xs text-foreground-muted">N2</span>
-          <div class="flex-1">
-            <div class="font-serif text-xl text-foreground transition group-hover:text-accent sm:text-2xl">
-              ツール辞書
-              <span class="ml-2 text-xs text-foreground-muted">領域別に比較 →</span>
-            </div>
-            <p class="mt-2 text-sm leading-7 text-foreground-muted">
-              開発・UI生成・動画・ライティング・自動化・インフラ・AIキャリアの各領域で、料金・日本語対応・強み弱みを編集ベースで一覧。
-            </p>
-          </div>
-          <span class="text-foreground-muted transition group-hover:translate-x-1 group-hover:text-accent">→</span>
-        </a>
-      </div>
-    </EditorialSection>
-
-    <!-- ========== AI Maker Lab Awards 2026（固定コーナー） ========== -->
-    <section class="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-100 via-purple-100 to-fuchsia-100 p-8 sm:p-12">
-        <img src="/icons/trophy-ai.png" alt="" aria-hidden="true" class="absolute -right-6 -top-6 h-36 w-36 opacity-20" />
-
-        <div class="relative">
-          <p class="text-xs font-bold tracking-[0.3em] text-indigo-700 uppercase">AI Maker Lab Awards 2026</p>
-          <h2 class="font-display mt-4 text-3xl sm:text-4xl font-bold text-stone-900">
-            <span class="bg-gradient-to-r from-indigo-700 to-fuchsia-700 bg-clip-text text-transparent">
-              AI Maker Lab Awards 2026
-            </span>
-          </h2>
-          <p class="mt-3 text-sm text-stone-700">編集部が選ぶ、2026 年注目の AI コーディングツール＆実践記事</p>
-
-          <!-- アワード 3カテゴリ -->
-          <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <a href="/posts/v0-vs-lovable-vs-bolt-2026/" class="group rounded-2xl bg-white p-5 transition hover:shadow-xl">
-              <div class="flex items-center gap-2">
-                <img src="/icons/medal-1.png" alt="1位" class="h-7 w-7" width="28" height="28" />
-                <span class="text-[10px] font-bold tracking-wide text-stone-500 uppercase">AI コーディング部門</span>
-              </div>
-              <h3 class="mt-3 font-display text-lg font-bold text-stone-900 group-hover:text-indigo-700">v0 vs Lovable vs Bolt</h3>
-              <p class="mt-2 text-xs text-stone-600">編集部が3ツールを実装比較</p>
-              <p class="mt-3 text-xs font-bold text-indigo-700">詳しく見る →</p>
-            </a>
-
-            <a href="/posts/claude-code-ai-company-1month-2026/" class="group rounded-2xl bg-white p-5 transition hover:shadow-xl">
-              <div class="flex items-center gap-2">
-                <img src="/icons/medal-2.png" alt="2位" class="h-7 w-7" width="28" height="28" />
-                <span class="text-[10px] font-bold tracking-wide text-stone-500 uppercase">AI 実践運用部門</span>
-              </div>
-              <h3 class="mt-3 font-display text-lg font-bold text-stone-900 group-hover:text-indigo-700">Claude Code で AI 会社1ヶ月運営</h3>
-              <p class="mt-2 text-xs text-stone-600">AI 駆動でメディア運営の実体験</p>
-              <p class="mt-3 text-xs font-bold text-indigo-700">詳しく見る →</p>
-            </a>
-
-            <a href="/posts/ai-side-business-roadmap-2026/" class="group rounded-2xl bg-white p-5 transition hover:shadow-xl">
-              <div class="flex items-center gap-2">
-                <img src="/icons/medal-3.png" alt="3位" class="h-7 w-7" width="28" height="28" />
-                <span class="text-[10px] font-bold tracking-wide text-stone-500 uppercase">AI 副業部門</span>
-              </div>
-              <h3 class="mt-3 font-display text-lg font-bold text-stone-900 group-hover:text-indigo-700">AI 副業ロードマップ 2026</h3>
-              <p class="mt-2 text-xs text-stone-600">個人開発からの収益化ステップ</p>
-              <p class="mt-3 text-xs font-bold text-indigo-700">詳しく見る →</p>
-            </a>
-          </div>
-
-          <p class="mt-6 text-xs text-stone-500">※ 編集部評価。各ツール公式公開データ取得日 2026-05-19。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== Popular Articles TOP 5 ========== -->
-    <EditorialSection border="bottom" size="base">
-      <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <Badge>Popular Articles</Badge>
-          <SerifHeading as="h2" class="mt-1">人気記事 TOP 5</SerifHeading>
-        </div>
-        <p class="text-sm text-foreground-muted">AI 編集部が特に推奨する Vibe Coding 実践記録をピックアップしました</p>
-      </div>
-
-      <ol class="border-t border-border">
-        {
-          popularArticles.map(p => {
-            const t = thumbStyleFor(p.category);
-            return (
-              <li class="border-b border-border">
-                <a
-                  href={p.href}
-                  class="group flex flex-col gap-0 py-5 pr-2 transition hover:bg-foreground/[0.015] sm:flex-row sm:items-stretch sm:gap-6 sm:py-7"
-                >
-                  <div class={`relative h-28 w-full flex-shrink-0 overflow-hidden bg-gradient-to-br ${t.gradient} flex items-center justify-center sm:h-auto sm:w-48`}>
-                    <span class="flex h-24 w-24 items-center justify-center rounded-2xl bg-background/85 shadow-md ring-1 ring-background/50 backdrop-blur-sm">
-                      <img src={`/icons/${t.icon}.png`} alt={t.label} class="h-20 w-20 object-contain" width="80" height="80" loading="lazy" />
-                    </span>
-                    <span class="absolute top-2 left-2 font-mono text-xs text-foreground-muted bg-background/80 px-1.5 py-0.5 rounded">
-                      0{p.rank}
-                    </span>
-                    <span class="absolute bottom-2 right-2 rounded-full bg-background/90 px-2 py-0.5 text-[10px] font-bold tracking-wide text-foreground">{t.label}</span>
-                  </div>
-                  <div class="flex-1 pt-4 sm:pt-0">
-                    <p class="editorial-marker mb-2">{p.category}</p>
-                    <div class="font-serif text-xl text-foreground transition group-hover:text-accent sm:text-2xl">
-                      {p.title}
-                    </div>
-                    <p class="mt-2 text-sm leading-7 text-foreground-muted">
-                      {p.summary}
-                    </p>
-                  </div>
-                  <span class="hidden text-foreground-muted transition group-hover:translate-x-1 group-hover:text-accent sm:inline">
-                    →
-                  </span>
-                </a>
-              </li>
-            );
-          })
-        }
-      </ol>
-    </EditorialSection>
-
-    <!-- ========== ジャーナル（4セクション） ========== -->
-    <EditorialSection border="bottom" size="base">
-      <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <Badge>Sections</Badge>
-          <SerifHeading as="h2" class="mt-1">どこから読みますか</SerifHeading>
-        </div>
-        <p class="text-sm text-foreground-muted">3層ペルソナで設計しました</p>
-      </div>
-
-      <div class="grid divide-y divide-border border-t border-border lg:grid-cols-2 lg:divide-x lg:divide-y-0 lg:[&>a:nth-child(3)]:border-t lg:[&>a:nth-child(4)]:border-t lg:[&>a:nth-child(n+3)]:border-border">
-        {
-          journals.map(j => (
-            <a
-              href={j.href}
-              class="group flex items-baseline gap-6 py-7 pr-2 transition hover:bg-foreground/[0.015]"
-            >
-              <span class="font-mono text-xs text-foreground-muted">
-                {j.no}
-              </span>
-              <div class="flex-1">
-                <div class="font-serif text-xl text-foreground transition group-hover:text-accent sm:text-2xl">
-                  {j.label}
-                </div>
-                <p class="mt-1 text-sm text-foreground-muted">{j.desc}</p>
-              </div>
-              <span class="text-foreground-muted transition group-hover:translate-x-1 group-hover:text-accent">
-                →
-              </span>
-            </a>
-          ))
-        }
-      </div>
-    </EditorialSection>
-
-    <!-- ========== Featured ========== -->
-    {
-      featuredPosts.length > 0 && (
-        <EditorialSection
-          border={recentPosts.length > 0 ? "bottom" : "none"}
-          size="base"
-        >
-          <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <Badge>Editor's Picks</Badge>
-              <SerifHeading as="h2" class="mt-1">
-                おすすめ記事
-              </SerifHeading>
-            </div>
-            <a
-              href="/posts"
-              class="border-b border-foreground-muted/40 pb-0.5 text-xs tracking-wide text-foreground-muted transition hover:border-accent hover:text-accent"
-            >
-              すべての記事 →
-            </a>
-          </div>
-          <ul class="grid gap-px bg-border sm:grid-cols-2">
-            {featuredPosts.map(data => (
-              <Card variant="h3" {...data} />
-            ))}
-          </ul>
-        </EditorialSection>
-      )
-    }
-
-    <!-- ========== Recent ========== -->
-    {
-      recentPosts.length > 0 && (
-        <EditorialSection border="none" size="base">
-          <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <Badge>Latest</Badge>
-              <SerifHeading as="h2" class="mt-1">
-                最新レビュー
-              </SerifHeading>
-            </div>
-            <a
-              href="/posts"
-              class="border-b border-foreground-muted/40 pb-0.5 text-xs tracking-wide text-foreground-muted transition hover:border-accent hover:text-accent"
-            >
-              すべての記事 →
-            </a>
-          </div>
-          <ul class="grid gap-px bg-border sm:grid-cols-2">
-            {recentPosts.map(
-              (data, index) =>
-                index < SITE.postPerIndex && <Card variant="h3" {...data} />
-            )}
-          </ul>
-        </EditorialSection>
-      )
-    }
-
-    <!-- ========== PERSONA DIAL ========== -->
-    <EditorialSection border="top" size="base">
-      <div class="grid items-center gap-12 py-6 lg:grid-cols-[1fr_1.2fr]">
-        <div>
-          <Badge>Persona Journey</Badge>
-          <SerifHeading as="h2" class="mt-2">
-            <span class="italic text-accent">3層</span>のキャリア・ジャーニー
-          </SerifHeading>
-          <p class="mt-6 max-w-md text-base leading-[1.85] text-foreground-muted">
-            「興味本位で触ってみたい」→「自分でつくれるようになりたい」→「収益化したい」<br />
-            一通り通った個人開発者と AI 編集部が、各層の解像度で記事を書き分けています。AI 駆動で動くメディアの裏側もそのまま記録します。
-          </p>
-        </div>
-        <ol class="relative space-y-6 border-l border-border pl-8">
-          <li class="relative">
-            <span class="editorial-marker absolute -left-[2.3rem] top-0.5 bg-background px-1">01</span>
-            <p class="font-serif text-xl text-foreground">Curiosity · 興味本位</p>
-            <p class="mt-1 text-sm text-foreground-muted">どんなツールがあるか、何ができるか、無料でどこまでできるか</p>
-          </li>
-          <li class="relative">
-            <span class="editorial-marker absolute -left-[2.3rem] top-0.5 bg-background px-1">02</span>
-            <p class="font-serif text-xl text-foreground">Building · 構築する</p>
-            <p class="mt-1 text-sm text-foreground-muted">実際にプロダクトをつくる、デプロイする、改善する</p>
-          </li>
-          <li class="relative">
-            <span class="editorial-marker absolute -left-[2.3rem] top-0.5 bg-background px-1">03</span>
-            <p class="font-serif text-xl text-foreground">Monetizing · 収益化する</p>
-            <p class="mt-1 text-sm text-foreground-muted">アフィリ・課金・SaaS化、副業ロードマップを公開情報ベースで整理</p>
-          </li>
-        </ol>
-      </div>
-    </EditorialSection>
-
-    <!-- ========== INDEX CTA ========== -->
-    <EditorialSection border="none" size="base">
-      <div class="cyan-glow relative rounded-2xl bg-card-bg p-10 sm:p-14">
-        <div class="absolute top-6 left-6 font-mono text-xs tracking-[0.2em] text-accent">EXPLORE · ARCHIVE</div>
-        <div class="absolute top-6 right-6 h-2 w-2 rounded-full bg-accent shadow-[0_0_12px_var(--color-accent)]"></div>
-        <div class="mt-8 grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-end">
+    <!-- 2. 編集部ピック3本 -->
+    <section class="border-b border-border">
+      <div class="site-layout py-14 sm:py-20">
+        <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <SerifHeading as="h2">
-              全<span class="italic text-accent">実体験記事</span>と<span class="italic text-accent">ツール辞書</span>を読む。
-            </SerifHeading>
-            <p class="mt-4 max-w-xl text-foreground-muted">
-              各ツールの料金・できること・収益化までを、AI 駆動の編集体制と個人開発者の実体験を組み合わせて領域別に整理しています。あなたに合うツールを 1 分で診断する機能もあります。
-            </p>
+            <Badge withLine>Editor's Picks</Badge>
+            <h2 class="mt-2 font-serif text-3xl font-black text-foreground sm:text-4xl">
+              編集部ピック<span class="text-accent">3本</span>
+            </h2>
           </div>
-          <div class="flex flex-col gap-3">
-            <Button href="/diagnose/" variant="outline">
-              1分でAI診断する
-            </Button>
-            <Button href="/posts/" variant="ghost" showArrow={false}>
-              実体験記事一覧へ
-            </Button>
-          </div>
+          <a
+            href="/posts/"
+            class="border-b border-foreground-muted/40 pb-0.5 text-xs tracking-wide text-foreground-muted transition hover:border-accent hover:text-accent"
+          >
+            すべての記事（{postCount}本）→
+          </a>
         </div>
+        <ol class="border-t-2 border-foreground">
+          <RankItem
+            rank={1}
+            href={pick1.href}
+            category="AI会社運営 / 実録"
+            title={pick1.title}
+            summary="このサイト自体を運営しているAI会社の1ヶ月記録。役割定義・相談処理・失敗事例・実績数字まで運営ログを全公開しています。"
+            dateLabel={pick1.dateLabel}
+            minutes={pick1.minutes}
+          >
+            <ThumbTerm
+              title="ai-company — 4部門"
+              lines={[
+                { cmd: "claude -p 'CEOとして今日の判断を'" },
+                { out: "CEO      判断・優先度づけ", ok: true },
+                { out: "QA       レビュー・差し戻し", ok: true },
+                { out: "事業開発  市場調査・商品設計", ok: true },
+                { out: "技術検証  PoC・実装確認", ok: true },
+              ]}
+            />
+          </RankItem>
+          <RankItem
+            rank={2}
+            href={pick2.href}
+            category="収益化 / 意思決定の実録"
+            title={pick2.title}
+            summary="3メディアを2週間で立ち上げて流入ゼロ。焦りと7回の旋回の末にピボットを決めるまでの、うまくいっていない期間の実況です。"
+            dateLabel={pick2.dateLabel}
+            minutes={pick2.minutes}
+          >
+            <ThumbSheet
+              title="運営帳簿 Day14"
+              asOf="2026.06.02"
+              rows={[
+                { label: "運営期間", value: "14日" },
+                { label: "検索流入", value: "0" },
+                { label: "意思決定", value: "ピボット", strong: true },
+              ]}
+            />
+          </RankItem>
+          <RankItem
+            rank={3}
+            href={pick3.href}
+            category="ツール比較 / 実測"
+            title={pick3.title}
+            summary="Vibe Coding 3大ツールを料金・出力品質・日本語・デプロイで比較。副業・個人開発の用途別に「これを選べ」まで言い切ります。"
+            dateLabel={pick3.dateLabel}
+            minutes={pick3.minutes}
+          >
+            <ThumbSheet
+              title="料金 実測表"
+              asOf={pick3.dateLabel + "更新"}
+              rows={[
+                { label: "v0 by Vercel", value: "$30〜" },
+                { label: "Lovable", value: "$25〜" },
+                { label: "Bolt.new", value: "$20〜" },
+              ]}
+            />
+          </RankItem>
+        </ol>
       </div>
-    </EditorialSection>
+    </section>
+
+    <!-- 3. 状況別入口3つ -->
+    <section class="border-b border-border">
+      <div class="site-layout py-14 sm:py-20">
+        <div class="mb-8">
+          <Badge withLine>Start Here</Badge>
+          <h2 class="mt-2 font-serif text-3xl font-black text-foreground sm:text-4xl">
+            いまの状況から、入口を選ぶ。
+          </h2>
+        </div>
+        <PersonaGrid
+          items={[
+            {
+              no: "01",
+              need: "まず1本、動くものを作りたい",
+              label: "SaaS MVP 1週間ロードマップを読む",
+              href: "/posts/vibe-coding-saas-mvp-in-1week-2026/",
+              desc: "v0 / Lovable / Cursor / Claude Code / Supabase を組み合わせ、Day1-7のタスク表つきで動くMVPまで進めます。",
+            },
+            {
+              no: "02",
+              need: "AIで副収入の道筋を知りたい",
+              label: "AI副業ロードマップを読む",
+              href: "/posts/ai-side-business-roadmap-2026/",
+              desc: "月3万→10万→30万のレンジ別に、アフィリ／プロダクト販売／スキル販売の現実解と失敗パターンを整理しています。",
+            },
+            {
+              no: "03",
+              need: "どのツールを使うか、今日決めたい",
+              label: "1分でAI診断する",
+              href: "/diagnose/",
+              desc: `用途・経験・予算の5問で、${TOOLS.length}ツールからあなたに合う3つに絞って提案します。`,
+            },
+          ]}
+        />
+      </div>
+    </section>
+
+    <!-- 4. 自社商品（実在3商品・価格は/shopと同期） -->
+    <section class="border-b border-border">
+      <div class="site-layout py-14 sm:py-20">
+        <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <Badge withLine>Shop</Badge>
+            <h2 class="mt-2 font-serif text-3xl font-black text-foreground sm:text-4xl">
+              実運用の仕組みを、そのまま商品に。
+            </h2>
+          </div>
+          <a
+            href="/shop/"
+            class="border-b border-foreground-muted/40 pb-0.5 text-xs tracking-wide text-foreground-muted transition hover:border-accent hover:text-accent"
+          >
+            ショップを見る →
+          </a>
+        </div>
+        <ShopStrip />
+      </div>
+    </section>
+
+    <!-- 5. note週報CTA -->
+    <section>
+      <div class="site-layout py-14 sm:py-20">
+        <WeeklyCta ledgerNoteUrl={LEDGER_NOTE_URL} noteProfileUrl={NOTE_PROFILE_URL} />
+      </div>
+    </section>
   </main>
+  <!-- 6. フッター -->
   <Footer />
 </Layout>
 

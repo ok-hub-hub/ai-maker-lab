@@ -15,6 +15,7 @@ import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
 import { getToolById } from "@/data/tools";
+import AffiliateCta from "@/components/lp/AffiliateCta.astro";
 
 type Props = {
   post: CollectionEntry<"blog">;
@@ -35,7 +36,33 @@ const {
   tags,
   hideEditPost,
   primaryGo,
+  affiliateCta,
+  review,
 } = post.data;
+
+// レビュー記事の Article+Review 構造化データ（rating は本文側にも可視表示する）
+const reviewJsonLd = review
+  ? {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      itemReviewed: {
+        "@type": "SoftwareApplication",
+        name: review.itemName,
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web",
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: review.rating,
+        bestRating: 5,
+        worstRating: 1,
+      },
+      author: { "@type": "Organization", name: "AI Maker Lab", url: SITE.website },
+      publisher: { "@type": "Organization", name: "AI Maker Lab", url: SITE.website },
+      datePublished: pubDatetime.toISOString(),
+      ...(modDatetime && { dateModified: modDatetime.toISOString() }),
+    }
+  : null;
 
 const { Content } = await render(post);
 
@@ -141,7 +168,7 @@ const relatedPosts = posts
       <div class="flex items-center gap-2">
         <span
           aria-hidden="true"
-          class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-indigo-500 text-base font-bold text-white shadow-sm"
+          class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-foreground text-base font-bold text-background"
         >AI</span>
         <div class="flex flex-col leading-tight">
           <a href="/about/" class="text-sm font-semibold text-foreground underline-offset-2 hover:text-accent hover:underline">{author}</a>
@@ -171,6 +198,15 @@ const relatedPosts = posts
         </p>
       )
     }
+    {
+      review && (
+        <p class="mt-2 inline-flex items-center gap-2 border border-border bg-muted/40 px-3 py-1.5 text-xs text-foreground">
+          <span class="font-bold">編集部評価</span>
+          <span class="font-mono font-semibold tabular-nums text-accent">{review.rating.toFixed(1)} / 5.0</span>
+          <span class="text-foreground-muted">（{review.itemName}・実運用ベース）</span>
+        </p>
+      )
+    }
     <article
       id="article"
       class="app-prose mt-8 w-full max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
@@ -178,11 +214,29 @@ const relatedPosts = posts
       <Content />
     </article>
 
+    {
+      reviewJsonLd && (
+        <script type="application/ld+json" is:inline set:html={JSON.stringify(reviewJsonLd)} />
+      )
+    }
+
+    <!-- 記事末尾アフィリCTA（frontmatter affiliateCta 駆動・PR表示つき） -->
+    {
+      affiliateCta?.map(cta => (
+        <AffiliateCta
+          toolId={cta.id}
+          lead={cta.lead}
+          note={cta.note}
+          experienced={cta.experienced}
+        />
+      ))
+    }
+
     <!-- 著者・検証体制ボックス（E-E-A-T） -->
     <aside class="mt-10 flex gap-4 rounded-xl border border-border bg-muted/40 p-5" data-pagefind-ignore>
       <span
         aria-hidden="true"
-        class="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 to-indigo-500 text-lg font-bold text-white shadow-sm"
+        class="inline-flex h-12 w-12 flex-none items-center justify-center rounded-full bg-foreground text-lg font-bold text-background"
       >AI</span>
       <div class="text-sm leading-6">
         <p class="font-bold text-foreground">{author} 編集部</p>
@@ -284,7 +338,7 @@ const relatedPosts = posts
           <a
             href={`/go/${primaryTool.id}`}
             rel="sponsored nofollow"
-            class="flex-1 rounded-full bg-amber-500 py-3 text-center text-sm font-bold text-white shadow-sm transition hover:bg-amber-600"
+            class="flex-1 rounded-full bg-accent py-3 text-center text-sm font-bold text-accent-fg transition hover:bg-foreground hover:text-background"
           >{ctaLabel}</a>
         </div>
       </div>

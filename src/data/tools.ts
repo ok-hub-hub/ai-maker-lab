@@ -827,7 +827,7 @@ export const TOOLS: ToolMeta[] = [
     affiliateTier: "A",
     officialUrl: "https://transcope.io/",
     affiliateUrl:
-      "https://af.moshimo.com/af/c/click?a_id=5628821&p_id=5285&pc_id=14372&pl_id=69207",
+      "https://af.moshimo.com/af/c/click?a_id=5628821&p_id=5285&pc_id=14372&pl_id=69107",
     description:
       "シェアモル社運営、SEOに特化した日本語AIライティングツール。キーワード分析・競合上位の見出し抽出・記事生成・検索順位チェックまでを1ツールで一気通貫し、オウンドメディア運営者を主なターゲットにする。",
     strengths: [
@@ -840,7 +840,37 @@ export const TOOLS: ToolMeta[] = [
       "短文コピー・SNS文面のテンプレ量産はCatchyの方が手数が速い（Transcopeは長文SEO本文に最適化されている）",
     ],
     verifiedAt: "2026-06-05",
-    note: "もしもアフィリエイト（promotion_id=5285）AI Maker Lab媒体(a_id=5628821)で提携承認済み。affiliateUrl 設定済み 2026-06-18。",
+    note: "もしもアフィリエイト（promotion_id=5285）AI Maker Lab媒体(a_id=5628821)で提携承認済み。2026-07-20 に旧バナー原稿URL(pl_id=69207)から自由テキスト原稿URL(pl_id=69107)へ更新（もしも管理画面で実照合）。",
+  },
+  {
+    id: "ai-blog-kun",
+    name: "AIブログくん",
+    category: ["writing"],
+    forEngineer: false,
+    forBeginner: true,
+    priceMin: 13,
+    priceFree: true,
+    jpFriendly: true,
+    speed: 3,
+    quality: 2,
+    scale: 2,
+    affiliateTier: "A",
+    officialUrl: "https://www.ai-blogkun.com/",
+    affiliateUrl:
+      "https://af.moshimo.com/af/c/click?a_id=5695328&p_id=7624&pc_id=22031&pl_id=95151",
+    description:
+      "キーワードを設定するとAIが記事の生成からWordPressへの投稿・Google通知までを自動で回す、日本語のブログ自動運営ツール。ブログを書き続ける時間が取れない人向けの「ほぼ全自動」型。",
+    strengths: [
+      "記事生成→投稿→インデックス送信までを自動化する設計で、手を動かす時間が最小で済む",
+      "日本語のサービス・サポートで、WordPressブログとの連携を前提に作られている",
+      "無料体験があり、有料プラン（Lite月額¥1,980〜）前に生成品質を確かめられる",
+    ],
+    weaknesses: [
+      "自動生成記事はそのままだと画一的になりやすく、上位表示を狙うなら編集・独自情報の追記が前提",
+      "当編集部ではまだ実運用しておらず、生成品質・SEO効果は未検証（公式情報ベースの紹介）",
+    ],
+    verifiedAt: "2026-07-20",
+    note: "もしもアフィリエイト AIブログくんGOLD（promotion_id=7624）AI Maker Lab媒体(a_id=5695328)で提携中。成果地点=有料プラン登録（Lite月額¥1,980〜Max年額¥198,000）。テキスト原稿URLを 2026-07-20 に管理画面で実照合して設定。編集部未検証のため記事では体験談を書かないこと。",
   },
   {
     id: "career-company",
@@ -936,6 +966,73 @@ export const TOOLS: ToolMeta[] = [
     ],
     verifiedAt: "2026-07-16",
     note: "A8.net 提携済み（programId s00000024757003・2026-07-13 CEO申請→2026-07-16 承認確認・detail-partnered）。成果報酬 50,000円・上流転職訴求テキストリンクを配線。未経験=明光（¥78,000）／経験者=TechGo（¥50,000）の二段構えでキャリア導線が完成。",
+  },
+  {
+    id: "type-tenshoku",
+    name: "type転職エージェント",
+    category: ["career"],
+    forEngineer: true,
+    forBeginner: true,
+    priceMin: 0,
+    priceFree: true,
+    jpFriendly: true,
+    speed: 2,
+    quality: 3,
+    scale: 2,
+    affiliateTier: "S",
+    officialUrl: "https://type.career-agent.jp/",
+    // affiliateUrl: TODO_AFFILIATE_URL
+    // もしも promotion_id=7540（成果地点=面談実施 ¥11,000）は 2026-07-20 実照合時点で
+    // キャリアラウンジ媒体(a_id=5673961)のみ提携中。AI Maker Lab媒体(672761)は未提携のため、
+    // AML媒体で提携申請→承認後にAML用テキスト原稿URLを差し込むこと（媒体不一致リンクの流用は規約リスク）。
+    serviceType: "agent",
+    conversionPoint: "free-counseling",
+    payoutJpy: 11000,
+    description:
+      "首都圏のIT・Web業界に強い老舗の転職エージェント（運営：株式会社キャリアデザインセンター）。求職者は無料で、キャリアアドバイザーとの面談を通じてITエンジニア・企画職などの求人紹介・選考対策を受けられる。",
+    strengths: [
+      "求職者は無料で利用できる（採用企業側から報酬を得るモデル）",
+      "IT・Web業界の求人に強く、エンジニア専任のキャリアアドバイザーがいる",
+      "面談はオンライン対応で、在職中でも相談から始められる",
+    ],
+    weaknesses: [
+      "求人は首都圏（一都三県）中心で、地方在住だと紹介案件が限られる場合がある",
+      "当編集部では面談サービスを未検証（公式情報ベースの紹介）",
+    ],
+    verifiedAt: "2026-07-20",
+    note: "もしも type転職エージェントの面談実施（promotion_id=7540・¥11,000）。AI Maker Lab媒体は未提携＝affiliateUrl未設定（officialUrlフォールバック中・報酬は発生しない）。編集部未検証のため記事では体験談を書かないこと。",
+  },
+  {
+    id: "terracam-ai",
+    name: "テラキャンAI（SHIFT TERAS CAMPUS）",
+    category: ["career"],
+    forEngineer: false,
+    forBeginner: true,
+    priceMin: 0,
+    priceFree: true,
+    jpFriendly: true,
+    speed: 2,
+    quality: 3,
+    scale: 2,
+    affiliateTier: "A",
+    officialUrl: "https://www.teracam.jp/",
+    affiliateUrl:
+      "https://af.moshimo.com/af/c/click?a_id=5574889&p_id=7460&pc_id=21544&pl_id=93638",
+    serviceType: "school",
+    payoutJpy: 1000,
+    description:
+      "東証プライム上場のSHIFTグループが運営する、AIスキルを強みに転職を目指す社会人向けオンラインスクール。受講料5万円（2026-07-20 公式サイト表記）でAI活用を学び、キャリア支援につなげる設計。",
+    strengths: [
+      "東証プライム上場SHIFTグループの運営で、スクールとしての信頼性・実務接続に期待できる",
+      "受講料5万円（公式表記）と、AI系スクールとしては手が届きやすい価格帯",
+      "オンライン完結で、働きながらAIスキルとキャリアの再設計に取り組める",
+    ],
+    weaknesses: [
+      "受講は有料（申し込み前に公式サイトで最新の料金・条件を確認すること）",
+      "当編集部では受講を未検証（公式情報ベースの紹介）",
+    ],
+    verifiedAt: "2026-07-20",
+    note: "もしも テラキャンAI（promotion_id=7460）AI Maker Lab媒体(a_id=5574889)で提携中。成果地点=受講申し込み完了 ¥1,000（無料カウンセリングではない点に注意）。テキスト原稿URLを 2026-07-20 に管理画面で実照合して設定。受講有料を必ず明示・編集部未検証のため体験談を書かないこと。",
   },
   {
     id: "potepan-camp",
