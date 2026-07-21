@@ -319,3 +319,81 @@
 1. catchy-review-2026（2026-07-05最終・Jul19解放→2日後）— 主任務最優先対���
 2. vibe-coding-tools-2026（被リンク1本に増加・PIN-1）— 次回更に内部リンク追加
 3. transcope-review-2026（Jul30解放・PIN-2継続）— 買い手クエリpos18.7の本命
+
+---
+
+## 2026-07-20 サイクル
+
+### 実施内容
+
+**改善1 (主任務): catchy-review-2026 強化**
+- title: 「Catchy（キャッチー）「ひどい・使えない」評判は本当か？…【2026】」→「Catchy 評判2026｜「ひどい・使えない」は本当か？100種テンプレを実運用した正直レビュー」（クエリ完全一致"Catchy 評判"＋2026＋具体数字100種）
+- H2追加「Catchy の始め方・テンプレートの実際の使い方」：登録→テンプレ選択→生成→人の手入れ→Free10クレジット目安の5ステップを解説
+- H2追加「Catchy 解約方法と注意点」：マイページからの解約手順・注意点・ボタン不明時の対処を記述
+- 本文 ≈1,800字 → ≈2,550字（2,500〜3,500字化達成）
+- modDatetime: 2026-07-05 → 2026-07-20（鮮度更新）
+- 被リンクは既存8記事から確保済み（主任務④クリア）
+- 2週間ルール: 前回2026-07-05から15日経過→解放済み
+
+**改善2 (PIN-3 = a): catchy-vs-transcope-2026 title/description 改善**
+- title: 「Transcope Catchy 比較2026｜料金・SEO効果どっち？…」→「Catchy vs Transcope どっちがいい？【2026年版】料金・SEO効果を実測比較した結論」（Catchy先出し・「どっちがいい」ユーザークエリに合致）
+- description: 「結論先出し」形式に変更（短文量産=Catchy / SEO一気通貫=Transcope + 料金目安）
+- 狙い: pos6.0・11表示・0クリックのCTR改善（スニペットで結論が見える化）
+- modDatetime: 2026-07-18 → 2026-07-20
+
+**改善3 (PIN-0 = d2): vibe-coding-tools-2026 内部リンク集約**
+- 追加元3記事: vibe-coding-guide-2026・v0-review-2026・v0-vs-lovable-vs-bolt-2026
+- アンカーテキスト: 「バイブコーディングツール比較2026：v0・Lovable・Bolt・Replit Agent を用途別に選ぶ」（完全一致寄り）
+- 狙い: pos10.0境界クエリ「バイブコーディングツール比較」を1ページ目（9位以内）へ
+- 既存リンク2本（cline-ryokin・ai-writing-tools-comparison）→ 今回3本追加で合計5本
+
+### ゲート結果
+- ✅ 法令4軸 grep: ステマ・薬機・景表・断定なし（「PR」はPull Request文脈で問題なし）
+- ✅ ビルド: 0 errors、189 pages built
+- ✅ dist確認: 更新タイトル・新H2・内部リンク全反映
+- ✅ OG画像: aimaker-lab-og.jpg 実在確認
+
+### push
+- commit: d07376e（rebase後）
+- push: origin/main → Cloudflare Pages 自動デプロイ開始
+
+### 次サイクル候補
+1. transcope-review-2026（Jul30解放・PIN-2継続・pos16.0買い手クエリ本命）
+2. catchy-review-2026（次回解放: 2026-08-03以降・2週間ルール）
+3. vibe-coding-tools-2026（内部リンク5本確保後の本文強化・主任務候補）
+
+---
+
+## 2026-07-21 サイクル
+
+### 実施内容
+
+**改善1 (主任務): claude-sonnet5-vs-opus48-vs-gpt55-jp-writing-2026 強化（pos26.0「claude opus 4.8 gpt5.5」）**
+- title: 「Claude Sonnet 5 vs Opus 4.8 vs GPT-5.5 日本語ライティング比較【2026年7月】コスパで選ぶAIモデル」
+  → 「Claude Opus 4.8 vs GPT-5.5 日本語ライティング比較【2026年7月】Sonnet 5 含む3モデルAPI料金・コスパ完全解説」（クエリ「claude opus 4.8 gpt5.5」を先頭近傍に配置）
+- description: API料金の具体数値（$5/$25・$5/$30）を含む購買意図訴求型に変更
+- H2追加①「Claude Opus 4.8 と GPT-5.5 どちらに課金すべきか」: 直接対決比較表・日本語傾向・向き用途を整理（未回答サブ意図の補完）
+- H2追加②「GPT-5.6 が出た今、GPT-5.5 を選ぶ理由は残るか」: 2026-07-09 GPT-5.6公開後の立ち位置・移行判断を補完（時制サブ意図）
+- modDatetime 追加: 2026-07-21T09:00:00+09:00（フレッシュネス更新）
+- 字数: 推定2,200字 → 約2,700字（2,500〜3,500字化達成）
+
+**改善2 (b / 内部リンク): 完全一致アンカーで2本追加**
+- gpt-5-6-vs-claude-sonnet5-jp-writing-2026.md 末尾リンク: アンカーを「claude opus 4.8 gpt5.5 の日本語ライティング比較」に変更（完全一致）
+- ai-writing-tools-comparison-2026.md 関連記事リンク: アンカーを「claude opus 4.8 gpt5.5 日本語ライティング比較」に変更
+- 内部被リンク合計: 既存1本 → 3本（主任務④達成）
+
+### ゲート結果
+- ✅ 法令4軸 grep: ステマ・薬機・景表・断定なし
+- ✅ ビルド: 0 errors, Complete!（8.42s）
+- ✅ dist確認: claude-sonnet5-vs-opus48・gpt-5-6-vs-claude・ai-writing-tools 全ページ生成確認
+- ✅ OG画像: public/aimaker-lab-og.jpg 実在確認
+
+### push
+- commit: TBD
+- push: origin/main → Cloudflare Pages 自動デプロイ
+
+### 次サイクル候補
+1. transcope-review-2026（2週間ルール解放: Aug3以降・PIN-2・pos16.0買い手クエリ本命）
+2. catchy-review-2026（次回解放: 2026-08-03以降）
+3. vibe-coding-tools-2026（本文強化 主任務候補）
+4. claude-sonnet5-vs-opus48 GSC確認（「claude opus 4.8 gpt5.5」pos26.0→20台改善確認）
