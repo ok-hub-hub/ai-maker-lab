@@ -1,0 +1,63 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import { SITE } from "@/config";
+---
+
+<Layout
+  title={`あっちの街 サポート | ${SITE.title}`}
+  description="モバイルアプリ「あっちの街」のサポートページ。アプリの概要とお問い合わせ方法をご案内します。"
+>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout">
+    <section id="attinomachi-support" class="app-prose mb-28 max-w-app prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-3xl">あっちの街 サポート</h1>
+      <p class="text-sm opacity-70">最終更新：2026-07-21</p>
+
+      <h2>アプリについて</h2>
+      <p>
+        「あっちの街」は、パラレルワールドに住む「あっちの自分」から手紙が届く iOS アプリです。届いた手紙を読み、返事を書きながら、少しずつ育っていくもうひとつの街と自分の物語を楽しめます。
+      </p>
+      <ul>
+        <li>アカウント登録は不要です。データは端末内に保存されます。</li>
+        <li>無料版では広告が表示されます。プレミアム（月額600円 / 年額4,800円・14日間無料トライアル）で広告なしでお楽しみいただけます。</li>
+        <li>購入の復元は、アプリ内「プレミアム」画面の「購入を復元」から行えます。</li>
+      </ul>
+
+      <h2>よくある質問</h2>
+      <ul>
+        <li>
+          <strong>Q. 機種変更したらデータは引き継げますか？</strong><br />
+          A. データは端末内に保存されるため、現行バージョンでは自動引き継ぎに対応していません。今後のアップデートで対応を検討しています。
+        </li>
+        <li>
+          <strong>Q. サブスクリプションの解約方法は？</strong><br />
+          A. iOS の「設定」→ Apple Account →「サブスクリプション」からいつでも解約できます。解約後も期間終了までプレミアムをご利用いただけます。
+        </li>
+        <li>
+          <strong>Q. 広告が表示されるのはなぜですか？</strong><br />
+          A. 無料版の運営のため、Google AdMob による広告を表示しています。手紙の本文画面には広告を表示しません。
+        </li>
+      </ul>
+
+      <h2>お問い合わせ</h2>
+      <div class="my-6 rounded-2xl border px-6 py-6">
+        <p class="text-sm font-semibold">お問い合わせ窓口</p>
+        <p class="mt-2">
+          <strong class="text-lg">X (Twitter) DM：<a href="https://x.com/aimakerlab" target="_blank" rel="noopener noreferrer">@aimakerlab</a></strong>
+        </p>
+        <p class="mt-2 text-xs opacity-70">
+          不具合のご報告・ご要望・プライバシーに関するご相談は、AI Maker Lab 公式 X アカウントの DM までご連絡ください。通常数日以内にお返事します。
+        </p>
+      </div>
+
+      <p>
+        利用者情報の取り扱いについては <a href="/attinomachi/privacy/">プライバシーポリシー</a> をご覧ください。
+      </p>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,88 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import { SITE } from "@/config";
+---
+
+<Layout
+  title={`あっちの街 プライバシーポリシー | ${SITE.title}`}
+  description="モバイルアプリ「あっちの街」における利用者情報の取り扱いについて定めたプライバシーポリシーです。"
+>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout">
+    <section id="attinomachi-privacy" class="app-prose mb-28 max-w-app prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-3xl">あっちの街 プライバシーポリシー</h1>
+      <p class="text-sm opacity-70">最終更新：2026-07-21</p>
+
+      <p>
+        AI Maker Lab（以下「当方」）は、モバイルアプリ「あっちの街」（以下「本アプリ」）における利用者情報の取り扱いについて、本ポリシーを定めます。
+      </p>
+
+      <h2>1. 収集しない情報</h2>
+      <p>
+        本アプリは<strong>アカウント登録が不要</strong>です。氏名・メールアドレス・電話番号などの個人を直接特定する情報は収集しません。手紙・街・図鑑・招待コードなどのデータは、原則として<strong>お使いの端末内（ローカルストレージ）に保存</strong>されます。
+      </p>
+
+      <h2>2. 収集・利用する情報</h2>
+      <p>
+        本アプリは、サービス提供・改善・広告配信・課金管理のため、以下の情報を取得する場合があります。
+      </p>
+      <ul>
+        <li>
+          <strong>広告識別子・利用状況データ</strong>：無料版では第三者配信の広告（Google AdMob）を表示します。これに伴い、広告識別子（IDFA等）、デバイス情報、アプリの利用状況などが広告配信・計測のために取得されることがあります。iOS では事前に「トラッキングの許可」（ATT）を表示し、許可いただいた場合にのみ識別子を用いたトラッキングを行います。
+        </li>
+        <li>
+          <strong>購入情報</strong>：プレミアム（サブスクリプション）の購入・復元・状態管理のため、購入履歴等の情報を RevenueCat 社および Apple（StoreKit）を通じて処理します。
+        </li>
+        <li>
+          <strong>位置情報（任意）</strong>：「街の天気を現実と同期する」機能のため、許可いただいた場合に<strong>おおまかな位置情報</strong>を一時的に利用します。拒否された場合は東京を既定として動作し、機能に支障はありません。位置情報を継続的に保存・送信することはありません。
+        </li>
+      </ul>
+
+      <h2>3. 第三者サービス</h2>
+      <p>本アプリは以下の外部サービスを利用します。各社の取り扱いは各社のポリシーに従います。</p>
+      <ul>
+        <li>
+          <strong>Google AdMob（広告）</strong>：
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>
+        </li>
+        <li>
+          <strong>RevenueCat（課金管理）</strong>：
+          <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">https://www.revenuecat.com/privacy</a>
+        </li>
+        <li>
+          <strong>Apple（App Store / StoreKit）</strong>：
+          <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">https://www.apple.com/legal/privacy/</a>
+        </li>
+        <li>
+          <strong>Open-Meteo（天気データ・位置を保存しない）</strong>：
+          <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener noreferrer">https://open-meteo.com/en/terms</a>
+        </li>
+      </ul>
+
+      <h2>4. 子どものプライバシー</h2>
+      <p>
+        本アプリは特定の年齢層を対象に個人情報を意図的に収集することはありません。保護者の方で懸念がある場合は下記までご連絡ください。
+      </p>
+
+      <h2>5. データの保存と削除</h2>
+      <p>
+        ローカルに保存されたデータは、アプリの削除により端末から消去されます。広告・課金に関する情報の削除等のご要望は、各第三者サービスのポリシー及び下記連絡先で対応します。
+      </p>
+
+      <h2>6. ポリシーの変更</h2>
+      <p>
+        本ポリシーは必要に応じて改定します。重要な変更がある場合は本アプリまたは本ページで告知します。
+      </p>
+
+      <h2>7. お問い合わせ</h2>
+      <p>
+        AI Maker Lab（<a href="/attinomachi/support/">あっちの街 サポートページ</a> 経由でご連絡ください）
+      </p>
+    </section>
+  </main>
+  <Footer />
+</Layout>
