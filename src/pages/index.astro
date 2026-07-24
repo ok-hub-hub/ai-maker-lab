@@ -54,7 +54,7 @@ function pick(slug: string) {
 }
 const pick1 = pick("claude-code-ai-company-1month-2026");
 const pick2 = pick("affiliate-2weeks-zero-to-video-pivot-2026");
-const pick3 = pick("v0-vs-lovable-vs-bolt-2026");
+const pick3 = pick("transcope-review-2026");
 ---
 
 <Layout>
@@ -123,19 +123,19 @@ const pick3 = pick("v0-vs-lovable-vs-bolt-2026");
           <RankItem
             rank={3}
             href={pick3.href}
-            category="ツール比較 / 実測"
+            category="AIライティング / 評判"
             title={pick3.title}
-            summary="Vibe Coding 3大ツールを料金・出力品質・日本語・デプロイで比較。副業・個人開発の用途別に「これを選べ」まで言い切ります。"
+            summary="SEO特化AIライティングツール「Transcope」を実運用3ヶ月で検証。Basic ¥11,000/月の料金が元を取れる人・取れない人の損益分岐を実体験で報告します。"
             dateLabel={pick3.dateLabel}
             minutes={pick3.minutes}
           >
             <ThumbSheet
-              title="料金 実測表"
+              title="Transcope 料金"
               asOf={pick3.dateLabel + "更新"}
               rows={[
-                { label: "v0 by Vercel", value: "$30〜" },
-                { label: "Lovable", value: "$25〜" },
-                { label: "Bolt.new", value: "$20〜" },
+                { label: "Free", value: "¥0（1週間）" },
+                { label: "Basic", value: "¥11,000/月" },
+                { label: "Pro", value: "¥38,500/月" },
               ]}
             />
           </RankItem>
