@@ -4,3 +4,12 @@
 
 # affiliate-2weeks-zero-to-video-pivot-2026 は 2026-07-19 に draft 解除して再公開（301削除済み）
 # handle-acquisition-playwright-3platforms-2026 は 2026-07-02 に draft 解除して再公開（301削除済み）
+
+# 2026-07-25 換金穴の修復：note/zennからの上位着地ページ(週32セッション)が全て404で、
+# 読者がマネーページに辿り着く前に離脱していた（GA4: go_redirect 28日=1・affiliate_click=0の真因）。
+# 存在しないスラッグ→意図が最も近い生きたマネーページへ301で回収する。
+/posts/programming-school-comparison-2026/  /posts/it-engineer-career-start-2026/            301
+/posts/programming-school-hikaku-2026/      /posts/it-engineer-career-start-2026/            301
+/posts/techgo-review-2026/                  /posts/techgo-vs-meiko-career-2026/              301
+/posts/meiko-career-review-2026/            /posts/techgo-vs-meiko-career-2026/              301
+/posts/mixhost-review-2026/                 /posts/hosting-for-individual-developers-2026/   301
