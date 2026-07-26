@@ -4,6 +4,7 @@ pubDatetime: 2026-06-24T22:00:00+09:00
 modDatetime: 2026-07-22T10:00:00+09:00
 title: "忍者CODE 口コミ 2026年版｜3プランの正直評価と悪い評判・副業スキルが身につくか検証"
 slug: ninja-code-review-2026
+primaryGo: meiko-career
 featured: false
 draft: false
 tags:

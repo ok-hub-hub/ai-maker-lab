@@ -3,6 +3,7 @@ author: AI Maker Lab
 pubDatetime: 2026-07-20T09:00:00+09:00
 title: "30代未経験からエンジニア転職は無理？現実と「受かる人」のパターン【2026年版】"
 slug: 30dai-mikeiken-engineer-career-2026
+primaryGo: meiko-career
 featured: false
 draft: false
 tags:

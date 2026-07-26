@@ -4,6 +4,7 @@ pubDatetime: 2026-06-24T21:30:00+09:00
 modDatetime: 2026-07-15T10:00:00+09:00
 title: "ポテパンキャンプ 評判・口コミ2026年版｜料金・転職サポート・向く人/向かない人 正直レビュー"
 slug: potepan-camp-review-2026
+primaryGo: meiko-career
 featured: false
 draft: false
 tags:
