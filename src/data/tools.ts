@@ -981,10 +981,10 @@ export const TOOLS: ToolMeta[] = [
     scale: 2,
     affiliateTier: "S",
     officialUrl: "https://type.career-agent.jp/",
-    // affiliateUrl: TODO_AFFILIATE_URL
-    // もしも promotion_id=7540（成果地点=面談実施 ¥11,000）は 2026-07-20 実照合時点で
-    // キャリアラウンジ媒体(a_id=5673961)のみ提携中。AI Maker Lab媒体(672761)は未提携のため、
-    // AML媒体で提携申請→承認後にAML用テキスト原稿URLを差し込むこと（媒体不一致リンクの流用は規約リスク）。
+    // 2026-07-26 実照合：AI Maker Lab媒体(672761)で「提携中」を確認し、AML専用のテキスト原稿から取得。
+    // a_id=5705681 はAML媒体固有（キャリアラウンジ用の a_id=5673961 とは別物・流用は規約違反）。
+    affiliateUrl:
+      "https://af.moshimo.com/af/c/click?a_id=5705681&p_id=7540&pc_id=21772&pl_id=94510",
     serviceType: "agent",
     conversionPoint: "free-counseling",
     payoutJpy: 11000,
@@ -999,8 +999,8 @@ export const TOOLS: ToolMeta[] = [
       "求人は首都圏（一都三県）中心で、地方在住だと紹介案件が限られる場合がある",
       "当編集部では面談サービスを未検証（公式情報ベースの紹介）",
     ],
-    verifiedAt: "2026-07-20",
-    note: "もしも type転職エージェントの面談実施（promotion_id=7540・¥11,000）。AI Maker Lab媒体は未提携＝affiliateUrl未設定（officialUrlフォールバック中・報酬は発生しない）。編集部未検証のため記事では体験談を書かないこと。",
+    verifiedAt: "2026-07-26",
+    note: "もしも type転職エージェントの面談実施（promotion_id=7540・¥11,000）。**2026-07-26にAI Maker Lab媒体で提携中を実照合しaffiliateUrlを配線済み**（それまでは素URLで報酬0円だった）。編集部未検証のため記事では体験談を書かないこと。",
   },
   {
     id: "terracam-ai",
