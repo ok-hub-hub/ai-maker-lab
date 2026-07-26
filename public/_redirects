@@ -13,3 +13,20 @@
 /posts/techgo-review-2026/                  /posts/techgo-vs-meiko-career-2026/              301
 /posts/meiko-career-review-2026/            /posts/techgo-vs-meiko-career-2026/              301
 /posts/mixhost-review-2026/                 /posts/hosting-for-individual-developers-2026/   301
+
+# 2026-07-26 換金穴の本丸を修復（GA4実測）：28日で全PV360のうち約149PV(41%)が
+# 存在しないURLに着地し、/go/ のPVが0件だった＝読者は来ているのに換金導線に到達できていない。
+# note/zenn/qiitaから月300セッション来ているので、ここが最大のマネタイズ機会損失。
+# 上位404を、意図が最も近く /go/ 導線を持つ生きた記事へ301で回収する。
+/posts/30dai-engineer-career-2026/               /posts/30dai-mikeiken-engineer-career-2026/   301
+/posts/30s-engineer-career-change-2026/          /posts/30dai-mikeiken-engineer-career-2026/   301
+/posts/engineer-career-change-30s-2026/          /posts/30dai-mikeiken-engineer-career-2026/   301
+/posts/30dai-engineer-career-change-2026/        /posts/30dai-mikeiken-engineer-career-2026/   301
+/posts/30dai-inexperienced-engineer-career-2026/ /posts/30dai-mikeiken-engineer-career-2026/   301
+/posts/30dai-it-career-change-2026/              /posts/30dai-mikeiken-engineer-career-2026/   301
+/posts/career-change-30s-engineer-2026/          /posts/30dai-mikeiken-engineer-career-2026/   301
+/posts/30dai-miken-engineer-career-2026/         /posts/30dai-mikeiken-engineer-career-2026/   301
+/posts/career-company-review-2026/               /posts/it-engineer-career-start-2026/         301
+/posts/programming-school-compare-2026/          /posts/it-engineer-career-start-2026/         301
+/posts/potepan-camp-vs-ninja-code-2026/          /posts/potepan-camp-review-2026/              301
+/posts/elevenlabs-review-2026/                   /posts/catchy-vs-transcope-2026/              301
