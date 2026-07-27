@@ -389,7 +389,7 @@
 - ✅ OG画像: public/aimaker-lab-og.jpg 実在確認
 
 ### push
-- commit: TBD
+- commit: 1fd52f9
 - push: origin/main → Cloudflare Pages 自動デプロイ
 
 ### 次サイクル候補
