@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-07-02T11:50:00+09:00
-modDatetime: 2026-07-17T11:00:00+09:00
+modDatetime: 2026-07-29T01:00:00+09:00
 title: "AIライティングツール比較2026：毎日記事を量産する運用者が「4つ」に絞った理由【Catchy/Transcope/ChatGPT/Claude】"
 slug: ai-writing-tools-comparison-2026
 featured: true
@@ -47,6 +47,8 @@ affiliateCta:
 | たまに文章を手伝ってほしいだけ | **ChatGPT（無料〜）** | 単発なら専用ツールは不要。まず無料で十分 |
 | 長文の論理構成・リライト・コードも書かせたい | **Claude** | 長文の一貫性と自然な日本語に強み。開発者はClaude Code展開も |
 | まだ決めかねている | [AI診断（5問・30秒）](/diagnose/) | 用途・予算・経験から自動で絞り込みます |
+
+![AIライティングツール4種の用途別比較図。Catchy・Transcope・ChatGPT・Claudeの向いている用途と料金の目安を整理](/images/posts/ai-writing-tools-comparison-2026/ai-writing-tools-figure.png)
 
 ## 4ツール比較表（◎○△×）
 

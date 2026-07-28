@@ -3,7 +3,7 @@ author: AI Maker Lab
 pubDatetime: 2026-06-05T19:00:00+09:00
 title: "Transcope vs Catchy どっちがいい？【2026年7月】3ヶ月使ったAIライターの比較結論"
 slug: catchy-vs-transcope-2026
-modDatetime: 2026-07-23T10:00:00+09:00
+modDatetime: 2026-07-29T01:00:00+09:00
 featured: true
 draft: false
 tags:
@@ -57,6 +57,8 @@ affiliateCta:
   <p class="font-bold text-sky-900">🧭 1行診断：迷ったらこれだけ</p>
   <p class="mt-2 text-sky-950">「<strong>まだ記事が売上を生んでいない</strong>」なら <a href="/go/catchy">Catchy（Freeで今日から）</a>／「<strong>記事1本が売上・問い合わせにつながる事業</strong>」なら <a href="/go/transcope">Transcope（Free 1週間で検証）</a>。どちらも無料から始められるので、先に触ってから決めるのが最短です。</p>
 </div>
+
+![CatchyとTranscopeの用途別比較図。Catchyは叩き台・短文の量産向けで無料10クレジットから、Transcopeは長文SEO・競合分析向けで当サイト採用](/images/posts/catchy-vs-transcope-2026/catchy-vs-transcope-figure.png)
 
 ## 2ツール比較表（料金・日本語・SEO・得意領域）
 
