@@ -19,6 +19,8 @@ description: "バイブコーディングツールを探しているあなたへ
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 
+> **広告に関する表記**：本記事には [お名前.com](/go/onamae)・[mixhost](/go/mixhost) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと、AI Maker Lab に紹介料が発生する場合があります。ツールの評価・比較そのものは、独立した立場で執筆しています。
+
 ## Vibe Coding とは何か（30秒で説明）
 
 「**こんなアプリが欲しい**」と日本語で指示すると、AI が UI と最低限のロジックを生成し、そのままブラウザでプレビューできる、新しいタイプのアプリ開発体験のことを **Vibe Coding（ヴァイブコーディング）** と呼びます。
