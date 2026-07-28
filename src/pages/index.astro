@@ -173,7 +173,8 @@ const pick3 = pick("transcope-review-2026");
               need: "どのツールを使うか、今日決めたい",
               label: "1分でAI診断する",
               href: "/diagnose/",
-              desc: `用途・経験・予算の5問で、${TOOLS.length}ツールからあなたに合う3つに絞って提案します。`,
+              // 診断は category で絞るため、カテゴリ未設定（＝診断対象外）のエントリは数に含めない
+              desc: `用途・経験・予算の5問で、${TOOLS.filter(t => t.category.length > 0).length}ツールからあなたに合う3つに絞って提案します。`,
             },
           ]}
         />
