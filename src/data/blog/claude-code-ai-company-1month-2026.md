@@ -13,6 +13,9 @@ tags:
   - vibe-coding
   - ai-agent
 description: "Claude Code を「個人開発の助っ人」ではなく、CEO・QA・事業開発・技術検証の4部門を持つ「AI会社」として1ヶ月運営してきた運用記録です。役割定義書の中身、相談処理フロー、失敗事例、1ヶ月の実績数字まで、誰も書いていない部分を全部公開します。"
+affiliateCta:
+  - id: onamae
+    lead: "AIで作ったものを公開する段になると、最初に要るのは独自ドメインです。検索は無料で試せます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100 via-blue-100 to-indigo-100 sm:h-32">
@@ -21,8 +24,8 @@ description: "Claude Code を「個人開発の助っ人」ではなく、CEO・
 </div>
 
 > 本記事は **AI Maker Lab の個人ジャーナル（連載企画 #1）** です。Vibe Coding ツールのレビューや比較ではなく、**「実際に何が起きているか」** を月次で公開していきます。
->
-> **広告に関する表記**：本記事には [お名前.com](/go/onamae)・[明光キャリアパートナーズ](/go/meiko-career)・[TechGo](/go/techgo) を経由するリンクが含まれます。リンク経由でのお申し込みにより、AI Maker Lab に紹介料が発生する場合があります。運営ログ・数字は広告と無関係の実記録です。
+
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・明光キャリアパートナーズ・TechGo。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## この記事の30秒結論
 

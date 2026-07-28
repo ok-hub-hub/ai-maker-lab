@@ -14,6 +14,9 @@ tags:
   - beginner
   - review
 description: "「忍者CODE 口コミ」を調べているあなたへ。3つのプランの正直評価・よく挙がる悪い評判・AIと組み合わせた副業スキルが本当に身につくか・ポテパンキャンプとの比較まで忖度なしでまとめます。"
+affiliateCta:
+  - id: meiko-career
+    lead: "スクールと並行して、IT転職エージェントの無料相談で「今の自分がどこまで狙えるか」を先に確認しておくと判断が早くなります。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-indigo-100 to-violet-100 sm:h-32">
@@ -25,7 +28,7 @@ description: "「忍者CODE 口コミ」を調べているあなたへ。3つの
 
 「スクールはいきなり高額で踏み出せない」という未経験者に選択肢として挙がるのが **忍者CODE**。本記事では、特徴・評判・向く人/向かない人を忖度なしでまとめます。結論は、**まず無料相談で自分に合うプランを確認**するのが正解です。
 
-> **広告に関する表記**：本記事には [忍者CODE](/go/ninja-code)・[ポテパンキャンプ](/go/potepan-camp)・[明光キャリアパートナーズ](/go/meiko-career) を経由するリンクが含まれます。リンク経由でのお申し込みにより、AI Maker Lab に紹介料が発生する場合があります。**相談・面談はいずれも無料**で、内容は公平な視点で書いています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：忍者CODE・ポテパンキャンプ・明光キャリアパートナーズ。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 

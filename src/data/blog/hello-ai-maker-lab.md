@@ -26,7 +26,7 @@ AI Maker Lab は、AIで個人が「実際に作って公開する」ことに�
   <p class="mt-2 text-sm leading-7 text-indigo-900">単なるツール紹介ではなく「Claude Code を中核とする AI 編集部 ＋ 個人開発者の実体験 ＋ 各社公式公開情報」を組み合わせて記録する Vibe Coding 実践ジャーナルです。AI 駆動で動くメディアの裏側もそのまま開示します。公式情報で裏取りできないツールはアフィリ誘導しません。</p>
 </aside>
 
-> **広告に関する表記**：本記事には [お名前.com](/go/onamae)・[ConoHa WING](/go/conoha)・[エックスサーバー](/go/xserver) を経由するリンクが含まれます。リンク経由でのお申し込みにより、AI Maker Lab に紹介料が発生する場合があります。構成・費用は実際に本サイトで使っているものをそのまま書いています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・ConoHa WING・エックスサーバー。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## このサイトでやらないこと
 

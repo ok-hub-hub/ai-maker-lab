@@ -13,6 +13,9 @@ tags:
   - reskilling
   - 30代
 description: "「30代・未経験ではエンジニア転職は無理」は本当か。難しいのが現実だが受かる人には共通パターンがある。転職エージェントとスクールの使い分け、最初に無料で確認すべきことをまとめます。"
+affiliateCta:
+  - id: meiko-career
+    lead: "30代・未経験からのIT転職を扱うエージェント。無料の面談から相場と現実的な道筋を確認できます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-violet-100 to-sky-100 sm:h-32">
@@ -24,7 +27,7 @@ description: "「30代・未経験ではエンジニア転職は無理」は本�
 
 AIツールを触り始めて「自分もIT/開発の仕事をしたい」と思い始めた30代の方から、このような声をよく受け取ります。本記事では **「30代未経験エンジニア転職」の現実**と、それでも受かる人に共通するパターンを、忖度なしでまとめます。
 
-> **広告に関する表記**：本記事には [明光キャリアパートナーズ](/go/meiko-career)・[TechGo](/go/techgo)・[type転職エージェント](/go/type-tenshoku)・[キャリアカンパニー](/go/career-company)・[ポテパンキャンプ](/go/potepan-camp)・[忍者CODE](/go/ninja-code) へのアフィリエイトリンクが含まれます。リンク経由でのお申し込みにより、AI Maker Lab に紹介料が発生する場合があります。**相談・カウンセリングはいずれも無料**で、内容は公平な視点で書いています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：明光キャリアパートナーズ・TechGo・type転職エージェント・キャリアカンパニー・ポテパンキャンプ・忍者CODE。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 

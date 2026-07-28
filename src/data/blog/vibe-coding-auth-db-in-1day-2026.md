@@ -15,6 +15,9 @@ tags:
   - cloudflare-pages
   - implementation
 description: "Lovable × Supabase × Cloudflare Pages で認証 + RLS 込みのアプリを8時間で公開する実装ガイド【2026年7月版】。月額費用・CORS/OAuth/メール未着の3大トラブル対策・RLS 漏洩防止まで一次情報をもとに整理。"
+affiliateCta:
+  - id: onamae
+    lead: "時間割の18:00「本番ドメイン接続」で必要になります。取得からDNS反映まで時間がかかるので、着手前に押さえておくと安全です。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 sm:h-32">
@@ -27,8 +30,8 @@ description: "Lovable × Supabase × Cloudflare Pages で認証 + RLS 込みの�
 これは AI Maker Lab 編集部に届く相談で、二番目に多いテーマです。本記事は **Lovable × Supabase × Cloudflare Pages で「ログインつき ToDo アプリ」を1日（8時間）で公開する時間割** を、9:00 から20:00 まで1時間単位で示します。
 
 > 本記事は **AI Maker Lab 編集部（運営者 + AI 編集部の協働運用）が Lovable と Supabase を実際に運用して、本番公開までを複数回再現した一次経験** をもとに執筆しています。料金・機能は 2026-07 時点の公式情報です。
->
-> **広告に関する表記**：本記事には [お名前.com](/go/onamae/)・[mixhost](/go/mixhost/) を経由するリンクが含まれます。リンク経由でのお申し込みにより、AI Maker Lab に紹介料が発生する場合があります。ツールの評価・手順は広告と無関係に実体験で書いています。
+
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・mixhost。評価・手順は広告と無関係に実体験で書いています。</p>
 
 <div class="my-6 rounded-xl bg-emerald-50 border border-emerald-200 p-5">
   <p class="font-bold text-emerald-900 mb-3">この記事でわかること</p>

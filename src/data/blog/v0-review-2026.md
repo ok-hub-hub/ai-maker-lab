@@ -12,6 +12,9 @@ tags:
   - vercel
   - ui-generator
 description: "v0 by Vercel の2026年最新料金（Free $0・Team $30〜）、1日7メッセージ無料枠の現実、Lovable / Bolt との違い、個人開発者が損益分岐点まで実践レビュー。"
+affiliateCta:
+  - id: onamae
+    lead: "v0の出力は *.vercel.app のままでも動きますが、人に使ってもらう段階では独自ドメインで信用が変わります。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-cyan-100 via-sky-100 to-indigo-100 sm:h-32">
@@ -19,7 +22,7 @@ description: "v0 by Vercel の2026年最新料金（Free $0・Team $30〜）、1
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 
-> **広告に関する表記**：本記事には [お名前.com](/go/onamae) を経由するリンクが含まれます。リンク経由でのお申し込みにより、AI Maker Lab に紹介料が発生する場合があります。v0 の評価は広告と無関係に実体験で書いています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 結論：v0 は「Next.js + Tailwind を書ける/書きたい人」の生産性を 2-3倍 にする
 

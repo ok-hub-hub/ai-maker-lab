@@ -12,6 +12,10 @@ tags:
   - comparison
   - llm
 description: "Claude Opus 4.8 vs GPT-5.5を日本語ライティング用途で徹底比較。API料金（Opus 4.8: $5/$25・GPT-5.5: $5/$30 per MTok）・速度・日本語品質の3軸に加え、GPT-5.6登場後の選び方とSonnet 5コスパ優位をあわせて解説。どのモデルに課金すべきか迷う人向けの結論付き比較記事。"
+affiliateCta:
+  - id: catchy
+    experienced: true
+    lead: "モデル選び以前に「手が止まる」問題を解くなら、テンプレ選択式のCatchyが向きます。無料10クレジットで試せます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-blue-100 via-indigo-100 to-violet-100 sm:h-32">
@@ -25,7 +29,7 @@ description: "Claude Opus 4.8 vs GPT-5.5を日本語ライティング用途で�
 
 本記事では、**AIで複数メディアの日本語SEO記事を量産している運用目線**で、価格・速度・日本語用途の3軸を比較します。
 
-> **広告に関する表記**：本記事には [Catchy](/go/catchy)・[Transcope](/go/transcope) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと AI Maker Lab に紹介料が発生する場合があります。レビュー内容は実際の運用にもとづき公平な視点で執筆しています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：Catchy・Transcope。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 

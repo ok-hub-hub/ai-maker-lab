@@ -12,6 +12,10 @@ tags:
   - chatgpt
   - comparison
 description: "「ChatGPT 無料で十分？Catchy や Transcope にわざわざお金を払う必要はある？」実際に複数メディアでAI文章生成を運用してきた目線で、ChatGPTで足りる人・専用ツールへ移行すべき人を判断軸ごとに正直にまとめます。"
+affiliateCta:
+  - id: catchy
+    experienced: true
+    lead: "ChatGPTで足りる場面と、テンプレ選択で手が止まらないCatchyが効く場面は別です。無料10クレジットで試せます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100 via-sky-100 to-violet-100 sm:h-32">
@@ -25,7 +29,7 @@ description: "「ChatGPT 無料で十分？Catchy や Transcope にわざわざ�
 
 結論から言うと、「ChatGPT で十分な人」と「専用ツールが必要な人」には明確な境界線があります。それは**書く頻度**と**SEO への本気度**です。本記事では、実際に AI 駆動で複数メディアを運用してきた立場から、その境界線を具体的に引きます。
 
-> **広告に関する表記**：本記事には [Catchy](/go/catchy) および [Transcope](/go/transcope) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと、AI Maker Lab に紹介料が発生する場合があります。比較内容そのものは、実際に使った上で独立した立場で執筆しています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：Catchy・Transcope。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 

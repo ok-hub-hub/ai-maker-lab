@@ -12,6 +12,10 @@ tags:
   - automation
   - claude
 description: "Claude CoworkでCatchy（タイトル・見出し生成）とTranscope（SEO本文）を自律操作させ、キーワード入力から記事ドラフト完成まで自動化した実録。具体的な指示文・各ステップのつまずきポイント・料金シミュレーションを公開します。"
+affiliateCta:
+  - id: transcope
+    experienced: true
+    lead: "長文SEO・競合分析まで一本で通すならTranscope。Free（1週間）で主要機能を試せます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-blue-100 to-violet-100 sm:h-32">
@@ -23,7 +27,7 @@ description: "Claude CoworkでCatchy（タイトル・見出し生成）とTrans
 
 ブラウザを自律的に操作できる Claude Cowork の、もっとも費用対効果が高い使い道のひとつが **ブログ記事の生産フロー自動化** です。本記事では、AI Maker Lab が実際に試した「**Claude Cowork を指揮官として、Catchy でタイトル・見出しを生成させ、Transcope でSEO本文を生成させる 3 ツール連携フロー**」を、手順・つまずきポイント・料金シミュレーションまで含めて公開します。
 
-> **広告に関する表記**：本記事には [Catchy](/go/catchy) および [Transcope](/go/transcope) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと AI Maker Lab に紹介料が発生する場合があります。レビュー内容は実際に使った上で公平な視点で執筆しています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：Catchy・Transcope。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 

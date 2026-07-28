@@ -14,6 +14,9 @@ tags:
   - ui-generator
   - comparison
 description: "v0 by Vercel（$30〜）/ Lovable（$25〜）/ Bolt.new（$20〜）の3ツールを料金・出力品質・日本語・デプロイで徹底比較。副業・個人開発の用途別に「これを選べ」を提示します。"
+affiliateCta:
+  - id: onamae
+    lead: "3ツールのどれで作っても、人に使ってもらう段階では独自ドメインが要ります。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-fuchsia-100 via-rose-100 to-orange-100 sm:h-32">
@@ -25,7 +28,7 @@ description: "v0 by Vercel（$30〜）/ Lovable（$25〜）/ Bolt.new（$20〜�
 
 [Vibe Coding 完全ガイド](/posts/vibe-coding-guide-2026/) を公開した直後、読者から最も多く届いた質問がこれでした。本記事では、この3ツールを個人開発者の現実的な評価軸で並べ、用途別の最適解を整理します。
 
-> **広告に関する表記**：本記事には [お名前.com](/go/onamae) および [mixhost](/go/mixhost) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと、AI Maker Lab に紹介料が発生する場合があります。比較内容そのものは、公平な視点で執筆しています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・mixhost。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 

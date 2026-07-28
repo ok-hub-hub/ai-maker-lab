@@ -13,6 +13,9 @@ tags:
   - ide
   - cli
 description: "Cursor（AI内蔵 IDE）と Claude Code（CLI ベース AI コーディングエージェント）。両者を設計思想・得意領域・料金プランで並べ、個人開発者が実務でどう使い分ければよいかを編集部が整理しました。乗り換えではなく『役割分担』が現実解という結論です。"
+affiliateCta:
+  - id: onamae
+    lead: "どちらのエディタで作っても、公開して人に使ってもらうには独自ドメインが要ります。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-100 via-amber-100 to-orange-100 sm:h-32">
@@ -229,7 +232,7 @@ Cursor は複数モデルを選択可能で、Claude を含む各種モデルを
 
 **ツールの向き・不向きに関する評価**は、執筆者および [AI Maker Lab](https://aimaker-lab.com/) 編集チームによる実使用感に基づく所感であり、定量的な比較試験の結果ではありません。あくまで1つの参考として、ご自身の用途に合うかは無料枠で試した上でご判断ください。
 
-> **広告に関する表記**：本記事には [お名前.com](/go/onamae) および [mixhost](/go/mixhost) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと、AI Maker Lab に紹介料が発生する場合があります。比較内容そのものは、公平な視点で執筆しています。Cursor および Claude Code 自体については、現時点でアフィリエイト提携を行っていません。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・mixhost。評価・手順は広告と無関係に実体験で書いています。</p>
 
 <script type="application/ld+json">
 {

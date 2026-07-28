@@ -11,6 +11,9 @@ tags:
   - conoha
   - review
 description: "GPUなし・Mac環境でStable Diffusion（AUTOMATIC1111/ComfyUI）をブラウザだけで使えるクラウドサービス「ConoHa AI Canvas」の正直レビュー。料金・できること・弱点を2026年5月の実接続データで解説します。"
+affiliateCta:
+  - id: conoha-ai-canvas
+    lead: "ブラウザだけでStable Diffusionを動かせるGPU環境。時間課金なので、まず短時間で試せます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-violet-100 via-purple-100 to-fuchsia-100 sm:h-32">
@@ -22,7 +25,7 @@ description: "GPUなし・Mac環境でStable Diffusion（AUTOMATIC1111/ComfyUI�
 
 AI画像生成に手を出そうとした多くの人が最初にぶつかる壁です。本記事では、この問題を**ブラウザだけで解決できる国内クラウドサービス「ConoHa AI Canvas」**について、実際の料金・できること・正直な弱点まで解説します。
 
-> **広告に関する表記**：本記事には [ConoHa AI Canvas](/go/conoha-ai-canvas) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと、AI Maker Lab に紹介料が発生する場合があります。レビュー内容そのものは、調査した上で公平な視点で執筆しています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：ConoHa AI Canvas。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 

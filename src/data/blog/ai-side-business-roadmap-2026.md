@@ -12,6 +12,9 @@ tags:
   - affiliate
   - vibe-coding
 description: "AIで副業収益を作りたい個人開発者・会社員向け、月収レンジ別ロードマップ。3つの収益化パス（アフィリ／プロダクト販売／スキル販売）の選び方、必要な道具、よくある失敗パターンまで現実ベースで整理。"
+affiliateCta:
+  - id: mixhost
+    lead: "副業ブログで収益化を狙うなら、WordPressが動く国内サーバーが出発点になります。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 sm:h-32">
@@ -25,7 +28,7 @@ description: "AIで副業収益を作りたい個人開発者・会社員向け�
 
 本記事は、**2026年5月時点で「個人がAIで現実的に収益を作る」ための道筋**を、月収レンジ別のロードマップに落とし込んだものです。
 
-> **広告に関する表記**：本記事には [お名前.com](/go/onamae) および [mixhost](/go/mixhost) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと、AI Maker Lab に紹介料が発生する場合があります。本記事の内容そのものは、独立した立場で執筆しています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・mixhost。評価・手順は広告と無関係に実体験で書いています。</p>
 
 <aside class="my-8 rounded-xl border border-amber-200 bg-amber-50 p-5">
   <p class="font-bold text-amber-950">今日やるなら、この順番です</p>

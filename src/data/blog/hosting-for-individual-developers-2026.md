@@ -14,6 +14,9 @@ tags:
   - mixhost
   - vibe-coding
 description: "Vibe Coding で作ったアプリ、AI副業ブログ、WordPress、それぞれに最適なホスティングは違います。Vercel / Cloudflare Pages / Netlify / mixhost を、料金・速度・運用負荷で個人開発者目線で比較しました。"
+affiliateCta:
+  - id: mixhost
+    lead: "比較したなかで、WordPressでSEO記事サイトを回すなら国内サーバーのmixhost。LiteSpeed + LSCache が標準で効きます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-100 sm:h-32">
@@ -25,7 +28,7 @@ description: "Vibe Coding で作ったアプリ、AI副業ブログ、WordPress�
 
 [Vibe Coding 完全ガイド](/posts/vibe-coding-guide-2026/) と [AI副業ロードマップ](/posts/ai-side-business-roadmap-2026/) の公開後、最も多く届いた質問の1つがこれでした。本記事では、個人開発者・副業ブロガー視点で「**目的別にどのホスティングを選ぶべきか**」を整理します。
 
-> **広告に関する表記**：本記事には [mixhost](/go/mixhost)・[お名前.com](/go/onamae) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと、AI Maker Lab に紹介料が発生する場合があります。比較の中身そのものは、独立した立場で執筆しています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：mixhost・お名前.com。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 

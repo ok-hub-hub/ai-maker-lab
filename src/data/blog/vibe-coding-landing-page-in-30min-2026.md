@@ -14,6 +14,9 @@ tags:
   - tailwind
   - implementation
 description: "v0 と Lovable で LP を30分以内に作る実装パターンを10種類、プロンプト例とツール別手順で網羅。ヒーローのみ・3カラム・FAQ・縦長 LP・料金表・申し込みフォーム・A/B テスト・モバイル特化・shadcn/ui・Tailwind v4 ダーク対応まで編集部の所見付きで解説します。"
+affiliateCta:
+  - id: onamae
+    lead: "作ったLPを「自分の資産」にする段階で必要になるのが独自ドメイン。乗り換えの自由を残すための投資です。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-fuchsia-100 via-pink-100 to-orange-100 sm:h-32">
@@ -26,8 +29,8 @@ description: "v0 と Lovable で LP を30分以内に作る実装パターンを
 これは AI Maker Lab 編集部に届く相談のなかで、いちばん多いテーマです。本記事は **v0 by Vercel と Lovable の2つを軸に、LP を30分以内に作るための実装パターン10種類**を、プロンプト例・ツール別手順・編集部所見つきで整理しました。AI 駆動の個人開発に振り切ったメディアとして、編集部が実際に使っている再現性のあるテンプレート集としてご活用ください。
 
 > 本記事は **AI Maker Lab 編集部（運営者 + AI 編集部の協働運用）が 2026-04〜2026-05 にかけて [v0](/posts/v0-review-2026/) / [Lovable](/posts/v0-vs-lovable-vs-bolt-2026/) で実際に LP を量産した一次経験** をベースに執筆しています。料金・機能は 2026-05 時点の公式情報です。
->
-> **広告に関する表記**：本記事には [お名前.com](/go/onamae/) を経由するリンクが含まれます。リンク経由でのお申し込みにより、AI Maker Lab に紹介料が発生する場合があります。パターン・ツールの評価は広告と無関係に実体験で書いています。
+
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## この記事で扱う10パターン
 

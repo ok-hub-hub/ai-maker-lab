@@ -15,6 +15,9 @@ tags:
   - claude-code
   - implementation
 description: "v0 / Lovable / Cursor / Claude Code / Supabase を組み合わせて、SaaS MVP を1週間で動かすロードマップ。Day1 アイデア整理から Day7 公開告知まで、編集部の実装日記とトラブルシュート込みで具体タスクを提示します。"
+affiliateCta:
+  - id: onamae
+    lead: "7日ロードマップで唯一「待ち時間」が出るのがドメインです。Day 1 に取っておくと7日が守れます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 sm:h-32">
@@ -27,8 +30,8 @@ description: "v0 / Lovable / Cursor / Claude Code / Supabase を組み合わせ�
 AI Maker Lab 編集部に届く相談で、いちばん多いテーマです。本記事は **v0 / Lovable / Cursor / Claude Code / Supabase を組み合わせて、SaaS MVP を1週間（実働7日）で動かすロードマップ**を、Day 別タスク・編集部の実装日記・トラブルシュートまで含めて提示します。
 
 > 本記事は **AI Maker Lab 編集部（運営者 + AI 編集部の協働運用）が、実際に複数のミニ SaaS（[ココラボ](https://kokolabo.jp/) や [キャリアラウンジ](https://careerlounge.jp/) などのメディアサイト本体および付随する内部ツール）を作るなかで蓄積した一次経験** をもとに執筆しています。料金・機能は 2026-05 時点の公式情報です。
->
-> **広告に関する表記**：本記事には [お名前.com](/go/onamae)・[ConoHa WING](/go/conoha)・[エックスサーバー](/go/xserver) を経由するリンクが含まれます。リンク経由でのお申し込みにより、AI Maker Lab に紹介料が発生する場合があります。ツールの評価・手順は広告と無関係に実体験で書いています。
+
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・ConoHa WING・エックスサーバー。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 結論：1週間スケジュール（Day1-7）
 

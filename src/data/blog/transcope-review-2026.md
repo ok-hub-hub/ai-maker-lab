@@ -31,7 +31,7 @@ affiliateCta:
 
 SEO特化のAIライティングツールとして名前が挙がる **Transcope（トランスコープ）**。最大の悩みは「料金」です。本記事では、**実際にAIで複数メディアの記事を量産してきた運用目線**で、Transcope の強み・正直な弱点・料金・「元が取れる人/取れない人」を、忖度なしでまとめます。
 
-> **広告に関する表記**：本記事には [Transcope](/go/transcope)・[Catchy](/go/catchy) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと、AI Maker Lab に紹介料が発生する場合があります。レビュー内容そのものは、実際に使った上で公平な視点で執筆しています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：Transcope・Catchy。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 

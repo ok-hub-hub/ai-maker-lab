@@ -12,6 +12,9 @@ tags:
   - ui-generator
   - prompt-patterns
 description: "v0 by Vercel を使いこなすための実装パターンを、ランディングページから管理画面・ダッシュボード・認証フォームまで10種類のプロンプト例とコードコールアウトで紹介。個人開発でハマる落とし穴も合わせて解説します。"
+affiliateCta:
+  - id: onamae
+    lead: "UIが量産できるようになると、次に足りないのは置き場所です。実費は年1,000〜2,000円台のドメイン代だけ。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-cyan-100 via-sky-100 to-blue-100 sm:h-32">
@@ -24,8 +27,8 @@ description: "v0 by Vercel を使いこなすための実装パターンを、�
 これは編集部に届くもっとも多い相談の1つです。本記事では、**個人開発者が v0 で実際によく使う10種類の実装パターン**を、プロンプト例・出力イメージ・実装難度バッジ付きで整理しました。AI 駆動で UI を量産したい人の作業テンプレ集として使ってください。
 
 > 本記事は **AI Maker Lab 編集部が 2026-04 〜 2026-05 にかけて v0 Free / Team プランで実際に試した結果** をもとに書いています。価格・機能は 2026-05-19 時点の [v0.app](https://v0.app/) 公式情報です。
->
-> **広告に関する表記**：本記事には [お名前.com](/go/onamae) を経由するリンクが含まれます。リンク経由でのお申し込みにより、AI Maker Lab に紹介料が発生する場合があります。パターン・評価は広告と無関係に実体験で書いています。
+
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 難度バッジの見方
 

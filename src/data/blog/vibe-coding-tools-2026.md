@@ -14,6 +14,9 @@ tags:
   - v0
   - hosting
 description: "vibe coding ツール 無料で始めたい人へ。AI IDE型（Claude Code/Cursor/Cline）とAIアプリビルダー型（v0/Bolt/Lovable）の全7ツールを、副業で作って公開するフロー×料金×無料枠で徹底比較。作ったものを公開するホスティング選びまで一気通貫で解説。2026年7月更新。"
+affiliateCta:
+  - id: conoha
+    lead: "作ったものをWordPressで公開・運用するなら、36ヶ月契約で月額660円台からのConoHa WINGが最安級です。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 sm:h-32">
@@ -27,7 +30,7 @@ Claude Code、Cursor、Cline、v0、Bolt、Lovable——選択肢が増えすぎ
 
 本記事では、**AI IDE型**（コードが読める人向き）と**AIアプリビルダー型**（コードをほぼ書かない人向き）の2カテゴリ・全7ツールを、**副業で作って公開するフロー**の観点から比較します。「作ったら終わり」ではなく、**どこで公開してどう収益化するか**まで含めて整理するのが、他のまとめ記事との違いです。
 
-> **広告に関する表記**：本記事には [ConoHa WING](/go/conoha) および [エックスサーバー](/go/xserver) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと、AI Maker Lab に紹介料が発生する場合があります。ツール比較の内容そのものは、実際に使用した上で独立した立場から執筆しています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：ConoHa WING・エックスサーバー。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 

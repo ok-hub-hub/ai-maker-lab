@@ -12,6 +12,9 @@ tags:
   - ui-generator
   - tutorial
 description: "バイブコーディングツールを探しているあなたへ。無料から始められる v0・Lovable・Bolt・Replit Agent・Figma Make の5ツールを料金・無料枠・向いている人で比較。副業月5万円への活用ステップも解説します【2026年7月更新】。"
+affiliateCta:
+  - id: onamae
+    lead: "Vibe Codingで作ったものを公開する段階で必要になるのが独自ドメインです。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 sm:h-32">
@@ -19,7 +22,7 @@ description: "バイブコーディングツールを探しているあなたへ
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 
-> **広告に関する表記**：本記事には [お名前.com](/go/onamae)・[mixhost](/go/mixhost) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと、AI Maker Lab に紹介料が発生する場合があります。ツールの評価・比較そのものは、独立した立場で執筆しています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・mixhost。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## Vibe Coding とは何か（30秒で説明）
 

@@ -13,6 +13,10 @@ tags:
   - chatgpt
   - claude
 description: "GPT-5.6 Luna（$1/$6 per MTok）vs Claude Sonnet 5（$2/$10 イントロ〜8/31）を低コスト量産の観点で徹底比較。月100本の実コスト差・日本語品質・どちらを選ぶべきかを実測ベースで整理。GPT-5.6 Sol・Terra の料金・用途も解説します。"
+affiliateCta:
+  - id: catchy
+    experienced: true
+    lead: "モデルの比較とは別に、日本語ブログの叩き台を量産するならテンプレ型のCatchyが速いです。無料10クレジットで試せます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-orange-100 via-amber-100 to-yellow-100 sm:h-32">
@@ -26,7 +30,7 @@ description: "GPT-5.6 Luna（$1/$6 per MTok）vs Claude Sonnet 5（$2/$10 イン
 
 本記事では、**AI で複数メディアの日本語 SEO 記事を運用する目線**で、GPT-5.6 3モデルと Claude Sonnet 5 を料金・日本語品質・速度・コスパの4軸で比較します。「どのモデルを使えばいいか」だけでなく、「そもそも API を直接叩くべきかどうか」まで踏み込んで整理します。
 
-> **広告に関する表記**：本記事には [Catchy](/go/catchy)・[Transcope](/go/transcope) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと AI Maker Lab に紹介料が発生する場合があります。モデル比較の内容は実際の運用経験にもとづき公平な視点で執筆しています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：Catchy・Transcope。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 

@@ -12,6 +12,9 @@ tags:
   - cloudflare
   - vibe-coding
 description: "AI副業ブログや個人プロダクトを始めるとき、最初に立ちはだかるのがドメイン選び。.com / .dev / .app の使い分けと、お名前.com / Cloudflare Registrar / Namecheap の比較を、個人開発者の現実的視点で整理しました。"
+affiliateCta:
+  - id: onamae
+    lead: "国内最大手。空きドメインの検索は無料で、取得だけが有料です。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-teal-100 via-emerald-100 to-lime-100 sm:h-32">
@@ -23,7 +26,7 @@ description: "AI副業ブログや個人プロダクトを始めるとき、最�
 
 [ホスティング選びガイド](/posts/hosting-for-individual-developers-2026/) を公開した直後、最も多く届いた質問がこれでした。本記事では、**TLD（.com / .dev / .app 等）の選び方**と、**レジストラ（お名前.com / Cloudflare Registrar / Namecheap 等）の比較**を、個人開発者・副業ブロガーの現実視点で整理します。
 
-> **広告に関する表記**：本記事には [お名前.com](/go/onamae)・[mixhost](/go/mixhost) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと、AI Maker Lab に紹介料が発生する場合があります。比較の中身そのものは、独立した立場で執筆しています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・mixhost。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 

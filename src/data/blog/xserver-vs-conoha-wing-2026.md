@@ -14,6 +14,9 @@ tags:
   - blog
   - affiliate
 description: "ConoHa WING（月額660円〜）とエックスサーバー（月額880円〜）を料金・速度・移行・解約・AI副業ブログ向き不向きで徹底比較。3メディアを運営する立場から「どちらで始めると稼ぎやすいか」を本音解説。2026年7月更新。"
+affiliateCta:
+  - id: xserver
+    lead: "実績と安定を取るならエックスサーバー。2003年から運用され、障害情報の開示も継続しています。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-100 sm:h-32">
@@ -25,7 +28,7 @@ description: "ConoHa WING（月額660円〜）とエックスサーバー（月�
 
 この2つは日本のレンタルサーバーの2強で、検索しても「どっちも良い」で終わる記事が多く、余計に迷います。本記事では、3つのメディアを実際に運営している AI Maker Lab が、**「ブログで稼ぎたい人」という一点に絞って**両者を比較します。
 
-> **広告に関する表記**：本記事には [エックスサーバー](/go/xserver)・[Xserverビジネス](/go/xserver-biz)・[ConoHa WING](/go/conoha)・[Catchy](/go/catchy) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと、当サイトに紹介料が発生する場合があります。比較の中身そのものは、独立した立場で執筆しています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：エックスサーバー・Xserverビジネス・ConoHa WING・Catchy。評価・手順は広告と無関係に実体験で書いています。</p>
 
 > **執筆スタンスの開示**：当サイト自体は静的サイトのため Cloudflare Pages で運用しています（[ホスティング比較記事](/posts/hosting-for-individual-developers-2026/) 参照）。本記事は「WordPress でブログを始める人」向けに、両社の**公式情報（2026-06-10 取得）と検証可能な事実**に基づいて比較するものです。
 

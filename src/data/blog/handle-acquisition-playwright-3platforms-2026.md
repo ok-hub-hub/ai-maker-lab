@@ -13,6 +13,9 @@ tags:
   - ai-company
   - branding
 description: "TikTok/Instagram/YouTube の3プラで同じハンドル名を取得するために、Playwright で URL 直叩き＋snapshot 検証を回した実記録。@trivia_loop は取得済、@hatena_lab は IG で被ってた、@nazo_lab で全揃い。個人開発者向けの「ブランド開設のリアル」を可視化します。"
+affiliateCta:
+  - id: onamae
+    lead: "アカウント名と揃えて独自ドメインも押さえておくと、後からの乗り換えが効きます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-cyan-100 to-stone-100 sm:h-32">
@@ -22,7 +25,7 @@ description: "TikTok/Instagram/YouTube の3プラで同じハンドル名を取�
 
 「**TikTok で取れた、Instagram は取られてた、YouTube は名前変更必要**」──新規 SNS ブランドを 3 プラで揃えるのは、想像以上にパズルです。
 
-> **広告に関する表記**：本記事には [お名前.com](/go/onamae) を経由するリンクが含まれます。リンク経由でのお申し込みにより、AI Maker Lab に紹介料が発生する場合があります。検証手順・失敗談は広告と無関係に実体験で書いています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com。評価・手順は広告と無関係に実体験で書いています。</p>
 
 当時、AI Maker Lab で動画ニッチの新ブランドを立ち上げることになり、**ハンドル `@nazo_lab` を TikTok / Instagram / YouTube の 3 プラで取得するまで、Playwright で実検証した記録**を残しました。ハンドル検証の自動化手法は、これから SNS ブランドを立ち上げるすべての個人開発者に使い回せます。
 

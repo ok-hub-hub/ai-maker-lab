@@ -13,6 +13,9 @@ tags:
   - cli
   - vibe-coding
 description: "Claude Code を macOS / Windows でセットアップし1ヶ月運用。実コスト（Claude Pro 月$20）、よく使う基本コマンド、つまづいたポイントを実体験ベースで公開。AI 駆動で個人開発を回したい人の実践教本です。"
+affiliateCta:
+  - id: techgo
+    lead: "Claude Codeを日常的に使える人材の市場価値は上がっています。IT特化の無料相談で今の相場を確認できます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-violet-100 via-fuchsia-100 to-pink-100 sm:h-32">
@@ -25,8 +28,8 @@ description: "Claude Code を macOS / Windows でセットアップし1ヶ月運
 公式ドキュメントは充実していますが、「**個人開発者が1人で1ヶ月使い倒した後に、何が分かるか**」という観点の情報はまだ薄いです。本記事では、編集部が **2026-04 中旬 〜 2026-05-19 の約1ヶ月、Claude Code を主力ツールとして AI 駆動の個人開発を回した実体験** をもとに、セットアップから運用までを実機目線で整理します。
 
 > 本記事は **AI 駆動を堂々と明示する立場** で書いています。「実は AI が書いた」を隠す方針ではなく、**AI と一緒に1人会社を回す**ことを前提にした実践ガイドです。
->
-> **広告に関する表記**：本記事の末尾に [明光キャリアパートナーズ](/go/meiko-career)・[TechGo](/go/techgo) を経由するリンクを含みます。リンク経由での面談申込により、AI Maker Lab に紹介料が発生する場合があります。**面談は求職者は無料**で、Claude Code の評価・手順は広告と無関係に実体験で書いています。
+
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：明光キャリアパートナーズ・TechGo。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 

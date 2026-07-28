@@ -15,6 +15,10 @@ description: "「Catchy ひどい」「使えない」と検索したあなた�
 review:
   itemName: "Catchy（キャッチー）"
   rating: 4.1
+affiliateCta:
+  - id: catchy
+    experienced: true
+    lead: "本記事で検証したCatchy。無料10クレジットで生成品質を自分で確かめられます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-cyan-100 to-blue-100 sm:h-32">
@@ -26,7 +30,7 @@ review:
 
 AIライティングツールを探すと必ず名前が挙がる **Catchy（キャッチー）**。本記事では、**実際にAIで複数メディアの記事を量産してきた運用目線**で、Catchy の良い評判・正直な弱点・料金・「どんな人に向くか」を、忖度なしでまとめます。
 
-> **広告に関する表記**：本記事には [Catchy](/go/catchy)・[Transcope](/go/transcope) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと、AI Maker Lab に紹介料が発生する場合があります。レビュー内容そのものは、実際に使った上で公平な視点で執筆しています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：Catchy・Transcope。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 

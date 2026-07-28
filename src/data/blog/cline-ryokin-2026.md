@@ -11,6 +11,10 @@ tags:
   - vibe-coding
   - review
 description: "Clineはオープンソースで無料だが、AIが動くには推論コストが別途かかる。「ClinePass $9.99/月」「BYOK（自前APIキー）」「Claude Code月額$20」の3パターンをコスパ実測で比較し、副業ブログ制作への活用フローも解説します。"
+affiliateCta:
+  - id: catchy
+    experienced: true
+    lead: "開発の合間に発信もするなら、日本語テンプレ型のCatchyが叩き台づくりに向きます。無料10クレジットで試せます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-purple-100 to-blue-100 sm:h-32">
@@ -22,7 +26,7 @@ description: "Clineはオープンソースで無料だが、AIが動くには�
 
 GitHub スター数 65k 超（2026年7月時点）で AIコーディングツールのトップに躍り出た **Cline**。「オープンソースで無料」という触れ込みは本当ですが、実際に AI に動いてもらうには**推論コストが別途かかる**構造です。本記事では、2026-07-19 に公式サイトへ直接接続して取得した料金をもとに、3パターンのコスト構造を整理します。
 
-> **広告に関する表記**：本記事には [Catchy](/go/catchy) および [Transcope](/go/transcope) を経由するアフィリエイトリンクが含まれます。リンク経由でご契約いただくと、AI Maker Lab に紹介料が発生する場合があります。レビュー内容そのものは、実際に使った上で公平な視点で執筆しています。
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：Catchy・Transcope。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 
