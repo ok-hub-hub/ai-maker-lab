@@ -24,6 +24,7 @@ pnpm-debug.log*
 .idea/
 
 # pagefind
+public/pagefind/
 
 public/pagefindrun-history.log
 public/nazolab/
