@@ -102,7 +102,7 @@ description: "v0 by Vercel を使いこなすための実装パターンを、�
     <svg aria-hidden="true" class="h-5 w-5 text-amber-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
     注意：OAuth は UI のみ
   </p>
-  <p class="mt-2 text-sm leading-7 text-amber-900">v0 が出力するのは <strong>UI とフォームのハンドリングまで</strong>です。実際の認証ロジックは Auth.js / Supabase Auth / Clerk などを別途繋ぐ必要があります。「フルスタックで完成」を期待する場合は <a href="/posts/v0-vs-lovable-vs-bolt-2026/">Lovable / Bolt との比較記事</a> もご参照ください。</p>
+  <p class="mt-2 text-sm leading-7 text-amber-900">v0 が出力するのは <strong>UI とフォームのハンドリングまで</strong>です。実際の認証ロジックは Auth.js / Supabase Auth / Clerk などを別途繋ぐ必要があります。「フルスタックで完成」を期待する場合は <a href="/posts/v0-vs-lovable-vs-bolt-2026/">Lovable / Bolt との比較記事</a>、Supabase を使った1日の実装タイムラインは <a href="/posts/vibe-coding-auth-db-in-1day-2026/">Supabase 認証 + RLS を1日で実装する方法</a> もご参照ください。</p>
 </aside>
 
 ---

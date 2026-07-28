@@ -1,7 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-05-25T03:32:00+09:00
-title: "Vibe Coding × Supabase で認証 + DB 込みのアプリを1日で動かす実装ガイド【時間割つき・2026年版】"
+modDatetime: 2026-07-28T09:00:00+09:00
+title: "Supabase 認証 + RLS を1日で実装する方法【2026年7月版】Lovable × Cloudflare Pages 8時間タイムライン"
 slug: vibe-coding-auth-db-in-1day-2026
 featured: true
 draft: false
@@ -13,7 +14,7 @@ tags:
   - rls
   - cloudflare-pages
   - implementation
-description: "Lovable と Supabase を組み合わせて、ログインつき ToDo アプリを8時間で公開するまでの時間割。9:00 雛形生成から20:00 公開告知まで、RLS / OAuth / Cloudflare デプロイのトラブルシュート込みで提示します。"
+description: "Lovable × Supabase × Cloudflare Pages で認証 + RLS 込みのアプリを8時間で公開する実装ガイド【2026年7月版】。月額費用・CORS/OAuth/メール未着の3大トラブル対策・RLS 漏洩防止まで一次情報をもとに整理。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 sm:h-32">
@@ -25,7 +26,19 @@ description: "Lovable と Supabase を組み合わせて、ログインつき To
 
 これは AI Maker Lab 編集部に届く相談で、二番目に多いテーマです。本記事は **Lovable × Supabase × Cloudflare Pages で「ログインつき ToDo アプリ」を1日（8時間）で公開する時間割** を、9:00 から20:00 まで1時間単位で示します。
 
-> 本記事は **AI Maker Lab 編集部（運営者 + AI 編集部の協働運用）が Lovable と Supabase を実際に運用して、本番公開までを複数回再現した一次経験** をもとに執筆しています。料金・機能は 2026-05 時点の公式情報です。
+> 本記事は **AI Maker Lab 編集部（運営者 + AI 編集部の協働運用）が Lovable と Supabase を実際に運用して、本番公開までを複数回再現した一次経験** をもとに執筆しています。料金・機能は 2026-07 時点の公式情報です。
+>
+> **広告に関する表記**：本記事には [お名前.com](/go/onamae/)・[mixhost](/go/mixhost/) を経由するリンクが含まれます。リンク経由でのお申し込みにより、AI Maker Lab に紹介料が発生する場合があります。ツールの評価・手順は広告と無関係に実体験で書いています。
+
+<div class="my-6 rounded-xl bg-emerald-50 border border-emerald-200 p-5">
+  <p class="font-bold text-emerald-900 mb-3">この記事でわかること</p>
+  <ul class="text-sm text-emerald-900 space-y-1 list-disc pl-4">
+    <li>Lovable × Supabase × Cloudflare Pages で<strong>1日（8時間）</strong>で認証アプリを公開する全手順</li>
+    <li>月額費用の目安：<strong>$0〜$25/月</strong>（無料枠で試作 → Lovable Starter $25 が実質入口）</li>
+    <li>RLS の正しい設定と「全データ丸見え」漏洩パターンの防ぎ方</li>
+    <li>CORS / Google OAuth / メール未着 の3大トラブルと対策</li>
+  </ul>
+</div>
 
 ## 目標：1日（8時間）で「ログインつき ToDo アプリ」公開まで
 
@@ -295,6 +308,20 @@ Lovable の出力は Vite ベースが多く、**Cloudflare Pages との相性�
 
 ---
 
+## Lovable + Supabase + Cloudflare の月額費用（2026年7月版）
+
+| サービス | 無料枠の上限 | 有料プラン | 個人開発での判断目安 |
+|---------|------------|-----------|------------------|
+| **Lovable** | 試用枠あり（上限は変動） | Starter $25/月 | 週1以上触るなら $25 が実質入口 |
+| **Supabase** | DB 500MB・Auth 50,000 MAU | Pro $25/月 | 個人規模は無料枠で十分 |
+| **Cloudflare Pages** | 帯域無制限・無制限デプロイ | Workers $5/月〜 | 無料枠で本番公開まで対応 |
+
+**月額の現実解**：本記事の構成で試作するなら **$0/月**（無料枠のみ）から始められます。Lovable を継続的に使い込む段階で Starter $25/月が実質的な入口です。Supabase の Auth 50,000 MAU は月間5万ユーザーまで無料なので、個人プロジェクトであれば当分余裕があります。
+
+> 料金は 2026-07 時点の各公式情報。Lovable は頻繁にプラン改定があるため、契約前に公式サイトで確認してください。
+
+---
+
 ## FAQ
 
 ### Q1. プログラミング未経験でも1日で公開できますか？
@@ -323,6 +350,16 @@ Lovable の出力は Vite ベースが多く、**Cloudflare Pages との相性�
 
 Lovable × Supabase × Cloudflare Pages の組み合わせで、**ログインつきアプリを1日で公開**できます。AI Maker Lab 編集部は本時間割を複数回再現して、毎回20:00 までに公開ボタンを押せることを確認しています。
 
+### 次のアクション
+
+**① 18:00「本番ドメイン接続」で必要になるものを先に押さえる**
+
+時間割どおりに進めると、夕方には「アプリは動くのにドメインが無い」で止まります。ドメインは取得から DNS 反映まで時間がかかるので、**着手前に取っておくのが唯一の前倒しポイント**です。
+
+[お名前.com で独自ドメインを取得する →](/go/onamae/)
+
+**② 本記事で使うツール**
+
 [Lovable を試す（無料枠あり） →](/go/lovable/)
 
 [v0 を試す（無料枠あり） →](/go/v0/)
@@ -330,8 +367,6 @@ Lovable × Supabase × Cloudflare Pages の組み合わせで、**ログイン�
 [Bolt を試す（無料枠あり） →](/go/bolt/)
 
 [Claude Code を試す →](/go/claude-code/)
-
-[お名前.com でドメインを取得 →](/go/onamae/)
 
 ---
 
