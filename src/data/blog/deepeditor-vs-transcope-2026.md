@@ -27,6 +27,8 @@ description: "「私の用途ならDeepEditorとTranscopeのどちらが最適?�
 
 <p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">本記事には <a href="/go/transcope">/go/transcope</a> を経由するアフィリエイトリンクが含まれます。Transcopeの評価は実体験と独自調査にもとづいており、広告の有無に関わらず正直に書いています。</p>
 
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：Transcope。評価・手順は広告と無関係に実体験で書いています。</p>
+
 ## 目次
 
 - 30秒で結論：用途別「どちらを選ぶか」
