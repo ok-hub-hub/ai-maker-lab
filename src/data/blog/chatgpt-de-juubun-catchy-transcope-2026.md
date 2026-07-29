@@ -1,6 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-07-08T09:23:00+09:00
+modDatetime: 2026-07-29T09:00:00+09:00
 title: "ChatGPT で十分？Catchy・Transcope が必要な人・不要な人を正直に整理する【2026年版】"
 slug: chatgpt-de-juubun-catchy-transcope-2026
 featured: false
@@ -295,6 +296,7 @@ A. 予算ゼロで始めるなら ChatGPT 無料。「コピーの量産に使�
 - [Catchy「ひどい・使えない」評判は本当か？正直レビュー](/posts/catchy-review-2026/) — Catchy の弱点・向く人を詳しく解説
 - [Transcope 評判・料金は高い？元が取れる条件](/posts/transcope-review-2026/) — Transcope が「高い」と感じる前に読む回収シミュレーション
 - [Catchy vs Transcope 徹底比較（用途別の選び方）](/posts/catchy-vs-transcope-2026/) — どちらを先に買うべきかを用途別に整理
+- [DeepEditor と Transcope の用途別比較](/posts/deepeditor-vs-transcope-2026/) — SEO特化ライティングツールで「法人か個人か」で向き先が逆になる構造を実調査で解説
 - [AIライティングツール比較2026（4ツールの全体地図）](/posts/ai-writing-tools-comparison-2026/) — Claude も含めた全体像から考える
 
 <script type="application/ld+json">
