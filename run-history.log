@@ -2,6 +2,47 @@
 
 ---
 
+## 2026-07-29 サイクル（d2: deepeditor-vs-transcope 孤立リンク解消 + modDatetime更新2件）
+
+### 実施内容
+
+**改善1 (d2 - 孤立リンク防止): chatgpt-de-juubun-catchy-transcope-2026 → deepeditor-vs-transcope-2026 内部リンク追加**
+- 今日（Jul 29）公開された deepeditor-vs-transcope-2026 は被リンク0本の孤立状態
+- chatgpt-de-juubun（Jul 8公開・modDatetime未設定=unlock済み）の「次に読むなら」セクションに
+  `[DeepEditor と Transcope の用途別比較](/posts/deepeditor-vs-transcope-2026/)` を追加
+- 理由: chatgpt-de-juubun はCatchy/Transcopeを比較する記事→DeepEditor比較への誘導が完全に自然
+- 合わせて modDatetime: 2026-07-29T09:00:00+09:00 を初設定（鮮度シグナル）
+
+**改善2 (主任務 pos11-25 treatment): v0-vs-lovable-vs-bolt-2026 modDatetime更新**
+- modDatetime: 2026-07-14T10:00:00+09:00 → 2026-07-29T09:00:00+09:00
+- FAQPage JSON-LD: 既存あり ✅ 内部リンク to vibe-coding-tools: 既存あり ✅
+- pos17.6相当クエリ（pos11-25） → 加筆禁止・modDatetime更新のみが正しい処方
+- 前サイクル記載「次サイクル候補: v0-vs-lovable-vs-bolt modDatetime更新のみ」を消化
+
+### 状況確認（Jul 29時点）
+- 本日の他セッション実施済み: deepeditor-vs-transcope新規記事公開・比較図解3記事追加・PR表記是正・CTA追加
+- gpt-5-6記事（唯一のGSC pos30-40可視クエリ）: modDatetime Jul 27 = LOCKED（Aug 10解放）
+- catchy-vs-transcope: Jul 23 = LOCKED（Aug 6解放）
+- transcope-review: Jul 21 = LOCKED（Aug 4解放）
+
+### ゲート結果
+- ✅ 法令4軸 grep: ステマ・薬機・景表・断定なし
+- ✅ ビルド: 0 errors（pagefind 39ページ）
+- ✅ dist確認: chatgpt-de-juubun → deepeditor-vs-transcope リンク反映
+- ✅ OG画像: public/aimaker-lab-og.jpg 実在確認
+
+### push
+- commit: fa9d803
+- push: origin/main → Cloudflare Pages 自動デプロイ
+
+### 次サイクル候補
+1. catchy-vs-transcope-2026（次回解放: 2026-08-06・38表示 pos8.4 CTR0%・PIN-3 CTR緊急修正）
+2. transcope-review-2026（次回解放: 2026-08-04・「トランスコープ 評判」pos13.2・PIN-2本命）
+3. gpt-5-6-vs-claude-sonnet5（次回解放: 2026-08-10・「sonnet 5 vs 5.6 luna」pos36.0主任務）
+4. vibe-coding-tools-2026（次回解放: 2026-08-05・「vibe coding ツール」pos83・最多表示30件）
+
+---
+
 ## 2026-07-16 サイクル（PIN-2: catchy-vs-transcope スニペット改善＋孤立money page 2件接続）
 
 ### 実行した改善
@@ -397,3 +438,46 @@
 2. catchy-review-2026（次回解放: 2026-08-03以降）
 3. vibe-coding-tools-2026（本文強化 主任務候補）
 4. claude-sonnet5-vs-opus48 GSC確認（「claude opus 4.8 gpt5.5」pos26.0→20台改善確認）
+
+---
+
+## 2026-07-28 サイクル
+
+### 実施内容
+
+**改善1 (主任務): vibe-coding-auth-db-in-1day-2026 強化（pos30.0・Supabase認証実装ガイド）**
+- title: 「Vibe Coding × Supabase で認証 + DB 込みのアプリを1日で動かす実装ガイド【時間割つき・2026年版】」
+  → 「Supabase 認証 + RLS を1日で実装する方法【2026年7月版】Lovable × Cloudflare Pages 8時間タイムライン」
+  （「supabase 認証 rls 実装」「supabase 認証 1日」型クエリに先頭一致させる）
+- description: 一次情報・月額費用・トラブル対策を明示した購買意図訴求型に変更
+- modDatetime 追加: 2026-07-28T09:00:00+09:00（フレッシュネス更新）
+- ファーストビュー結論ブロック追加: 「この記事でわかること」4点（1日8時間・月額$0〜$25・RLS漏洩防止・3大トラブル）
+- H2追加「Lovable + Supabase + Cloudflare の月額費用（2026年7月版）」: Lovable/Supabase/Cloudflare の無料枠と有料プランの比較表＋月額現実解（genuinely missing user intent: 「いくらかかる？」に回答）
+
+**改善2 (b - 内部リンク): v0-implementation-patterns-10 → vibe-coding-auth-db**
+- パターン4「認証フォーム」注意ブロックに「Supabase 認証 + RLS を1日で実装する方法」完全一致アンカーを追加
+  （v0 は UI のみ→フルスタックはLovable/Supabase 誘導の自然な文脈）
+- 最終content edit: 2026-07-13（15日経過で2週間ルール解禁）
+
+### GSC分析
+- 最多表示クエリ: 「vibe coding ツール」44表示 pos85.9（vibe-coding-tools-2026 - Jul24編集でAug7まで lock）
+- 「トランスコープ 評判」9表示 pos13.2（transcope-review - Jul21編集でAug4まで lock）
+- 「catchy-vs-transcope」38表示 pos8.4 CTR0%（Jul23編集でAug6まで lock）
+- 主任務選定: vibe-coding-auth-db pos30.0（最終content edit Jul9、19日経過・unlock確認）
+
+### ゲート結果
+- ✅ 法令4軸 grep: ステマ・薬機・景表・断定なし
+- ✅ ビルド: 0 errors, 210 pages built（9.15s）
+- ✅ dist確認: タイトル・結論ブロック・月額費用H2・内部リンク全反映
+- ✅ OG画像: public/aimaker-lab-og.jpg 実在確認
+- ✅ GSC URL検査: インデックス登録済み＋優先クロールキュー追加完了
+
+### push
+- commit: 4d081d5
+- push: origin/main → Cloudflare Pages 自動デプロイ開始
+
+### 次サイクル候補
+1. catchy-vs-transcope-2026（次回解放: 2026-08-06・38表示 pos8.4 CTR0%・CTR緊急修正）
+2. transcope-review-2026（次回解放: 2026-08-04・「トランスコープ 評判」pos13.2・PIN-2本命）
+3. vibe-coding-tools-2026（次回解放: 2026-08-07・「vibe coding ツール」44表示 pos85.9・最多表示数）
+4. v0-vs-lovable-vs-bolt-2026（modDatetime更新＋内部リンク集約のみ・pos17.6）
