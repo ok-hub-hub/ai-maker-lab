@@ -12,9 +12,6 @@ tags:
   - beginner
   - review
 description: "明光キャリアパートナーズ（エンジニア転職）の評判・口コミを正直まとめ。求職者は無料。強み・弱点・向く人/向かない人・他エージェントとの使い分けを、AI副業メディア運営者がYMYL基準で解説します。"
-affiliateCta:
-  - id: meiko-career
-    lead: "本記事で扱った明光キャリアパートナーズ。求職者は無料で、面談から現在の相場と現実的な道筋を確認できます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-teal-100 to-indigo-100 sm:h-32">
@@ -26,7 +23,7 @@ affiliateCta:
 
 AIツールを触り始めて「IT業界で働きたい」と思ったとき、候補に上がるのが **明光キャリアパートナーズ**（エンジニア転職）です。本記事では、**特徴・評判・強み・正直な弱点・向く人/向かない人**を、忖度なしでまとめます。
 
-<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：明光キャリアパートナーズ・TechGo。評価・手順は広告と無関係に実体験で書いています。</p>
+> **広告に関する表記**：本記事には [明光キャリアパートナーズ](/go/meiko-career)・[TechGo](/go/techgo)・[キャリアカンパニー](/go/career-company) へのアフィリエイトリンクが含まれます。リンク経由でのお申し込みにより、AI Maker Lab に紹介料が発生する場合があります。**面談・相談はいずれも求職者は無料**です。内容は公平な視点で書いています。
 
 ## 目次
 
@@ -204,7 +201,7 @@ A. 求職者は無料です（エージェントは採用企業側から報酬�
 - **転職や年収の結果は保証されない**。エージェントはあくまで転職活動の支援サービス。
 - 実務経験があり上流・ハイクラスを狙うなら → **[TechGo](/go/techgo)**（[使い分けはこちら](/posts/techgo-vs-meiko-career-2026/)）。
 
-**最初の一歩はリスクゼロの無料面談から。**
+**最初の一歩は無料面談から。合わなければ進めなくてOKです。**
 
 <div class="my-8 flex flex-col gap-3">
   <a href="/go/meiko-career" class="flex flex-col rounded-2xl bg-emerald-600 p-5 text-white no-underline shadow-sm transition hover:bg-emerald-700">
