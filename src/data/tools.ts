@@ -717,8 +717,8 @@ export const TOOLS: ToolMeta[] = [
     scale: 2,
     affiliateTier: "A",
     officialUrl: "https://www.onamae.com/",
-    affiliateUrl:
-      "https://www.onamae.com/?banner_id=690_vc_2215298&waad=yyDUAf8t&argument=29kVaVam&dmai=a5c73cbbb7f179",
+    // ⚠️2026-07-30監査: 旧affiliateUrl(ValueCommerceのwaadトークン直リンク)は保有していない
+    // VC口座宛で1円も計上されないため除去。A8等で提携承認が取れたら差し込む（承認前の先行配線はしない）
     description:
       "GMO インターネット運営の国内大手ドメイン登録サービス。1999年運営開始、対応 TLD 数は2026-05 時点で580種超。Whois 情報公開代行・コンビニ決済を国内事業者として標準で備える。",
     strengths: [

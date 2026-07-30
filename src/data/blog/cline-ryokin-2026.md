@@ -281,6 +281,7 @@ A. 使えます。ただし「Cline だけで記事が書ける」わけでは�
 - [Catchy レビュー 2026](/posts/catchy-review-2026/) — AIライティングツールの実力を正直評価
 - [Transcope レビュー 2026](/posts/transcope-review-2026/) — SEO記事生成ツールの詳細レビュー
 - [vibe coding ツール比較 2026](/posts/vibe-coding-tools-2026/) — Cline 以外の AI コーディングツール全体像
+- [n8n 評判レビュー](/posts/n8n-review-2026/) — コードを書かない業務自動化の選択肢
 
 <script type="application/ld+json">
 {

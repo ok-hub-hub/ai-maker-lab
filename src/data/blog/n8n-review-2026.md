@@ -12,6 +12,7 @@ tags:
   - ai-side-business
   - vibe-coding
 description: "n8n の評判・口コミを正直まとめ。Zapier・Make との違い、AIエージェント連携、セルフホスト vs Cloud の料金比較、向く人/向かない人をAI副業メディア運営者が解説。まず無料で試してから判断するのが正解。"
+primaryGo: n8n
 ---
 
 <div class="relative mb-8 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-violet-100 via-purple-100 to-indigo-100 sm:h-64">

@@ -146,6 +146,7 @@ A. オンライン完結なので始めやすい一方、課題ベースで時�
 
 - [未経験からITエンジニア転職・学習 完全ガイド](/posts/it-engineer-career-start-2026/) — 転職エージェントやスクールの選び方を比較
 - [忍者CODE 口コミ・評判 2026年版](/posts/ninja-code-review-2026/) — 独学寄り・手頃に始めたい人はこちらも
+- [プログラミングスクール3校比較（ポテパン・忍者CODE・テラキャンAI）](/posts/programming-school-hikaku-2026/) — 迷ったらまず使い分け早見表から
 
 <script type="application/ld+json">
 {

@@ -12,6 +12,10 @@ tags:
   - beginner
   - review
 description: "明光キャリアパートナーズ（エンジニア転職）の評判・口コミを正直まとめ。求職者は無料。強み・弱点・向く人/向かない人・他エージェントとの使い分けを、AI副業メディア運営者がYMYL基準で解説します。"
+primaryGo: meiko-career
+affiliateCta:
+  - id: meiko-career
+    lead: "エンジニア転職に特化した転職エージェント。求職者は無料で、オンラインのキャリア面談から始められます（転職・年収の結果を保証するものではありません）。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-100 via-teal-100 to-indigo-100 sm:h-32">

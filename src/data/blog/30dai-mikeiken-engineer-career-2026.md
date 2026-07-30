@@ -260,6 +260,8 @@ A. プラスにはなりますが、それだけで採用されるわけでは�
 - [未経験からITエンジニア転職・学習 完全ガイド](/posts/it-engineer-career-start-2026/) — 転職エージェントとスクールの全体像を比較
 - [ポテパンキャンプ 評判レビュー](/posts/potepan-camp-review-2026/) — スクールで学ぶ道を検討している人へ
 - [忍者CODE 口コミ・評判](/posts/ninja-code-review-2026/) — 独学寄り・手頃に始めたい人はこちらも
+- [明光キャリアパートナーズ 評判・口コミ](/posts/meiko-career-partners-review-2026/) — 面談前に強み・弱点・向く人を正直レビュー
+- [未経験向けプログラミングスクール3校比較](/posts/programming-school-mikeiken-hikaku-2026/) — 学ぶ道を選ぶならこちら
 
 <script type="application/ld+json">
 {

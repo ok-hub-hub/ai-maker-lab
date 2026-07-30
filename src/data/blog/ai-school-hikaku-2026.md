@@ -14,6 +14,12 @@ tags:
   - school
   - comparison
 description: "AIツールを触り始めて「本格的に学んで転職したい」と考えた未経験者へ。テラキャンAI・ポテパンキャンプ・忍者CODEの3スクールを特徴・費用感・向く人で正直比較。スクール前に転職エージェントで無料相談すべき理由も整理します。"
+primaryGo: meiko-career
+affiliateCta:
+  - id: meiko-career
+    lead: "スクール検討の前に、エンジニア転職エージェントの無料面談で「今の自分がどう動けるか」を確認できます（求職者は無料・転職や年収の保証はありません）。"
+  - id: terracam-ai
+    lead: "東証プライム上場SHIFTグループ運営のAIスクール。受講料5万円（2026-07-20公式表記）。相談は無料・受講は有料。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-teal-100 via-emerald-100 to-sky-100 sm:h-32">
@@ -258,6 +264,9 @@ A. 「一番いい」は目的次第です。AIスキルを体系化したい→
 - [未経験からITエンジニア転職・学習 完全ガイド](/posts/it-engineer-career-start-2026/) — 転職エージェントとスクールの全体像
 - [TechGoと明光、どっちに相談すべき？](/posts/techgo-vs-meiko-career-2026/) — 実務経験の有無で分かれる面談先の選び方
 - [30代未経験からエンジニア転職は無理？](/posts/30dai-mikeiken-engineer-career-2026/) — 30代特有の現実と戦略
+- [明光キャリアパートナーズ 評判・口コミ](/posts/meiko-career-partners-review-2026/) — 面談前に強み・弱点・向く人を正直レビュー
+- [プログラミングスクール3校の総合比較](/posts/programming-school-hikaku-2026/) — AI特化にこだわらない総合版
+- [未経験特化の3校比較](/posts/programming-school-mikeiken-hikaku-2026/) — 完全未経験の人向けの切り口
 
 <script type="application/ld+json">
 {

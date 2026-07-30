@@ -223,3 +223,6 @@ A. スクール受講自体は年齢問わず可能です。ただし、転職�
 - [30代未経験からエンジニア転職は無理？](/posts/30dai-mikeiken-engineer-career-2026/) — 年齢と現実を正直に解説
 - [ポテパンキャンプ 評判・口コミ](/posts/potepan-camp-review-2026/) — ポテパンキャンプの詳細レビュー
 - [忍者CODE 口コミ](/posts/ninja-code-review-2026/) — 忍者CODEの詳細レビュー
+- [明光キャリアパートナーズ 評判・口コミ](/posts/meiko-career-partners-review-2026/) — 面談前に強み・弱点・向く人を正直レビュー
+- [未経験に特化した3校の選び方](/posts/programming-school-mikeiken-hikaku-2026/) — 完全未経験の人はこちらの切り口も
+- [AIスキル起点で選ぶ3校比較](/posts/ai-school-hikaku-2026/) — 「AIを学んで転職」ならこちら

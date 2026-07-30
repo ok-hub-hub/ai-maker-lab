@@ -243,6 +243,9 @@ A. 保証できません。スクールで学ぶことは転職の可能性を�
 - [30代未経験からエンジニア転職は無理？](/posts/30dai-mikeiken-engineer-career-2026/) — 30代特有の現実とパターン
 - [ポテパンキャンプ 評判レビュー](/posts/potepan-camp-review-2026/) — ポテパンをさらに詳しく知りたい人へ
 - [忍者CODE 口コミ・評判](/posts/ninja-code-review-2026/) — 忍者CODEをさらに詳しく知りたい人へ
+- [明光キャリアパートナーズ 評判・口コミ](/posts/meiko-career-partners-review-2026/) — 面談前に強み・弱点・向く人を正直レビュー
+- [3校の総合比較・使い分け早見表](/posts/programming-school-hikaku-2026/) — 未経験に限らない総合版はこちら
+- [AIスキル起点で選ぶ3校比較](/posts/ai-school-hikaku-2026/) — 「AIを学んで転職」ならこちら
 
 <script type="application/ld+json">
 {

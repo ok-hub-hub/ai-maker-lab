@@ -28,7 +28,7 @@ affiliateCta:
 
 [Vibe Coding 完全ガイド](/posts/vibe-coding-guide-2026/) を公開した直後、読者から最も多く届いた質問がこれでした。本記事では、この3ツールを個人開発者の現実的な評価軸で並べ、用途別の最適解を整理します。
 
-<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・mixhost。評価・手順は広告と無関係に実体験で書いています。</p>
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・mixhost・Lovable。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 
@@ -105,7 +105,7 @@ v0 の独自性は、生成される React コードが [shadcn/ui](https://ui.s
 
 v0 単独の使用感は [v0 by Vercel とは：料金・使い方・個人開発者の実践レビュー](/posts/v0-review-2026/) で扱っています。料金の落とし穴、無料枠の現実、shadcn/ui との連携手順まで深掘りしています。
 
-## Lovable — Supabase 統合がデフォルト、認証＋DB＋UI を1指示で生成（ただし参加できないASPに注意）
+## Lovable — Supabase 統合がデフォルト、認証＋DB＋UI を1指示で生成
 
 **結論：「認証 + DB + UI」が必要な MVP を、最速で実物にしたい人向け**
 
@@ -121,13 +121,13 @@ Lovable の真価は **Supabase との統合**です。「ログイン機能つ�
 
 - 既存 Next.js リポジトリへ生成コードを **`.tsx` 単位でマージしたい**（→ v0 の `npx shadcn add` が適）
 - 認証・DB が不要で、**ブラウザ内で30分のプロトタイプを共有**したいだけ（→ Bolt の WebContainer）
-- **紹介リンクで収益化**したい（後述の通り、現在アフィリ参加不可）
 
-### アフィリエイト参加状況についての注意
-
-2026年5月時点で、Lovable は新しいパートナープログラムへの移行作業中で、新規申請の受け付けを停止しています。本記事では Lovable の製品評価は維持しつつ、**Lovable へのアフィリリンク誘導は行いません**。プログラム再開時には [/tools/lovable/](/tools/lovable/) のページで告知します。
-
-ASP 経由で確実に収益化できる Vibe Coding 周辺ツールについては、本記事末尾の「公開後のインフラ」セクションで触れます。
+<div class="my-6">
+  <a href="/go/lovable/" class="flex flex-col rounded-2xl bg-violet-600 p-5 text-white no-underline shadow-sm transition hover:bg-violet-700">
+    <span class="text-lg font-bold">Lovable を無料で試す →</span>
+    <span class="mt-1 text-sm text-violet-100">無料枠あり・Supabase統合の「動くMVP」を1指示で（有料プランは $25/月〜）</span>
+  </a>
+</div>
 
 ## Bolt.new — WebContainer でブラウザ完結、貸出 PC でも開発が始められる
 
@@ -259,7 +259,7 @@ WordPress を併設して SEO 記事から自社プロダクトに送客する�
 
 ### 情報の一次性について
 
-本記事の **価格・プラン情報** は **2026-05-12 時点で各公式サイト（[v0.app](https://v0.app/) / [lovable.dev](https://lovable.dev/) / [bolt.new](https://bolt.new/)）に記載されている**情報を引用しています。Vibe Coding ツールは継続的にプラン改定が行われるため、契約判断の前に必ず各公式サイトで最新情報をご確認ください。
+本記事の **価格・プラン情報** は **2026-05-12 時点で各公式サイト（v0.app / lovable.dev / bolt.new）に記載されている**情報を引用しています。Vibe Coding ツールは継続的にプラン改定が行われるため、契約判断の前に必ず各公式サイトで最新情報をご確認ください。
 
 **ツールの向き・不向きに関する評価**は、執筆者および [AI Maker Lab](https://aimaker-lab.com/) 編集チームによる実使用感に基づく所感であり、定量的な比較試験の結果ではありません。あくまで1つの参考として、ご自身の用途に合うかは無料枠で試した上でご判断ください。
 

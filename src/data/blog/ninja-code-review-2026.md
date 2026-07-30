@@ -161,6 +161,7 @@ A. 相談は**無料**、受講は**有料**でプランにより異なります
 
 - [未経験からITエンジニア転職・学習 完全ガイド](/posts/it-engineer-career-start-2026/) — エージェントやスクールの選び方を比較
 - [ポテパンキャンプの評判レビュー](/posts/potepan-camp-review-2026/) — 課題ベースで本格的に学びたい人はこちらも
+- [プログラミングスクール3校比較（ポテパン・忍者CODE・テラキャンAI）](/posts/programming-school-hikaku-2026/) — 迷ったらまず使い分け早見表から
 
 <script type="application/ld+json">
 {
