@@ -1,6 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-05-25T03:31:00+09:00
+modDatetime: 2026-07-30T10:00:00+09:00
 title: "Vibe Coding で SaaS MVP を1週間で動かす実装ロードマップ【Day1-7 タスク表・2026年版】"
 slug: vibe-coding-saas-mvp-in-1week-2026
 featured: true
@@ -317,6 +318,7 @@ Vibe Coding の最大の価値は **「個人が1週間で SaaS を出せる」�
 - [Claude Code セットアップから1ヶ月運用まで](/posts/claude-code-setup-1month-practical/) — Day 4 以降の相棒ツール
 - [個人開発者向けホスティング選定ガイド](/posts/hosting-for-individual-developers-2026/) — Day 6 のデプロイ先選定
 - [独自ドメイン取得ガイド 2026](/posts/domain-selection-guide-2026/) — Day 6 のドメイン接続
+- [バイブコーディングツール比較 2026（Claude Code・Cursor・v0・Bolt）](/posts/vibe-coding-tools-2026/) — Day 1 のツール選定に使えるまとめ
 
 ---
 

@@ -1,7 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-07-29T09:20:00+09:00
-title: "DeepEditorとTranscopeどちらが最適？実際に調べてわかった「対象ユーザーが違う」という結論【2026年7月】"
+modDatetime: 2026-07-30T10:00:00+09:00
+title: "私の用途ならDeepEditorとTranscope どちらが最適？【2026年7月・個人〜法人別に結論】"
 slug: deepeditor-vs-transcope-2026
 featured: false
 draft: false

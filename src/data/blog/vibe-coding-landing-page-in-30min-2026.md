@@ -1,6 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-05-25T03:30:00+09:00
+modDatetime: 2026-07-30T10:00:00+09:00
 title: "Vibe Coding でランディングページを30分で作る実装パターン10【v0 / Lovable 併記・2026年版】"
 slug: vibe-coding-landing-page-in-30min-2026
 featured: true
@@ -449,6 +450,7 @@ v0 は Vercel への Publish が無料枠で可能、Lovable も独自のホス�
 - [Vibe Coding 完全ガイド 2026](/posts/vibe-coding-guide-2026/) — AI 時代の個人開発入門
 - [Vibe Coding × Supabase で認証 + DB のアプリを1日で動かす](/posts/vibe-coding-auth-db-in-1day-2026/) — LP の次のステップ
 - [Vibe Coding で SaaS MVP を1週間で動かすロードマップ](/posts/vibe-coding-saas-mvp-in-1week-2026/) — 本格 SaaS 化への道筋
+- [バイブコーディングツール比較 2026（Claude Code・Cursor・v0・Bolt）](/posts/vibe-coding-tools-2026/) — ツール選びで迷ったらここで比較
 
 ---
 
