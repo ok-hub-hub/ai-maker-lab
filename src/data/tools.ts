@@ -531,7 +531,7 @@ export const TOOLS: ToolMeta[] = [
     strengths: [
       "Docker / VPS にセルフホストすると、シナリオ実行数に関係なく月額固定（Hetzner CX22 で月数百円程度）まで運用コストを抑えられる",
       "公式ノード400超に加え、JavaScript / Python の Code ノードで自由スクリプトを差し込める、Zapier の Code by Zapier より自由度が高い",
-      "アフィリエイトは30%継続報酬 × 12ヶ月（公式 n8n Partner Program 2026-05 取得）、SaaS 紹介の単発と比べ積み上がりやすい",
+      "公式アフィリエイトプログラムあり（30%継続報酬 × 12ヶ月・2026-07-30公式ページ確認）。SaaS 紹介の単発と比べ積み上がりやすい",
     ],
     weaknesses: [
       "シナリオはノード接続式の本格 UI で、Zapier のような「Trigger → Action」の単純構造より学習曲線が急（最初の数日は YouTube チュートリアル前提）",

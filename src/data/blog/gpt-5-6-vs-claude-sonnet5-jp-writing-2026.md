@@ -1,8 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-07-15T09:20:00+09:00
-modDatetime: 2026-07-27T10:00:00+09:00
-title: "GPT-5.6 Luna vs Claude Sonnet 5 比較【2026年7月】低コスト量産でどちらが安い？Sol/Terra も解説"
+modDatetime: 2026-07-30T10:00:00+09:00
+title: "GPT-5.6 Luna vs Claude Sonnet 5【2026年7月】30秒で結論｜料金・日本語品質・用途別の選び方"
 slug: gpt-5-6-vs-claude-sonnet5-jp-writing-2026
 featured: false
 draft: false

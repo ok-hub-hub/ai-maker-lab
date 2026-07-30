@@ -1,7 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-05-02T11:00:00+09:00
-title: "AI副業ロードマップ｜個人が月3万→10万→30万へ進む現実解【2026】"
+modDatetime: 2026-07-30T10:00:00+09:00
+title: "AI副業の始め方ロードマップ【2026年7月】月3万→10万→30万の順番と3つの収益化パスの選び方"
 slug: ai-side-business-roadmap-2026
 featured: true
 draft: false
