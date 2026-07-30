@@ -9,7 +9,6 @@
 # 読者がマネーページに辿り着く前に離脱していた（GA4: go_redirect 28日=1・affiliate_click=0の真因）。
 # 存在しないスラッグ→意図が最も近い生きたマネーページへ301で回収する。
 /posts/programming-school-comparison-2026/  /posts/it-engineer-career-start-2026/            301
-/posts/programming-school-hikaku-2026/      /posts/it-engineer-career-start-2026/            301
 /posts/techgo-review-2026/                  /posts/techgo-vs-meiko-career-2026/              301
 /posts/meiko-career-review-2026/            /posts/techgo-vs-meiko-career-2026/              301
 /posts/mixhost-review-2026/                 /posts/hosting-for-individual-developers-2026/   301
