@@ -55,6 +55,22 @@ function pick(slug: string) {
 const pick1 = pick("claude-code-ai-company-1month-2026");
 const pick2 = pick("affiliate-2weeks-zero-to-video-pivot-2026");
 const pick3 = pick("transcope-review-2026");
+
+// 新着記事（pubDatetime降順・自動）。トップページからの内部リンクを常時供給し、
+// 「公開した記事が孤立する」構造を根治する（2026-07-30 ファネル監査の恒久対策）
+const latestPosts = [...posts]
+  .sort(
+    (a, b) =>
+      new Date(b.data.pubDatetime).getTime() -
+      new Date(a.data.pubDatetime).getTime()
+  )
+  .slice(0, 6)
+  .map(p => ({
+    href: `/posts/${p.id}/`,
+    title: p.data.title,
+    dateLabel: dateLabel(p.data.pubDatetime),
+    minutes: readMinutes(p.body ?? ""),
+  }));
 ---
 
 <Layout>
@@ -140,6 +156,37 @@ const pick3 = pick("transcope-review-2026");
             />
           </RankItem>
         </ol>
+      </div>
+    </section>
+
+    <!-- 2.5 新着記事（自動供給・孤立防止） -->
+    <section class="border-b border-border">
+      <div class="site-layout py-14 sm:py-20">
+        <div class="mb-8">
+          <Badge withLine>Latest</Badge>
+          <h2 class="mt-2 font-serif text-3xl font-black text-foreground sm:text-4xl">
+            新着記事
+          </h2>
+        </div>
+        <ul class="grid gap-4 sm:grid-cols-2">
+          {
+            latestPosts.map(p => (
+              <li>
+                <a
+                  href={p.href}
+                  class="block h-full rounded-xl border border-border p-5 no-underline transition hover:border-accent"
+                >
+                  <span class="block font-bold leading-snug text-foreground">
+                    {p.title}
+                  </span>
+                  <span class="mt-2 block text-xs text-foreground-muted">
+                    {p.dateLabel} ・ 約{p.minutes}分
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
       </div>
     </section>
 
