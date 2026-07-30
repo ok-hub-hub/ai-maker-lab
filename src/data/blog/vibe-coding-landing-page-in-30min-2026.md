@@ -30,7 +30,7 @@ affiliateCta:
 
 > 本記事は **AI Maker Lab 編集部（運営者 + AI 編集部の協働運用）が 2026-04〜2026-05 にかけて [v0](/posts/v0-review-2026/) / [Lovable](/posts/v0-vs-lovable-vs-bolt-2026/) で実際に LP を量産した一次経験** をベースに執筆しています。料金・機能は 2026-05 時点の公式情報です。
 
-<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com。評価・手順は広告と無関係に実体験で書いています。</p>
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・Lovable。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## この記事で扱う10パターン
 

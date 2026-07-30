@@ -31,7 +31,7 @@ affiliateCta:
 
 > 本記事は **AI Maker Lab 編集部（運営者 + AI 編集部の協働運用）が Lovable と Supabase を実際に運用して、本番公開までを複数回再現した一次経験** をもとに執筆しています。料金・機能は 2026-07 時点の公式情報です。
 
-<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・mixhost。評価・手順は広告と無関係に実体験で書いています。</p>
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・mixhost・Lovable。評価・手順は広告と無関係に実体験で書いています。</p>
 
 <div class="my-6 rounded-xl bg-emerald-50 border border-emerald-200 p-5">
   <p class="font-bold text-emerald-900 mb-3">この記事でわかること</p>

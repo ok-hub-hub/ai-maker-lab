@@ -31,7 +31,7 @@ AI Maker Lab 編集部に届く相談で、いちばん多いテーマです。�
 
 > 本記事は **AI Maker Lab 編集部（運営者 + AI 編集部の協働運用）が、実際に複数のミニ SaaS（[ココラボ](https://kokolabo.jp/) や [キャリアラウンジ](https://careerlounge.jp/) などのメディアサイト本体および付随する内部ツール）を作るなかで蓄積した一次経験** をもとに執筆しています。料金・機能は 2026-05 時点の公式情報です。
 
-<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・ConoHa WING・エックスサーバー。評価・手順は広告と無関係に実体験で書いています。</p>
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・ConoHa WING・エックスサーバー・Lovable。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 結論：1週間スケジュール（Day1-7）
 

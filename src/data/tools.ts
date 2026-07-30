@@ -220,8 +220,10 @@ export const TOOLS: ToolMeta[] = [
     speed: 3,
     quality: 2,
     scale: 2,
-    affiliateTier: "watch",
+    affiliateTier: "A",
+    payoutJpy: 15000,
     officialUrl: "https://lovable.dev/",
+    affiliateUrl: "https://lovablelabs.pxf.io/QYeDgx",
     description:
       "旧 GPT Engineer を前身とする AI フルスタックアプリビルダー。Supabase との統合がデフォルトテンプレートに組み込まれており、認証＋DB＋UI を1回の指示で生成できる。",
     strengths: [
@@ -230,11 +232,10 @@ export const TOOLS: ToolMeta[] = [
       "Discord コミュニティが活発で、プロンプト改良例や失敗事例が日々共有される（学習素材が拾いやすい）",
     ],
     weaknesses: [
-      "アフィリエイトプログラムは新プログラムへ移行中で、2026-05 時点で新規申請は受付停止（紹介収益化はできない）",
       "1指示あたりのプロンプト消費が v0 / Bolt より大きく、Starter $25/月でも長文プロジェクトでは追加課金が早い",
     ],
-    note: "アフィリエイト参加は当面不可、記事は監視枠として執筆",
-    verifiedAt: "2026-05-12",
+    note: "Impact経由の提携承認済み（2026-07-30・報酬は最大$100/初回課金者）。リンク配線済み",
+    verifiedAt: "2026-07-30",
   },
   {
     id: "replit",
