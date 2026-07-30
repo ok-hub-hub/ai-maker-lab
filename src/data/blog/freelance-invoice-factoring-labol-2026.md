@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-07-28T11:00:00+09:00
-title: "請求書を先に現金化する前に、10%が高いか計算した｜フリーランスの入金待ちとラボルの使いどころ【2026】"
+title: "ラボルの手数料10%は年換算で何%か｜支払サイト30日・45日・60日で計算した表と、使うと損になる3つの条件【2026】"
 slug: freelance-invoice-factoring-labol-2026
 primaryGo: labol
 featured: false
