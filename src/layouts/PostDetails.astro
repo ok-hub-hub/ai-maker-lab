@@ -87,10 +87,23 @@ const _goIdsNoQuote = [..._bodyNoQuote.matchAll(/\/go\/([a-z0-9-]+)/g)].map(
 const primaryGoId = primaryGo ?? _goIdsNoQuote[0] ?? _goIds[0];
 const primaryTool = primaryGoId ? getToolById(primaryGoId) : undefined;
 const hasAffiliate = _goIds.length > 0;
-// CTA文言はツール種別で出し分け（転職エージェント=無料面談、それ以外=無料で試す）
+// CTA文言はツール種別で出し分ける。
+// 🔴2026-07-31 freelance（請求書買取＝金融サービス）を追加。
+//   それまで labol にも「無料で試してみる »」が出ていた。登録自体は無料だが**サービスは買取額の10%を取る**ので、
+//   常時表示のstickyバーで「無料で試す」と言うのは実態と食い違う（景表法の観点でも危うい）。
+//   無料なのは登録までだと分かる文言にし、手数料をその場で示す。
 const isAgentTool = primaryTool?.serviceType === "agent";
-const ctaLabel = isAgentTool ? "無料面談を予約する »" : "無料で試してみる »";
-const ctaSub = isAgentTool ? "求職者は無料・オンライン可" : "公式サイトで確認";
+const isFinanceTool = primaryTool?.serviceType === "freelance";
+const ctaLabel = isAgentTool
+  ? "無料面談を予約する »"
+  : isFinanceTool
+    ? "無料登録して条件を確認する »"
+    : "無料で試してみる »";
+const ctaSub = isAgentTool
+  ? "求職者は無料・オンライン可"
+  : isFinanceTool
+    ? "登録は無料・買取時に手数料10%"
+    : "公式サイトで確認";
 
 let ogImageUrl: string | undefined;
 
