@@ -38,6 +38,15 @@ const destination = tool.affiliateUrl ?? tool.officialUrl;
           "ep.link_domain": new URL(url).hostname,
           "ep.page_path": location.pathname,
           "ep.referrer": document.referrer || "(direct)",
+          // 🔴2026-07-31追加: どの位置のCTAが押されたかを分解できるようにする。
+          // それまで page_path しか送っておらず、**記事内のどのCTAが効いているか一切分からなかった**ため、
+          // CTAの配置や文言を変えても効果を測れなかった（＝改善が感想になる）。
+          // 記事側からは /go/<id>?pos=mid のように付ける。無ければ (unset)。
+          "ep.cta_pos":
+            new URLSearchParams(location.search).get("pos") || "(unset)",
+          // 送客元の記事slug（?from=）。内部リンク経由の流入を分離して評価する
+          "ep.from_slug":
+            new URLSearchParams(location.search).get("from") || "(unset)",
         });
         navigator.sendBeacon(
           "https://www.google-analytics.com/g/collect?" + p.toString()
