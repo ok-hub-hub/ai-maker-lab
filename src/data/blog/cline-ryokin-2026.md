@@ -1,6 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-07-19T09:22:30+09:00
+modDatetime: 2026-07-31T09:00:00+09:00
 title: "Cline の料金は？ 2026年版｜ClinePass $9.99・BYOK・Claude Code月額を比べた"
 slug: cline-ryokin-2026
 featured: false
@@ -278,6 +279,7 @@ A. 使えます。ただし「Cline だけで記事が書ける」わけでは�
 
 次に読むなら：
 
+- [Claude Cowork × Catchy × Transcope 副業ブログ自動化の実録](/posts/claude-cowork-catchy-transcope-blog-2026/) — Cline で作った仕組みに Catchy/Transcope を組み込む全手順
 - [Catchy レビュー 2026](/posts/catchy-review-2026/) — AIライティングツールの実力を正直評価
 - [Transcope レビュー 2026](/posts/transcope-review-2026/) — SEO記事生成ツールの詳細レビュー
 - [vibe coding ツール比較 2026](/posts/vibe-coding-tools-2026/) — Cline 以外の AI コーディングツール全体像

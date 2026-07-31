@@ -13,9 +13,12 @@ tags:
   - reskilling
   - 30代
 description: "「30代・未経験ではエンジニア転職は無理」は本当か。難しいのが現実だが受かる人には共通パターンがある。転職エージェントとスクールの使い分け、最初に無料で確認すべきことをまとめます。"
+modDatetime: 2026-07-31T09:00:00+09:00
 affiliateCta:
   - id: meiko-career
     lead: "30代・未経験からのIT転職を扱うエージェント。無料の面談から相場と現実的な道筋を確認できます。"
+  - id: type-tenshoku
+    lead: "IT・Webに強い老舗エージェント。首都圏のエンジニア求人を幅広く持ち、無料面談から始められます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-violet-100 to-sky-100 sm:h-32">
@@ -257,6 +260,7 @@ A. プラスにはなりますが、それだけで採用されるわけでは�
 
 次に読むなら：
 
+- [AIを3ヶ月使い込んでITエンジニア転職を考え始めた実録](/posts/ai-3months-career-rethink-2026/) — AI活用から転職を意識し始めた人の実体験
 - [未経験からITエンジニア転職・学習 完全ガイド](/posts/it-engineer-career-start-2026/) — 転職エージェントとスクールの全体像を比較
 - [ポテパンキャンプ 評判レビュー](/posts/potepan-camp-review-2026/) — スクールで学ぶ道を検討している人へ
 - [忍者CODE 口コミ・評判](/posts/ninja-code-review-2026/) — 独学寄り・手頃に始めたい人はこちらも
