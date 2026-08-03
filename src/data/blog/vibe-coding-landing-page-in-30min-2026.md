@@ -436,7 +436,7 @@ v0 は Vercel への Publish が無料枠で可能、Lovable も独自のホス�
 
 **② 本記事で使うツール**
 
-[v0 を試す（無料枠あり） →](/go/v0/)
+[v0 を試す（無料枠あり） →](https://v0.app/)
 
 [Lovable を試す（無料枠あり） →](/go/lovable/)
 

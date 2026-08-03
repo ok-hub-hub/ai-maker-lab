@@ -82,8 +82,8 @@ AI Maker Lab 編集部に届く相談で、いちばん多いテーマです。�
 ### ツール選択
 
 - **DB / 認証 / 決済まで一気に欲しい** → [Lovable](/go/lovable/)（Supabase 統合がデフォルト）
-- **UI を細かく追い込みたい / Next.js 環境に組み込みたい** → [v0](/go/v0/)（shadcn/ui ベース）
-- **ブラウザ完結で気楽に試したい** → [Bolt](/go/bolt/)（WebContainer ブラウザ完結）
+- **UI を細かく追い込みたい / Next.js 環境に組み込みたい** → [v0](https://v0.app/)（shadcn/ui ベース）
+- **ブラウザ完結で気楽に試したい** → [Bolt](https://bolt.new/)（WebContainer ブラウザ完結）
 
 詳細な比較は [v0 vs Lovable vs Bolt 記事](/posts/v0-vs-lovable-vs-bolt-2026/) と [Vibe Coding LP 30分実装パターン10](/posts/vibe-coding-landing-page-in-30min-2026/) を参照してください。
 
@@ -296,15 +296,15 @@ Vibe Coding の最大の価値は **「個人が1週間で SaaS を出せる」�
 
 **② 本記事で使うツール**
 
-[v0 を試す（無料枠あり） →](/go/v0/)
+[v0 を試す（無料枠あり） →](https://v0.app/)
 
 [Lovable を試す（無料枠あり） →](/go/lovable/)
 
-[Bolt を試す（無料枠あり） →](/go/bolt/)
+[Bolt を試す（無料枠あり） →](https://bolt.new/)
 
-[Cursor を試す（無料枠あり） →](/go/cursor/)
+[Cursor を試す（無料枠あり） →](https://cursor.com/)
 
-[Claude Code を試す →](/go/claude-code/)
+[Claude Code を試す →](https://claude.com/claude-code)
 
 ---
 

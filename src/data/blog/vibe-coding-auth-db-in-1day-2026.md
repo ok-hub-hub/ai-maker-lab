@@ -365,11 +365,11 @@ Lovable × Supabase × Cloudflare Pages の組み合わせで、**ログイン�
 
 [Lovable を試す（無料枠あり） →](/go/lovable/)
 
-[v0 を試す（無料枠あり） →](/go/v0/)
+[v0 を試す（無料枠あり） →](https://v0.app/)
 
-[Bolt を試す（無料枠あり） →](/go/bolt/)
+[Bolt を試す（無料枠あり） →](https://bolt.new/)
 
-[Claude Code を試す →](/go/claude-code/)
+[Claude Code を試す →](https://claude.com/claude-code)
 
 ---
 
