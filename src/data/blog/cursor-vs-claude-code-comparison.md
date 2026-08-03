@@ -1,7 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-05-13T16:00:00+09:00
-title: "Cursor vs Claude Code：実務での使い分け方を個人開発者目線で徹底比較【2026年版】"
+modDatetime: 2026-08-03T09:00:00+09:00
+title: "Cursor vs Claude Code 比較【2026年8月版】料金・機能・使い分けを個人開発者目線で解説"
 slug: cursor-vs-claude-code-comparison
 featured: false
 draft: false
@@ -12,7 +13,7 @@ tags:
   - comparison
   - ide
   - cli
-description: "Cursor（AI内蔵 IDE）と Claude Code（CLI ベース AI コーディングエージェント）。両者を設計思想・得意領域・料金プランで並べ、個人開発者が実務でどう使い分ければよいかを編集部が整理しました。乗り換えではなく『役割分担』が現実解という結論です。"
+description: "Cursor vs Claude Code を2026年8月時点の最新料金・機能で徹底比較。Cursor Pro $20/月・Claude Code は Anthropic Pro $22/月（月払い）に同梱。設計思想・得意領域・実務での使い分けシナリオを個人開発者目線で整理しました。"
 affiliateCta:
   - id: onamae
     lead: "どちらのエディタで作っても、公開して人に使ってもらうには独自ドメインが要ります。"
@@ -21,6 +22,16 @@ affiliateCta:
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-100 via-amber-100 to-orange-100 sm:h-32">
   <img src="/icons/ai-tool.png" alt="" aria-hidden="true" class="h-16 w-16 sm:h-20 sm:w-20 drop-shadow-md" />
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
+</div>
+
+<div class="my-6 rounded-xl border-l-4 border-sky-500 bg-sky-50 p-5">
+  <p class="font-bold text-sky-900 mb-2">この記事でわかること</p>
+  <ul class="text-sm leading-7 text-sky-900 list-disc pl-4 mb-0">
+    <li>Cursor（IDE型）と Claude Code（CLI エージェント型）の設計思想の根本的な違い</li>
+    <li>2026年8月版の料金：Cursor Pro $20/月・Claude Code は Anthropic Pro $22/月（月払い）に同梱</li>
+    <li>「どっちか一方」ならどちらを選ぶか—用途別の判断基準</li>
+    <li>新規・既存リポジトリ・CI組込の3シナリオ別の実践的な使い分け方</li>
+  </ul>
 </div>
 
 「**Cursor と Claude Code、結局どっちを使えばいいんですか？**」
@@ -140,25 +151,48 @@ Claude Code は強力ですが、複雑なタスクを長時間走らせると A
     <svg aria-hidden="true" class="h-5 w-5 text-amber-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 6v12"></path><path d="M9 9.5a2.5 2.5 0 0 1 2.5-1.5h1A2.5 2.5 0 0 1 15 10.5c0 1.5-1.5 2-3 2s-3 .5-3 2A2.5 2.5 0 0 0 11.5 17h1a2.5 2.5 0 0 0 2.5-1.5"></path></svg>
     料金・コストの注意
   </p>
-  <p class="mt-2 text-sm leading-7 text-amber-900">Claude Code は API 従量だとトークン消費が早い。月額固定の Anthropic Pro $20/月 や Max プラン経由が予算管理しやすい。料金は2026-05-13 時点の公式情報、契約前に必ず最新確認を。</p>
+  <p class="mt-2 text-sm leading-7 text-amber-900">Claude Code は API 従量だとトークン消費が早い。月額固定の Anthropic Pro $22/月（月払い）/$18/月（年払い）や Max プラン経由が予算管理しやすい。料金は2026-08-03 時点の公式情報、契約前に必ず最新確認を。</p>
 </aside>
 
-## 料金プランの比較（2026-05-13 時点）
+## 料金プランの比較（2026-08-03 時点）
 
-> **価格情報の取得日**：本表の料金は **2026-05-13 時点で各公式サイトに記載されている** プラン情報です。最新の料金・含まれる機能・利用枠は契約前に必ず公式サイトでご確認ください。
+> **価格情報の取得日**：本表の料金は **2026-08-03 時点で各公式サイト（cursor.com / claude.com）に記載されている** プラン情報です。最新の料金・含まれる機能・利用枠は契約前に必ず公式サイトでご確認ください。
 
-| 利用パターン | Cursor | Claude Code |
+| 利用パターン | Cursor | Claude Code（Anthropic） |
 |------------|---------|-------------|
-| 無料枠 | あり（モデル・利用回数制限） | あり（モデル経由でレート制限） |
-| 個人プラン最安 | $20/月（Pro 相当） | Anthropic の Pro プラン $20/月 等に同梱（CLI として利用） |
-| ヘビーユース個人 | $40/月（Business 等の上位プラン） | Max プラン（さらに上位レンジ）／API 従量併用 |
-| 法人・チーム | チーム単価あり | チーム単価あり |
+| 無料枠 | あり（Hobby プラン・制限付きエージェントリクエスト） | あり（Free プラン・利用量上限あり） |
+| 個人プラン最安 | $20/月（Pro） | Pro プラン $22/月（月払い）/ $18/月（年払い・$220前払い）に同梱 |
+| ヘビーユース個人 | Pro+・Ultra（公式サイト要確認） | Max プラン $110/月〜（5倍利用量）／API 従量併用 |
+| 法人・チーム | Teams $40/user/月 | Team & Enterprise（公式要確認） |
 
 **個人開発者の現実的な選択**：
 
-1. まず**Cursor 無料枠** + **Claude Code を Pro プラン**でそれぞれ触る
+1. まず**Cursor Hobby（無料）** + **Claude Code は Anthropic Pro**でそれぞれ触る
 2. メイン業務での比重が見えてきたら、片方を有料化
-3. **両方有料化**するのは、両方の機能を週次以上で使うようになってから
+3. **両方有料化**するのは、両方の機能を週次以上で使うようになってから（目安 Cursor Pro $20 + Anthropic Pro $22 = 月額 $42 前後）
+
+## 2026年8月版：Cursor の新機能と Claude Code プランの変更点
+
+初版（2026年5月）から約3ヶ月で、両ツールに注目すべき変化がありました（2026-08-03 各公式サイト確認）。
+
+### Cursor：Pro に Cloud Agents・MCP・Skills・Hooks が追加
+
+2026年8月時点で Cursor は個人向けに **Pro（$20/月）・Pro+・Ultra** の3段階を提供。Pro プランから **Cloud Agents・MCP・Skills・Hooks** が含まれるようになり、ターミナルや外部ツールとの連携がより広がっています。Grok モデルへのアクセスも Pro に含まれています。
+
+| Cursor プラン | 料金（月払い） | 特徴 |
+|--------------|-------------|------|
+| Hobby | 無料 | 制限付きエージェント・Composer |
+| Pro | $20/月 | Cloud Agents・MCP・Skills・Hooks・Frontier モデル |
+| Pro+・Ultra | 公式サイト要確認 | より多い利用枠 |
+| Teams (Standard) | $40/user/月 | チーム管理・Bugbot・SAML SSO |
+
+### Claude Code（Anthropic）：Pro 料金が月払い $22・年払い $18 に
+
+Anthropic の個人プランは月払い **$22/月**、年払いで **$18/月**（$220 前払い）となっています。以前の $20/月という案内から変更されているため、契約前に必ず [claude.com/pricing](https://claude.com/pricing) で最新情報を確認してください。Claude Code はこのプランに同梱されており、追加費用なしで CLI から利用できます。
+
+より多くの利用量が必要な場合は **Max プラン（$110/月〜、5倍利用量）** も選択肢です。
+
+> 料金・プラン内容は随時変動します。本表は参考情報として活用し、最終確認は必ず公式サイトで行ってください。
 
 ## 実務での使い分け：3つのシナリオ
 
@@ -228,7 +262,7 @@ Cursor は複数モデルを選択可能で、Claude を含む各種モデルを
 
 ### 情報の一次性について
 
-本記事の **価格・プラン情報** は **2026-05-13 時点で各公式サイト（[cursor.com](https://cursor.com/) / [anthropic.com](https://www.anthropic.com/claude-code)）に記載されている**情報を引用しています。両ツールとも継続的にアップデートが行われるため、契約判断の前に必ず各公式サイトで最新情報をご確認ください。
+本記事の **価格・プラン情報** は **2026-08-03 時点で各公式サイト（[cursor.com/pricing](https://cursor.com/pricing) / [claude.com/pricing](https://claude.com/pricing)）に記載されている**情報を引用しています。両ツールとも継続的にアップデートが行われるため、契約判断の前に必ず各公式サイトで最新情報をご確認ください。
 
 **ツールの向き・不向きに関する評価**は、執筆者および [AI Maker Lab](https://aimaker-lab.com/) 編集チームによる実使用感に基づく所感であり、定量的な比較試験の結果ではありません。あくまで1つの参考として、ご自身の用途に合うかは無料枠で試した上でご判断ください。
 

@@ -2,6 +2,99 @@
 
 ---
 
+## 2026-08-03 サイクル（主任務: cursor-vs-claude-code-comparison 強化 + Rule(e)価格再検証）
+
+### GSC状況（28日・2026-08-03実測値）
+- 合計クリック: 5、表示回数: 396、平均CTR: 1.3%、平均順位: 20.9
+- pos30-40候補の現状:
+  - vibe-coding-auth-db pos30.0: LOCKED（Jul28編集→Aug11解放）
+  - cursor-vs-claude-code: 「cursor vs claude code」pos29.0（1表示・境界線）→ **本日選定**
+  - gpt-5-6-vs-claude-sonnet5: pos7.2（上位安定・対象外）
+- ロック中: transcope(Aug4)・catchy-vs-transcope(Aug6)・vibe-coding-tools(Aug7)
+
+### 実施内容
+
+**改善1（主任務 + Rule(e)）: cursor-vs-claude-code-comparison 強化**
+- 対象理由: May13公開から83日未更新。価格情報81日超（60日ルール違反）。「cursor vs claude code」pos29（境界線・改善余地あり）
+- **title更新**: 「Cursor vs Claude Code：実務での使い分け方を個人開発者目線で徹底比較【2026年版】」
+  → 「Cursor vs Claude Code 比較【2026年8月版】料金・機能・使い分けを個人開発者目線で解説」
+  （クエリ先頭一致維持＋2026年8月版＋料金キーワード追加）
+- **description更新**: 2026年8月時点の具体的料金を明示した訴求型に変更
+- **modDatetime追加**: 2026-08-03T09:00:00+09:00（フレッシュネス更新）
+- **ファーストビュー結論ブロック追加**: 「この記事でわかること」4点（設計思想・料金・どちらか一方の判断・3シナリオ）
+- **Rule(e) 料金再検証**: cursor.com/pricing・claude.com/pricing に実接続
+  - Cursor Pro: $20/月（変更なし）。新規: Pro+/Ultra追加、Cloud Agents・MCP・Skills・HooksがProに含まれる
+  - Anthropic Pro: $22/月（月払い）/$18/月（年払い・$220前払い）。旧$20/月から変更。Claude Code同梱
+  - Max plan: $110/月〜（5倍利用量）
+- **料金テーブル更新**: 「2026-05-13 時点」→「2026-08-03 時点」、Claude Code料金を正確な値に修正
+- **新H2追加**: 「2026年8月版：Cursor の新機能と Claude Code プランの変更点」
+  （Cursor Pro+/Ultra追加・Anthropic料金変更を事実ベースで記述）
+
+### ゲート結果
+- ✅ 法令4軸 grep: 「必ず」は公式確認促進文脈のみ、断定・薬機・景表・ステマなし
+- ✅ ビルド: 0 errors, 226 pages built
+- ✅ dist確認: タイトル「2026年8月版」・結論ブロック・新H2・料金$22反映
+- ✅ OG画像: public/aimaker-lab-og.jpg 実在確認
+
+### push
+- commit: （以下push後に記録）
+- push: origin/main → Cloudflare Pages 自動デプロイ
+
+### 次サイクル候補
+1. transcope-review-2026（**2026-08-04解放** → PIN-2本命・「トランスコープ 評判」pos11.6・内部リンク集約のみ）
+2. catchy-vs-transcope-2026（**2026-08-06解放** → PIN-3・52表示 pos10.5・CTR0%緊急修正）
+3. vibe-coding-tools-2026（**2026-08-07解放** → 22表示 pos82.8→主任務強化）
+4. gpt-5-6-vs-claude-sonnet5（**2026-08-13解放** → pos7.2 上位維持確認）
+5. cursor-vs-claude-code（次回解放: 2026-08-17以降）
+
+---
+
+## 2026-07-31 サイクル（d2: 孤立money page 2件接続 + 0D type-tenshoku CTA追加）
+
+### GSC状況（2026-07-30実測値ベース）
+- 平均順位: 22.2（3週連続改善）・CTR: 0.9%・クリック: 3（初増加）
+- PIN-3: catchy-vs-transcope pos5.3 → LOCKED（Aug 12解放）
+- PIN-2: transcope-review pos12.4 → LOCKED（Aug 6解放）
+- PIN-0: vibe-coding-tools pos10.0 → LOCKED（Aug 5解放）
+- 主任務候補 pos30-40: gpt-5-6 pos36.0 → LOCKED（Aug 13解放）
+- **全 pos30-40 記事がロック中 → 主任務はスキップ、d2+0D で出荷**
+
+### 実施内容
+
+**改善1 (d2+0D+b2): 30dai-mikeiken-engineer-career-2026**
+- `ai-3months-career-rethink-2026`（pub Jul 26・被リンク0本・12 /go/ リンク）が孤立中 → 接続
+- 30dai-mikeiken 「次に読むなら」先頭に `[AIを3ヶ月使い込んでITエンジニア転職を考え始めた実録](/posts/ai-3months-career-rethink-2026/)` 追加
+- affiliateCta に type-tenshoku を追加（0D完了。potepan/techgoは既完了）
+  - lead: "IT・Webに強い老舗エージェント。首都圏のエンジニア求人を幅広く持ち、無料面談から始められます。"
+- modDatetime: 未設定 → 2026-07-31T09:00:00+09:00（b2）
+
+**改善2 (d2+b2): cline-ryokin-2026**
+- `claude-cowork-catchy-transcope-blog-2026`（pub Jul 22・被リンク0本・9 /go/ リンク）が孤立中 → 接続
+- cline-ryokin 「次に読むなら」先頭に `[Claude Cowork × Catchy × Transcope 副業ブログ自動化の実録](/posts/claude-cowork-catchy-transcope-blog-2026/)` 追加
+  - 接続理由: cline-ryokin の「副業ブログ制作への活用フロー（Cline × Catchy/Transcope）」セクションと完全一致の内容
+- modDatetime: 未設定 → 2026-07-31T09:00:00+09:00（b2）
+
+### ゲート結果
+- ✅ 法令4軸 grep: 断定・薬機・景表・ステマなし
+- ✅ GA4 init: frontmatter/リスト変更のみ（JS/HTML構造変更なし）
+- ✅ ビルド: 0 errors、Complete!（11.20s）
+- ✅ dist確認: 30dai-mikeiken → ai-3months・cline-ryokin → claude-cowork リンク反映
+- ✅ OG画像: public/aimaker-lab-og.jpg 実在確認
+
+### push
+- commit: e2685e9
+- push: origin/main → Cloudflare Pages 自動デプロイ
+
+### 次サイクル候補（ロック解放日）
+1. catchy-vs-transcope-2026（**Aug 6解放** → PIN-3 CTR緊急修正・pos5.3・19表示・CTR0%）
+2. transcope-review-2026（**Aug 4解放** → PIN-2 本命・「トランスコープ 評判」pos12.4）
+3. vibe-coding-tools-2026（**Aug 5解放** → PIN-0 最多表示）
+4. gpt-5-6-vs-claude-sonnet5（**Aug 13解放** → pos36.0 主任務候補）
+5. ai-3months-career-rethink（被リンク1本になった・次はtechgo-vs-meikoからも追加可能）
+6. claude-cowork-catchy-transcope（被リンク1本になった・ai-writing-tools-comparison解放後に追加）
+
+---
+
 ## 2026-07-29 サイクル（d2: deepeditor-vs-transcope 孤立リンク解消 + modDatetime更新2件）
 
 ### 実施内容
