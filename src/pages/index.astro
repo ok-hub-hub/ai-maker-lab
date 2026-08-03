@@ -18,18 +18,27 @@ const postCount = posts.length;
 
 /**
  * 帳簿（実測値・捏造禁止）。毎週金曜のnote帳簿更新後、ここだけ直せばHeroに反映される。
- * 出典：GSC実測＋note帳簿（2026-07-16計測）。
+ * 出典（2026-08-03 実測）：
+ *   検索表示/クリック = GSC直近28日（7/07-8/03）を aimaker-metrics-api/data/daily.csv から集計
+ *   前期比 = 直近14日(246) vs 前14日(150)。※28日単位で比べないのは計器の開始が7/05でデータが揃わないため
+ *   noteスキ = note公開API（creators/aimakerlab/contents）全31本の likeCount 合計
+ *   広告収益 = A8・もしも管理画面の当月実測（ops/asp-report.mjs）
  */
 const LEDGER = {
-  asOf: "07.16時点",
+  asOf: "08.03時点",
   adRevenue: "¥0",
-  searchImpressions: "265",
-  searchImpressionsDelta: "+71%",
-  searchClicks: "3",
-  noteLikes: "26",
+  searchImpressions: "396",
+  searchImpressionsDelta: "+64%",
+  searchClicks: "5",
+  noteLikes: "74",
 };
 
-const LEDGER_NOTE_URL = "https://note.com/aimakerlab/n/n9e06c0070235";
+// 帳簿の着地点はnoteプロフィール＝常に最新の週報が先頭に出るので週次で古くならない。
+// 旧・有料note(n9e06c0070235)を指していたのを2026-08-03に修正：
+//   「毎週金曜更新の帳簿を見る」という透明性のCTAが、第1回・有料(¥500)・売上0の記事に
+//   着地していた（配信側では既に廃止決定済みなのにサイトのリンクだけ残存していた）。
+//   特定の号に固定リンクすると同じ陳腐化が再発するため、意図的にプロフィールを指す。
+const LEDGER_NOTE_URL = "https://note.com/aimakerlab";
 const NOTE_PROFILE_URL = "https://note.com/aimakerlab";
 
 // 編集部ピック（実在記事・読了時間は本文から実算出）

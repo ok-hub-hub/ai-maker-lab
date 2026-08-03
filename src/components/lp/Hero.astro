@@ -101,8 +101,8 @@ const { postCount, ledger, ledgerNoteUrl } = Astro.props;
         lines={[
           { cmd: "launchctl list | grep aimakerlab" },
           { out: "research   月・木 08:00", ok: true },
-          { out: "create     日・水 09:30", ok: true },
-          { out: "inflow     毎日 10:00", ok: true },
+          { out: "create     日月水金 09:30", ok: true },
+          { out: "inflow     毎日 10:00 / 15:30 ＋平日 21:00", ok: true },
           { out: "improve    平日 11:00", ok: true },
           { cmd: "git push origin main" },
           { out: "Cloudflare Pages → aimaker-lab.com", ok: true },
