@@ -22,7 +22,7 @@ affiliateCta:
   <div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
 </div>
 
-<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・mixhost。評価・手順は広告と無関係に実体験で書いています。</p>
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：Lovable・お名前.com・mixhost。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## Vibe Coding とは何か（30秒で説明）
 
@@ -56,6 +56,13 @@ affiliateCta:
 | まずはデザインだけ AI に任せたい | **[Figma Make](/tools/figma-make/)** | Figma のデザインから React コードを生成 |
 
 決められない人は、**[AI診断（1分）](/diagnose)** で「やりたいこと × 経験 × 予算」から3つを抽出してください。
+
+<div class="my-6">
+  <a href="/go/lovable" class="flex flex-col rounded-2xl bg-indigo-600 p-5 text-white no-underline shadow-sm transition hover:bg-indigo-700">
+    <span class="text-lg font-bold">Lovable を無料で試してみる →</span>
+    <span class="mt-1 text-sm text-indigo-100">プログラミング未経験でも日本語指示でSaaSの形になる（無料枠あり・Supabase統合）</span>
+  </a>
+</div>
 
 ---
 

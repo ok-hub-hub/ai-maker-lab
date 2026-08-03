@@ -49,7 +49,7 @@ affiliateCta:
 
 <div class="my-6 rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
   <p class="flex items-center gap-2 text-lg font-bold text-amber-900">✅ 編集部の結論</p>
-  <p class="mt-2 text-amber-950">API 直接利用なら <strong>Claude Sonnet 5（〜8月末のイントロ価格 $2/$10）</strong> がコスパ最優秀。ChatGPT UI で書くなら <strong>GPT-5.6 Terra</strong> がバランス点。ただし日本語SEO記事量産なら、モデル選択を抽象化してくれる <strong>Catchy・Transcope</strong> を使う方が生産性は圧倒的に高い。</p>
+  <p class="mt-2 text-amber-950">API 直接利用なら <strong>Claude Sonnet 5（〜8月末のイントロ価格 $2/$10）</strong> がコスパ最優秀。ChatGPT UI で書くなら <strong>GPT-5.6 Terra</strong> がバランス点。ただし日本語SEO記事量産なら、モデル選択を抽象化してくれる <strong><a href="/go/catchy" class="underline">Catchy</a>・<a href="/go/transcope" class="underline">Transcope</a></strong> を使う方が生産性は圧倒的に高い。</p>
   <div class="mt-4 grid gap-1.5 text-sm text-amber-950">
     <div class="flex items-center gap-2"><span class="w-36 flex-none">日本語品質</span><span class="h-2 flex-1 rounded-full bg-amber-200"><span class="block h-2 rounded-full bg-amber-500" style="width:88%"></span></span><span class="w-8 text-right font-bold">4.4</span></div>
     <div class="flex items-center gap-2"><span class="w-36 flex-none">APIコスパ</span><span class="h-2 flex-1 rounded-full bg-amber-200"><span class="block h-2 rounded-full bg-amber-500" style="width:80%"></span></span><span class="w-8 text-right font-bold">4.0</span></div>
@@ -65,7 +65,7 @@ affiliateCta:
 | API 経由でSEO記事を量産（コスパ優先） | Claude Sonnet 5（〜2026/8/31 イントロ価格） |
 | ChatGPT UI で日々ライティング | GPT-5.6 Terra |
 | 最高品質の長文・エージェント処理 | GPT-5.6 Sol または Claude Opus 4.8 |
-| 日本語SEO記事を専用UIで書きたい | Catchy または Transcope |
+| 日本語SEO記事を専用UIで書きたい | [Catchy](/go/catchy) または [Transcope](/go/transcope) |
 | とにかく低コストで大量生成 | GPT-5.6 Luna |
 
 <div class="my-6">
