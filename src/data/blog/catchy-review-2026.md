@@ -1,8 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-06-24T19:00:00+09:00
-modDatetime: 2026-07-20T10:00:00+09:00
-title: "Catchy 評判2026｜「ひどい・使えない」は本当か？100種テンプレを実運用した正直レビュー"
+modDatetime: 2026-08-04T09:00:00+09:00
+title: "キャッチー レビュー【2026年8月】3ヶ月・100テンプレ実運用で分かった正直な評価｜向く人・向かない人"
 slug: catchy-review-2026
 featured: false
 draft: false
@@ -11,7 +11,7 @@ tags:
   - catchy
   - review
   - seo
-description: "「Catchy ひどい」「使えない」と検索したあなたへ。日本語AIライティングツールを複数メディアで実際に使った目線で、弱点・料金・向く人/向かない人を正直にまとめます。"
+description: "結論：短文コピー・叩き台の量産なら使える。SEO長文は専門外。3ヶ月・100テンプレ実運用目線で、評判（「ひどい」の正体）・料金・向く人を正直まとめ。まずFree（毎月10クレジット）で確認を。"
 review:
   itemName: "Catchy（キャッチー）"
   rating: 4.1
@@ -228,6 +228,7 @@ A. サブスクなので、合わなければ次回更新前に解約すればOK
 
 - [AIライティングツール比較2026（4つに絞った理由）](/posts/ai-writing-tools-comparison-2026/) — ChatGPT/Claudeも含めた全体地図
 - [Catchy vs Transcope 徹底比較](/posts/catchy-vs-transcope-2026/) — SEOまで本気で狙うなら、どっちを選ぶ？
+- [トランスコープ 評判・料金は高い？正直レビュー2026](/posts/transcope-review-2026/) — SEO長文・集客なら。元が取れる人/取れない人
 - [AI副業ロードマップ2026](/posts/ai-side-business-roadmap-2026/) — ツールを収益につなげる全体像
 
 <script type="application/ld+json">
