@@ -26,7 +26,7 @@ affiliateCta:
 
 [ホスティング選びガイド](/posts/hosting-for-individual-developers-2026/) を公開した直後、最も多く届いた質問がこれでした。本記事では、**TLD（.com / .dev / .app 等）の選び方**と、**レジストラ（お名前.com / Cloudflare Registrar / Namecheap 等）の比較**を、個人開発者・副業ブロガーの現実視点で整理します。
 
-<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・mixhost。評価・手順は広告と無関係に実体験で書いています。</p>
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・mixhost・ラボル。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 
@@ -241,7 +241,7 @@ affiliateCta:
 
 ### Q3. お名前.com の初年度1円キャンペーンは罠ですか？
 
-**罠ではありませんが、2年目以降の更新料が高めなことは理解しておくべきです**。1年目1円 → 2年目以降1,500〜2,500円/年、というのが平均的な価格構造。長期運用なら **Cloudflare Registrar への移管**（移管手数料込みでも長期トータルで安くなる）を検討する価値があります。
+**罠ではありませんが、2年目以降の更新料が高めなことは理解しておくべきです**。1年目1円 → 2年目以降1,500〜2,500円/年、というのが平均的な価格構造。長期運用なら **Cloudflare Registrar への移管**（移管手数料込みでも長期トータルで安くなる）を検討する価値があります。複数ドメインの更新が同じ月に固まると数千〜1万円級の出費になるので、受託の入金待ちと重なる月の資金繰りは [フリーランスの入金待ち対策5つ](/posts/freelance-cashflow-5methods-2026/)（[ラボル](/go/labol?pos=domain-faq)は1万円から・手数料10%）が参考になります。
 
 ### Q4. .ai ドメインは個人開発者でも取るべきですか？
 
@@ -258,6 +258,8 @@ affiliateCta:
 1. **TLD は何にするか？** → 副業ブログなら .com、個人プロダクトなら .dev / .app、AI プロダクトなら .ai
 2. **レジストラはどこか？** → 日本語サポート派なら [お名前.com](/go/onamae)、コスト最適化派なら Cloudflare Registrar
 3. **DNS は誰が管理するか？** → Cloudflare DNS を強く推奨（無料・高速・統合性）
+
+更新費・サーバ代など先払いの固定費が入金前に重なる月は、[ラボルの条件](/go/labol?pos=domain-end)（請求書の先行現金化・1万円から）を非常口として知っておくと選択を焦らずに済みます。
 4. **メールはどう運用するか？** → 最初は Cloudflare Email Routing で転送、本格化したら Google Workspace
 
 **個人開発者の鉄板構成**（本サイトもこの構成）：

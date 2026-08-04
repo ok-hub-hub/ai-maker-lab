@@ -29,7 +29,7 @@ affiliateCta:
 
 本記事は、**2026年5月時点で「個人がAIで現実的に収益を作る」ための道筋**を、月収レンジ別のロードマップに落とし込んだものです。
 
-<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・mixhost。評価・手順は広告と無関係に実体験で書いています。</p>
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：お名前.com・mixhost・ラボル。評価・手順は広告と無関係に実体験で書いています。</p>
 
 <aside class="my-8 rounded-xl border border-amber-200 bg-amber-50 p-5">
   <p class="font-bold text-amber-950">今日やるなら、この順番です</p>
@@ -180,7 +180,14 @@ affiliateCta:
 - 稼働時間に収益が比例する（労働集約モデル）
 - 単価を上げにくい構造（クライアントワークの天井）
 - AI記事執筆代行は **値崩れが進行中**（2026年時点で1記事500〜2,000円が中央値）
-- **納品と入金がずれる**。受託は月末締め翌月末払いが標準で、着手から入金まで2ヶ月空くことが珍しくありません。稼げているのに手元にお金が無い状態は、このパスで最初にぶつかる壁です（対処の選択肢と、その手数料が年換算で何%になるかは [フリーランスの入金待ちとラボルの手数料を計算した記事](/posts/freelance-invoice-factoring-labol-2026/) にまとめました）
+- **納品と入金がずれる**。受託は月末締め翌月末払いが標準で、着手から入金まで2ヶ月空くことが珍しくありません。稼げているのに手元にお金が無い状態は、このパスで最初にぶつかる壁です（対処の選択肢と、その手数料が年換算で何%になるかは [フリーランスの入金待ちとラボルの手数料を計算した記事](/posts/freelance-invoice-factoring-labol-2026/) にまとめました。請求書を売却して先に現金化する[ラボル](/go/labol?pos=roadmap-wall)は1万円から・最短30分ですが、買取額の10%を取られるので毎月の常用ではなく「今月だけの穴」用です）
+
+<div class="my-6">
+  <a href="/go/labol?pos=roadmap-cta" class="flex flex-col rounded-2xl bg-amber-600 p-5 text-white no-underline shadow-sm transition hover:bg-amber-700">
+    <span class="text-lg font-bold">入金2ヶ月待ちの逃げ道を先に把握しておく →</span>
+    <span class="mt-1 text-sm text-amber-100">ラボル：手数料一律10%・1万円から・最短30分。無料会員登録のみで条件を確認できます（2026-08-02公式確認）</span>
+  </a>
+</div>
 
 ### 比較的単価が高い領域
 
@@ -296,6 +303,8 @@ AI副業を始めるときの判断は、シンプルです：
 3. **すぐ収益が欲しい** → パス3（スキル販売）
 
 組み合わせが現実解です。本サイトは **パス1 → 将来パス2へ展開** の道筋を実演中です。
+
+パス3（スキル販売）で始める場合は、入金が着手から2ヶ月遅れる前提で、資金繰りの選択肢だけ先に把握しておくと詰みません（[ラボルの条件を見る](/go/labol?pos=roadmap-end)・[入金待ち対策の解説記事](/posts/freelance-cashflow-5methods-2026/)）。
 
 迷ったら、まず [AI診断（5問）](/diagnose/) であなたの状況に合うAIツール3つを把握するところから始めてください。
 

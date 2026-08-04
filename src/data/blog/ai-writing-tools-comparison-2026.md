@@ -29,7 +29,7 @@ affiliateCta:
 
 筆者は **AI駆動の編集体制でこのサイト自体を毎日運営**しており、記事の下書き・SEO記事・SNS配信文をAIで量産しています。その実運用の結論から言うと、**日本語で書く個人〜小規模チームが検討すべきツールは実質4つ**です。15個の浅い紹介ではなく、4つを深く比較します。
 
-<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：Catchy・Transcope。評価・手順は広告と無関係に実体験で書いています。</p>
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：Catchy・Transcope・ラボル。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 
@@ -111,6 +111,8 @@ SNS投稿文・見出し案・商品紹介文のような「ゼロから考え�
 
 ¥14,000〜 は Catchy ¥3,000〜 + Transcope Basic ¥11,000 の合計です（料金は2026-06-05 公式取得）。「高い」と感じる場合は、[Transcope の記事外注置き換えモデル](/posts/transcope-review-2026/)で回収計算を確認してください。
 
+なお、受託ライティングは報酬の入金が納品の1〜2ヶ月後になるのが普通で、ツール費や取材費は先に出ていきます。「売上はあるのに現金が無い」月ができたときの選択肢は [フリーランスの入金待ち対策5つ](/posts/freelance-cashflow-5methods-2026/) に整理しました（請求書を先に現金化する[ラボル](/go/labol?pos=writing-cost)は1万円から・手数料10%。常用でなく非常口として把握しておく用です）。
+
 ## FAQ
 
 **Q. 結局、無料のChatGPTだけではダメ？**
@@ -127,6 +129,7 @@ A. 予算ゼロで始めるならChatGPT。「書く量」が決まっている�
 - 選択肢は実質4つ：**量産のCatchy／SEOのTranscope／無料のChatGPT／長文と開発のClaude**
 - 専用ツールの価値は「文章力」でなく**内蔵ワークフローの時短**。書く頻度が高いほど効く
 - 迷ったら無料枠で「自分の用途」を試す。それでも迷うなら[AI診断（5問）](/diagnose/)へ
+- 受託で書く人は、入金までの1〜2ヶ月をしのぐ手段（[5つの比較](/posts/freelance-cashflow-5methods-2026/)・[ラボルの条件](/go/labol?pos=writing-end)）も先に把握しておくとツール費の先払いで詰まない
 
 <div class="my-8 grid gap-4 sm:grid-cols-2">
   <a href="/go/catchy" class="flex flex-col rounded-2xl bg-sky-600 p-5 text-white no-underline shadow-sm transition hover:bg-sky-700">

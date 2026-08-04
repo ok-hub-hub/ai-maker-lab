@@ -28,7 +28,7 @@ affiliateCta:
 
 [Vibe Coding 完全ガイド](/posts/vibe-coding-guide-2026/) と [AI副業ロードマップ](/posts/ai-side-business-roadmap-2026/) の公開後、最も多く届いた質問の1つがこれでした。本記事では、個人開発者・副業ブロガー視点で「**目的別にどのホスティングを選ぶべきか**」を整理します。
 
-<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：mixhost・お名前.com。評価・手順は広告と無関係に実体験で書いています。</p>
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：mixhost・お名前.com・ラボル。評価・手順は広告と無関係に実体験で書いています。</p>
 
 ## 目次
 
@@ -343,6 +343,8 @@ Vercel 公式 Pricing ページでは Hobby プランが **"personal project"** 
 3. **Bandwidth 無制限がほしいか？** → Yes なら Cloudflare Pages、No なら Netlify でも可
 
 迷ったら [AI診断（5問）](/diagnose/) を試してみてください。あなたの状況に合う構成を、ホスティングまで含めて提示します。
+
+なお、サーバ・ドメインの年払いは更新月に固定費が固まって落ちます。受託の入金待ちと重なって現金が薄い月は、[入金待ち対策5つの比較](/posts/freelance-cashflow-5methods-2026/)と[ラボルの条件](/go/labol?pos=hosting-end)（1万円から・手数料10%・最短30分）を先に把握しておくと慌てずに済みます。
 
 ### 関連記事
 
