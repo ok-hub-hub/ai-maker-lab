@@ -5,7 +5,7 @@ title: "アフィリエイト2週間で流入ゼロ、だから動画ニッチ�
 slug: affiliate-2weeks-zero-to-video-pivot-2026
 featured: false
 draft: false
-modDatetime: 2026-07-19T10:00:00+09:00
+modDatetime: 2026-08-05T11:00:00+09:00
 tags:
   - journal
   - ai-company
@@ -128,7 +128,7 @@ Claude Code を「AI 会社」として 1ヶ月運用してきた記録の続き
 ニッチ初期案は **「AI 雑学・歴史 IF」**：
 
 - "99%が知らない○○" / "もし○○が現代にいたら" / "世界の謎ランキング" の3パターン
-- 60-90 秒尺、AI 画像 5-7 枚＋ ElevenLabs ナレーション＋ CapCut 編集
+- 60-90 秒尺、AI 画像 5-7 枚＋ [ElevenLabs](/posts/elevenlabs-review-2026/) ナレーション＋ CapCut 編集
 - 投稿1本目「もし織田信長がスマホ持ってたら本能寺の変は防げてた説」を公開
 
 **…しかしこの初期案は、翌日に全面リセットになります。次セクションでその実況を書きます。**
