@@ -1104,6 +1104,38 @@ export const TOOLS: ToolMeta[] = [
     note: "A8.net 提携申請予定（成果地点=無料相談）。承認後に affiliateUrl 差し込み。未設定中は officialUrl フォールバック。受講有料・相談無料を明示すること。",
   },
   {
+    id: "gamma",
+    name: "Gamma（ガンマ）",
+    category: ["writing"],
+    forEngineer: false,
+    forBeginner: true,
+    priceMin: 0,
+    priceFree: true,
+    jpFriendly: true,
+    speed: 3,
+    quality: 3,
+    scale: 2,
+    affiliateTier: "A",
+    officialUrl: "https://gamma.app/",
+    // PartnerStack 提携済み 2026-08-05 承認（B-03 bet-ledger 記載）。初年度25%リカーリング
+    affiliateUrl: "https://try.gamma.app/vj8t3p45vzf9",
+    conversionPoint: "free-signup",
+    payoutJpy: 11000,
+    description:
+      "AIプロンプト入力だけでプレゼン・ドキュメント・ウェブサイトを生成するツール。スライド構成・デザイン・画像挿入まで一気通貫。Free（サインアップ時400クレジット・CC不要）で始められ、共有URLひとつで即公開できる。",
+    strengths: [
+      "テキスト入力→スライド完成までが数十秒。白紙から始めるCanvaより格段に速い",
+      "日本語ローカライズ済みで、生成コンテンツの日本語品質が高い",
+      "共有URLひとつで閲覧・編集招待・埋め込みが完結、PowerPointのファイル送付不要",
+    ],
+    weaknesses: [
+      "クレジット制のため、大量生成するほど消費が早い（Proで月4,000クレジット）",
+      "デザインの細かいピクセル調整はCanvaやPowerPointに劣る（AIまかせが前提）",
+    ],
+    verifiedAt: "2026-08-05",
+    note: "PartnerStack 提携承認 2026-08-05（初年度25%リカーリング）。affiliateUrl=try.gamma.app/vj8t3p45vzf9。価格は2026-08-05公式サイト実接続確認: Free¥0/Plus¥1,800/Pro¥3,500/Ultra¥14,750（月払い）。",
+  },
+  {
     id: "labol",
     name: "labol（ラボル）",
     // ⚠️ category を意図的に空にしている：本サービスは「AIツール」ではなく資金調達
