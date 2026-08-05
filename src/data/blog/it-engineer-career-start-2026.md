@@ -170,3 +170,4 @@ A. 転職エージェント（type転職エージェント）は求職者**無�
 - [プログラミングスクール3校比較（ポテパン・忍者CODE・テラキャンAI）](/posts/programming-school-hikaku-2026/) — スクール派はまず使い分け早見表から
 - [AIツール→仕事へ：これからのキャリアの作り方](/posts/ai-skills-to-career-2026/) — AIスキルをどう仕事に変えるかの全体像
 - [AI副業ロードマップ2026](/posts/ai-side-business-roadmap-2026/) — 雇用以外で稼ぐ道も知りたい人へ
+- [TechGo 評判・正直レビュー](/posts/techgo-review-2026/) — 経験者になった後のハイクラス転職の選択肢

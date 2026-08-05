@@ -148,6 +148,8 @@ A. 予算ゼロで始めるならChatGPT。「書く量」が決まっている�
 - [Transcopeの評判・料金は高い？正直レビュー](/posts/transcope-review-2026/)
 - [Catchy vs Transcope 徹底比較（実運用フロー付き）](/posts/catchy-vs-transcope-2026/)
 - [vibe coding ツール おすすめ比較2026年版（Claude Code・Cursor・v0・Bolt）](/posts/vibe-coding-tools-2026/) — AIで記事を量産しながらアプリも作りたい人向け
+- [ElevenLabs 評判・料金・日本語の実力レビュー](/posts/elevenlabs-review-2026/) — 記事を音声コンテンツに展開したい人へ
+- [Gamma 評判・料金レビュー](/posts/gamma-review-2026/) — 記事の内容を提案資料・スライドに転用したい人へ
 
 <script type="application/ld+json">
 {

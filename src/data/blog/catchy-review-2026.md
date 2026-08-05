@@ -230,6 +230,7 @@ A. サブスクなので、合わなければ次回更新前に解約すればOK
 - [Catchy vs Transcope 徹底比較](/posts/catchy-vs-transcope-2026/) — SEOまで本気で狙うなら、どっちを選ぶ？
 - [トランスコープ 評判・料金は高い？正直レビュー2026](/posts/transcope-review-2026/) — SEO長文・集客なら。元が取れる人/取れない人
 - [AI副業ロードマップ2026](/posts/ai-side-business-roadmap-2026/) — ツールを収益につなげる全体像
+- [ElevenLabs 評判・料金・日本語の実力レビュー](/posts/elevenlabs-review-2026/) — 書いた記事を音声化して展開したい人へ
 
 <script type="application/ld+json">
 {
