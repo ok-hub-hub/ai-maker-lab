@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-06-24T20:00:00+09:00
-modDatetime: 2026-07-23T10:00:00+09:00
+modDatetime: 2026-08-06T10:00:00+09:00
 title: "トランスコープの評判は実際どう？Transcopeで記事量産して分かった料金の元が取れる人【2026】"
 slug: transcope-review-2026
 featured: false
