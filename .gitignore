@@ -23,7 +23,10 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-# pagefind
+# pagefind（ビルドが cp -r dist/pagefind public/ で毎回再生成する）
+public/pagefind/
 
-public/pagefindrun-history.log
+# ジョブ実行ログ
+run-history.log
+
 public/nazolab/
