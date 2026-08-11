@@ -18,19 +18,20 @@ const postCount = posts.length;
 
 /**
  * 帳簿（実測値・捏造禁止）。毎週金曜のnote帳簿更新後、ここだけ直せばHeroに反映される。
- * 出典（2026-08-03 実測）：
- *   検索表示/クリック = GSC直近28日（7/07-8/03）を aimaker-metrics-api/data/daily.csv から集計
- *   前期比 = 直近14日(246) vs 前14日(150)。※28日単位で比べないのは計器の開始が7/05でデータが揃わないため
- *   noteスキ = note公開API（creators/aimakerlab/contents）全31本の likeCount 合計
- *   広告収益 = A8・もしも管理画面の当月実測（ops/asp-report.mjs）
+ * 出典（2026-08-11 実測）：
+ *   検索表示/クリック = GSC直近28日 vs 前28日（revenue-ops MCP metrics_report・API取得）
+ *   前期比 = 表示 439 vs 前期 186
+ *   noteスキ = note公開API（creators/aimakerlab/contents）全39本の likeCount 合計＝89
+ *   広告収益 = A8・もしも管理画面の当月実測（2026-08-11 22:07 JST 取得）。
+ *              A8=クリック7/発生0、もしも=クリック0/発生0。よって ¥0 は推定ではなく実測値
  */
 const LEDGER = {
-  asOf: "08.03時点",
+  asOf: "08.11時点",
   adRevenue: "¥0",
-  searchImpressions: "396",
-  searchImpressionsDelta: "+64%",
-  searchClicks: "5",
-  noteLikes: "74",
+  searchImpressions: "439",
+  searchImpressionsDelta: "+136%",
+  searchClicks: "12",
+  noteLikes: "89",
 };
 
 // 帳簿の着地点はnoteプロフィール＝常に最新の週報が先頭に出るので週次で古くならない。
