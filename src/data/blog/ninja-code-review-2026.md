@@ -1,8 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-06-24T22:00:00+09:00
-modDatetime: 2026-07-22T10:00:00+09:00
-title: "忍者CODE 口コミ 2026年版｜3プランの正直評価と悪い評判・副業スキルが身につくか検証"
+modDatetime: 2026-08-11T09:00:00+09:00
+title: "忍者CODE 口コミ【2026年最新】3プランの料金・悪い評判・副業に使えるか正直評価"
 slug: ninja-code-review-2026
 primaryGo: meiko-career
 featured: false
@@ -13,7 +13,7 @@ tags:
   - school
   - beginner
   - review
-description: "「忍者CODE 口コミ」を調べているあなたへ。3つのプランの正直評価・よく挙がる悪い評判・AIと組み合わせた副業スキルが本当に身につくか・ポテパンキャンプとの比較まで忖度なしでまとめます。"
+description: "忍者CODEの3プラン（独学〜メンター付き）を実体験で正直評価。悪い評判3選・料金の目安（相談無料）・副業収益化3ルート・ポテパンキャンプとの違いを1記事で比較。"
 affiliateCta:
   - id: meiko-career
     lead: "スクールと並行して、IT転職エージェントの無料相談で「今の自分がどこまで狙えるか」を先に確認しておくと判断が早くなります。"

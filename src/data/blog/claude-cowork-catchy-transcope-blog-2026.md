@@ -1,6 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-07-22T09:23:00+09:00
+modDatetime: 2026-08-11T09:00:00+09:00
 title: "Claude Coworkでブログを自動化した実録2026｜Catchy×Transcopeを自律AIに動かして記事1本を仕上げる手順"
 slug: claude-cowork-catchy-transcope-blog-2026
 featured: false
@@ -316,6 +317,7 @@ A. テーマに応じて柔軟に対応できます。「個人開発者向け�
 - [Transcope 評判レビュー2026](/posts/transcope-review-2026/) — Basic ¥11,000/月で元が取れる人/取れない人
 - [Catchy vs Transcope 比較](/posts/catchy-vs-transcope-2026/) — 用途別の選び方
 - [AIライティングツール比較2026](/posts/ai-writing-tools-comparison-2026/) — 全体地図から選ぶ
+- [Gamma AIレビュー2026](/posts/gamma-review-2026/) — プレゼン・提案書もAI自動化するならGamma（数十秒で叩き台完成）
 
 <script type="application/ld+json">
 {
