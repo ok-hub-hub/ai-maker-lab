@@ -1,7 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-07-23T10:00:00+09:00
-title: "明光キャリアパートナーズ 評判・口コミ2026年版｜エンジニア転職サービスの強み・弱点・向く人を正直レビュー"
+modDatetime: 2026-08-12T10:00:00+09:00
+title: "明光キャリアパートナーズ 評判【2026年8月】口コミ・強み3点・弱点3点・向く人を正直レビュー"
 slug: meiko-career-partners-review-2026
 featured: false
 draft: false
@@ -11,7 +12,7 @@ tags:
   - agent
   - beginner
   - review
-description: "明光キャリアパートナーズ（エンジニア転職）の評判・口コミを正直まとめ。求職者は無料。強み・弱点・向く人/向かない人・他エージェントとの使い分けを、AI副業メディア運営者がYMYL基準で解説します。"
+description: "明光キャリアパートナーズの評判は？エンジニア転職特化・求職者は無料。強み3点・弱点3点・向く人/向かない人・TechGo・type転職との比較表で解説。実務未経験〜ジュニア層向けの判断材料を整理しました【2026年8月】"
 primaryGo: meiko-career
 affiliateCta:
   - id: meiko-career

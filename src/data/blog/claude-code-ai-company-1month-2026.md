@@ -1,6 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-05-14T11:30:00+09:00
+modDatetime: 2026-08-12T10:00:00+09:00
 title: "Claude Code で「AI会社」を1ヶ月運営してみた｜CEO・QA・事業開発・技術検証の4部門で個人開発を回す"
 slug: claude-code-ai-company-1month-2026
 primaryGo: meiko-career
@@ -374,6 +375,7 @@ CEO が「(A) これがおすすめだけど、(B) こっちもアリです」�
 
 - [Vibe Coding 完全ガイド：個人開発者が AI で動くアプリをつくる、最短ルート【2026年版】](/posts/vibe-coding-guide-2026/)
 - [Cursor vs Claude Code 徹底比較](/posts/cursor-vs-claude-code-comparison/) — 本記事で主力に据えた Claude Code の特性を Cursor と対比
+- [Claude WorkbenchがConsoleに統合【2026年8月】](/posts/claude-workbench-console-2026/) — 2026年8月17日廃止予定。Claude Code のセットアップフローが変わる点を実録で整理
 - [v0 by Vercel とは：料金・使い方・個人開発者の実践レビュー【2026年最新】](/posts/v0-review-2026/)
 - [AI副業ロードマップ：個人が AI で月10万を目指す現実的な道筋](/posts/ai-side-business-roadmap-2026/)
 - [Catchy vs Transcope 徹底比較](/posts/catchy-vs-transcope-2026/) — このAI会社の記事量産で使うライティングツールの選び方
