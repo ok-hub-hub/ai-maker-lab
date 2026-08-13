@@ -287,4 +287,4 @@ A. 短文コピー・SNS・広告文が多いなら Catchy。SEO長文記事を�
 }
 </script>
 
-関連比較：[GPT-5.6（Sol/Terra/Luna）vs Claude Sonnet 5 の日本語ライティング比較](/posts/gpt-5-6-vs-claude-sonnet5-jp-writing-2026/) — 最新モデル同士の比較はこちら。
+関連比較：[Sonnet 5 vs GPT-5.6 Luna・コスト差と日本語品質を実測比較【2026年8月】](/posts/gpt-5-6-vs-claude-sonnet5-jp-writing-2026/) — GPT-5.6 登場後の選び方・イントロ価格終了前の最終判断はこちら。
