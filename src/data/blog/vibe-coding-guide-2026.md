@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-04-24T09:30:00+09:00
-modDatetime: 2026-07-23T10:00:00+09:00
+modDatetime: 2026-08-14T10:00:00+09:00
 title: "バイブコーディングツール おすすめ比較5選【2026年最新版】v0・Lovable・Bolt・Replit Agent を用途別で選ぶ"
 slug: vibe-coding-guide-2026
 featured: true
@@ -11,7 +11,7 @@ tags:
   - v0
   - ui-generator
   - tutorial
-description: "バイブコーディングツールを探しているあなたへ。無料から始められる v0・Lovable・Bolt・Replit Agent・Figma Make の5ツールを料金・無料枠・向いている人で比較。副業月5万円への活用ステップも解説します【2026年7月更新】。"
+description: "バイブコーディングツールを探しているあなたへ。無料から始められる v0・Lovable・Bolt・Replit Agent・Figma Make の5ツールを料金・無料枠・向いている人で比較。副業月5万円への活用ステップも解説します【2026年8月更新】。"
 affiliateCta:
   - id: onamae
     lead: "Vibe Codingで作ったものを公開する段階で必要になるのが独自ドメインです。"
@@ -130,9 +130,9 @@ affiliateCta:
 - **Lovable**：Supabase の認証＋DB＋RLS が前提の SaaS（家計簿・社内ツール・ログイン制限付きダッシュボード等）を1指示で動かしたい
 - **Bolt**：ローカルに Node を入れずに、貸出 PC / Chromebook のブラウザだけで30分のプロトタイプを完成させて URL 共有したい
 
-### 注意点（2026年5月時点）
+### Lovable の詳細レビュー
 
-**[Lovable](/tools/lovable/) はアフィリエイトプログラムを新体制に移行中** で、当面 個人ブロガー向けの新規参加は受付停止しています。提携検討中の場合は公式リリースを待つ必要があります（このサイトでも追跡中）。
+実際にアプリを作って検証した詳細は **[Lovable レビュー【2026年8月】実際にアプリを作って分かった正直評価](/posts/lovable-review-2026/)** で扱っています。Free 枠の現実・Supabase 統合の使い心地・向く人と向かない人を整理しています。
 
 ---
 
@@ -194,7 +194,7 @@ LP制作・Webサイト制作・社内ツール開発は、ランサーズ・ク
     <svg aria-hidden="true" class="h-5 w-5 text-emerald-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
     編集部の実体験メモ
   </p>
-  <p class="mt-2 text-sm leading-7 text-emerald-900">本サイト（AI Maker Lab）は **Astro 本体は手書きベース／LPプロトタイプは v0 で試作、記事生成・運用は Claude Code 駆動** という構成。「LPだけは v0、本体は Astro」のような分業が現実解です。一方、Lovable はアフィリ参加不可期間中なので、収益化主眼なら v0 / Bolt を入口に推奨します。</p>
+  <p class="mt-2 text-sm leading-7 text-emerald-900">本サイト（AI Maker Lab）は **Astro 本体は手書きベース／LPプロトタイプは v0 で試作、記事生成・運用は Claude Code 駆動** という構成。「LPだけは v0、本体は Astro」のような分業が現実解です。フルスタック MVP を最速で動かしたい用途では Lovable の Supabase 統合が強力です（[Lovable レビュー](/posts/lovable-review-2026/)）。</p>
 </aside>
 
 <aside class="my-8 rounded-xl border-l-4 border-amber-500 bg-amber-50 p-5">
@@ -251,6 +251,7 @@ A. v0 は生成コードを `git pull` で手元に取り込める設計なの�
 
 - [バイブコーディングツール比較](/posts/vibe-coding-tools-2026/) — v0・Lovable・Bolt・Replit Agent を料金・無料枠・向いている人で横並び比較（2026年版）
 - [v0 vs Lovable vs Bolt：Vibe Coding 3大ツール比較](/posts/v0-vs-lovable-vs-bolt-2026/) — UI 生成ツールを個人開発者目線で横並び比較
+- [Lovable レビュー【2026年8月】実際にアプリを作って分かった正直評価](/posts/lovable-review-2026/) — Free枠でアプリを試作、Supabase統合の実力と正直な弱点
 - [v0 by Vercel とは：料金・使い方・個人開発者の実践レビュー](/posts/v0-review-2026/) — v0 単独の深掘りレビュー
 - [Cursor vs Claude Code 徹底比較](/posts/cursor-vs-claude-code-comparison/) — AI コーディングエディタの使い分け
 - [AI 副業ロードマップ 2026](/posts/ai-side-business-roadmap-2026/) — Vibe Coding からの収益化シナリオ

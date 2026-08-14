@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-04-28T16:00:00+09:00
-modDatetime: 2026-07-29T09:00:00+09:00
+modDatetime: 2026-08-14T10:00:00+09:00
 title: "v0 vs Lovable vs Bolt 比較2026年版｜料金$20〜・Vibe Coding 3大ツールを副業・個人開発目線で選ぶ"
 slug: v0-vs-lovable-vs-bolt-2026
 featured: true
@@ -69,11 +69,9 @@ affiliateCta:
 | GitHub 連携 | あり（Vercel経由） | あり | あり | — |
 | 即時プレビュー | プレビュー専用ドメイン | プレビュー専用ドメイン | **ブラウザ内即時** | 即起動：**Bolt** |
 | 本番デプロイ | **Vercel 1クリック** | Lovable Cloud / 外部 | Netlify/Vercel 等 | デプロイ統合：**v0** |
-| 個人開発の主力ティア | **S（最優先）** | watch（監視中）<sup>※1</sup> | A（用途次第） | — |
+| 個人開発の主力ティア | **S（最優先）** | **A（主力）** | A（用途次第） | — |
 
-<sup>※1 Lovable は2026年5月時点でアフィリエイトプログラムを移行中のため、現時点では参加不可。製品自体の評価とは独立です。</sup>
-
-**ティア基準**：S＝最優先（収益性・話題性ともに高い）、A＝優先（標準的）、watch＝監視中（アフィリ未対応、または規約が変動中で扱いが定まっていない）
+**ティア基準**：S＝最優先（収益性・話題性ともに高い）、A＝優先（標準的）
 
 <aside class="my-8 rounded-xl border-l-4 border-indigo-500 bg-indigo-50 p-5">
   <p class="flex items-center gap-2 font-bold text-indigo-900">
@@ -128,6 +126,8 @@ Lovable の真価は **Supabase との統合**です。「ログイン機能つ�
     <span class="mt-1 text-sm text-violet-100">無料枠あり・Supabase統合の「動くMVP」を1指示で（有料プランは $25/月〜）</span>
   </a>
 </div>
+
+詳細な使用感・料金・向く人については **[Lovable レビュー【2026年8月】実際にアプリを作って分かった正直評価](/posts/lovable-review-2026/)** で掘り下げています。
 
 ## Bolt.new — WebContainer でブラウザ完結、貸出 PC でも開発が始められる
 
@@ -223,7 +223,7 @@ WordPress を併設して SEO 記事から自社プロダクトに送客する�
 
 ### Q4. アフィリエイトプログラムに参加できるのはどれですか？
 
-2026年5月時点で v0 / Bolt のパートナープログラムは個人開発者規模では未提供、Lovable は移行中で参加不可です。**Vibe Coding ツール自体ではなく、その周辺インフラ（ドメイン・ホスティング）で収益化する**のが現実的なルートです。本記事の [/go/onamae](/go/onamae) / [/go/mixhost](/go/mixhost) が該当します。
+v0 / Bolt のパートナープログラムは個人開発者規模では現時点で未提供です。Lovable はアフィリエイト提携を利用できる状態になっています（詳細は [Lovable レビュー](/posts/lovable-review-2026/)）。Vibe Coding ツールの **周辺インフラ（ドメイン・ホスティング）でも収益化できます**。本記事の [/go/onamae](/go/onamae) / [/go/mixhost](/go/mixhost) が該当します。
 
 ### Q5. ChatGPT や Claude で同じことはできませんか？
 
@@ -243,6 +243,7 @@ WordPress を併設して SEO 記事から自社プロダクトに送客する�
 
 - [バイブコーディングツール比較2026：v0・Lovable・Bolt・Replit Agent を用途別に選ぶ](/posts/vibe-coding-tools-2026/) — 5ツール横断で料金・無料枠・向いている人をまとめた比較記事
 - [Vibe Coding 完全ガイド：個人開発者が AI で「動くアプリ」をつくる最短ルート](/posts/vibe-coding-guide-2026/) — 本記事の親ピラー記事
+- [Lovable レビュー【2026年8月】実際にアプリを作って分かった正直評価](/posts/lovable-review-2026/) — Free枠の現実・Supabase統合の使い心地・正直な弱点
 - [v0 by Vercel とは：料金・使い方・個人開発者の実践レビュー](/posts/v0-review-2026/) — v0 単独の深掘り
 - [Cursor vs Claude Code 徹底比較](/posts/cursor-vs-claude-code-comparison/) — 生成コードを編集する側のエディタ選び
 - [AI 副業ロードマップ 2026](/posts/ai-side-business-roadmap-2026/) — Vibe Coding からの収益化シナリオ
@@ -263,7 +264,7 @@ WordPress を併設して SEO 記事から自社プロダクトに送客する�
 
 **ツールの向き・不向きに関する評価**は、執筆者および [AI Maker Lab](https://aimaker-lab.com/) 編集チームによる実使用感に基づく所感であり、定量的な比較試験の結果ではありません。あくまで1つの参考として、ご自身の用途に合うかは無料枠で試した上でご判断ください。
 
-**Lovable のアフィリエイトプログラム参加状況**は 2026-05-12 時点の情報です。プログラム再開時には [/tools/lovable/](/tools/lovable/) にて告知します。
+**Lovable のアフィリエイトプログラム参加状況**は 2026-08-14 時点で提携利用可能な状態です（[Lovable レビュー](/posts/lovable-review-2026/)参照）。
 
 <script type="application/ld+json">
 {
@@ -299,7 +300,7 @@ WordPress を併設して SEO 記事から自社プロダクトに送客する�
       "name": "アフィリエイトプログラムに参加できるのはどれですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "2026-05 時点で v0 / Bolt のパートナープログラムは個人開発者規模では未提供、Lovable は移行中で参加不可です。周辺インフラ（ドメイン・ホスティング）で収益化するのが現実的です。"
+        "text": "v0 / Bolt のパートナープログラムは個人開発者規模では未提供です。Lovable はアフィリエイト提携が利用可能な状態です（2026-08時点）。周辺インフラ（ドメイン・ホスティング）でも収益化できます。"
       }
     },
     {
