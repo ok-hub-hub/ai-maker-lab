@@ -1,9 +1,9 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-06-05T19:00:00+09:00
-title: "Transcope vs Catchy どっちがいい？実際に使って分かった差と結論【2026年8月】"
+title: "Transcope vs Catchy どっちがいい？実際に使って分かった差と結論【2026年8月最新】"
 slug: catchy-vs-transcope-2026
-modDatetime: 2026-08-11T09:00:00+09:00
+modDatetime: 2026-08-17T11:00:00+09:00
 featured: true
 draft: false
 tags:
@@ -12,7 +12,7 @@ tags:
   - transcope
   - comparison
   - seo
-description: "結論：SEO集客記事でオウンドメディアを育てるならTranscope、SNS文・短コピー・タイトル量産ならCatchy。3ヶ月実運用で料金・日本語精度・SEO効果を比較した結論。目的が違う2ツールの使い分け基準を整理します。"
+description: "結論：オウンドメディア・SEO集客記事ならTranscope（Basic月¥11,000〜）、SNS短文・タイトル量産ならCatchy（月¥3,000〜）。3ヶ月実運用した料金・SEO効果・日本語精度の比較と、用途別の使い分け基準を整理します。"
 affiliateCta:
   - id: transcope
     experienced: true

@@ -1,8 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-07-29T09:20:00+09:00
-modDatetime: 2026-08-11T09:00:00+09:00
-title: "DeepEditorとTranscopeの違いと使い分け事例｜実際に両方使って分かった結論【2026年8月】"
+modDatetime: 2026-08-17T11:00:00+09:00
+title: "DeepEditor vs Transcope｜SEO用途で両方使った違いと使い分け【2026年8月】"
 slug: deepeditor-vs-transcope-2026
 featured: false
 draft: false
@@ -12,7 +12,7 @@ tags:
   - deepeditor
   - comparison
   - seo
-description: "結論：ブログ・個人SEOならTranscope（¥11,000〜・Free1週間）、社内ライン量産・法人用途ならDeepEditor。実際に両方使った使い分けケース（ブログ記事/SEO長文/社内コンテンツ）を整理。「私の用途はどっちが最適？」という問いに用途別で直接答えます。"
+description: "結論：SEO用途ならTranscope（¥11,000〜・1週間無料）、社内コンテンツ量産・法人用途ならDeepEditor。両方を実際に使って分かったSEO機能差・料金差・用途別の使い分けケースを整理。「私の用途はどっちが最適？」に直接答えます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-violet-100 via-indigo-100 to-sky-100 sm:h-32">
