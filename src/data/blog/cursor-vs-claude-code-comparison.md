@@ -1,8 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-05-13T16:00:00+09:00
-modDatetime: 2026-08-03T09:00:00+09:00
-title: "Cursor vs Claude Code 比較【2026年8月版】料金・機能・使い分けを個人開発者目線で解説"
+modDatetime: 2026-08-18T11:00:00+09:00
+title: "Cursor vs Claude Code 比較【2026年8月最新】料金$20/$22・機能差と個人開発者の選び方"
 slug: cursor-vs-claude-code-comparison
 featured: false
 draft: false
@@ -13,7 +13,7 @@ tags:
   - comparison
   - ide
   - cli
-description: "Cursor vs Claude Code を2026年8月時点の最新料金・機能で徹底比較。Cursor Pro $20/月・Claude Code は Anthropic Pro $22/月（月払い）に同梱。設計思想・得意領域・実務での使い分けシナリオを個人開発者目線で整理しました。"
+description: "Cursor vs Claude Code の2026年8月最新比較。Cursor Pro $20/月 vs Anthropic Pro $22/月（月払い）の料金差から、設計思想・得意領域・実務での使い分けまで個人開発者視点で解説。Workbench廃止後の選び方も収録。"
 affiliateCta:
   - id: onamae
     lead: "どちらのエディタで作っても、公開して人に使ってもらうには独自ドメインが要ります。"
@@ -234,6 +234,18 @@ Cursor は複数モデルを選択可能で、Claude を含む各種モデルを
 
 2026年5月時点で、Cursor / Claude Code 自体のアフィリエイトプログラムは個人開発者規模では未提供です。AI コーディング周辺の**インフラ（ドメイン・ホスティング）**で収益化するのが現実的なルートで、本記事末尾の関連リンクが該当します。
 
+## Workbench 廃止後（2026年8月17日）この比較への影響
+
+2026年8月17日、Anthropic が **Claude Workbench**（claude.ai 内のプロンプトテスト用 GUI 環境）を正式廃止し、Console（console.anthropic.com）へ統合しました。「これで Claude Code の使い方や比較関係が変わるか？」という質問が増えているため、ここに整理します。
+
+**Claude Code（CLI ツール）への影響：なし。** Workbench は「ブラウザでプロンプトを試す画面」であり、ターミナルで動く Claude Code とは元から独立した仕組みです。API キー管理・CLI の動作・CLAUDE.md による自走設定は廃止前後で一切変わっていません。
+
+**Cursor（IDE）への影響：なし。** Cursor は Anthropic のエコシステムとは独立したスタンドアロン IDE です。
+
+Workbench 廃止後も「**自走・複数ファイル一括変更 → Claude Code**、**GUI で見ながら対話的に編集 → Cursor**」という使い分け原則は変わりません。廃止当日に実際に両ツールを使い続けた実録は以下の記事で詳しく書いています。
+
+→ [Claude Code vs Cursor｜Workbench廃止当日に両方使った実録【2026年8月17日】](/posts/claude-code-vs-cursor-after-workbench-2026/)
+
 ## まとめと次に読むべき記事
 
 両ツールの選び方を、もう一度1行で：
@@ -246,6 +258,7 @@ Cursor は複数モデルを選択可能で、Claude を含む各種モデルを
 
 ### 関連記事
 
+- [Claude Code vs Cursor：Workbench廃止当日に両方使った実録](/posts/claude-code-vs-cursor-after-workbench-2026/) — 廃止後の使い分けを実録で解説（2026年8月17日）
 - [v0 vs Lovable vs Bolt：Vibe Coding 3大ツール比較](/posts/v0-vs-lovable-vs-bolt-2026/) — UI 生成ツールの比較
 - [Vibe Coding 完全ガイド](/posts/vibe-coding-guide-2026/) — 個人開発者の AI コーディング入門
 - [Claude Code で AI 会社を1ヶ月運営してみた](/posts/claude-code-ai-company-1month-2026/) — Claude Code の実運用レポート

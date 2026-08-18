@@ -283,3 +283,9 @@ Workbench が廃止された 2026年8月17日の朝、実際に確かめた結�
     <span class="mt-1 text-sm text-violet-100">Claude Code でも Cursor でも、作ったアプリを最短でデプロイできます。</span>
   </a>
 </div>
+
+### 関連記事
+
+- [Cursor vs Claude Code 詳細比較（2026年8月最新）](/posts/cursor-vs-claude-code-comparison/) — 料金・機能・使い分けシナリオの完全版
+- [Vibe Coding 完全ガイド](/posts/vibe-coding-guide-2026/) — AI コーディング入門
+- [Claude Code で AI 会社を1ヶ月運営してみた](/posts/claude-code-ai-company-1month-2026/) — Claude Code 実運用レポート
