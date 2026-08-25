@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-07-12T10:03:00+09:00
-modDatetime: 2026-08-13T10:00:00+09:00
+modDatetime: 2026-08-25T17:00:00+09:00
 title: "vibe coding ツール おすすめ比較2026年版｜無料枠あり・Claude Code・Cursor・v0・Bolt を副業×公開フローで選ぶ"
 slug: vibe-coding-tools-2026
 featured: false
@@ -16,7 +16,7 @@ tags:
 description: "vibe coding ツール 無料で始めたい人へ。AI IDE型（Claude Code/Cursor/Cline）とAIアプリビルダー型（v0/Bolt/Lovable）の全7ツールを、副業で作って公開するフロー×料金×無料枠で徹底比較。作ったものを公開するホスティング選びまで一気通貫で解説。2026年7月更新。"
 affiliateCta:
   - id: conoha
-    lead: "作ったものをWordPressで公開・運用するなら、36ヶ月契約で月額660円台からのConoHa WINGが最安級です。"
+    lead: "作ったものをWordPressで公開・運用するなら、36ヶ月契約で月額659円からのConoHa WINGが最安級です。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 sm:h-32">
@@ -66,12 +66,12 @@ Claude Code、Cursor、Cline、v0、Bolt、Lovable——選択肢が増えすぎ
 | API代を最小化・OSS重視 | **[Cline](/tools/cline/)** | 本体無料。Claude / Gemini / ローカル LLM を自分で切り替え |
 | コード不要でUIプロトタイプを作りたい | **[v0 by Vercel](/tools/v0/)** | Vercel ワンクリックデプロイ。React 系エンジニアの高速試作にも強い |
 | ログイン・DB込みの SaaS を最速で | **[Bolt.new](/tools/bolt/)** | ブラウザだけで完結。バックエンドも自動生成 |
-| 作ったサイトをWordPressで収益化したい | **[ConoHa WING](/go/conoha)** | 月678円〜（2026-07-22取得・8/5まで最大53%OFF）。AI記事+WordPressが最速ルート |
+| 作ったサイトをWordPressで収益化したい | **[ConoHa WING](/go/conoha)** | 月659円〜（2026-08-25取得・9/9 16時まで最大54%OFF）。AI記事+WordPressが最速ルート |
 
 <div class="my-6">
   <a href="/go/conoha" class="flex flex-col rounded-2xl bg-sky-600 p-5 text-white no-underline shadow-sm transition hover:bg-sky-700">
     <span class="text-lg font-bold">ConoHa WING でWordPressブログを始める →</span>
-    <span class="mt-1 text-sm text-sky-100">月678円〜（8/5まで最大53%OFF）・独自ドメイン2つ無料・かんたんセットアップ</span>
+    <span class="mt-1 text-sm text-sky-100">月659円〜（9/9 16時まで最大54%OFF）・独自ドメイン2つ無料・かんたんセットアップ</span>
   </a>
 </div>
 
@@ -128,7 +128,7 @@ Claude Code、Cursor、Cline、v0、Bolt、Lovable——選択肢が増えすぎ
 <div class="my-6">
   <a href="/go/xserver" class="flex flex-col rounded-2xl bg-green-600 p-5 text-white no-underline shadow-sm transition hover:bg-green-700">
     <span class="text-lg font-bold">エックスサーバーで10日間無料お試し →</span>
-    <span class="mt-1 text-sm text-green-100">通常990円〜、実質693円〜（2026-07-12取得・8/4まで）・独自ドメイン2つ無料</span>
+    <span class="mt-1 text-sm text-green-100">通常990円〜、月693円〜（2026-08-25取得・9/7まで）・独自ドメイン2つ無料</span>
   </a>
 </div>
 
@@ -230,28 +230,28 @@ AI ライティングツール（Catchy / Transcope）で記事を量産して�
 
 | サービス | 通常月額 | キャンペーン月額 | ドメイン無料特典 | 向く人 |
 |---------|----------|----------------|----------------|--------|
-| **ConoHa WING** | キャンペーン外は公式で確認 | **月678円〜**（8/5まで最大53%OFF・WINGパック36ヶ月） | 2つ無料 | WordPress をとにかく安く始めたい |
-| **エックスサーバー** | 990円〜（スタンダード） | **実質693円〜**（8/4まで・キャッシュバック） | 2つ無料 | 長期安定重視・国内シェアNo.1の実績を信頼 |
+| **ConoHa WING** | キャンペーン外は公式で確認 | **月659円〜**（9/9 16時まで最大54%OFF・WINGパック36ヶ月） | 2つ無料 | WordPress をとにかく安く始めたい |
+| **エックスサーバー** | 990円〜（スタンダード） | **月693円〜**（9/7まで・最大30%オフ） | 2つ無料 | 長期安定重視・国内シェアNo.1の実績を信頼 |
 
 <sup>※料金は2026-07-12に各公式サイトへ接続して取得した情報です。キャンペーン価格は期限あり。契約前に必ず公式で最新価格をご確認ください。</sup>
 
 <div class="my-6">
   <a href="/go/conoha" class="flex flex-col rounded-2xl bg-sky-600 p-5 text-white no-underline shadow-sm transition hover:bg-sky-700">
     <span class="text-lg font-bold">ConoHa WING を公式で確認する →</span>
-    <span class="mt-1 text-sm text-sky-100">月678円〜（8/5まで最大53%OFF）・独自ドメイン2つ無料・WordPressかんたんセットアップ</span>
+    <span class="mt-1 text-sm text-sky-100">月659円〜（9/9 16時まで最大54%OFF）・独自ドメイン2つ無料・WordPressかんたんセットアップ</span>
   </a>
 </div>
 
 **ConoHa WING の特徴**（2026-07-22 公式取得）
 
-- WINGパック36ヶ月で月678円〜（最大53%OFF・8月5日まで）
+- WINGパック36ヶ月で月659円〜（最大54%OFF・9月9日16時まで）
 - WordPress かんたんセットアップ：ドメイン取得・SSL・テーマ導入まで管理画面1画面
 - 独自ドメイン2つ永久無料
 - 国内データセンター（東京・大阪）で国内アクセスに最適化
 
 **エックスサーバーの特徴**（2026-07-12 公式取得）
 
-- スタンダードプラン 通常990円〜、キャッシュバックで実質693円〜（8月4日まで）
+- スタンダードプラン 通常990円〜、最大30%オフで月693円〜（9月7日まで）
 - 2003年運営開始・国内シェアNo.1（公式サイト表記）
 - NVMe SSD 500GB・独自ドメイン2つ無料
 - 10日間無料お試し（本契約前に動作確認可能）
@@ -259,7 +259,7 @@ AI ライティングツール（Catchy / Transcope）で記事を量産して�
 <div class="my-6">
   <a href="/go/xserver" class="flex flex-col rounded-2xl bg-green-600 p-5 text-white no-underline shadow-sm transition hover:bg-green-700">
     <span class="text-lg font-bold">エックスサーバーを10日間無料で試す →</span>
-    <span class="mt-1 text-sm text-green-100">実質693円〜（8/4まで）・10日間無料お試し・独自ドメイン2つ無料</span>
+    <span class="mt-1 text-sm text-green-100">月693円〜（9/7まで）・10日間無料お試し・独自ドメイン2つ無料</span>
   </a>
 </div>
 
@@ -272,7 +272,7 @@ A. 各ツールに無料枠はありますが、継続的な本格開発には�
 A. Bolt.new と Lovable は未経験でもプロトタイプまで到達できます。ただし、完成したものを実際にサービスとして運用・改善していくには、ある程度コードの読み方を学ぶ必要があります。「副業で収益を出すまで持っていく」なら、プログラミングの基礎学習と並行して進めるのが現実的です。
 
 **Q. 作ったアプリをどこで公開すればいいですか？**
-A. 用途で変わります。Next.js/React 系なら Vercel（v0 と親和性◎）か Cloudflare Pages（無料・帯域無制限）。WordPress でブログを立ち上げて AI 記事で収益化するなら、[ConoHa WING](/go/conoha)（月678円〜・8/5まで）か[エックスサーバー](/go/xserver)（実質693円〜・8/4まで）が国内2強です。
+A. 用途で変わります。Next.js/React 系なら Vercel（v0 と親和性◎）か Cloudflare Pages（無料・帯域無制限）。WordPress でブログを立ち上げて AI 記事で収益化するなら、[ConoHa WING](/go/conoha)（月659円〜・9/9 16時まで）か[エックスサーバー](/go/xserver)（月693円〜・9/7まで）が国内2強です。
 
 **Q. Claude Code と Cursor はどちらを選べばいいですか？**
 A. 両方使うのが現実解です。Claude Code はターミナルからの自走タスクに強く、Cursor は VS Code UIを見ながらのコード編集に強い。詳細な比較は [Cursor vs Claude Code 比較記事](/posts/cursor-vs-claude-code-comparison/) で解説しています。
@@ -281,16 +281,16 @@ A. 両方使うのが現実解です。Claude Code はターミナルからの�
 
 - バイブコーディングツールは「コードが読めるか」で AI IDE型（Cursor/Claude Code/Cline）か AIビルダー型（v0/Bolt/Lovable）かを選ぶのが基本。
 - エンジニア副業の生産性向上なら **Claude Code + Cursor** の組み合わせが最高効率。コード不要の入り口なら **Bolt.new** から始める。
-- どのツールで作っても、公開・収益化にはホスティングが必要。WordPress で AI 記事と組み合わせるなら [ConoHa WING](/go/conoha)（月678円〜・8/5まで）か [エックスサーバー](/go/xserver)（実質693円〜・8/4まで）が国内2強。
+- どのツールで作っても、公開・収益化にはホスティングが必要。WordPress で AI 記事と組み合わせるなら [ConoHa WING](/go/conoha)（月659円〜・9/9 16時まで）か [エックスサーバー](/go/xserver)（月693円〜・9/7まで）が国内2強。
 
 <div class="my-8 flex flex-col gap-3">
   <a href="/go/conoha" class="flex flex-col rounded-2xl bg-sky-600 p-5 text-white no-underline shadow-sm transition hover:bg-sky-700">
     <span class="text-lg font-bold">ConoHa WINGでWordPressを始める →</span>
-    <span class="mt-1 text-sm text-sky-100">月678円〜（8/5まで最大53%OFF）・独自ドメイン2つ無料・WordPress即開設</span>
+    <span class="mt-1 text-sm text-sky-100">月659円〜（9/9 16時まで最大54%OFF）・独自ドメイン2つ無料・WordPress即開設</span>
   </a>
   <a href="/go/xserver" class="flex flex-col rounded-2xl bg-green-600 p-5 text-white no-underline shadow-sm transition hover:bg-green-700">
     <span class="text-lg font-bold">エックスサーバーを10日間無料で試す →</span>
-    <span class="mt-1 text-sm text-green-100">実質693円〜（8/4まで）・国内シェアNo.1・10日間無料お試し</span>
+    <span class="mt-1 text-sm text-green-100">月693円〜（9/7まで）・国内シェアNo.1・10日間無料お試し</span>
   </a>
 </div>
 
@@ -327,7 +327,7 @@ A. 両方使うのが現実解です。Claude Code はターミナルからの�
       "name": "バイブコーディングで作ったアプリをどこで公開すればいいですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "用途で変わります。Next.js/React系ならVercel（v0と親和性◎）かCloudflare Pages（無料・帯域無制限）。WordPressブログを立ち上げてAI記事で収益化するなら、ConoHa WING（月678円〜・2026-07-22取得）かエックスサーバー（実質693円〜・2026-07-12取得）が国内2強です。"
+        "text": "用途で変わります。Next.js/React系ならVercel（v0と親和性◎）かCloudflare Pages（無料・帯域無制限）。WordPressブログを立ち上げてAI記事で収益化するなら、ConoHa WING（月659円〜・2026-08-25取得）かエックスサーバー（月693円〜・2026-08-25取得）が国内2強です。"
       }
     },
     {
