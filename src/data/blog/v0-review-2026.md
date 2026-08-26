@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-04-19T14:30:00+09:00
-modDatetime: 2026-07-24T09:00:00+09:00
+modDatetime: 2026-08-26T10:00:00+09:00
 title: "v0 料金・評判 2026｜$0無料枠の実態から$30有料の損益分岐まで個人開発者が解説"
 slug: v0-review-2026
 featured: true
@@ -11,7 +11,7 @@ tags:
   - vibe-coding
   - vercel
   - ui-generator
-description: "v0 by Vercel の2026年最新料金（Free $0・Team $30〜）、1日7メッセージ無料枠の現実、Lovable / Bolt との違い、個人開発者が損益分岐点まで実践レビュー。"
+description: "v0 by Vercel の2026年最新料金（Free $0・Plus $30〜）、1日7メッセージ無料枠の現実、Lovable / Bolt との違い、個人開発者が損益分岐点まで実践レビュー。"
 affiliateCta:
   - id: onamae
     lead: "v0の出力は *.vercel.app のままでも動きますが、人に使ってもらう段階では独自ドメインで信用が変わります。"
@@ -51,18 +51,18 @@ v0 by Vercel は、テキストで「こんなUIが欲しい」と指示する�
 | プラン | 月額 | 含まれるクレジット | 主な制限 |
 |---|---|---|---|
 | **Free** | $0 | $5/月 のクレジット | **1日7メッセージまで** |
-| **Team** | $30/ユーザー | $30/月 ＋ ログインボーナス $2/日 | チーム共同編集、課金統合 |
+| **Plus** | $30/ユーザー | $30/月 ＋ ログインボーナス $2/日 | 全モデルアクセス、チーム共同編集 |
 | **Business** | $100/ユーザー | $30/月 ＋ ログインボーナス $2/日 | データをモデル学習に使わない |
 | **Enterprise** | 個別見積 | カスタム | SAML SSO、SLA、優先サポート |
 
-ポイントは **「Free プランは試用版に近い」** ということ。1日7メッセージで本気のプロダクト開発は厳しく、本格利用なら Team $30/月が現実ラインです。
+ポイントは **「Free プランは試用版に近い」** ということ。1日7メッセージで本気のプロダクト開発は厳しく、本格利用なら Plus $30/月が現実ラインです。
 
 <aside class="my-8 rounded-xl border-l-4 border-amber-500 bg-amber-50 p-5">
   <p class="flex items-center gap-2 font-bold text-amber-900">
     <svg aria-hidden="true" class="h-5 w-5 text-amber-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 6v12"></path><path d="M9 9.5a2.5 2.5 0 0 1 2.5-1.5h1A2.5 2.5 0 0 1 15 10.5c0 1.5-1.5 2-3 2s-3 .5-3 2A2.5 2.5 0 0 0 11.5 17h1a2.5 2.5 0 0 0 2.5-1.5"></path></svg>
     料金・コストの注意
   </p>
-  <p class="mt-2 text-sm leading-7 text-amber-900">上記料金は2026-05-12 時点で v0.app/pricing から取得。Vercel は継続的にプラン改定を行うため、契約前に必ず公式サイトで最新情報を確認してください。Max Fast モデルはクレジット消費が早い点にも注意。</p>
+  <p class="mt-2 text-sm leading-7 text-amber-900">上記料金は2026-08-26 時点で v0.app/pricing から取得。Vercel は継続的にプラン改定を行うため、契約前に必ず公式サイトで最新情報を確認してください。Max Fast モデルはクレジット消費が早い点にも注意。</p>
 </aside>
 
 なお、モデルは Mini / Pro / Max / Max Fast の4種類があり、入力・キャッシュ・出力それぞれにトークン単価（$1〜$150/100万トークン）が設定されています。Max Fast を多用すると思ったよりクレジットを食う点は要注意です。
@@ -77,7 +77,7 @@ v0 by Vercel は、テキストで「こんなUIが欲しい」と指示する�
 - **管理画面 1セット**：10-15メッセージ必要（Free 2日分）
 - **SaaSアプリのMVP**：30-50メッセージ（Free 5-7日分）
 
-つまり「お試しなら無料、月に何か作るなら Team プランが必要」というのが現実です。
+つまり「お試しなら無料、月に何か作るなら Plus プランが必要」というのが現実です。
 
 ---
 
@@ -168,13 +168,13 @@ v0 by Vercel は、テキストで「こんなUIが欲しい」と指示する�
 - Vue / Svelte / Astro / Solid など **React 以外のフロント**で書きたい人
 - 認証・DB を含む **バックエンドまで1回の指示で生成**してほしい人（→ Lovable の Supabase 統合）
 - 管理画面・ドキュメント・エラーメッセージが **日本語UIでないと困る**人（v0 はメニュー・モデル選択肢が英語）
-- 月 $30（Team プラン）の固定費を払わずに済ませたい人（Free は1日7メッセージで開発用途は厳しい）
+- 月 $30（Plus プラン）の固定費を払わずに済ませたい人（Free は1日7メッセージで開発用途は厳しい）
 
 ---
 
 ## 個人開発者の損益分岐点
 
-副業 or 本業として v0 Team $30/月を払う場合：
+副業 or 本業として v0 Plus $30/月を払う場合：
 
 - アフィリ報酬（推定）：v0 は紹介プログラムあり（[Vercel Affiliate](https://v0.app/) 詳細は公式参照）
 - 自分のSaaS立ち上げ：UI制作工数が月20-40時間削減できれば、時給1500円換算で月3-6万円の価値
@@ -260,7 +260,7 @@ v0 の出力は `*.vercel.app` のままでも動きます。ただし、**人�
       "name": "v0 の料金プランはどうなっていますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "2026-05-12 時点で Free $0（1日7メッセージ）/ Team $30 / Business $100 / Enterprise 個別見積。本格利用なら Team $30 が現実ラインです（要最新確認）。"
+        "text": "2026-08-26 時点で Free $0（1日7メッセージ）/ Plus $30 / Business $100 / Enterprise 個別見積。本格利用なら Plus $30 が現実ラインです（要最新確認）。"
       }
     },
     {
