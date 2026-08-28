@@ -857,7 +857,7 @@ export const TOOLS: ToolMeta[] = [
     category: ["writing"],
     forEngineer: false,
     forBeginner: true,
-    priceMin: 13,
+    priceMin: 33,
     priceFree: true,
     jpFriendly: true,
     speed: 3,
@@ -872,14 +872,14 @@ export const TOOLS: ToolMeta[] = [
     strengths: [
       "記事生成→投稿→インデックス送信までを自動化する設計で、手を動かす時間が最小で済む",
       "日本語のサービス・サポートで、WordPressブログとの連携を前提に作られている",
-      "無料体験があり、有料プラン（Lite月額¥1,980〜）前に生成品質を確かめられる",
+      "無料プラン（月3記事）があり、有料に進む前に生成品質を確かめられる",
     ],
     weaknesses: [
       "自動生成記事はそのままだと画一的になりやすく、上位表示を狙うなら編集・独自情報の追記が前提",
       "当編集部ではまだ実運用しておらず、生成品質・SEO効果は未検証（公式情報ベースの紹介）",
     ],
-    verifiedAt: "2026-07-20",
-    note: "もしもアフィリエイト AIブログくんGOLD（promotion_id=7624）AI Maker Lab媒体(a_id=5695328)で提携中。成果地点=有料プラン登録（Lite月額¥1,980〜Max年額¥198,000）。テキスト原稿URLを 2026-07-20 に管理画面で実照合して設定。編集部未検証のため記事では体験談を書かないこと。",
+    verifiedAt: "2026-08-29",
+    note: "もしもアフィリエイト AIブログくんGOLD（promotion_id=7624）AI Maker Lab媒体で提携中。【価格・2026-08-29 公式をPlaywrightでDOM抽出】無料=月3記事／Lite=月間8,200円・年間4,900円(月額換算)・〜15記事／Starter=月間16,500円・年間9,900円(月額換算)・〜50記事。出典 https://www.ai-blogkun.com/ 。価格改定があるため記事に書く際は再取得すること。成果報酬額は もしも管理画面で未再確認。編集部未検証のため記事では体験談を書かないこと。",
   },
   {
     id: "career-company",
