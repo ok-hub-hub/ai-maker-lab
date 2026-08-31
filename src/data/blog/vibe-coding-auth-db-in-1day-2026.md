@@ -1,8 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-05-25T03:32:00+09:00
-modDatetime: 2026-07-28T09:00:00+09:00
-title: "Supabase 認証 + RLS を1日で実装する方法【2026年7月版】Lovable × Cloudflare Pages 8時間タイムライン"
+modDatetime: 2026-08-31T22:55:00+09:00
+title: "Supabase 認証 + RLS を1日で実装する方法【2026年最新版】Lovable × Cloudflare Pages 8時間タイムライン"
 slug: vibe-coding-auth-db-in-1day-2026
 featured: true
 draft: false
@@ -14,7 +14,7 @@ tags:
   - rls
   - cloudflare-pages
   - implementation
-description: "Lovable × Supabase × Cloudflare Pages で認証 + RLS 込みのアプリを8時間で公開する実装ガイド【2026年7月版】。月額費用・CORS/OAuth/メール未着の3大トラブル対策・RLS 漏洩防止まで一次情報をもとに整理。"
+description: "Lovable × Supabase × Cloudflare Pages で認証 + RLS 込みのアプリを8時間で公開する実装ガイド【2026年最新版】。月額費用・CORS/OAuth/メール未着の3大トラブル対策・RLS 漏洩防止まで一次情報をもとに整理。"
 affiliateCta:
   - id: onamae
     lead: "時間割の18:00「本番ドメイン接続」で必要になります。取得からDNS反映まで時間がかかるので、着手前に押さえておくと安全です。"

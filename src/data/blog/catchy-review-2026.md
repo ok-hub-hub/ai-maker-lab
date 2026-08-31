@@ -1,8 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-06-24T19:00:00+09:00
-modDatetime: 2026-08-28T10:00:00+09:00
-title: "キャッチー レビュー【2026年8月最新】3ヶ月100テンプレ実検証：正直評価と向く人/向かない人"
+modDatetime: 2026-08-31T22:55:00+09:00
+title: "キャッチー レビュー【2026年最新】3ヶ月100テンプレ実検証：正直評価と向く人/向かない人"
 slug: catchy-review-2026
 featured: false
 draft: false

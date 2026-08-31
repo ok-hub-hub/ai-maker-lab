@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-08-12T09:22:00+09:00
-title: "Claude WorkbenchがConsoleに統合——Claude Code・Cursor開発者が知るべき変更点まとめ【2026年8月】"
+title: "Claude WorkbenchがConsoleに統合——Claude Code・Cursor開発者が知るべき変更点まとめ【2026年最新】"
 slug: claude-workbench-console-2026
 featured: false
 draft: false
@@ -10,7 +10,7 @@ tags:
   - cursor
   - ai-coding
   - vibe-coding
-description: "Claude Workbenchが2026年8月17日に廃止予定。Console統合でClaude Codeのセットアップと開発フローが具体的にどう変わるか、Cursor vs Claude Codeの使い分けを含め実録で解説します。"
+description: "Claude Workbenchが2026年8月17日に廃止されました。Console統合でClaude Codeのセットアップと開発フローが具体的にどう変わるか、Cursor vs Claude Codeの使い分けを含め実録で解説します。"
 affiliateCta:
   - id: lovable
     lead: "CursorやClaude Codeで作ったアプリをそのままデプロイできます。ビルド→公開URLまで最短ルート。"

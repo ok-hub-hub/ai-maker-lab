@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-08-05T09:23:00+09:00
-title: "Gamma AIレビュー【2026年8月】プレゼンが数十秒で完成｜Canva・PowerPointと何が違う？"
+title: "Gamma AIレビュー【2026年最新】プレゼンが数十秒で完成｜Canva・PowerPointと何が違う？"
 slug: gamma-review-2026
 featured: false
 draft: false

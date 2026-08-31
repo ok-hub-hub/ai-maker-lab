@@ -1,8 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-07-15T09:20:00+09:00
-modDatetime: 2026-08-28T09:10:00+09:00
-title: "Sonnet 5 vs GPT-5.6 Luna【2026年8月】1本あたりコスト差$0.009・日本語SEO記事品質を実測比較"
+modDatetime: 2026-08-31T22:55:00+09:00
+title: "Sonnet 5 vs GPT-5.6 Luna【2026年最新】1本あたりコスト差$0.020・日本語SEO記事品質を実測比較"
 slug: gpt-5-6-vs-claude-sonnet5-jp-writing-2026
 featured: false
 draft: false
@@ -12,7 +12,7 @@ tags:
   - llm
   - chatgpt
   - claude
-description: "Sonnet 5 vs GPT-5.6 Luna の違い【2026年8月実測】。Claude Sonnet 5（$2/$10 イントロ〜8/31）vs GPT-5.6 Luna（$1/$6）でSEO記事1本あたりのコスト差は$0.009。8月末イントロ価格終了前に知るべき比較と、日本語品質・用途別の選び方を整理。"
+description: "Sonnet 5 vs GPT-5.6 Luna の違いを実測比較。2026年9月1日にイントロ価格が終了し、Claude Sonnet 5 は通常価格 $3/$15 へ。GPT-5.6 Luna（$1/$6）とのSEO記事1本あたりのコスト差は $0.020 に拡大しました。日本語品質・用途別の選び方を整理。"
 affiliateCta:
   - id: catchy
     experienced: true
@@ -49,7 +49,7 @@ affiliateCta:
 
 <div class="my-6 rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
   <p class="flex items-center gap-2 text-lg font-bold text-amber-900">✅ 編集部の結論</p>
-  <p class="mt-2 text-amber-950">API 直接利用なら <strong>Claude Sonnet 5（〜8月末のイントロ価格 $2/$10）</strong> がコスパ最優秀。ChatGPT UI で書くなら <strong>GPT-5.6 Terra</strong> がバランス点。ただし日本語SEO記事量産なら、モデル選択を抽象化してくれる <strong><a href="/go/catchy" class="underline">Catchy</a>・<a href="/go/transcope" class="underline">Transcope</a></strong> を使う方が生産性は圧倒的に高い。</p>
+  <p class="mt-2 text-amber-950">API 直接利用でコストを最優先するなら <strong>GPT-5.6 Luna（$1/$6）</strong>。2026年9月1日にイントロ価格が終了し、<strong>Claude Sonnet 5 は $3/$15</strong> と GPT-5.6 Terra 同水準になりました。ChatGPT UI で書くなら <strong>GPT-5.6 Terra</strong> がバランス点。ただし日本語SEO記事量産なら、モデル選択を抽象化してくれる <strong><a href="/go/catchy" class="underline">Catchy</a>・<a href="/go/transcope" class="underline">Transcope</a></strong> を使う方が生産性は圧倒的に高い。</p>
   <div class="mt-4 grid gap-1.5 text-sm text-amber-950">
     <div class="flex items-center gap-2"><span class="w-36 flex-none">日本語品質</span><span class="h-2 flex-1 rounded-full bg-amber-200"><span class="block h-2 rounded-full bg-amber-500" style="width:88%"></span></span><span class="w-8 text-right font-bold">4.4</span></div>
     <div class="flex items-center gap-2"><span class="w-36 flex-none">APIコスパ</span><span class="h-2 flex-1 rounded-full bg-amber-200"><span class="block h-2 rounded-full bg-amber-500" style="width:80%"></span></span><span class="w-8 text-right font-bold">4.0</span></div>
@@ -97,17 +97,17 @@ Claude Sonnet 5（`claude-sonnet-5`）は、Anthropic が 2026年6月30日にリ
 
 | 指標 | 値 |
 |-----|---|
-| API 入力料金（イントロ・〜8/31） | $2.00 / 1Mトークン |
-| API 出力料金（イントロ・〜8/31） | $10.00 / 1Mトークン |
-| API 入力料金（通常） | $3.00 / 1Mトークン |
-| API 出力料金（通常） | $15.00 / 1Mトークン |
+| API 入力料金（通常・現行） | $3.00 / 1Mトークン |
+| API 出力料金（通常・現行） | $15.00 / 1Mトークン |
+| API 入力料金（イントロ・2026/8/31 終了） | $2.00 / 1Mトークン |
+| API 出力料金（イントロ・2026/8/31 終了） | $10.00 / 1Mトークン |
 | コンテキスト窓 | 1M トークン |
 | 最大出力 | 128k トークン |
 | Adaptive thinking | あり |
 
 *料金出典：Anthropic Claude ドキュメント（platform.claude.com/docs/en/about-claude/models/overview）2026-08-28 再確認*
 
-イントロ価格 $2/$10 はトークン単価として現行モデル中でも最安クラスです。2026年8月末以降は $3/$15 に移行するため、**今のうちにコスト構造を把握しておく価値があります**。
+イントロ価格 $2/$10 は **2026年8月31日で終了**し、2026年9月1日以降は通常価格 $3/$15 です。以下のコスト試算はすべて現行価格を基準にしています。
 
 ## 料金比較（2026年7月15日実取得）
 
@@ -118,8 +118,8 @@ API 直接利用ベースで全モデルを並べると以下のとおりです�
 | GPT-5.6 Sol | $5.00 | $30.00 | 最高品質を求める・月1本の看板記事 |
 | GPT-5.6 Terra | $2.50 | $15.00 | ChatGPT UI でバランス重視 |
 | GPT-5.6 Luna | $1.00 | $6.00 | とにかく低コストで量産したい |
-| **Claude Sonnet 5**（〜8/31 イントロ） | **$2.00** | **$10.00** | **API 経由でコスパを重視したい** |
-| Claude Sonnet 5（通常価格） | $3.00 | $15.00 | Terra と同水準 |
+| **Claude Sonnet 5**（現行価格） | **$3.00** | **$15.00** | **長文処理と日本語品質を重視したい** |
+| Claude Sonnet 5（イントロ・2026/8/31 終了） | $2.00 | $10.00 | ※現在は適用されません |
 | Claude Opus 4.8 | $5.00 | $25.00 | 複雑なエージェント処理・長文品質優先 |
 
 ### コスト試算：記事1本あたり
@@ -130,10 +130,10 @@ API 直接利用ベースで全モデルを並べると以下のとおりです�
 |--------|----------------------|---------|
 | GPT-5.6 Sol | 約$0.065（≒10円） | 約$6.50（≒1,000円） |
 | GPT-5.6 Terra | 約$0.033（≒5円） | 約$3.30（≒500円） |
-| Claude Sonnet 5（イントロ） | 約$0.022（≒3円） | 約$2.20（≒330円） |
+| Claude Sonnet 5（現行 $3/$15） | 約$0.033（≒5円） | 約$3.30（≒495円） |
 | GPT-5.6 Luna | 約$0.013（≒2円） | 約$1.30（≒200円） |
 
-月100本の量産なら差は小さいですが、月1,000本を超えるとイントロ価格中の Claude Sonnet 5 の優位が明確に出ます。**「8月末までに量産ワークフローを確立するかどうか」**が一つの判断基準になります。
+イントロ価格が終了した現在、Claude Sonnet 5 は GPT-5.6 Terra と同水準の単価です。**単価だけで選ぶなら GPT-5.6 Luna**、編集の手戻りを含めた総コストで選ぶなら Sonnet 5、という判断になります。
 
 ## 日本語ライティング3軸比較
 
@@ -157,7 +157,7 @@ GPT-5.6 Sol は競合記事を参照させて「差別化ポイントを抽出�
 
 ## GPT-5.6 Luna vs Claude Sonnet 5 直接比較（低コスト量産の本命対決）
 
-「できる限りコストを下げて記事を量産したい」という用途では、Sol や Terra ではなく **GPT-5.6 Luna**（入力$1・出力$6/MTok）と **Claude Sonnet 5**（入力$2・出力$10/MTok・〜2026/8/31 イントロ）の2択になります。
+「できる限りコストを下げて記事を量産したい」という用途では、Sol や Terra ではなく **GPT-5.6 Luna**（入力$1・出力$6/MTok）と **Claude Sonnet 5**（入力$3・出力$15/MTok・現行価格）の2択になります。
 
 ### コスト差：月100本なら実質いくら違うか
 
@@ -166,9 +166,9 @@ GPT-5.6 Sol は競合記事を参照させて「差別化ポイントを抽出�
 | モデル | 記事1本コスト | 月100本 | 月500本 |
 |--------|------------|---------|---------|
 | GPT-5.6 Luna | 約$0.013（≒2円） | 約$1.30（≒195円） | 約$6.50（≒975円） |
-| Claude Sonnet 5（イントロ〜8/31） | 約$0.022（≒3円） | 約$2.20（≒330円） | 約$11（≒1,650円） |
+| Claude Sonnet 5（現行 $3/$15） | 約$0.033（≒5円） | 約$3.30（≒495円） | 約$16.50（≒2,475円） |
 
-月100本の差は約135円。**コスト差は見た目より小さく、意思決定の軸はコストより「出力後の編集が増えるかどうか」になります。**
+月100本の差は約300円（イントロ期間中は約135円でした）。**金額としてはなお小さく、意思決定の軸はコストより「出力後の編集が増えるかどうか」になります。**
 
 ### 品質差：Luna の弱点は長文の文体ブレ
 
@@ -212,7 +212,7 @@ AI Maker Lab の実運用比較（2026年7月）では次の差が出ていま�
   <div class="rounded-xl border-t-4 border-emerald-500 bg-emerald-50 p-4">
     <p class="font-bold text-emerald-900">Claude Sonnet 5 のメリット</p>
     <ul class="mt-2 grid gap-1.5 text-sm text-emerald-950">
-      <li>✓ イントロ価格（〜8/31）で現行最安クラスのコスパ</li>
+      <li>✓ 1Mトークンの文脈窓を持ちながら単価は GPT-5.6 Terra と同水準</li>
       <li>✓ 1M トークン文脈窓で長文の一括処理が得意</li>
       <li>✓ 日本語文体の一貫性が高く、編集手直しが少ない</li>
     </ul>
@@ -220,7 +220,7 @@ AI Maker Lab の実運用比較（2026年7月）では次の差が出ていま�
   <div class="rounded-xl border-t-4 border-rose-400 bg-rose-50 p-4">
     <p class="font-bold text-rose-900">Claude Sonnet 5 のデメリット</p>
     <ul class="mt-2 grid gap-1.5 text-sm text-rose-950">
-      <li>✗ イントロ価格は2026年8月末まで。以降は $3/$15/MTok に上昇</li>
+      <li>✗ 2026年9月1日にイントロ価格が終了し、$2/$10 から $3/$15/MTok へ上昇した</li>
       <li>✗ 日本語ライティング専用UIがなくプロンプト設計が必要</li>
       <li>✗ Claude.ai Pro（$20/月）では Opus 4.8 との振り分けが不透明</li>
     </ul>
@@ -272,7 +272,7 @@ Claude Sonnet 5 には**イントロ価格 $2/$10/MTok** が適用されてい�
 | 時期 | Claude Sonnet 5 | GPT-5.6 Luna | Sonnet 5 / Luna 差 | 記事1本（入力1k+出力2k tok）の差 |
 |------|-----------------|--------------|-------------------|-------------------------------|
 | 〜2026/8/31（イントロ・終了） | $2.00/$10.00 | $1.00/$6.00 | **約1.7倍** | 約$0.009（≈1.4円） |
-| **2026/9/1〜（現行）** | **$3.00/$15.00** | $1.00/$6.00 | **約3倍** | 約$0.018（≈2.7円） |
+| **2026/9/1〜（現行）** | **$3.00/$15.00** | $1.00/$6.00 | **約2.5倍** | 約$0.020（≈3.0円） |
 
 *料金は Anthropic 公式ドキュメント（2026-08-28 再確認）の情報にもとづきます。価格は改定されることがあるため、実際の見積り前に必ず公式で最新価格を確認してください。*
 
@@ -282,7 +282,7 @@ Claude Sonnet 5 には**イントロ価格 $2/$10/MTok** が適用されてい�
 
 1. **量産ワークフローの月コストを実測する**：単価が上がった分がどこに効くかは、記事本数×トークン数を出さないと分からない
 2. **量産と仕上げを分ける**：下書きを Luna で量産して人が仕上げる、または [Catchy](/go/catchy?pos=pricing)・[Transcope](/go/transcope?pos=pricing) のようにモデル選択自体を抽象化するツールへ寄せる
-3. **月1,000本を超えるなら特に注意**：1本あたり$0.009の差でも1,000本で約$9、年間では1万円を超える差になる
+3. **月1,000本を超えるなら特に注意**：1本あたり$0.020の差でも1,000本で約$20、年間では3万円を超える差になる
 
 イントロ価格の終了で「API 直接利用の Sonnet 5 で量産」の優位は縮みました。日本語SEO記事を継続的に量産するなら、ここがツール選択を見直す区切りになります。
 

@@ -1,8 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-05-13T16:00:00+09:00
-modDatetime: 2026-08-18T11:00:00+09:00
-title: "Cursor vs Claude Code 比較【2026年8月最新】料金$20/$22・機能差と個人開発者の選び方"
+modDatetime: 2026-08-31T22:55:00+09:00
+title: "Cursor vs Claude Code 比較【2026年最新】料金$20/$22・機能差と個人開発者の選び方"
 slug: cursor-vs-claude-code-comparison
 featured: false
 draft: false
@@ -13,7 +13,7 @@ tags:
   - comparison
   - ide
   - cli
-description: "Cursor vs Claude Code の2026年8月最新比較。Cursor Pro $20/月 vs Anthropic Pro $22/月（月払い）の料金差から、設計思想・得意領域・実務での使い分けまで個人開発者視点で解説。Workbench廃止後の選び方も収録。"
+description: "Cursor vs Claude Code の2026年最新比較。Cursor Pro $20/月 vs Anthropic Pro $22/月（月払い）の料金差から、設計思想・得意領域・実務での使い分けまで個人開発者視点で解説。Workbench廃止後の選び方も収録。"
 affiliateCta:
   - id: onamae
     lead: "どちらのエディタで作っても、公開して人に使ってもらうには独自ドメインが要ります。"

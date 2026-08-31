@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-08-14T09:28:00+09:00
-title: "Lovable レビュー【2026年8月】実際にアプリを作って分かった正直評価"
+title: "Lovable レビュー【2026年最新】実際にアプリを作って分かった正直評価"
 slug: lovable-review-2026
 featured: false
 draft: false

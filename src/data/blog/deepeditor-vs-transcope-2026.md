@@ -1,8 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-07-29T09:20:00+09:00
-modDatetime: 2026-08-31T11:00:00+09:00
-title: "DeepEditor vs Transcope どちらが最適？｜SEO・法人 用途別に両方使った正直比較【2026年8月】"
+modDatetime: 2026-08-31T22:55:00+09:00
+title: "DeepEditor vs Transcope どちらが最適？｜SEO・法人 用途別に両方使った正直比較【2026年最新】"
 slug: deepeditor-vs-transcope-2026
 featured: false
 draft: false

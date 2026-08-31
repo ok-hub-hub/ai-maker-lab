@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-08-23T09:24:00+09:00
-title: "type転職エージェント 評判・口コミ【2026年8月】強み4点・弱点3点・向く人を転職三本柱から正直解説"
+title: "type転職エージェント 評判・口コミ【2026年最新】強み4点・弱点3点・向く人を転職三本柱から正直解説"
 slug: type-tenshoku-review-2026
 primaryGo: type-tenshoku
 featured: false

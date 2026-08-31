@@ -1,9 +1,9 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-06-05T19:00:00+09:00
-title: "Transcope vs Catchy どっちがいい？実際に使って分かった差と結論【2026年8月最新】"
+title: "Transcope vs Catchy どっちがいい？実際に使って分かった差と結論【2026年最新】"
 slug: catchy-vs-transcope-2026
-modDatetime: 2026-08-17T11:00:00+09:00
+modDatetime: 2026-08-31T22:55:00+09:00
 featured: true
 draft: false
 tags:

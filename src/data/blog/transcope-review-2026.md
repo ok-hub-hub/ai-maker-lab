@@ -1,8 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-06-24T20:00:00+09:00
-modDatetime: 2026-08-17T11:00:00+09:00
-title: "トランスコープ 評判【2026年8月最新】AI会社で実運用・月¥11,000の元が取れる人を正直解説"
+modDatetime: 2026-08-31T22:55:00+09:00
+title: "トランスコープ 評判【2026年最新】AI会社で実運用・月¥11,000の元が取れる人を正直解説"
 slug: transcope-review-2026
 featured: false
 draft: false
