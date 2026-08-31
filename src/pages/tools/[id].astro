@@ -5,6 +5,7 @@ import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import { TOOLS } from "@/data/tools";
 import { SITE } from "@/config";
+import { priceLabelFull } from "../../lib/price";
 
 export async function getStaticPaths() {
   return TOOLS.map(tool => ({
@@ -52,11 +53,7 @@ const careerPriceLabel: Record<string, string> = {
 
 const priceLabel = tool.conversionPoint
   ? careerPriceLabel[tool.conversionPoint]
-  : tool.priceFree
-    ? tool.priceMin === 0
-      ? "無料あり（無料プランで利用可）"
-      : `無料あり（有料は $${tool.priceMin}/月〜）`
-    : `$${tool.priceMin}/月〜`;
+  : priceLabelFull(tool);
 
 const verifiedDate = new Date(tool.verifiedAt + "T00:00:00Z");
 const daysSinceVerified = Math.floor(

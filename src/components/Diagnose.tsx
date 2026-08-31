@@ -14,6 +14,7 @@ import type {
   ToolMeta,
 } from "@/data/tools";
 import { getProductById } from "@/data/products";
+import { priceShort, priceUnitLabel } from "../lib/price";
 
 /**
  * 結果タイプに応じた自社商品1枠（/shop と同じ products.ts が唯一の正）。
@@ -351,8 +352,8 @@ function Result({
 
                   <dl className="mb-4 grid grid-cols-2 gap-x-4 gap-y-3 sm:grid-cols-4">
                     <SpecCell
-                      label="月額"
-                      value={tool.priceMin === 0 ? "Free〜" : `$${tool.priceMin}〜`}
+                      label={priceUnitLabel(tool)}
+                      value={priceShort(tool)}
                     />
                     <SpecCell
                       label="日本語"

@@ -18,7 +18,22 @@ export type ToolMeta = {
   category: Q1Code[];
   forEngineer: boolean;
   forBeginner: boolean;
+  /** 診断の予算フィルタ用に **USD 正規化** した値。表示には使わない（priceDisplay を見ること） */
   priceMin: number;
+  /**
+   * 表示用の実売価格。priceMin は USD 正規化値なので、円建て商品・年額課金はここで正しく持つ。
+   * 未設定なら priceMin を USD・月額として表示する。src/lib/price.ts が唯一の整形経路。
+   */
+  priceDisplay?: {
+    amount: number;
+    currency: "JPY" | "USD";
+    /** 課金単位。既定は "月" */
+    unit?: "月" | "年";
+    /** 「36ヶ月契約時」など金額に付く条件 */
+    condition?: string;
+    /** 出典（表示されない・照合用） */
+    source?: string;
+  };
   priceFree: boolean;
   jpFriendly: boolean;
   speed: 1 | 2 | 3;
@@ -379,6 +394,7 @@ export const TOOLS: ToolMeta[] = [
     forEngineer: false,
     forBeginner: true,
     priceMin: 7,
+    priceDisplay: { amount: 1100, currency: "JPY", condition: "Entry・10時間GPU", source: "記事 conoha-ai-canvas-review-2026（2026-05-14 公式取得）" },
     priceFree: false,
     jpFriendly: true,
     speed: 2,
@@ -599,6 +615,7 @@ export const TOOLS: ToolMeta[] = [
     forEngineer: false,
     forBeginner: true,
     priceMin: 9,
+    priceDisplay: { amount: 660, currency: "JPY", condition: "36ヶ月契約時", source: "記事 xserver-vs-conoha-wing-2026（2026-07 公式確認）" },
     priceFree: false,
     jpFriendly: true,
     speed: 3,
@@ -627,6 +644,7 @@ export const TOOLS: ToolMeta[] = [
     forEngineer: false,
     forBeginner: true,
     priceMin: 8,
+    priceDisplay: { amount: 880, currency: "JPY", condition: "12ヶ月契約時", source: "記事 xserver-vs-conoha-wing-2026（2026-07 公式確認）" },
     priceFree: false,
     jpFriendly: true,
     speed: 3,
@@ -654,6 +672,7 @@ export const TOOLS: ToolMeta[] = [
     forEngineer: false,
     forBeginner: true,
     priceMin: 30,
+    priceDisplay: { amount: 3762, currency: "JPY", condition: "スタンダード", source: "記事 xserver-biz-review-2026（2026-08-28 公式サイト実確認）" },
     priceFree: false,
     jpFriendly: true,
     speed: 3,
@@ -682,6 +701,7 @@ export const TOOLS: ToolMeta[] = [
     forEngineer: true,
     forBeginner: true,
     priceMin: 7,
+    priceDisplay: { amount: 1000, currency: "JPY", condition: "スタンダード・税込目安", source: "記事 vibe-coding-hosting-xserver-conoha-2026（2026-05 税込月額目安）" },
     priceFree: false,
     jpFriendly: true,
     speed: 3,
@@ -710,6 +730,7 @@ export const TOOLS: ToolMeta[] = [
     forEngineer: true,
     forBeginner: true,
     priceMin: 1,
+    priceDisplay: { amount: 1, currency: "JPY", unit: "年", condition: "初年度・対象ドメイン", source: "記事 domain-selection-guide-2026（2026-05-13 時点）" },
     priceFree: false,
     jpFriendly: true,
     speed: 2,
@@ -858,6 +879,7 @@ export const TOOLS: ToolMeta[] = [
     forEngineer: false,
     forBeginner: true,
     priceMin: 33,
+    priceDisplay: { amount: 8200, currency: "JPY", condition: "Lite・月間契約／年間契約なら¥4,900", source: "tools.ts note（2026-08-29 公式をPlaywrightでDOM抽出）" },
     priceFree: true,
     jpFriendly: true,
     speed: 3,

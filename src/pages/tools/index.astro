@@ -4,6 +4,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import { TOOLS } from "@/data/tools";
+import { priceCompact } from "../../lib/price";
 
 const categoryOrder: { code: string; en: string; ja: string }[] = [
   { code: "dev", en: "Development", ja: "開発・コーディング" },
@@ -114,7 +115,7 @@ const description = "AI Maker Lab が扱うAIツールを、開発／UI生成／
                           <span>{tierLabels[tool.affiliateTier]}</span>
                           <span>·</span>
                           <span>
-                            {tool.priceMin === 0 ? "Free" : `$${tool.priceMin}`}
+                            {priceCompact(tool)}
                           </span>
                           {tool.jpFriendly && (
                             <>
