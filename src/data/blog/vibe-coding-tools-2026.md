@@ -1,8 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-07-12T10:03:00+09:00
-modDatetime: 2026-08-25T17:00:00+09:00
-title: "vibe coding ツール おすすめ比較2026年版｜無料枠あり・Claude Code・Cursor・v0・Bolt を副業×公開フローで選ぶ"
+modDatetime: 2026-08-31T11:00:00+09:00
+title: "バイブコーディング ツール比較2026年版｜Claude Code・v0・Lovable・Bolt を実際に作って公開した開発者が選ぶ"
 slug: vibe-coding-tools-2026
 featured: false
 draft: false
@@ -13,7 +13,7 @@ tags:
   - claude-code
   - v0
   - hosting
-description: "vibe coding ツール 無料で始めたい人へ。AI IDE型（Claude Code/Cursor/Cline）とAIアプリビルダー型（v0/Bolt/Lovable）の全7ツールを、副業で作って公開するフロー×料金×無料枠で徹底比較。作ったものを公開するホスティング選びまで一気通貫で解説。2026年7月更新。"
+description: "バイブコーディング ツール比較2026年版。Claude Code・Cursor・v0・Bolt・Lovable を実際にアプリを作って公開した開発者が料金・無料枠・向き不向きで徹底比較。副業でvibe codingを始めるなら何から使うべきかを一次体験で解説。"
 affiliateCta:
   - id: conoha
     lead: "作ったものをWordPressで公開・運用するなら、36ヶ月契約で月額659円からのConoHa WINGが最安級です。"
