@@ -983,7 +983,7 @@ export const TOOLS: ToolMeta[] = [
     affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B7ZH5+8D9CVM+5B0Y+HWAG2",
     serviceType: "agent",
     conversionPoint: "free-counseling",
-    payoutJpy: 50000,
+    payoutJpy: 18000, // 2026-09-01〜 通常単価。¥50,000 は 2026/07/01〜08/31 のキャンペーン価格（終了）
     description:
       "ITエンジニアのハイクラス転職に特化した転職エージェント。求職者は無料で、経験者が上流工程・年収アップを狙う転職を相談できる。AIスキルを実務で使いこなす現役エンジニアが、市場価値を確かめる面談から始められる。",
     strengths: [
