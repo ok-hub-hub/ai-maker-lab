@@ -136,6 +136,7 @@ A. されません。どちらも相談・紹介サービスであり、結果�
 
 - [未経験からITエンジニア転職 完全ガイド](/posts/it-engineer-career-start-2026/) — 転職の全体像・エージェントとスクールの違い
 - [明光キャリアパートナーズ 評判・口コミ](/posts/meiko-career-partners-review-2026/) — 面談前に強み・弱点・向く人を正直レビュー
+- [type転職エージェント 評判・口コミ【2026年最新】](/posts/type-tenshoku-review-2026/) — 全職種対応・IT/Web含む幅広い求人を持つ第三の選択肢
 - [Claude Code で AI会社を1ヶ月運営してみた](/posts/claude-code-ai-company-1month-2026/) — 「AIスキルは職務経歴になる」の元になった実録
 - [TechGo（テックゴー）評判・口コミ](/posts/techgo-review-2026/) — ITエンジニア経験者のハイクラス転職エージェントを正直レビュー
 

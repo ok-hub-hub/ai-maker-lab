@@ -236,6 +236,7 @@ A. 求職者は無料です（エージェントは採用企業側から報酬�
 次に読むなら：
 
 - [TechGoと明光キャリアパートナーズ、どっちに相談すべき？](/posts/techgo-vs-meiko-career-2026/) — 分かれ道は実務経験の有無1つだけ
+- [type転職エージェント 評判・口コミ【2026年最新】](/posts/type-tenshoku-review-2026/) — 全職種対応・IT/Web含む幅広い求人で選択肢を広げたい人向け
 - [未経験からITエンジニア転職・学習 完全ガイド2026](/posts/it-engineer-career-start-2026/) — エージェント・スクールの全体像
 - [30代未経験からエンジニア転職は無理？](/posts/30dai-mikeiken-engineer-career-2026/) — 現実とパターンを正直に
 
