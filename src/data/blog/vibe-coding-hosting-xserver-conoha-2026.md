@@ -138,7 +138,7 @@ Vercel の無料枠には帯域制限があり、一定のアクセスで有料�
   </div>
 </div>
 
-**向く Vibe Coder のプロフィール：** 「副業ブログを2〜3年回して回収したい」「障害が起きたとき電話でサポートを受けたい」「安定第一で迷ったらここ」という人。
+**向く Vibe Coder のプロフィール：** 「副業ブログを2〜3年回して回収したい」「障害が起きたとき電話でサポートを受けたい」「安定第一で迷ったらここ」という人。クライアントのサイトを受託運営している場合は、SLA書面が付帯する [XServerビジネス](/posts/xserver-biz-review-2026/) も比較対象になります。
 
 <div class="my-6">
   <a href="/go/xserver" class="flex flex-col rounded-2xl bg-indigo-600 p-5 text-white no-underline shadow-sm transition hover:bg-indigo-700">
