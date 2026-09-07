@@ -1,7 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-08-05T09:23:00+09:00
-title: "Gammaレビュー｜無料で十分？有料化前に資料1本で確認すること"
+modDatetime: 2026-09-07T09:00:00+09:00
+title: "Gamma（ガンマ）評判まとめ｜副業ブロガーが¥11,000サブスクを3か月使ったリアルな感想"
 slug: gamma-review-2026
 featured: false
 draft: false
@@ -9,7 +10,7 @@ tags:
   - ai-writing
   - review
   - productivity
-description: "Gammaを無料で試す課題と、Plus・Proを検討する判断基準。日本語の修正、共有、書き出し後のレイアウトまで確認し、自分の資料作成に合うかを判断します。"
+description: "映えるスライドが5分で作れると話題のGamma。実際に3か月使って分かったこと——料金・使い方・解約・Catchyとの比較まで。"
 review:
   itemName: "Gamma（ガンマ）"
   rating: 4.2
