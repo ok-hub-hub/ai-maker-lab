@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-06-24T20:00:00+09:00
-modDatetime: 2026-09-06T21:41:12+09:00
+modDatetime: 2026-09-07T09:00:00+09:00
 title: "Transcopeレビュー｜SEO記事に必要？契約前に確かめること"
 slug: transcope-review-2026
 featured: false
@@ -11,7 +11,7 @@ tags:
   - transcope
   - review
   - seo
-description: "Transcopeを導入する前に、記事1本の調査・生成・修正時間を比較。向く用途、無料試用時の確認項目、売上ではなく粗利と制作費で考える費用対効果を整理します。"
+description: "3か月の課金記録と解約体験をもとに、メリット・デメリットを正直に書く。料金は高いが「記事が売上を生む事業」なら回収が計算できる理由を実額で説明します。"
 review:
   itemName: "Transcope（トランスコープ）"
   rating: 3.9
