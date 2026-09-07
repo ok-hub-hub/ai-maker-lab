@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-05-06T13:30:00+09:00
-modDatetime: 2026-07-05T13:30:00+09:00
+modDatetime: 2026-09-07T13:30:00+09:00
 title: "個人開発者のためのホスティング選び：Vercel / Cloudflare Pages / Netlify / mixhost【2026年版】"
 slug: hosting-for-individual-developers-2026
 featured: true
@@ -181,7 +181,7 @@ Netlify は2014年運営開始の老舗で、Cloudflare Pages の DNS / Workers 
 
 WordPress を採用するなら、Vercel / Cloudflare Pages / Netlify は **すべて不適**です（これらは静的＋サーバレス前提のサービスのため、PHP+MySQL ベースの WordPress は動きません）。
 
-国内の主要レンタルサーバ（ConoHa WING / Xserver / mixhost / さくらインターネット 等）の中で、**LiteSpeed Web Server を採用している mixhost** は、WordPress の表示速度面で有利です。なお、サイトに載せる画像を Stable Diffusion で自作したい場合は、レンタルサーバーと同じ感覚で使える GPU 環境として [ConoHa AI Canvas のレビュー](/posts/conoha-ai-canvas-review-2026/)も参考にしてください。ConoHa WING と Xserver の料金・速度・移行コストの詳細比較は [エックスサーバー ConoHa WING 比較](/posts/xserver-vs-conoha-wing-2026/) にまとめています。
+国内の主要レンタルサーバ（ConoHa WING / Xserver / mixhost / さくらインターネット 等）の中で、**LiteSpeed Web Server を採用している mixhost** は、WordPress の表示速度面で有利です。なお、サイトに載せる画像を Stable Diffusion で自作したい場合は、レンタルサーバーと同じ感覚で使える GPU 環境として [ConoHa AI Canvas のレビュー](/posts/conoha-ai-canvas-review-2026/)も参考にしてください。ConoHa WING と Xserver の料金・速度・移行コストの詳細比較は [エックスサーバー ConoHa WING 比較](/posts/xserver-vs-conoha-wing-2026/) にまとめています。クライアントサイトの受託でSLA書面が必要になる場面は [XServerビジネス（レビュー）](/posts/xserver-biz-review-2026/)（SLA 99.99%・.co.jpドメイン永久無料付き）も選択肢に入ります。
 
 ### 向いているケース
 
