@@ -615,7 +615,7 @@ export const TOOLS: ToolMeta[] = [
     forEngineer: false,
     forBeginner: true,
     priceMin: 9,
-    priceDisplay: { amount: 660, currency: "JPY", condition: "36ヶ月契約時", source: "記事 xserver-vs-conoha-wing-2026（2026-07 公式確認）" },
+    priceDisplay: { amount: 659, currency: "JPY", condition: "36ヶ月契約時", source: "xserver-vs-conoha-wing-2026（2026-09-08 公式確認）" },
     priceFree: false,
     jpFriendly: true,
     speed: 3,
@@ -635,7 +635,7 @@ export const TOOLS: ToolMeta[] = [
       "サーバー配置は国内特化のため、北米・欧州向けに配信する場合は CDN（Cloudflare 等）を別途併用する必要がある",
       "VPS / GPU サーバー（ConoHa VPS / ConoHa AI Canvas）は別商品契約、WordPress と1契約で完結はしない",
     ],
-    verifiedAt: "2026-05-12",
+    verifiedAt: "2026-09-08",
   },
   {
     id: "xserver",
