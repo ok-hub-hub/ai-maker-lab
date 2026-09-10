@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-07-12T10:03:00+09:00
-modDatetime: 2026-09-09T11:00:00+09:00
+modDatetime: 2026-09-10T10:00:00+09:00
 title: "バイブコーディング ツール比較2026年版｜Claude Code・v0・Lovable・Bolt を実際に作って公開した開発者が選ぶ"
 slug: vibe-coding-tools-2026
 featured: false
@@ -16,7 +16,7 @@ tags:
 description: "バイブコーディング ツール比較2026年版。Claude Code・Cursor・v0・Bolt・Lovable を実際にアプリを作って公開した開発者が料金・無料枠・向き不向きで徹底比較。副業でvibe codingを始めるなら何から使うべきかを一次体験で解説。"
 affiliateCta:
   - id: conoha
-    lead: "作ったものをWordPressで公開・運用するなら、36ヶ月契約で月額659円からのConoHa WINGが最安級です。"
+    lead: "作ったものをWordPressで公開・運用するなら、36ヶ月契約で月額678円からのConoHa WINGが最安級です。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 sm:h-32">
@@ -66,12 +66,12 @@ Claude Code、Cursor、Cline、v0、Bolt、Lovable——選択肢が増えすぎ
 | API代を最小化・OSS重視 | **[Cline](/tools/cline/)** | 本体無料。Claude / Gemini / ローカル LLM を自分で切り替え |
 | コード不要でUIプロトタイプを作りたい | **[v0 by Vercel](/tools/v0/)** | Vercel ワンクリックデプロイ。React 系エンジニアの高速試作にも強い |
 | ログイン・DB込みの SaaS を最速で | **[Bolt.new](/tools/bolt/)** | ブラウザだけで完結。バックエンドも自動生成 |
-| 作ったサイトをWordPressで収益化したい | **[ConoHa WING](/go/conoha)** | 月659円〜（2026-08-25取得・9/9 16時まで最大54%OFF）。AI記事+WordPressが最速ルート |
+| 作ったサイトをWordPressで収益化したい | **[ConoHa WING](/go/conoha)** | 月678円〜（2026-09-10取得・9/24 16時まで最大53%OFF）。AI記事+WordPressが最速ルート |
 
 <div class="my-6">
   <a href="/go/conoha" class="flex flex-col rounded-2xl bg-sky-600 p-5 text-white no-underline shadow-sm transition hover:bg-sky-700">
     <span class="text-lg font-bold">ConoHa WING でWordPressブログを始める →</span>
-    <span class="mt-1 text-sm text-sky-100">月659円〜（9/9 16時まで最大54%OFF）・独自ドメイン2つ無料・かんたんセットアップ</span>
+    <span class="mt-1 text-sm text-sky-100">月678円〜（9/24 16時まで最大53%OFF）・独自ドメイン2つ無料・かんたんセットアップ</span>
   </a>
 </div>
 
@@ -226,25 +226,25 @@ AI ライティングツール（Catchy / Transcope）で記事を量産して�
   <p class="mt-2 text-sm text-sky-950">「AIでアプリを作る」と「AIで記事を書いて稼ぐ」は、副業のゴールが近い。作ったアプリを紹介するブログを WordPress で立ち上げ、アフィリエイトで収益化する構成が、コスパの良い組み合わせです。</p>
 </aside>
 
-## ホスティング料金早見表（2026-09-09 公式サイト取得）
+## ホスティング料金早見表（2026-09-10 公式サイト取得）
 
 | サービス | 通常月額 | キャンペーン月額 | ドメイン無料特典 | 向く人 |
 |---------|----------|----------------|----------------|--------|
-| **ConoHa WING** | キャンペーン外は公式で確認 | **月659円〜**（9/9 16時まで最大54%OFF・WINGパック36ヶ月） | 2つ無料 | WordPress をとにかく安く始めたい |
+| **ConoHa WING** | キャンペーン外は公式で確認 | **月678円〜**（9/24 16時まで最大53%OFF・WINGパック36ヶ月） | 2つ無料 | WordPress をとにかく安く始めたい |
 | **エックスサーバー** | 990円〜（スタンダード） | **実質月495円〜**（10/5まで・半額キャッシュバック） | 2つ無料 | 長期安定重視・国内シェアNo.1の実績を信頼 |
 
-<sup>※料金は2026-09-09に各公式サイトへ接続して取得した情報です。キャンペーン価格は期限あり。契約前に必ず公式で最新価格をご確認ください。</sup>
+<sup>※料金は2026-09-10に各公式サイトへ接続して取得した情報です。キャンペーン価格は期限あり。契約前に必ず公式で最新価格をご確認ください。</sup>
 
 <div class="my-6">
   <a href="/go/conoha" class="flex flex-col rounded-2xl bg-sky-600 p-5 text-white no-underline shadow-sm transition hover:bg-sky-700">
     <span class="text-lg font-bold">ConoHa WING を公式で確認する →</span>
-    <span class="mt-1 text-sm text-sky-100">月659円〜（9/9 16時まで最大54%OFF）・独自ドメイン2つ無料・WordPressかんたんセットアップ</span>
+    <span class="mt-1 text-sm text-sky-100">月678円〜（9/24 16時まで最大53%OFF）・独自ドメイン2つ無料・WordPressかんたんセットアップ</span>
   </a>
 </div>
 
-**ConoHa WING の特徴**（2026-07-22 公式取得）
+**ConoHa WING の特徴**（2026-09-10 公式取得）
 
-- WINGパック36ヶ月で月659円〜（最大54%OFF・9月9日16時まで）
+- WINGパック36ヶ月で月678円〜（最大53%OFF・9月24日16時まで）
 - WordPress かんたんセットアップ：ドメイン取得・SSL・テーマ導入まで管理画面1画面
 - 独自ドメイン2つ永久無料
 - 国内データセンター（東京・大阪）で国内アクセスに最適化
@@ -272,7 +272,7 @@ A. 各ツールに無料枠はありますが、継続的な本格開発には�
 A. Bolt.new と Lovable は未経験でもプロトタイプまで到達できます。ただし、完成したものを実際にサービスとして運用・改善していくには、ある程度コードの読み方を学ぶ必要があります。「副業で収益を出すまで持っていく」なら、プログラミングの基礎学習と並行して進めるのが現実的です。
 
 **Q. 作ったアプリをどこで公開すればいいですか？**
-A. 用途で変わります。Next.js/React 系なら Vercel（v0 と親和性◎）か Cloudflare Pages（無料・帯域無制限）。WordPress でブログを立ち上げて AI 記事で収益化するなら、[ConoHa WING](/go/conoha)（月659円〜・9/9 16時まで）か[エックスサーバー](/go/xserver)（実質月495円〜・10/5まで・半額キャッシュバック）が国内2強です。
+A. 用途で変わります。Next.js/React 系なら Vercel（v0 と親和性◎）か Cloudflare Pages（無料・帯域無制限）。WordPress でブログを立ち上げて AI 記事で収益化するなら、[ConoHa WING](/go/conoha)（月678円〜・9/24まで）か[エックスサーバー](/go/xserver)（実質月495円〜・10/5まで・半額キャッシュバック）が国内2強です。
 
 **Q. Claude Code と Cursor はどちらを選べばいいですか？**
 A. 両方使うのが現実解です。Claude Code はターミナルからの自走タスクに強く、Cursor は VS Code UIを見ながらのコード編集に強い。詳細な比較は [Cursor vs Claude Code 比較記事](/posts/cursor-vs-claude-code-comparison/) で解説しています。
@@ -281,12 +281,12 @@ A. 両方使うのが現実解です。Claude Code はターミナルからの�
 
 - バイブコーディングツールは「コードが読めるか」で AI IDE型（Cursor/Claude Code/Cline）か AIビルダー型（v0/Bolt/Lovable）かを選ぶのが基本。
 - エンジニア副業の生産性向上なら **Claude Code + Cursor** の組み合わせが最高効率。コード不要の入り口なら **Bolt.new** から始める。
-- どのツールで作っても、公開・収益化にはホスティングが必要。WordPress で AI 記事と組み合わせるなら [ConoHa WING](/go/conoha)（月659円〜・9/9 16時まで）か [エックスサーバー](/go/xserver)（実質月495円〜・10/5まで・半額キャッシュバック）が国内2強。
+- どのツールで作っても、公開・収益化にはホスティングが必要。WordPress で AI 記事と組み合わせるなら [ConoHa WING](/go/conoha)（月678円〜・9/24まで）か [エックスサーバー](/go/xserver)（実質月495円〜・10/5まで・半額キャッシュバック）が国内2強。
 
 <div class="my-8 flex flex-col gap-3">
   <a href="/go/conoha" class="flex flex-col rounded-2xl bg-sky-600 p-5 text-white no-underline shadow-sm transition hover:bg-sky-700">
     <span class="text-lg font-bold">ConoHa WINGでWordPressを始める →</span>
-    <span class="mt-1 text-sm text-sky-100">月659円〜（9/9 16時まで最大54%OFF）・独自ドメイン2つ無料・WordPress即開設</span>
+    <span class="mt-1 text-sm text-sky-100">月678円〜（9/24 16時まで最大53%OFF）・独自ドメイン2つ無料・WordPress即開設</span>
   </a>
   <a href="/go/xserver" class="flex flex-col rounded-2xl bg-green-600 p-5 text-white no-underline shadow-sm transition hover:bg-green-700">
     <span class="text-lg font-bold">エックスサーバーを10日間無料で試す →</span>
@@ -327,7 +327,7 @@ A. 両方使うのが現実解です。Claude Code はターミナルからの�
       "name": "バイブコーディングで作ったアプリをどこで公開すればいいですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "用途で変わります。Next.js/React系ならVercel（v0と親和性◎）かCloudflare Pages（無料・帯域無制限）。WordPressブログを立ち上げてAI記事で収益化するなら、ConoHa WING（月659円〜・2026-09-09取得）かエックスサーバー（実質月495円〜・2026-09-09取得）が国内2強です。"
+        "text": "用途で変わります。Next.js/React系ならVercel（v0と親和性◎）かCloudflare Pages（無料・帯域無制限）。WordPressブログを立ち上げてAI記事で収益化するなら、ConoHa WING（月678円〜・2026-09-10取得）かエックスサーバー（実質月495円〜・2026-09-09取得）が国内2強です。"
       }
     },
     {
