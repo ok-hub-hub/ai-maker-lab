@@ -22,6 +22,7 @@ const blog = defineCollection({
       timezone: z.string().optional(),
       // スマホ追従CTA等の主要導線を明示指定（省略時は本文最初の /go/ を自動検出）
       primaryGo: z.string().optional(),
+      disableStickyCta: z.boolean().optional(),
       // 記事末尾に挿すアフィリCTA（AffiliateCta を PostDetails が描画）。
       // id は tools.ts の id。experienced=true のときだけ実運用メモ(note)を表示。
       affiliateCta: z
