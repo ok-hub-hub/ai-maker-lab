@@ -63,14 +63,14 @@ Claude Code や Cursor を日常的に回すようになると、一度はよぎ
 
 **未経験〜ジュニア層のエンジニア転職に特化した転職エージェント**です（[詳細レビューはこちら](/posts/meiko-career-partners-review-2026/)）。「AIツールに触れてITで働くことに興味が出た」段階の人が、キャリア面談から次の一歩を検討できます。
 
-- **向く人**：実務未経験でIT/エンジニア職を目指す人、独学や個人開発の経験をどう職務経歴に翻訳すればいいか分からない人
+- **向く人**：実務未経験でIT/エンジニア職を目指す人（**東京・大阪エリアでの就職希望者が中心**）、独学や個人開発の経験をどう職務経歴に翻訳すればいいか分からない人
 - **AIスキルとの相性**：未経験市場では「学習意欲と継続の証拠」が最重要です。AIツールで作ったもの・続けてきた記録は、面談でそのまま材料になります（[実録：AIスキルは職務経歴になる](/posts/claude-code-ai-company-1month-2026/)）
-- **注意点**：紹介制のため、経歴・エリアによって紹介できる求人が限られる場合があります
+- **注意点**：**東京・大阪エリア中心**のため、地方在住の方は紹介できる求人が限られる場合があります。IT実務経験がある方のほうが紹介求人の幅が広がります
 
 <div class="my-8 flex flex-col gap-3">
   <a href="/go/meiko-career" class="flex flex-col rounded-2xl bg-emerald-600 p-5 text-white no-underline shadow-sm transition hover:bg-emerald-700">
     <span class="text-lg font-bold">明光の無料キャリア面談を見る →</span>
-    <span class="mt-1 text-sm text-emerald-100">未経験〜ジュニア向けエンジニア転職（求職者は無料・オンライン可）</span>
+    <span class="mt-1 text-sm text-emerald-100">未経験〜ジュニア向けエンジニア転職（東京・大阪エリア中心・求職者は無料）</span>
   </a>
 </div>
 

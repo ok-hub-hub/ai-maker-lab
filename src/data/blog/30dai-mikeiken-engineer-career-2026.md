@@ -141,16 +141,16 @@ AIツールを触り始めて「自分もIT/開発の仕事をしたい」と思
 
 エンジニア転職に特化した転職エージェントです。**求職者は無料**（採用企業側から報酬を得るモデル）で、まずは**キャリア面談**から始められます。
 
-- **向く人**：30代・未経験で「エンジニアとして転職できるか」をプロに確認したい人。まだ転職すると決めていない段階でも相談可能。
-- **強み**：エンジニア転職に特化しており、IT/開発職を軸に相談できる。未経験〜ジュニア層の面談実績あり。
-- **正直な注意点**：紹介制のため、経歴・エリアによって紹介できる求人が限られることがあります。**転職や年収の結果を保証するものではありません。**
+- **向く人**：**東京・大阪エリア**でIT/エンジニア職への転職可能性をプロに確認したい30代。IT実務経験が浅い〜ある方の面談実績あり。まだ転職すると決めていない段階でも相談可能。
+- **強み**：エンジニア転職に特化しており、IT/開発職を軸に相談できる。
+- **正直な注意点**：**東京・大阪エリア中心**のため、地方在住の方は紹介できる求人が限られる場合があります。公式LPはIT実務経験者の事例が中心で、完全未経験の場合は面談で紹介可能な求人を直接確認してください。**転職や年収の結果を保証するものではありません。**
 
 > まだ「転職する」と決めていなくても面談は受けられます。**「自分の状況で現実的に動けるか」を確認する**のが、30代の最初の一手として最もコスパが高い動き方です。
 
 <div class="my-8 flex flex-col gap-3">
   <a href="/go/meiko-career" class="flex flex-col rounded-2xl bg-indigo-600 p-5 text-white no-underline shadow-sm transition hover:bg-indigo-700">
     <span class="text-lg font-bold">明光キャリアパートナーズの無料面談を見る →</span>
-    <span class="mt-1 text-sm text-indigo-100">エンジニア転職に特化（求職者は無料・オンライン可）</span>
+    <span class="mt-1 text-sm text-indigo-100">エンジニア転職に特化（東京・大阪エリア中心・求職者は無料）</span>
   </a>
 </div>
 
@@ -247,7 +247,7 @@ A. プラスにはなりますが、それだけで採用されるわけでは�
 <div class="my-8 flex flex-col gap-3">
   <a href="/go/meiko-career" class="flex flex-col rounded-2xl bg-indigo-600 p-5 text-white no-underline shadow-sm transition hover:bg-indigo-700">
     <span class="text-lg font-bold">30代の転職可能性を無料面談で確認する →</span>
-    <span class="mt-1 text-sm text-indigo-100">明光キャリアパートナーズ（エンジニア転職特化・求職者は無料・オンライン可）</span>
+    <span class="mt-1 text-sm text-indigo-100">明光キャリアパートナーズ（エンジニア転職特化・東京大阪エリア中心・求職者は無料）</span>
   </a>
   <a href="/go/type-tenshoku" class="flex flex-col rounded-2xl border-2 border-indigo-600 bg-white p-5 text-indigo-900 no-underline shadow-sm transition hover:bg-indigo-50">
     <span class="text-base font-bold">首都圏のIT・Web求人を幅広く相談する（無料）→</span>
