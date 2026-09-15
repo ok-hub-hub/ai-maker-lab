@@ -36,6 +36,7 @@ const {
   tags,
   hideEditPost,
   primaryGo,
+  disableStickyCta,
   affiliateCta,
   review,
 } = post.data;
@@ -331,7 +332,7 @@ const relatedPosts = posts
 
   <!-- スマホ追従CTA（アフィリ記事のみ。ファーストビュー通過後に表示） -->
   {
-    hasAffiliate && primaryTool && (
+    !disableStickyCta && hasAffiliate && primaryTool && (
       <div
         id="sticky-cta"
         data-pagefind-ignore
