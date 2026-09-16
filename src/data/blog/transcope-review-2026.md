@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-06-24T20:00:00+09:00
-modDatetime: 2026-09-07T09:00:00+09:00
+modDatetime: 2026-09-16T09:00:00+09:00
 title: "Transcopeレビュー｜SEO記事に必要？契約前に確かめること"
 slug: transcope-review-2026
 featured: false
@@ -118,7 +118,7 @@ Transcope は、**シェアモル社**が運営する、**SEOに特化**した�
 
 ## 料金（高いのか？元が取れる条件）
 
-> **価格情報の取得日**：以下の料金は **2026-06-05 に公式サイトへ接続して取得**したものです。プラン改定が入る可能性があるため、契約前に必ず[公式サイト](/go/transcope?pos=body&from=transcope-review-2026)で最新情報をご確認ください。
+> **価格情報の取得日**：以下の料金は **2026-09-16 に公式サイトへ接続して取得**したものです（2026-06-05比で変化なし）。プラン改定が入る可能性があるため、契約前に必ず[公式サイト](/go/transcope?pos=body&from=transcope-review-2026)で最新情報をご確認ください。
 
 | プラン | 料金（月額・前払い） | 想定ユーザー |
 |------|------------------|---------|
@@ -127,7 +127,7 @@ Transcope は、**シェアモル社**が運営する、**SEOに特化**した�
 | Pro | **¥38,500/月** | 本数を回すオウンドメディア |
 | Enterprise | **¥66,000/月** | チーム運用・大規模 |
 
-<sup>※料金・条件は2026-06-05時点。最新は[公式](/go/transcope?pos=body&from=transcope-review-2026)でご確認ください。すべてサブスク前払いです。</sup>
+<sup>※料金・条件は2026-09-16時点（公式実接続で確認）。最新は[公式](/go/transcope?pos=body&from=transcope-review-2026)でご確認ください。すべてサブスク前払いです。</sup>
 
 ## 契約前に記事1本で確かめること
 
@@ -227,7 +227,7 @@ A. Free（1週間）で主要機能を確認できます。高額プランなの
     "name": "Transcope（トランスコープ）",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
-    "offers": { "@type": "Offer", "price": "11000", "priceCurrency": "JPY", "description": "Basicプラン月額（2026-06-05 公式取得時点）" }
+    "offers": { "@type": "Offer", "price": "11000", "priceCurrency": "JPY", "description": "Basicプラン月額（2026-09-16 公式取得時点）" }
   },
   "reviewRating": { "@type": "Rating", "ratingValue": "3.9", "bestRating": "5" },
   "author": { "@type": "Organization", "name": "AI Maker Lab 編集部" },
