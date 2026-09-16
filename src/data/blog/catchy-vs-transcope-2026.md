@@ -3,7 +3,7 @@ author: AI Maker Lab
 pubDatetime: 2026-06-05T19:00:00+09:00
 title: "Transcope vs Catchy どっちがいい？実際に使って分かった差と結論【2026年最新】"
 slug: catchy-vs-transcope-2026
-modDatetime: 2026-08-31T22:55:00+09:00
+modDatetime: 2026-09-16T09:00:00+09:00
 featured: true
 draft: false
 tags:
@@ -129,7 +129,7 @@ Transcope は、**SEOに特化**した日本語AIライティングツールで�
   <p class="mt-2 text-sm text-violet-950">検索上位を本気で狙うオウンドメディア・事業ブログ。競合分析と順位計測まで1ツールで完結したい人 → <a href="/go/transcope" class="font-bold underline">Transcope を見る</a></p>
 </aside>
 
-Transcope 単体の評判・プラン別の向き不向きの詳細は、[トランスコープ 評判・詳細レビュー](/posts/transcope-review-2026/)で深掘りしています。
+Transcope 単体の評判・プラン別の向き不向きの詳細は、[トランスコープ 評判](/posts/transcope-review-2026/)（詳細レビュー）で深掘りしています。
 
 ## トランスコープの評判・口コミ――「高い」「効果ない」という声の真相
 
