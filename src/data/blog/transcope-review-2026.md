@@ -1,8 +1,8 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-06-24T20:00:00+09:00
-modDatetime: 2026-09-16T09:00:00+09:00
-title: "Transcopeレビュー｜SEO記事に必要？契約前に確かめること"
+modDatetime: 2026-09-17T09:00:00+09:00
+title: "トランスコープ 評判｜Transcopeレビュー：SEO記事に必要？契約前に確かめること"
 slug: transcope-review-2026
 featured: false
 draft: false
