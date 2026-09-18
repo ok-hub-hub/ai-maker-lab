@@ -938,8 +938,8 @@ export const TOOLS: ToolMeta[] = [
     id: "meiko-career",
     name: "明光キャリアパートナーズ（エンジニア転職）",
     category: ["career"],
-    forEngineer: false,
-    forBeginner: true,
+    forEngineer: true,
+    forBeginner: false,
     priceMin: 0,
     priceFree: true,
     jpFriendly: true,
@@ -953,7 +953,7 @@ export const TOOLS: ToolMeta[] = [
     conversionPoint: "free-counseling",
     payoutJpy: 78000,
     description:
-      "株式会社明光キャリアパートナーズが運営する、エンジニア転職に特化した転職エージェント。求職者は無料で、キャリア面談を通じて IT/エンジニア職への転職を相談できる。AIツールに触れて「エンジニアとして働くこと」に関心が出た段階の人が、無料面談から次の一歩を検討できる。",
+      "株式会社明光キャリアパートナーズが運営する、エンジニア転職に特化した転職エージェント。この紹介では、エンジニアの実務経験があり、東京・大阪エリアでの就職を希望する方を対象としています。求職者は無料で、これまでの経験を踏まえた転職を相談できます。",
     strengths: [
       "求職者は無料で利用できる（転職エージェントは採用企業側から報酬を得るモデル）",
       "エンジニア転職に特化しており、IT/開発職を軸に相談できる",

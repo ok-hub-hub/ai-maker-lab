@@ -23,6 +23,13 @@ const PRICE_CAP: Record<Q3Code, number> = {
   "100plus": Infinity,
 };
 
+function matchesExperience(tool: ToolMeta, experience: Q2Code): boolean {
+  if (experience === "engineer") return tool.forEngineer;
+  if (experience === "none") return tool.forBeginner;
+  // HTML/CSSに触れた経験は、転職案件のエンジニア実務経験とは扱わない。
+  return !tool.category.includes("career") || tool.forBeginner;
+}
+
 export function diagnose(answers: Answers): ToolMeta[] {
   // 1) Q1 で候補プール抽出
   let pool = TOOLS.filter(t => t.category.includes(answers.q1));
@@ -32,11 +39,7 @@ export function diagnose(answers: Answers): ToolMeta[] {
   // 本MVP1では明示的に Q1 が選ばれている前提
 
   // 2) Q2（経験）でフィルタ
-  if (answers.q2 === "engineer") {
-    pool = pool.filter(t => t.forEngineer);
-  } else if (answers.q2 === "none") {
-    pool = pool.filter(t => t.forBeginner);
-  }
+  pool = pool.filter(t => matchesExperience(t, answers.q2));
 
   // 3) Q3（予算）でフィルタ
   if (answers.q3 === "free") {
@@ -79,15 +82,15 @@ export function diagnose(answers: Answers): ToolMeta[] {
     else if (answers.q1 === "ui" || answers.q1 === "dev")
       monetize = TOOLS.find(t => t.id === "conoha");
 
-    if (monetize && !top3.some(t => t.id === monetize!.id) && top3.length >= 3) {
+    if (monetize && matchesExperience(monetize, answers.q2) && !top3.some(t => t.id === monetize!.id) && top3.length >= 3) {
       top3[2] = monetize;
     }
   }
 
-  // 6) フォールバック：3つに満たない場合は予算/経験フィルタを段階的に緩めて補充
+  // 6) 予算条件を緩めて補充する場合も、経験の適合条件は維持する。
   if (top3.length < 3) {
     const filler = TOOLS.filter(
-      t => t.category.includes(answers.q1) && !top3.some(x => x.id === t.id)
+      t => t.category.includes(answers.q1) && matchesExperience(t, answers.q2) && !top3.some(x => x.id === t.id)
     );
     top3 = [...top3, ...filler].slice(0, 3);
   }
@@ -95,7 +98,7 @@ export function diagnose(answers: Answers): ToolMeta[] {
   // それでも3未満なら、ChatGPT を最後の砦に
   if (top3.length < 3) {
     const chatgpt = TOOLS.find(t => t.id === "chatgpt");
-    if (chatgpt && !top3.some(t => t.id === chatgpt.id)) top3.push(chatgpt);
+    if (chatgpt && matchesExperience(chatgpt, answers.q2) && !top3.some(t => t.id === chatgpt.id)) top3.push(chatgpt);
   }
 
   return top3.slice(0, 3);
