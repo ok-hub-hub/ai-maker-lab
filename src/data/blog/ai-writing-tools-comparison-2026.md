@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-07-02T11:50:00+09:00
-modDatetime: 2026-07-29T01:00:00+09:00
+modDatetime: 2026-09-18T10:00:00+09:00
 title: "AIライティングツール比較2026：毎日記事を量産する運用者が「4つ」に絞った理由【Catchy/Transcope/ChatGPT/Claude】"
 slug: ai-writing-tools-comparison-2026
 featured: true
@@ -150,6 +150,7 @@ A. 予算ゼロで始めるならChatGPT。「書く量」が決まっている�
 - [vibe coding ツール おすすめ比較2026年版（Claude Code・Cursor・v0・Bolt）](/posts/vibe-coding-tools-2026/) — AIで記事を量産しながらアプリも作りたい人向け
 - [ElevenLabs 評判・料金・日本語の実力レビュー](/posts/elevenlabs-review-2026/) — 記事を音声コンテンツに展開したい人へ
 - [Gamma 評判・料金レビュー](/posts/gamma-review-2026/) — 記事の内容を提案資料・スライドに転用したい人へ
+- [AIブログくん 評判・料金レビュー2026](/posts/ai-blog-kun-review-2026/) — キーワード設定→記事生成→WordPress自動投稿まで全部やりたい場合の選択肢
 
 <script type="application/ld+json">
 {
