@@ -48,9 +48,9 @@ disableStickyCta: true
 
 「私の経験で紹介可能な求人はあるか」「希望する勤務地に合うか」「応募前に業務内容をどこまで確認できるか」「選考対策では何を支援してもらえるか」を確認してみてください。回答を比較すると、自分の課題に合うかを判断しやすくなります。
 
-<a href="/go/techgo" rel="sponsored nofollow">TechGoのサービス内容と相談窓口を確認する</a>
+<a href="/go/techgo?pos=decision&from=techgo-vs-meiko-career-2026" rel="sponsored nofollow">TechGoのサービス内容と相談窓口を確認する</a>
 
-<a href="/go/meiko-career" rel="sponsored nofollow">明光キャリアパートナーズのエンジニア向けサービスを確認する</a>
+<a href="/go/meiko-career?pos=decision&from=techgo-vs-meiko-career-2026" rel="sponsored nofollow">明光キャリアパートナーズのエンジニア向けサービスを確認する</a>
 
 利用可能な求人や支援内容は経歴・希望条件によって変わります。転職や年収アップを約束するものではありません。希望に合わなければ、応募を急がず条件を整理し直してください。
 
