@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-06-24T19:00:00+09:00
-modDatetime: 2026-09-06T20:45:04+09:00
+modDatetime: 2026-09-21T11:00:00+09:00
 title: "Catchyレビュー｜ChatGPTで十分な人・有料化前に試すこと"
 slug: catchy-review-2026
 featured: false
@@ -249,6 +249,7 @@ A. サブスクなので、合わなければ次回更新前に解約すればOK
 - [AIライティングツール比較2026（4つに絞った理由）](/posts/ai-writing-tools-comparison-2026/) — ChatGPT/Claudeも含めた全体地図
 - [Catchy vs Transcope 徹底比較](/posts/catchy-vs-transcope-2026/) — SEOまで本気で狙うなら、どっちを選ぶ？
 - [トランスコープ 評判・料金は高い？正直レビュー2026](/posts/transcope-review-2026/) — SEO長文・集客なら。元が取れる人/取れない人
+- [Gamma AI × 副業ブログ・SNS発信の実践ガイド](/posts/gamma-blog-workflow-2026/) — ブログ画像・Pinterest縦長ピン・比較チャートをAIで5分で作る方法
 - [AI副業ロードマップ2026](/posts/ai-side-business-roadmap-2026/) — ツールを収益につなげる全体像
 - [ElevenLabs 評判・料金・日本語の実力レビュー](/posts/elevenlabs-review-2026/) — 書いた記事を音声化して展開したい人へ
 
