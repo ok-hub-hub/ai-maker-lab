@@ -1,7 +1,7 @@
 ---
 author: AI Maker Lab
 pubDatetime: 2026-08-05T09:23:00+09:00
-modDatetime: 2026-09-08T15:05:00+09:00
+modDatetime: 2026-09-22T10:00:00+09:00
 title: "Gamma（ガンマ）評判まとめ｜副業ブロガーが¥11,000サブスクを3か月使ったリアルな感想"
 slug: gamma-review-2026
 featured: false
@@ -264,6 +264,7 @@ A. サブスクリプションはいつでも変更・キャンセル可能で�
 
 次に読むなら：
 
+- [Gamma × 副業ブログ実践ガイド](/posts/gamma-blog-workflow-2026/) — ブログ画像・SNS縦長ピン・比較チャートをGammaで5分で作る具体的な手順
 - [AIライティングツール比較2026（4つに絞った理由）](/posts/ai-writing-tools-comparison-2026/) — ChatGPT/Claudeも含めたAI文章ツール全体地図
 - [Catchy レビュー2026](/posts/catchy-review-2026/) — 短文・SNSコピーの量産に向くAIライティングツール
 - [AI副業ロードマップ2026](/posts/ai-side-business-roadmap-2026/) — ツールを収益につなげる全体像
