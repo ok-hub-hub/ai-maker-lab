@@ -30,7 +30,7 @@ affiliateCta:
 
 本記事では、**AI で複数メディアの日本語 SEO 記事を運用する目線**で、GPT-5.6 3モデルと Claude Sonnet 5 を料金・日本語品質・速度・コスパの4軸で比較します。「どのモデルを使えばいいか」だけでなく、「そもそも API を直接叩くべきかどうか」まで踏み込んで整理します。
 
-<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：Catchy・Transcope。評価・手順は広告と無関係に実体験で書いています。</p>
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：Catchy・Transcope・Gamma。リンク先の紹介記事にも広告を含みます。</p>
 
 ## 目次
 
@@ -68,11 +68,14 @@ affiliateCta:
 | 日本語SEO記事を専用UIで書きたい | [Catchy](/go/catchy?pos=body&from=gpt-5-6-vs-claude-sonnet5-jp-writing-2026) または [Transcope](/go/transcope?pos=body&from=gpt-5-6-vs-claude-sonnet5-jp-writing-2026) |
 | とにかく低コストで大量生成 | GPT-5.6 Luna |
 
-<div class="my-6">
-  <a href="/go/catchy?pos=body&from=gpt-5-6-vs-claude-sonnet5-jp-writing-2026" class="flex flex-col rounded-2xl bg-sky-600 p-5 text-white no-underline shadow-sm transition hover:bg-sky-700">
-    <span class="text-lg font-bold">Catchy を無料で試してみる →</span>
-    <span class="mt-1 text-sm text-sky-100">短文テンプレートが自分の作業に合うか、無料枠から確認できます</span>
+<div class="my-6 rounded-2xl border border-violet-200 bg-violet-50 p-5 text-violet-950">
+  <p class="text-lg font-bold">書いた記事を、説明スライドにも使いたい方へ</p>
+  <p class="mt-2 text-sm leading-7">ChatGPT・Claudeで作った原稿をもとに資料も作るなら、Gammaの試用手順を用意しています。自分の記事1本を使い、3枚のスライドにまとめる入力例から、内容の修正・書き出し確認まで進められます。</p>
+  <a href="/posts/gamma-blog-workflow-2026/#まずこの入力例でブログ記事のまとめを1本作る" class="mt-3 flex flex-col rounded-xl bg-violet-600 p-4 text-white no-underline shadow-sm transition hover:bg-violet-700">
+    <span class="font-bold">記事を3枚のスライドにする入力例を見る →</span>
+    <span class="mt-1 text-sm text-violet-100">手順は登録不要で読めます。試用後に、手直しの手間と必要な機能で有料化を判断してください。</span>
   </a>
+  <p class="mt-2 text-xs leading-6">2026年9月24日追記。生成結果や時間短縮を保証するものではありません。</p>
 </div>
 
 ## GPT-5.6 とは（Sol/Terra/Luna の3層構造）
@@ -243,6 +246,7 @@ AI Maker Lab の実運用比較（2026年7月）では次の差が出ていま�
 | 単発の文章や相談 | 今使っているChatGPT・Claudeで指示を具体化する | このページのモデル比較 |
 | 毎回SNS文や広告コピーの指示を考える | 同じ題材でテンプレートから案を出し、修正時間を比べる | [Catchyの無料試用チェック](/posts/catchy-review-2026/#無料で試すときの課題と有料化の判断) |
 | 記事の調査・見出し整理に時間がかかる | 調査から本文修正まで、記事1本の総作業時間を比べる | [Transcopeの導入前チェック](/posts/transcope-review-2026/#契約前に記事1本で確かめること) |
+| 書いた記事を説明スライドにも使いたい | 自分の記事1本で、構成・修正・書き出しまでの手間を確かめる | [Gammaで記事を3枚のスライドにする入力例](/posts/gamma-blog-workflow-2026/#まずこの入力例でブログ記事のまとめを1本作る) |
 
 **比較するのは生成の速さだけでなく、公開できる状態に直すまでの時間です。** 同じ資料・同じ文字数・同じ読者を指定し、誤りの修正も含めて記録してください。無料枠で差が分からなければ、有料化を急ぐ必要はありません。
 
