@@ -3,7 +3,7 @@ author: AI Maker Lab
 pubDatetime: 2026-05-19T10:00:00+09:00
 title: "Claude Code 実体験｜セットアップから1ヶ月運用・月$20のコストを公開【2026】"
 slug: claude-code-setup-1month-practical
-primaryGo: meiko-career
+disableStickyCta: true
 featured: false
 draft: false
 tags:
@@ -13,9 +13,6 @@ tags:
   - cli
   - vibe-coding
 description: "Claude Code を macOS / Windows でセットアップし1ヶ月運用。実コスト（Claude Pro 月$20）、よく使う基本コマンド、つまづいたポイントを実体験ベースで公開。AI 駆動で個人開発を回したい人の実践教本です。"
-affiliateCta:
-  - id: techgo
-    lead: "Claude Codeを日常的に使える人材の市場価値は上がっています。IT特化の無料相談で今の相場を確認できます。"
 ---
 
 <div class="relative mb-8 flex h-24 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-violet-100 via-fuchsia-100 to-pink-100 sm:h-32">
@@ -29,7 +26,7 @@ affiliateCta:
 
 > 本記事は **AI 駆動を堂々と明示する立場** で書いています。「実は AI が書いた」を隠す方針ではなく、**AI と一緒に1人会社を回す**ことを前提にした実践ガイドです。
 
-<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">広告を含みます：明光キャリアパートナーズ・TechGo。評価・手順は広告と無関係に実体験で書いています。</p>
+<p class="mb-6 text-xs leading-6 text-stone-500 dark:text-stone-400">この記事から案内する転職相談先の比較記事には広告を含みます。</p>
 
 ## 目次
 
@@ -251,29 +248,24 @@ Claude Code は、**CLI で動く自律エージェント** という、Cursor �
 
 [Claude Code 公式ドキュメント →](https://docs.claude.com/en/docs/claude-code/)
 
-## その先：AIで書けるようになった人の「次の一手」
+## 転職も考えるなら、実務経験と求人の条件を確認する
 
-1ヶ月も回すと、たいてい次の壁にぶつかります。**「これ、仕事にできるのか？」** です。
+Claude Codeを使った個人開発の経験と、エンジニアとしての実務経験は分けて整理してください。ツールを使えることだけで、求人や転職サービスの対象条件を満たすとは限りません。
 
-Claude Code や Cursor を使いこなせる人は、実は市場では珍しい側です。ただし**独学の実力は、自分では値付けできません**。「今の自分の経歴＋AIスキルで、どんな求人が現実的に狙えるのか」は、実際に求人を持っている人に聞くのが一番早い。
+**実務経験がない方**は、応募したい求人の経験条件を読み、今できることと学習が必要なことを整理するところから始めてください。明光キャリアパートナーズを未経験者向けの相談先として紹介していた案内は取り下げます。
 
-<aside class="my-8 rounded-xl border-l-4 border-indigo-500 bg-indigo-50 p-5">
-  <p class="font-bold text-indigo-900">転職しなくても、現在地を知る価値はある</p>
-  <p class="mt-2 text-sm text-indigo-950">面談は「転職の意思表明」ではなく情報収集です。合わなければ進めなくてOK。<strong>今の市場価値を一度知っておくと、「今の会社に残る」判断にも根拠が持てます。</strong></p>
-</aside>
+**エンジニアの実務経験がある方**は、希望職種・勤務地・支援内容を確認して相談先を比較してください。以下の比較記事では、本サイトが紹介する明光の対象を「実務経験があり、東京・大阪での就職を希望する方」として整理しています。
 
 <div class="my-8 flex flex-col gap-3">
-  <a href="/go/meiko-career" class="flex flex-col rounded-2xl bg-indigo-600 p-5 text-white no-underline shadow-sm transition hover:bg-indigo-700">
-    <span class="text-lg font-bold">エンジニア転職の無料キャリア面談を見る →</span>
-    <span class="mt-1 text-sm text-indigo-100">明光キャリアパートナーズ（未経験〜ジュニア向け・求職者は無料・オンライン可）</span>
+  <a href="/posts/30dai-mikeiken-engineer-career-2026/" class="flex flex-col rounded-2xl bg-indigo-600 p-5 text-white no-underline shadow-sm transition hover:bg-indigo-700">
+    <span class="text-lg font-bold">実務未経験なら：求人票と学習計画を整理する →</span>
+    <span class="mt-1 text-sm text-indigo-100">求人の経験条件と、応募前に準備することを確認できます</span>
   </a>
-  <a href="/go/techgo" class="flex flex-col rounded-2xl border-2 border-indigo-600 bg-white p-5 text-indigo-900 no-underline shadow-sm transition hover:bg-indigo-50">
-    <span class="text-lg font-bold">実務経験があるなら：ハイクラス転職の無料相談 →</span>
-    <span class="mt-1 text-sm text-indigo-700">TechGo（ITエンジニア経験者向け・上流/年収アップ特化・無料）</span>
+  <a href="/posts/techgo-vs-meiko-career-2026/" class="flex flex-col rounded-2xl border-2 border-indigo-600 bg-white p-5 text-indigo-900 no-underline shadow-sm transition hover:bg-indigo-50">
+    <span class="text-lg font-bold">実務経験があるなら：相談先の条件を比較する →</span>
+    <span class="mt-1 text-sm text-indigo-700">TechGo・明光の希望職種、勤務地、支援内容を確認できます（広告を含む記事）</span>
   </a>
 </div>
-
-転職の全体像から知りたい人は [未経験からITエンジニア転職 完全ガイド](/posts/it-engineer-career-start-2026/) を先に読んでください。
 
 ---
 
