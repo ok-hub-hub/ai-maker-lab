@@ -373,6 +373,7 @@ CEO が「(A) これがおすすめだけど、(B) こっちもアリです」�
 
 **関連記事**：
 
+- [Claude Code 実体験｜セットアップから1ヶ月運用・月$20のコストを公開](/posts/claude-code-setup-1month-practical/) — Claude Code の導入手順・基本コマンド・実コストを実機目線でまとめた実践ガイド
 - [Vibe Coding 完全ガイド：個人開発者が AI で動くアプリをつくる、最短ルート【2026年版】](/posts/vibe-coding-guide-2026/)
 - [Cursor vs Claude Code 徹底比較](/posts/cursor-vs-claude-code-comparison/) — 本記事で主力に据えた Claude Code の特性を Cursor と対比
 - [Claude WorkbenchがConsoleに統合【2026年8月】](/posts/claude-workbench-console-2026/) — 2026年8月17日廃止予定。Claude Code のセットアップフローが変わる点を実録で整理
