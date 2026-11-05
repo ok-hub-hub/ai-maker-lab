@@ -327,7 +327,7 @@ A. 両方使うのが現実解です。Claude Code はターミナルからの�
       "name": "バイブコーディングで作ったアプリをどこで公開すればいいですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "用途で変わります。Next.js/React系ならVercel（v0と親和性◎）かCloudflare Pages（無料・帯域無制限）。WordPressブログを立ち上げてAI記事で収益化するなら、ConoHa WING（月678円〜・2026-10-08取得）かエックスサーバー（実質月693円〜・2026-10-06取得）が国内2強です。"
+        "text": "用途で変わります。Next.js/React系ならVercel（v0と親和性◎）かCloudflare Pages（無料・帯域無制限）。WordPressブログを立ち上げてAI記事で収益化するなら、ConoHa WING（月659円〜・11/5まで）かエックスサーバー（月990円〜・2026-11-05公式確認）が国内2強です。"
       }
     },
     {
